@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8790204805922321323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4162714718477495340}
+  - component: {fileID: 5903647496116288163}
+  - component: {fileID: 4163369408196000471}
+  m_Layer: 0
+  m_Name: Chat Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4162714718477495340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790204805922321323}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5903647496116288163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790204805922321323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dae073c9916b6446a2a28b64f15ade1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SO_listOfDialogueSO: {fileID: 11400000, guid: 428e894818215f34a86c3a04e595084e, type: 2}
+  SCR_listOfFace:
+    List_face:
+    - ENM_characterFace: 1
+      SPR_characterSprite: {fileID: -60164073, guid: 40a2b21dc4b32db488c118b88c604b09, type: 3}
+  SO_currDialog: {fileID: 0}
+  F_interval: 5
+  I_currDialogComponentIndex: 0
+--- !u!114 &4163369408196000471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790204805922321323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ee330723e21b84190a2ee1110e2fb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PB_chatBubble: {fileID: 3222345978840826382, guid: ced12d870d030ad439db50dfe078883a, type: 3}
+  List_chatBubble: []
+  TF_chatBubbleParent: {fileID: 0}
+  I_maxChatBubble: 2
