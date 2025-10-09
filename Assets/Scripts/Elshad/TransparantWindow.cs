@@ -1,6 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.XR;
 
 public class TransparantWindow : MonoBehaviour
@@ -58,7 +59,7 @@ public class TransparantWindow : MonoBehaviour
 
     private void Update()
     {
-        SetClickThrough(Physics2D.OverlapPoint(RaycastHit2D))
+        //SetClickThrough(IsSomethingBehindCursor());
     }
 
     private void SetClickThrough(bool clickThrough)
@@ -74,8 +75,24 @@ public class TransparantWindow : MonoBehaviour
 
     }
 
-    private bool IsThereACollider()
+    public static bool IsSomethingBehindCursor()
     {
+        // 🔹 Step 1: Check UI (Screen Space UI)
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            return true;
 
+        // 🔹 Step 2: Check 3D collider
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit hit3D))
+            return true;
+
+        // 🔹 Step 3: Check 2D collider
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit2D = Physics2D.Raycast(mousePos, Vector2.zero);
+        if (hit2D.collider != null)
+            return true;
+
+        // 🔹 Step 4: Nothing found
+        return false;
     }
 }
