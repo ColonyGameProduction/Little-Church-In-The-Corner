@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Mengatur seluruh hal mengenai UI dari Chat, seperti menampilkan chat bubble dan animasi dari chat bubble.
+/// </summary>
 public class UIChatManager : MonoBehaviour
 {
     public static UIChatManager Instance { get; private set; }
@@ -10,7 +13,13 @@ public class UIChatManager : MonoBehaviour
     public List<UIChatBubble> List_chatBubble;
     public Transform TF_chatBubbleParent;
 
+    /// <summary>
+    /// Ini jumlah maksimum chat bubble yang nilai transparansinya 100% kelihatan
+    /// </summary>
     public int I_maxChatBubble = 2;
+    /// <summary>
+    /// Ini jumlah chat bubble yang bakal menjadi sedikit transparan. Chat bubble bakal jadi sedikit transparan setelah melewati batasan I_maxChatBubble. Kalau nilai ini 0, maka ga bakal ada chat bubble yang setengah transparan.
+    /// </summary>
     public int I_amountOfFadedChatBubbles = 2;
 
     private void Awake()
@@ -35,21 +44,30 @@ public class UIChatManager : MonoBehaviour
         ChatManager.ACT_PlayDialogue -= SetupNextChatBubble;
     }
 
-    //Dipanggil pas click interact, seharusnya
-    //Buat setup semua chat bubble, jadi nanti tinggal dienable aja kalau mau munculin
+
+    /// <summary>
+    /// Dipanggil pas click interact, seharusnya
+    /// Ini seharusnya dipanggil sebelum PlayDialogue di ChatManager.
+    /// 
+    /// Buat setup semua chat bubble. Awalnya semuanya bakal didisable, jadi nanti tinggal dienable aja kalau mau munculin
+    /// </summary>
+
     public void SetupAllChats()
     {
+        //Bersihin list chat bubble kalau misalnya ada yang tersisa, mungkin dari dialog-dialog sebelumnya.
         if (List_chatBubble == null) List_chatBubble = new List<UIChatBubble>();
         List_chatBubble.Clear();
 
-        //Clears all game objects from chat bubble parent
+        //Hapus semua game objects dari parent chat bubble, mungkin dari dialog-dialog sebelumnya
         foreach (Transform child in TF_chatBubbleParent)
         {
             Destroy(child.gameObject);
         }
 
+        //Ini dialog/renungan saat ini.
         DialogSO SO_dialogSO = ChatManager.Instance.SO_currDialog;
 
+        //Ini bakal membuat semua chat bubble yang bakal ada di dalam renungan, tetapi dia bakal didisable terlebih dahulu supaya ga kelihatan di UI. Nanti mereka bakal dienable kalau sudah waktunya.
         foreach (DialogComponent components in SO_dialogSO.SCR_dialogComponent)
         {
             GameObject GO_chatBubble = Instantiate(PB_chatBubble, TF_chatBubbleParent);
@@ -63,9 +81,14 @@ public class UIChatManager : MonoBehaviour
             List_chatBubble.Add(SCR_UIChatBubble);
         }
 
+        //Untuk chat bubble pertama, dia bakal dienable.
         SetupChatBubble(0, 1f);
     }
 
+    /// <summary>
+    /// Mengatur chat bubble selanjutnya yang akan muncul, DAN JUGA mengatur chat bubble sebelumnya (untuk fading dan semacamnya)
+    /// </summary>
+    /// <param name="I_currentIndex">Index chat bubble dalam dialog/renungan saat ini</param>
     private void SetupNextChatBubble(int I_currentIndex)
     {
         if(I_currentIndex < List_chatBubble.Count)
@@ -75,12 +98,29 @@ public class UIChatManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ini mengatur chat bubble secara satuan.
+    /// </summary>
+    /// <param name="I_index">Index dari chat bubble yang akan diatur</param>
+    /// <param name="F_alpha">Alpha/transparansi yang akan dipasang ke chat bubblenya</param>
     private void SetupChatBubble(int I_index, float F_alpha)
     {
         List_chatBubble[I_index].gameObject.SetActive(true);
         List_chatBubble[I_index].Fade(F_alpha);
     }
 
+    /// <summary>
+    /// Ini mengatur chat bubble yang udah pernah muncul sebelumnya.
+    /// 
+    /// Kalau chat bubblenya sudah sangat lama, dia bakal didisable.
+    /// 
+    /// Kalau chat bubblenya udah agak lama, dia bakal ngefade (dan fadingnya bakal perlahan-lahan seperti gradasi)
+    /// 
+    /// Kalau chat bubblenya masih baru, transparansinya masih 100% kelihatan
+    /// 
+    /// Kalau chat bubblenya memang belum muncul, dia bakal keluar dari loop soalnya sudah ga perlu ngeproses yang belum muncul.
+    /// </summary>
+    /// <param name="I_currentIndex">Index chat bubble saat ini</param>
     private void SetupPreviousChatBubbles(int I_currentIndex)
     {
         for (int i = 0; i < List_chatBubble.Count; i++)
