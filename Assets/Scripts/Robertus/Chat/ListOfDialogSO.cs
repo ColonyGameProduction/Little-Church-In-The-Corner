@@ -16,7 +16,7 @@ public class ListOfDialogSO : ScriptableObject
     /// </summary>
     /// <param name="ENM_dialogTitle">Title dari dialog</param>
     /// <returns>DialogSO</returns>
-    public DialogSO SO_GetDialogSO(AllEnum.ENM_DialogTitle ENM_dialogTitle)
+    public DialogSO SO_GetDialogSO(ENM_DialogTitle ENM_dialogTitle)
     {
         DialogSO SO_dialogSO = null;
 
