@@ -14,8 +14,8 @@ public class MusicManager : MonoBehaviour
     public Songs SCR_currSong;
 
     [Header("Para Enum")]
-    public AllEnum.ENM_PauseAndPlay ENM_pauseAndPlay;
-    public AllEnum.ENM_LoopMethod ENM_loopMethod;
+    public ENM_PauseAndPlay ENM_pauseAndPlay;
+    public ENM_LoopMethod ENM_loopMethod;
 
     [Header("Condition")]
     public bool B_isShuffling = false;
@@ -60,7 +60,7 @@ public class MusicManager : MonoBehaviour
         audioSource.clip = songs.ADO_music;
         audioSource.Play();
 
-        ENM_pauseAndPlay = AllEnum.ENM_PauseAndPlay.Play;
+        ENM_pauseAndPlay = ENM_PauseAndPlay.Play;
         AssigningSongTitleAndAuthor(songs);
 
         ACT_playSong?.Invoke(songs);
@@ -72,12 +72,12 @@ public class MusicManager : MonoBehaviour
         if (audioSource.isPlaying)
         {
             audioSource.Pause();
-            ENM_pauseAndPlay = AllEnum.ENM_PauseAndPlay.Paused;
+            ENM_pauseAndPlay = ENM_PauseAndPlay.Paused;
         }
         else
         {
             audioSource.Play();
-            ENM_pauseAndPlay = AllEnum.ENM_PauseAndPlay.Play;
+            ENM_pauseAndPlay = ENM_PauseAndPlay.Play;
         }
     }
 
@@ -90,7 +90,7 @@ public class MusicManager : MonoBehaviour
     // ini setup buat metode loop (no loop, loop, loop playlist)
     public void ToggleLoopMethod()
     {
-        ENM_loopMethod = (AllEnum.ENM_LoopMethod)(((int)ENM_loopMethod + 1) % Enum.GetValues(typeof(AllEnum.ENM_LoopMethod)).Length);
+        ENM_loopMethod = (ENM_LoopMethod)(((int)ENM_loopMethod + 1) % Enum.GetValues(typeof(ENM_LoopMethod)).Length);
     }
 
     // setup buat fungsi next song
@@ -171,15 +171,15 @@ public class MusicManager : MonoBehaviour
     {
         switch (ENM_loopMethod)
         {
-            case AllEnum.ENM_LoopMethod.NoLoop:
+            case ENM_LoopMethod.NoLoop:
                 ToggleNextSong();
                 break;
 
-            case AllEnum.ENM_LoopMethod.LoopSong:
+            case ENM_LoopMethod.LoopSong:
                 PlaySong(SCR_currSong);
                 break;
 
-            case AllEnum.ENM_LoopMethod.LoopPlaylist:
+            case ENM_LoopMethod.LoopPlaylist:
                 ToggleNextSong();
                 break;
         }

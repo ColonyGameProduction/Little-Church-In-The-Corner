@@ -72,7 +72,7 @@ public class UIMusicManager : MonoBehaviour
     {
         SCR_MM.TogglePauseAndPlayMusic();
 
-        if (SCR_MM.ENM_pauseAndPlay == AllEnum.ENM_PauseAndPlay.Paused)
+        if (SCR_MM.ENM_pauseAndPlay == ENM_PauseAndPlay.Paused)
         {
             //IMG_pauseAndPlay.sprite = SPR_playIcon;
         }

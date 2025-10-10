@@ -5,7 +5,7 @@ public class Songs
 {
     public AudioClip ADO_music;
     public string S_titleAndAuthor;
-    public AllEnum.ENM_MusicCode ENM_musicCode;
+    public ENM_MusicCode ENM_musicCode;
 
     // nantian ini tunggu ada playlist uinya duls hehe
     public void OnEnable()
