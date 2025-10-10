@@ -20,7 +20,7 @@ public class ChatManager : MonoBehaviour
     /// <summary>
     /// Dialog yang aktif saat ini
     /// </summary>
-    public DialogSO SO_currDialog;
+    [HideInInspector] public DialogSO SO_currDialog;
     /// <summary>
     /// Jeda antar teks dialog dalam satuan detik.
     /// </summary>
