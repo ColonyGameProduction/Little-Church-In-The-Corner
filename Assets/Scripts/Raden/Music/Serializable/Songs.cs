@@ -14,6 +14,8 @@ public class Songs
     }
 
     // hmm ini gua jujur ga tau ini buat apa jadi gua giniin duls
+
+    //Justru action nya dipanggil disini den
     public void PlayingThisSong()
     {
         Debug.Log($"Playing: {S_titleAndAuthor}");
