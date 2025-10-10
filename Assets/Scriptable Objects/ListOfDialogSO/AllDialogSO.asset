@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: AllDialogSO
   m_EditorClassIdentifier: 
   List_SO_dialogSO:
+  - {fileID: 11400000, guid: 79ad17bca80bc0244bf54bf1def70e67, type: 2}
+  - {fileID: 11400000, guid: e9d7b18df9ac09842b97c33cf3ac5bf1, type: 2}
   - {fileID: 11400000, guid: f5519c404f688954b94e066513255120, type: 2}
   - {fileID: 11400000, guid: 9f6c055f69bcd884ab1ab2a44f0c2c4f, type: 2}

@@ -8,6 +8,8 @@ public enum ENM_DialogTitle
 {
     Test1 = 1,
     Test2 = 2,
+    Sample = 3,
+    SamplePanjang = 4,
 }
 #endregion
 

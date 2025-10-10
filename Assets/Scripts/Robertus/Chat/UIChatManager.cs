@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,10 +10,12 @@ public class UIChatManager : MonoBehaviour
 {
     public static UIChatManager Instance { get; private set; }
 
+    [Header("References")]
     public GameObject PB_chatBubble;
-    public List<UIChatBubble> List_chatBubble;
+    [HideInInspector] public List<UIChatBubble> List_chatBubble;
     public Transform TF_chatBubbleParent;
 
+    [Header("Data")]
     /// <summary>
     /// Ini jumlah maksimum chat bubble yang nilai transparansinya 100% kelihatan
     /// </summary>
@@ -21,6 +24,18 @@ public class UIChatManager : MonoBehaviour
     /// Ini jumlah chat bubble yang bakal menjadi sedikit transparan. Chat bubble bakal jadi sedikit transparan setelah melewati batasan I_maxChatBubble. Kalau nilai ini 0, maka ga bakal ada chat bubble yang setengah transparan.
     /// </summary>
     public int I_amountOfFadedChatBubbles = 2;
+    /// <summary>
+    /// Ini durasi animasi, seperti animasi fade out, animasi gerak, dst.
+    /// </summary>
+    public float F_animationDuration = 1f;
+    /// <summary>
+    /// Ini seberapa jauh chat bubblenya bakal naik ke atas pas fade out (fade out di sini itu pas mau mulai dialog baru. Dialog lama bakal fade out semuanya)
+    /// </summary>
+    public float F_fadeOutDistance = 100f;
+    /// <summary>
+    /// Ini seberapa cepat animasi teks. Semakin besar angkanya, semakin cepat.
+    /// </summary>
+    public float F_textAnimationSpeed = 1f;
 
     private void Awake()
     {
@@ -51,18 +66,15 @@ public class UIChatManager : MonoBehaviour
     /// 
     /// Buat setup semua chat bubble. Awalnya semuanya bakal didisable, jadi nanti tinggal dienable aja kalau mau munculin
     /// </summary>
-
     public void SetupAllChats()
     {
+        //Fade out semua chat bubble yang masih tersisa
+        RemoveAllChatBubbles();
+
         //Bersihin list chat bubble kalau misalnya ada yang tersisa, mungkin dari dialog-dialog sebelumnya.
         if (List_chatBubble == null) List_chatBubble = new List<UIChatBubble>();
         List_chatBubble.Clear();
 
-        //Hapus semua game objects dari parent chat bubble, mungkin dari dialog-dialog sebelumnya
-        foreach (Transform child in TF_chatBubbleParent)
-        {
-            Destroy(child.gameObject);
-        }
 
         //Ini dialog/renungan saat ini.
         DialogSO SO_dialogSO = ChatManager.Instance.SO_currDialog;
@@ -80,9 +92,19 @@ public class UIChatManager : MonoBehaviour
 
             List_chatBubble.Add(SCR_UIChatBubble);
         }
+    }
 
-        //Untuk chat bubble pertama, dia bakal dienable.
-        SetupChatBubble(0, 1f);
+    /// <summary>
+    /// Fade out semua chat bubble yang ada di list. Setelah difadeout, mereka bakal didestroy.
+    /// 
+    /// Ini bakal terjadi kalau ada renungan baru. Dialog renungan lama bakal dihapus melalui function ini.
+    /// </summary>
+    private void RemoveAllChatBubbles()
+    {
+        foreach (UIChatBubble SCR_chatBubble in List_chatBubble)
+        {
+            SCR_chatBubble.FadeOutAndDestroyAnimation();
+        }
     }
 
     /// <summary>
@@ -94,6 +116,8 @@ public class UIChatManager : MonoBehaviour
         if(I_currentIndex < List_chatBubble.Count)
         {
             SetupChatBubble(I_currentIndex, 1f);
+            List_chatBubble[I_currentIndex].MoveUpAnimation();
+            List_chatBubble[I_currentIndex].StartTextAnimation(F_textAnimationSpeed);
             SetupPreviousChatBubbles(I_currentIndex);
         }
     }
@@ -128,16 +152,16 @@ public class UIChatManager : MonoBehaviour
             //Kalau i melebihi current index, break soalnya dialognya lom dimunculin.
             if (i > I_currentIndex)
             {
-                Debug.Log($"{i}. Reached the end of setup");
+                //Debug.Log($"{i}. Reached the end of setup");
                 break;
             }
 
-            //Kalau chat bubblenya udah lama banget, disable
+            //Kalau chat bubblenya udah lama banget, hilangin. Ga jadi didisable soalnya ngaruh ke animasi fade outnya. Kalau didisable langsung, dia bakal abrupt gitu fade outnya.
             if (I_currentIndex - i >= I_maxChatBubble + I_amountOfFadedChatBubbles)
             {
                 SetupChatBubble(i, 0f);
-                List_chatBubble[i].gameObject.SetActive(false);
-                Debug.Log($"{i} chat has expired, disabling");
+                //List_chatBubble[i].gameObject.SetActive(false);
+                //Debug.Log($"{i} chat has expired, disabling");
                 continue;
             }
 
@@ -145,19 +169,14 @@ public class UIChatManager : MonoBehaviour
             if (I_currentIndex - i < I_maxChatBubble)
             {
                 SetupChatBubble(i, 1f);
-                Debug.Log($"{i} chat is new, alpha at 1");
+                //Debug.Log($"{i} chat is new, alpha at 1");
                 continue;
             }
 
             //Kalau chat bubblenya udah agak lama, mulai fade
             float F_alpha = 1 - ((I_currentIndex - i + 1.0f - I_maxChatBubble) / (I_amountOfFadedChatBubbles + 1.0f));
             SetupChatBubble(i, F_alpha);
-            Debug.Log($"{i} chat is fading, alpha at {F_alpha}");
+            //Debug.Log($"{i} chat is fading, alpha at {F_alpha}");
         }
-    }
-
-    public void AnimateChatBubble()
-    {
-        //mungkin ini buat animasi teks? typewriter atau semacamnya
     }
 }
