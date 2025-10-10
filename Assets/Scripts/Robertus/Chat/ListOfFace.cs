@@ -15,7 +15,7 @@ public class ListOfFace
     /// </summary>
     /// <param name="ENM_charFace">Enum/ID muka karakter yang ingin diambil</param>
     /// <returns>Data dari muka karakter</returns>
-    public Face SCR_GetFace(AllEnum.ENM_CharFace ENM_charFace)
+    public Face SCR_GetFace(ENM_CharFace ENM_charFace)
     {
         Face faceResult = null;
 

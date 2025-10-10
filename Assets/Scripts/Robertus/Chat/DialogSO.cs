@@ -8,7 +8,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Dialog_JUDUL_ENUM", menuName = "Chat/DialogSO")]
 public class DialogSO : ScriptableObject
 {
-    public AllEnum.ENM_DialogTitle ENM_dialogTitle;
+    public ENM_DialogTitle ENM_dialogTitle;
     public List<DialogComponent> SCR_dialogComponent;
 
     //Aku ga tau ini buat apa kegunaannya
