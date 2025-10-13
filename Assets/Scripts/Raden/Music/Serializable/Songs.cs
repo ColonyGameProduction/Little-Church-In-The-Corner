@@ -10,10 +10,13 @@ public class Songs
     // nantian ini tunggu ada playlist uinya duls hehe
     public void OnEnable()
     {
-
+        // BTW disini aja den buat OnClick Button nya
+        // jadi lu pas instantiate button nya dari UIMusicManager, kasih komponent script ini
+        // trus disini lu kasih onclick nya si PlayingThis Song yang dibawah
+        // jadi lu add listener nya ditaro di UIPlaylist
     }
 
-    //Justru action nya dipanggil disini den (okay)
+    
     public void PlayingThisSong()
     {
         // udah di ganti ya seyenkkk
