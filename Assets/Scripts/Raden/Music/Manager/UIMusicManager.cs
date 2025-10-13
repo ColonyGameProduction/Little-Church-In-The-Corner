@@ -56,6 +56,8 @@ public class UIMusicManager : MonoBehaviour
     // setup buat button shuffle
     public void SetupShuffleButton()
     {
+        //jangan lupa ntar dikasih logic buat UI nya
+        //yang gonta ganti image
         SCR_MM.ToggleShuffle();
         Debug.Log("Shuffle toggled!");
     }
@@ -63,6 +65,8 @@ public class UIMusicManager : MonoBehaviour
     // setup buat button loop
     public void SetupLoopButtonMethod()
     {
+        //jangan lupa ntar dikasih logic buat UI nya
+        //yang gonta ganti image
         SCR_MM.ToggleLoopMethod();
         Debug.Log("Loop method: " + SCR_MM.ENM_loopMethod);
     }
