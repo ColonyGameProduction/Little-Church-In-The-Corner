@@ -59,7 +59,7 @@ public class UIChatManager : MonoBehaviour
         ChatManager.ACT_PlayDialogue -= SetupNextChatBubble;
     }
 
-
+    #region Chat Bubble
     /// <summary>
     /// Dipanggil pas click interact, seharusnya
     /// Ini seharusnya dipanggil sebelum PlayDialogue di ChatManager.
@@ -92,6 +92,8 @@ public class UIChatManager : MonoBehaviour
 
             List_chatBubble.Add(SCR_UIChatBubble);
         }
+
+        ChatManager.Instance.PlayDialogue();
     }
 
     /// <summary>
@@ -179,4 +181,5 @@ public class UIChatManager : MonoBehaviour
             //Debug.Log($"{i} chat is fading, alpha at {F_alpha}");
         }
     }
+    #endregion
 }

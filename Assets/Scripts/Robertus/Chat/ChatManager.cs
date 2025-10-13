@@ -30,6 +30,12 @@ public class ChatManager : MonoBehaviour
     /// </summary>
     [HideInInspector] public int I_currDialogComponentIndex;
 
+    /// <summary>
+    /// Ini buat tahu apakah renungannya sudah selesai atau belum. Technically kalau dialog terakhir udah muncul, dia udah selesai. Tapi, gara-gara ada animasi teks muncul perlahan-lahan, jadi dia beneran udah selesai pas animasinya udah selesai.
+    /// Animasi udah selesai atau belum, ditentuin dari variabel ini.
+    /// </summary>
+    public int I_amountOfTextAnimationDone;
+
     public static event Action<int> ACT_PlayDialogue;
 
     private void Awake()
@@ -44,6 +50,16 @@ public class ChatManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        LocalTime.ACT_interactIsReady += SetupRenungan;
+    }
+
+    private void OnDisable()
+    {
+        LocalTime.ACT_interactIsReady -= SetupRenungan;
+    }
+
     /// <summary>
     /// Mengatur jalannya dialog dalam renungan secara otomatis.
     /// 
@@ -53,13 +69,21 @@ public class ChatManager : MonoBehaviour
     /// <returns></returns>
     public IEnumerator DialogueSequence(float f_interval)
     {
+        I_amountOfTextAnimationDone = 0;
         while (I_currDialogComponentIndex < SO_currDialog.SCR_dialogComponent.Count)
         {
             ACT_PlayDialogue?.Invoke(I_currDialogComponentIndex);
-            yield return new WaitForSeconds(f_interval);
             I_currDialogComponentIndex++;
+            //Keluar duluan biar ga usah nunggu selama f_interval, tapi nunggunya tergantung text animation.
+            if (I_currDialogComponentIndex >= SO_currDialog.SCR_dialogComponent.Count) break;
+            yield return new WaitForSeconds(f_interval);
         }
+
+        //Kalau semua teks udah selesai animasinya, baru lanjut. Kalau belum, stay di sini.
+        yield return new WaitUntil(() => I_amountOfTextAnimationDone >= I_currDialogComponentIndex);
+
         Debug.Log("All dialogues done!");
+        SO_currDialog = null;
     }
 
     /// <summary>
@@ -67,6 +91,7 @@ public class ChatManager : MonoBehaviour
     /// </summary>
     public void PlayDialogue()
     {
+        Debug.Log("Play dialogue");
         StartCoroutine(DialogueSequence(F_interval));
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -76,6 +77,7 @@ public class UIChatBubble : MonoBehaviour
     /// <param name="F_alpha">Nilai dari 0-1. 0 itu transparan/hilang, 1 itu kelihatan 100%</param>
     public void Fade(float F_alpha)
     {
+        //Debug.Log(CG_chatBubble);
         LeanTween
             .alphaCanvas(CG_chatBubble, F_alpha, UIChatManager.Instance.F_animationDuration)
             .setEase(LeanTweenType.easeOutCubic);
@@ -210,6 +212,8 @@ public class UIChatBubble : MonoBehaviour
         }
         //Jaga-jaga, bikin supaya semua karakternya kelihatan.
         TMPUGUI_chatBubble.maxVisibleCharacters = I_totalVisibleCharacters;
+        //Kalau udah selesai animasi teksnya, 
+        ChatManager.Instance.I_amountOfTextAnimationDone++;
     }
 
     /// <summary>
@@ -231,7 +235,7 @@ public class UIChatBubble : MonoBehaviour
         //Cara kerja ini adalah kalau misalnya kecepatan teksnya tinggi, maka ada kemungkinan untuk nambah karakter yang bakal dimunculin sekaligus.
         //Yah, kurang lebih gitu.
         F_chanceForAdditionalCharacter = Mathf.Clamp01(F_chanceForAdditionalCharacter);
-        float F_randomValue = Random.Range(0f, 1f);
+        float F_randomValue = UnityEngine.Random.Range(0f, 1f);
         if (F_chanceForAdditionalCharacter > F_randomValue)
             I_result++;
 
