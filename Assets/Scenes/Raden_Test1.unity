@@ -288,7 +288,7 @@ RectTransform:
   m_Father: {fileID: 1847490001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -384,7 +384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &330032196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,7 +830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &637806010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,7 +951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &659874372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,7 +1072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &664771724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1263,7 +1263,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Playlist
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1377,13 +1379,13 @@ MonoBehaviour:
   GO_pauseAndPlay: {fileID: 659874371}
   GO_next: {fileID: 637806009}
   GO_prev: {fileID: 664771723}
+  GO_playlist: {fileID: 2024711395}
   BTN_shuffle: {fileID: 1297342974}
   BTN_loop: {fileID: 330032196}
   BTN_pauseAndPlay: {fileID: 659874372}
   BTN_next: {fileID: 637806010}
   BTN_prev: {fileID: 664771724}
-  IMG_playMethod: {fileID: 0}
-  IMG_pauseAndPlay: {fileID: 0}
+  BTN_playlist: {fileID: 2024711397}
   TMPGUI_titleAndAuthor: {fileID: 1010440428}
   SLR_progressBar: {fileID: 1313086977}
 --- !u!4 &894199958
@@ -1418,7 +1420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1010440427
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1635,10 +1637,10 @@ RectTransform:
   - {fileID: 664771727}
   - {fileID: 637806013}
   - {fileID: 330032199}
+  - {fileID: 2024711396}
   - {fileID: 1297342977}
   - {fileID: 1313086976}
   - {fileID: 1010440427}
-  - {fileID: 2024711396}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1807,7 +1809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1297342974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2062,7 +2064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1313086976
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2169,7 +2171,7 @@ RectTransform:
   m_Father: {fileID: 165775351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2600,7 +2602,7 @@ GameObject:
   - component: {fileID: 2024711398}
   - component: {fileID: 2024711397}
   m_Layer: 5
-  m_Name: Rock Button
+  m_Name: Playlist Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2623,7 +2625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -108}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024711397
