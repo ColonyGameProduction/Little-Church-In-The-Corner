@@ -18,11 +18,8 @@ MonoBehaviour:
     S_stringText: Halo!
     ENM_charFace: 1
   - COL_bubbleColour: {r: 1, g: 1, b: 1, a: 1}
-    S_stringText: Dalam suratnya yang ditujukan kepada Filemon, Paulus meminta kesediaannya
-      untuk menerima seseorang layaknya menerima dirinya sendiri (ay. 17). Seseorang
-      yang dimaksud ialah Onesimus, budak yang melarikan diri setelah mendatangkan
-      kerugian kepadanya. Jika Filemon masih menyayangkan besarnya kerugian itu,
-      ia boleh menanggungkan semuanya kepada Paulus (ay. 18).
+    S_stringText: 'Renungan kita pada hari ini, di ambil dari FILEMON 1 : 8 - 22
+      yang bertemakan Onesimus dan Kita '
     ENM_charFace: 1
   - COL_bubbleColour: {r: 1, g: 1, b: 1, a: 1}
     S_stringText: Dalam suratnya yang ditujukan kepada Filemon, Paulus meminta kesediaannya
@@ -82,10 +79,12 @@ MonoBehaviour:
     S_stringText: Jauh lebih beruntung diri kita oleh limpahnya anugerah Allah.
     ENM_charFace: 1
   - COL_bubbleColour: {r: 1, g: 1, b: 1, a: 1}
-    S_stringText: Nah, tidakkah kita rindu menjadi sosok yang sangat berguna bagi
-      Kerajaan Allah.
+    S_stringText: 'Nah, tidakkah kita rindu menjadi sosok yang sangat berguna bagi
+      Kerajaan Allah? '
     ENM_charFace: 1
   - COL_bubbleColour: {r: 1, g: 1, b: 1, a: 1}
-    S_stringText: Hal ini membuktikan bahwa Onesimus telah paham betapa beruntungnya
-      dirinya menerima kebaikan Paulus.
+    S_stringText: 'Tidakkah kita bersemangat menunjukkan kasih terhadap sesama dan
+      menjangkau jiwa-jiwa?
+
+'
     ENM_charFace: 1
