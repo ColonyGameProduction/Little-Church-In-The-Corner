@@ -13,11 +13,13 @@ public class Songs
 
     }
 
-    // hmm ini gua jujur ga tau ini buat apa jadi gua giniin duls
-
-    //Justru action nya dipanggil disini den
+    //Justru action nya dipanggil disini den (okay)
     public void PlayingThisSong()
     {
-        Debug.Log($"Playing: {S_titleAndAuthor}");
+        // udah di ganti ya seyenkkk
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.ACT_playSong?.Invoke(this);
+        }
     }
 }
