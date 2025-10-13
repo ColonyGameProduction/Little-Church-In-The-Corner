@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4162714718477495340}
   - component: {fileID: 5903647496116288163}
   - component: {fileID: 4163369408196000471}
+  - component: {fileID: 407744173426025695}
+  - component: {fileID: 79721989721427080}
   m_Layer: 0
   m_Name: Chat Manager
   m_TagString: Untagged
@@ -51,8 +53,9 @@ MonoBehaviour:
     - ENM_characterFace: 1
       SPR_characterSprite: {fileID: -60164073, guid: 40a2b21dc4b32db488c118b88c604b09, type: 3}
   SO_currDialog: {fileID: 0}
-  F_interval: 5
+  F_interval: 3
   I_currDialogComponentIndex: 0
+  I_amountOfTextAnimationDone: 0
 --- !u!114 &4163369408196000471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,3 +72,43 @@ MonoBehaviour:
   List_chatBubble: []
   TF_chatBubbleParent: {fileID: 0}
   I_maxChatBubble: 2
+  I_amountOfFadedChatBubbles: 1
+  F_animationDuration: 0.5
+  F_fadeOutDistance: 100
+  F_textAnimationSpeed: 3
+--- !u!114 &407744173426025695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790204805922321323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c987d148a9575e40bad939baa957c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SCR_sermonSchedule:
+  - I_hour: 3
+    I_minute: 0
+  - I_hour: 9
+    I_minute: 0
+  - I_hour: 12
+    I_minute: 0
+  - I_hour: 15
+    I_minute: 0
+  - I_hour: 20
+    I_minute: 0
+--- !u!114 &79721989721427080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790204805922321323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b13f5212691c34c81cdc967d533e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTN_interact: {fileID: 0}
