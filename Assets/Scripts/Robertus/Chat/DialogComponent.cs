@@ -9,6 +9,7 @@ public class DialogComponent
 {
     //Warna defaultnya putih.
     public Color COL_bubbleColour = Color.white;
+    [TextArea]
     public string S_stringText;
     public ENM_CharFace ENM_charFace;
 }

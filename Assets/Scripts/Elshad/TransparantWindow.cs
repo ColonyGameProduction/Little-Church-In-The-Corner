@@ -71,7 +71,7 @@ public class TransparantWindow : MonoBehaviour
     {
 
         //untuk mensetup windows infisible dan menset windows tersebut untuk selalu didepan
-#if !UNITY_EDITOR_
+#if !UNITY_EDITOR
         hWnd = GetActiveWindow();
 
         //setup window style nya
@@ -88,8 +88,10 @@ public class TransparantWindow : MonoBehaviour
 
     private void Update()
     {
+#if !UNITY_EDITOR
         //ngecek untuk interact sama object di game nya
         SetClickThrough(IsSomethingBehindCursor());
+#endif
     }
 
     private void SetClickThrough(bool clickThrough)
