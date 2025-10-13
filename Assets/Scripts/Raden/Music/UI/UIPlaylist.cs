@@ -44,6 +44,7 @@ public class UIPlaylist : MonoBehaviour
             Button btn = newButton.GetComponent<Button>();
             ENM_PlaylistType playlistType = playlist.ENM_playlistType;
 
+            // Cek script Songs
             btn.onClick.AddListener(() =>
             {
                 //setup semua playlist song
