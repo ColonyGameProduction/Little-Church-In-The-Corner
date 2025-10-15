@@ -40,6 +40,7 @@ public class UIMusicManager : MonoBehaviour
         BTN_pauseAndPlay.onClick.AddListener(() => SetupPauseAndPlayImage());
         BTN_next.onClick.AddListener(() => SCR_MM.ToggleNextSong());
         BTN_prev.onClick.AddListener(() => SCR_MM.TogglePrevSong());
+        BTN_playlist.onClick.AddListener(() => SetupPlaylistUI());
 
         // Event listener pas laguan berubah
         SCR_MM.ACT_playSong += UpdateSongNameUI;
@@ -100,6 +101,6 @@ public class UIMusicManager : MonoBehaviour
 
     public void SetupPlaylistUI()
     {
-        // nantian yak ini aga ribet ini gay
+        GO_playlist.SetActive(true);
     }
 }
