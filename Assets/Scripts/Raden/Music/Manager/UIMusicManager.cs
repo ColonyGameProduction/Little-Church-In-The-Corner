@@ -12,7 +12,7 @@ public class UIMusicManager : MonoBehaviour
     public GameObject GO_pauseAndPlay;
     public GameObject GO_next;
     public GameObject GO_prev;
-    //public GameObject GO_playlist;
+    public GameObject GO_playlist;
 
     [Header("Para Button")]
     public Button BTN_shuffle;
@@ -20,11 +20,11 @@ public class UIMusicManager : MonoBehaviour
     public Button BTN_pauseAndPlay;
     public Button BTN_next;
     public Button BTN_prev;
-    //public Button BTN_playlist;
+    public Button BTN_playlist;
 
     [Header("Semua UI Element")]
-    public Image IMG_playMethod;
-    public Image IMG_pauseAndPlay;
+    //public Image IMG_playMethod;
+    //public Image IMG_pauseAndPlay;
     public TextMeshProUGUI TMPGUI_titleAndAuthor;
     public Slider SLR_progressBar;
 
@@ -40,6 +40,7 @@ public class UIMusicManager : MonoBehaviour
         BTN_pauseAndPlay.onClick.AddListener(() => SetupPauseAndPlayImage());
         BTN_next.onClick.AddListener(() => SCR_MM.ToggleNextSong());
         BTN_prev.onClick.AddListener(() => SCR_MM.TogglePrevSong());
+        BTN_playlist.onClick.AddListener(() => SetupPlaylistUI());
 
         // Event listener pas laguan berubah
         SCR_MM.ACT_playSong += UpdateSongNameUI;
@@ -100,6 +101,6 @@ public class UIMusicManager : MonoBehaviour
 
     public void SetupPlaylistUI()
     {
-        // nantian yak ini aga ribet ini gay
+        GO_playlist.SetActive(true);
     }
 }
