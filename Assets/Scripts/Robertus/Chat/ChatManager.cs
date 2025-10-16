@@ -37,6 +37,7 @@ public class ChatManager : MonoBehaviour
     public int I_amountOfTextAnimationDone;
 
     public static event Action<int> ACT_PlayDialogue;
+    public static event Action ACT_RenunganDone;
 
     private void Awake()
     {
@@ -83,7 +84,9 @@ public class ChatManager : MonoBehaviour
         yield return new WaitUntil(() => I_amountOfTextAnimationDone >= I_currDialogComponentIndex);
 
         Debug.Log("All dialogues done!");
-        SO_currDialog = null;
+
+        //Nunggu semuanya selesai dulu, baru munculin hal lain seperti opsi untuk download
+        ACT_RenunganDone?.Invoke();
     }
 
     /// <summary>

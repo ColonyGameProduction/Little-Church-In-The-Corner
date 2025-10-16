@@ -16,4 +16,10 @@ public class DialogSO : ScriptableObject
     {
         throw new NotImplementedException("Get Dialogue Component NOT IMPLEMENTED");
     }
+
+    public DialogSO(ENM_DialogTitle eNM_dialogTitle, List<DialogComponent> sCR_dialogComponent)
+    {
+        ENM_dialogTitle = eNM_dialogTitle;
+        SCR_dialogComponent = sCR_dialogComponent;
+    }
 }
