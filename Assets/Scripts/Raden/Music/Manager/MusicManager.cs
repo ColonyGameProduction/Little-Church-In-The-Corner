@@ -150,6 +150,18 @@ public class MusicManager : MonoBehaviour
         Debug.Log($"Now Playing: {songs.S_titleAndAuthor}");
     }
 
+    // ngubah posisi lagu sesuai value slider
+    public void OnSliderValueChanged(Slider slider)
+    {
+        if (audioSource.clip == null) 
+        {
+            return;
+        }
+
+        audioSource.time = slider.value * audioSource.clip.length;
+    }
+
+
     // ini setup buat slider progress lagu udah nyanyi ampe mana
     public void ProgressBarLogic(Slider slider)
     {

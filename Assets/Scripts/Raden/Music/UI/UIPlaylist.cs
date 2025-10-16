@@ -29,7 +29,7 @@ public class UIPlaylist : MonoBehaviour
     public void SetupAllPlaylistButton()
     {
         // bersiin tombol2 lama
-         foreach (Transform TF_child in TF_playlistButtonParent)
+        foreach (Transform TF_child in TF_playlistButtonParent)
         {
             Destroy(TF_child.gameObject);
         }
@@ -89,16 +89,20 @@ public class UIPlaylist : MonoBehaviour
             Button BTN_btn = GO_newButton.GetComponent<Button>();
             Songs _selectedSong = songs;
 
-            Songs _songsComponent = GO_newButton.GetComponent<Songs>();
-
-            if (_songsComponent == null)
+            /*Songs songComp = GO_newButton.GetComponent<Songs>();
+            if (songComp == null)
             {
-                //_songsComponent = GO_newButton.AddComponent<Songs>();
+                songComp = GO_newButton.AddComponent<Songs>();
             }
 
-            _songsComponent.ADO_music = songs.ADO_music;
-            _songsComponent.S_titleAndAuthor = songs.S_titleAndAuthor;
-            _songsComponent.ENM_musicCode = songs.ENM_musicCode;
+            songComp.ADO_music = songs.ADO_music;
+            songComp.S_titleAndAuthor = songs.S_titleAndAuthor;
+            songComp.ENM_musicCode = songs.ENM_musicCode;*/
+
+            BTN_btn.onClick.AddListener(() =>
+            {
+                SCR_MM.PlaySong(_selectedSong);
+            });
         }
     }
 }

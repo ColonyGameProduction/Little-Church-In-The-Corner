@@ -14,12 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ENM_playlistType: 2
   SCR_playlist:
-  - ADO_music: {fileID: 8300000, guid: 0bfaf10cf24737a42ae4d27953ebdeb5, type: 3}
-    S_titleAndAuthor: Tulsa - Reed Mathis
+  - ADO_music: {fileID: 8300000, guid: 89a837b0206f4b242844412d1ac849c9, type: 3}
+    S_titleAndAuthor: Ayam Kampung
     ENM_musicCode: 101
-  - ADO_music: {fileID: 8300000, guid: bef74404cbcc8be41bd4902db406a19d, type: 3}
-    S_titleAndAuthor: Washington DC - Reed Mathis
+  - ADO_music: {fileID: 8300000, guid: fbb5625d4eac66d47b3a5d840d1e0b37, type: 3}
+    S_titleAndAuthor: Raul Gay
     ENM_musicCode: 102
-  - ADO_music: {fileID: 8300000, guid: bd60ac003198cfd4cbde7cd25fd0d05e, type: 3}
-    S_titleAndAuthor: Austin - Reed Mathis
-    ENM_musicCode: 103
