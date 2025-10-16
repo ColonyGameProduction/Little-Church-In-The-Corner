@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlaylistTypeSO : ScriptableObject
 {
     public ENM_PlaylistType ENM_playlistType;
-    public List<Songs> SCR_playlist = new List<Songs>();
+    public List<Songs> SCR_playlist;
 
     // nyari song berdasarkan enum di satu playlist
     public Songs SCR_GetSongs(ENM_MusicCode ENM_musicCode)

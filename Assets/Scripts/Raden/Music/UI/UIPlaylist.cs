@@ -93,7 +93,7 @@ public class UIPlaylist : MonoBehaviour
 
             if (_songsComponent == null)
             {
-                _songsComponent = GO_newButton.AddComponent<Songs>();
+                //_songsComponent = GO_newButton.AddComponent<Songs>();
             }
 
             _songsComponent.ADO_music = songs.ADO_music;

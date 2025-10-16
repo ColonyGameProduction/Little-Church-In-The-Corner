@@ -23,7 +23,8 @@ public enum ENM_PlaylistType
 public enum ENM_MusicCode
 {
     Song1 = 101,
-    Song2 = 102
+    Song2 = 102,
+    Song3 = 103,
 }
 
 public enum ENM_PauseAndPlay

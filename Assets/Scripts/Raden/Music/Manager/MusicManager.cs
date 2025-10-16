@@ -64,7 +64,7 @@ public class MusicManager : MonoBehaviour
         AssigningSongTitleAndAuthor(songs);
 
         // udah diganti ya seyenkkk
-        songs.PlayingThisSong();
+        //songs.PlayingThisSong();
     }
 
     // nah ini buat setup tombol pause sama playnya

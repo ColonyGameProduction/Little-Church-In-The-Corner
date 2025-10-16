@@ -14,9 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ENM_playlistType: 1
   SCR_playlist:
-  - ADO_music: {fileID: 8300000, guid: 89a837b0206f4b242844412d1ac849c9, type: 3}
-    S_titleAndAuthor: Rudi Karbu - gerobak sodor
-    ENM_musicCode: 101
-  - ADO_music: {fileID: 8300000, guid: fbb5625d4eac66d47b3a5d840d1e0b37, type: 3}
-    S_titleAndAuthor: Istri Sahroni - suling majapahit
-    ENM_musicCode: 102
+  - {fileID: 0}

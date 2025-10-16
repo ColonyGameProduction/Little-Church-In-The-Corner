@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
-[System.Serializable]
-public class Songs : MonoBehaviour
+[Serializable]
+public class Songs
 {
     public AudioClip ADO_music;
     public string S_titleAndAuthor;
@@ -10,34 +11,34 @@ public class Songs : MonoBehaviour
 
     private Button BTN_self;
 
-    public void OnEnable()
-    {
-        // BTW disini aja den buat OnClick Button nya
-        // jadi lu pas instantiate button nya dari UIMusicManager, kasih komponent script ini
-        // trus disini lu kasih onclick nya si PlayingThis Song yang dibawah
-        // jadi lu add listener nya ditaro di UIPlaylist
+    //public void OnEnable()
+    //{
+    //    // BTW disini aja den buat OnClick Button nya
+    //    // jadi lu pas instantiate button nya dari UIMusicManager, kasih komponent script ini
+    //    // trus disini lu kasih onclick nya si PlayingThis Song yang dibawah
+    //    // jadi lu add listener nya ditaro di UIPlaylist
 
-        BTN_self = GetComponent<Button>();
+    //    BTN_self = GetComponent<Button>();
 
-        if (BTN_self != null)
-        {
-            BTN_self.onClick.RemoveAllListeners();
+    //    if (BTN_self != null)
+    //    {
+    //        BTN_self.onClick.RemoveAllListeners();
 
-            BTN_self.onClick.AddListener(() =>
-            {
-                if (MusicManager.Instance != null)
-                {
-                    MusicManager.Instance.PlaySong(this);
-                }
-            });
-        }
-    }
+    //        BTN_self.onClick.AddListener(() =>
+    //        {
+    //            if (MusicManager.Instance != null)
+    //            {
+    //                MusicManager.Instance.PlaySong(this);
+    //            }
+    //        });
+    //    }
+    //}
 
-    public void PlayingThisSong()
-    {
-        if (MusicManager.Instance != null)
-        {
-            MusicManager.Instance.ACT_playSong?.Invoke(this);
-        }
-    }
+    //public void PlayingThisSong()
+    //{
+    //    if (MusicManager.Instance != null)
+    //    {
+    //        MusicManager.Instance.ACT_playSong?.Invoke(this);
+    //    }
+    //}
 }

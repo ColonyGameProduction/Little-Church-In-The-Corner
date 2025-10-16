@@ -2506,7 +2506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1937454423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2574,8 +2574,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SO_listOfPlaylistSO: {fileID: 11400000, guid: 0b94dc6ea370faa479858617eddad013, type: 2}
-  SO_currPlaylistTypeSO: {fileID: 11400000, guid: 1098a2a667d8eaf459c9cd2ecb01bfc2, type: 2}
-  SCR_currSong: {fileID: 0}
+  SO_currPlaylistTypeSO: {fileID: 11400000, guid: 022473f60bba72e4e8509ac3024da077, type: 2}
+  SCR_currSong:
+    ADO_music: {fileID: 0}
+    S_titleAndAuthor: 
+    ENM_musicCode: 0
   ENM_pauseAndPlay: 0
   ENM_loopMethod: 0
   B_isShuffling: 0
