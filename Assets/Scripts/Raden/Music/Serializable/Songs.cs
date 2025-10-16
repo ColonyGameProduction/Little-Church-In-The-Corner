@@ -2,13 +2,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class Songs : MonoBehaviour
+public class Songs
 {
     public AudioClip ADO_music;
     public string S_titleAndAuthor;
     public ENM_MusicCode ENM_musicCode;
-
-    private Button BTN_self;
 
     public void OnEnable()
     {
@@ -17,7 +15,7 @@ public class Songs : MonoBehaviour
         // trus disini lu kasih onclick nya si PlayingThis Song yang dibawah
         // jadi lu add listener nya ditaro di UIPlaylist
 
-        BTN_self = GetComponent<Button>();
+        /*BTN_self = GetComponent<Button>();
 
         if (BTN_self != null)
         {
@@ -30,7 +28,7 @@ public class Songs : MonoBehaviour
                     MusicManager.Instance.PlaySong(this);
                 }
             });
-        }
+        }*/
     }
 
     public void PlayingThisSong()
