@@ -66,6 +66,11 @@ public class UIChatManager : MonoBehaviour
     /// </summary>
     public float F_textAnimationSpeed = 1f;
 
+    /// <summary>
+    /// Action untuk menunjukkan kalau lagi ga ada renungan yang sedang ditampilkan.
+    /// </summary>
+    public static event Action ACT_NoCurrentSermonAvailable;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -247,6 +252,10 @@ public class UIChatManager : MonoBehaviour
         GO_optionToDownloadContainer.SetActive(false);
         RemoveAllChatBubbles();
         GO_downloadedSermonButtonContainer.SetActive(true);
+
+        //Sudah ga ada renungan yang berjalan.
+        ChatManager.Instance.SO_currDialog = null;
+        ACT_NoCurrentSermonAvailable?.Invoke();
     }
 
     /// <summary>

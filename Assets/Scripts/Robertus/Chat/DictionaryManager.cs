@@ -27,10 +27,7 @@ public class DictionaryManager : MonoBehaviour
     /// Ini lokasi tempat penyimpanan renungan yang didownload di device pemain
     /// </summary>
     private string S_saveFilePath;
-    /// <summary>
-    /// Angka random buat dijadiin key pas encrypt save file. PASTIKAN TIDAK BERUBAH, soalnya kalau berubah, file-file yang telah terenkripsi sebelumnya ga bakal bisa dibalikin lagi.
-    /// </summary>
-    private const int I_KEY = 723;
+    
 
     private void Awake()
     {
@@ -45,7 +42,11 @@ public class DictionaryManager : MonoBehaviour
 
         //https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html
         //Basically, nanti kalau di Windows Unity Editor, lokasinya jadi %userprofile%\AppData\LocalLow\<companyname>\<productname>\Data\a.data
-        S_saveFilePath = Path.Combine(Application.persistentDataPath, "Data", "a.data");
+        S_saveFilePath = Path.Combine(Application.persistentDataPath, "Data", "downloaded.data");
+    }
+
+    private void Start()
+    {
         //Pas awal mulai, langsung ngeload renungan yang sudah disimpan.
         LoadFromDevice(S_saveFilePath);
     }
@@ -73,7 +74,7 @@ public class DictionaryManager : MonoBehaviour
 
         Debug.Log($"Saving...\n{SCR_saveData}");
 
-        SaveXOR(S_saveFilePath, JsonUtility.ToJson(SCR_saveData));
+        DataManager.Instance.SaveXOR(S_saveFilePath, JsonUtility.ToJson(SCR_saveData));
     }
 
     /// <summary>
@@ -91,7 +92,7 @@ public class DictionaryManager : MonoBehaviour
             string S_encryptedString = File.ReadAllText(S_filePath);
 
             //Diconvert ke teks yang bisa dibaca (JSON)
-            string S_decryptedString = S_EncryptDecrypt(S_encryptedString);
+            string S_decryptedString = DataManager.Instance.S_EncryptDecrypt(S_encryptedString);
 
             //Diconvert ke class SaveData.
             SaveData SCR_loadedData = JsonUtility.FromJson<SaveData>(S_decryptedString);
@@ -113,42 +114,6 @@ public class DictionaryManager : MonoBehaviour
             Debug.LogWarning("WARNING: File doesn't exist");
         }
     }
-
-    #region Encryption Algorithm
-    //Semuanya diambil dari link ini, dengan beberapa modifikasi.
-    //https://discussions.unity.com/t/saving-loading-with-encryption/589974
-
-    //Takes string, encrypts string and then saves it to file
-    private void SaveXOR(string S_filePath, string S_data)
-    {
-        FileInfo fileInfo = new FileInfo(S_filePath);
-        fileInfo.Directory.Create(); // If the directory already exists, this method does nothing.
-
-        //Kalau ga ada directorynya, ini bakal error
-        //Makanya di atas ada Directory.Create()
-        StreamWriter streamWriter = new StreamWriter(S_filePath);
-        streamWriter.Write(S_EncryptDecrypt(S_data));
-        streamWriter.Flush();
-        streamWriter.Close();
-    }
-
-    //XOR encryption by key, basiclly it takes ASCII code of character and ^ by key, does that to each character of string
-    public string S_EncryptDecrypt(string S_textToEncrypt)
-    {
-        Debug.Log("Encrypting/Decrypting\n" + S_textToEncrypt);
-        StringBuilder SB_inSb = new StringBuilder(S_textToEncrypt);
-        StringBuilder SB_outSb = new StringBuilder(S_textToEncrypt.Length);
-        char c;
-        for (int i = 0; i < S_textToEncrypt.Length; i++)
-        {
-            c = SB_inSb[i];
-            c = (char)(c ^ I_KEY);
-            SB_outSb.Append(c);
-        }
-        Debug.Log("Result\n" + SB_outSb.ToString());
-        return SB_outSb.ToString();
-    }
-    #endregion
 
     #region Save Data Classes
     //Yes, harus kayak gini biar bisa diserialize ke JSON. Ga bisa langsung serialize List<DialogSO> soalnya JSONUtility ga bisa serialize list for some reason. Harus ada wrapper classnya.

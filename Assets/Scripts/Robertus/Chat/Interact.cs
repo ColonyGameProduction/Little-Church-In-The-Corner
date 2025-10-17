@@ -17,12 +17,14 @@ public class Interact : MonoBehaviour
     {
         TimeManager.ACT_interactIsReady += ShowInteractButton;
         BTN_interact.onClick.AddListener(ClickInteractButton);
+        UIChatManager.ACT_NoCurrentSermonAvailable += ShowInteractButton;
     }
 
     private void OnDisable()
     {
         TimeManager.ACT_interactIsReady -= ShowInteractButton;
         BTN_interact.onClick.RemoveListener(ClickInteractButton);
+        UIChatManager.ACT_NoCurrentSermonAvailable -= ShowInteractButton;
     }
 
     /// <summary>
@@ -30,6 +32,13 @@ public class Interact : MonoBehaviour
     /// </summary>
     private void ShowInteractButton()
     {
+        //Kalau lagi ada renungan yang berjalan, jangan tampilin interact button.
+        if (ChatManager.Instance.SO_currDialog)
+            return;
+        //Kalau ga ada renungan dalam queue, jangan tampilin interact button.
+        if (TimeManager.Instance.I_queuedSermon <= 0)
+            return;
+
         BTN_interact.gameObject.SetActive(true);
     }
 
@@ -40,5 +49,7 @@ public class Interact : MonoBehaviour
     {
         UIChatManager.Instance.SetupAllChats();
         BTN_interact.gameObject.SetActive(false);
+        //Kurangin queue renungan
+        TimeManager.Instance.I_queuedSermon--;
     }
 }
