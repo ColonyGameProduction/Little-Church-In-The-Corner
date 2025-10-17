@@ -12,4 +12,11 @@ public class DialogComponent
     [TextArea]
     public string S_stringText;
     public ENM_CharFace ENM_charFace;
+
+    public DialogComponent(Color cOL_bubbleColour, string stringText, ENM_CharFace eNM_charFace)
+    {
+        COL_bubbleColour = cOL_bubbleColour;
+        S_stringText = stringText;
+        ENM_charFace = eNM_charFace;
+    }
 }
