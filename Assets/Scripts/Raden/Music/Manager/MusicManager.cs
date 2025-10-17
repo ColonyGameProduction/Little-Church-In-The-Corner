@@ -41,12 +41,14 @@ public class MusicManager : MonoBehaviour
 
     private void Start()
     {
+        //ACT_playSong += PlaySong();
         if (SO_currPlaylistTypeSO != null && SO_currPlaylistTypeSO.SCR_playlist.Count > 0)
         {
             SCR_currSong = SO_currPlaylistTypeSO.SCR_playlist[0];
             PlaySong(SCR_currSong);
         }
     }
+
 
     // ini fungsi nge nge play lagunya
     public void PlaySong(Songs songs)
