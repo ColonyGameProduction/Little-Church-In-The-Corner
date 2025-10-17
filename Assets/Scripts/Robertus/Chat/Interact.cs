@@ -15,13 +15,13 @@ public class Interact : MonoBehaviour
 
     private void OnEnable()
     {
-        LocalTime.ACT_interactIsReady += ShowInteractButton;
+        TimeManager.ACT_interactIsReady += ShowInteractButton;
         BTN_interact.onClick.AddListener(ClickInteractButton);
     }
 
     private void OnDisable()
     {
-        LocalTime.ACT_interactIsReady -= ShowInteractButton;
+        TimeManager.ACT_interactIsReady -= ShowInteractButton;
         BTN_interact.onClick.RemoveListener(ClickInteractButton);
     }
 

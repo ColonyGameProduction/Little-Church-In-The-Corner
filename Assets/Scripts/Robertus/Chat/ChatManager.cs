@@ -53,12 +53,12 @@ public class ChatManager : MonoBehaviour
 
     private void OnEnable()
     {
-        LocalTime.ACT_interactIsReady += SetupRenungan;
+        TimeManager.ACT_interactIsReady += SetupRenungan;
     }
 
     private void OnDisable()
     {
-        LocalTime.ACT_interactIsReady -= SetupRenungan;
+        TimeManager.ACT_interactIsReady -= SetupRenungan;
     }
 
     /// <summary>
@@ -107,7 +107,7 @@ public class ChatManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Mengatur renungan baru. Ini seharusnya dipanggil dari RenunganIsReady yang ada di LocalTime.
+    /// Mengatur renungan baru. Ini seharusnya dipanggil dari RenunganIsReady yang ada di TimeManager.
     /// Ini bakal ngambil renungan random dan mengatur index dialog menjadi 0 kembali.
     /// </summary>
     public void SetupRenungan()

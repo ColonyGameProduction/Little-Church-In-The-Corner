@@ -6,7 +6,7 @@ using UnityEngine;
 /// <summary>
 /// Mengatur logic waktu dan penjadwalan renungan
 /// </summary>
-public class LocalTime : MonoBehaviour
+public class TimeManager : MonoBehaviour
 {
     /// <summary>
     /// Waktu saat ini, tergantung device pemain
