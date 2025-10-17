@@ -32,11 +32,7 @@ public class UISavedSermonItem : MonoBehaviour
     /// <summary>
     /// Tombol delete renungan. Ini bakal menampilkan panel konfirmasi terlebih dahulu. Also, ini juga hanya muncul kalau renungan diseleksi.
     /// </summary>
-    public Button BTN_deleteButton;
-    /// <summary>
-    /// Tombol favorit renungan. Untuk sekarang, ini hanya visual saja. Ga tau ke depannya bakal ada fungsi lain atau tidak.
-    /// </summary>
-    public Button BTN_favoriteButton;
+    public Button BTN_heartButton;
 
     private void Awake()
     {
@@ -46,15 +42,15 @@ public class UISavedSermonItem : MonoBehaviour
     private void OnEnable()
     {
         BTN_selectSermon.onClick.AddListener(SelectSermon);
-        BTN_deleteButton.onClick.AddListener(DeleteSermon);
-        BTN_favoriteButton.onClick.AddListener(FavoriteSermon);
+        BTN_heartButton.onClick.AddListener(DeleteSermon);
+        //BTN_favoriteButton.onClick.AddListener(FavoriteSermon);
     }
 
     private void OnDisable()
     {
         BTN_selectSermon.onClick.RemoveListener(SelectSermon);
-        BTN_deleteButton.onClick.RemoveListener(DeleteSermon);
-        BTN_favoriteButton.onClick.RemoveListener(FavoriteSermon);
+        BTN_heartButton.onClick.RemoveListener(DeleteSermon);
+        //BTN_favoriteButton.onClick.RemoveListener(FavoriteSermon);
     }
 
     /// <summary>
@@ -69,23 +65,24 @@ public class UISavedSermonItem : MonoBehaviour
         DictionaryManager.Instance.SCR_UIDictionary.SCR_currSelectedSermon = this;
         //Lalu ubah UInya
         IMG_background.color = COL_selectedColor;
-        BTN_deleteButton.gameObject.SetActive(true);
     }
 
     /// <summary>
     /// Ini dipanggil saat tombol delete di sebelah renungan dipencet.
+    /// Select dulu baru delete
     /// </summary>
     private void DeleteSermon()
     {
+        SelectSermon();
         DictionaryManager.Instance.SCR_UIDictionary.ShowDeleteConfirmation();
     }
 
     /// <summary>
     /// Ini dipanggil saat tombol favorit di sebelah renungan dipencet.
     /// </summary>
-    private void FavoriteSermon()
-    {
-        //Bolak-balik antara warna asli (white) dan warna silhouette (hitam)
-        BTN_favoriteButton.image.color = BTN_favoriteButton.image.color == Color.white ? Color.black : Color.white;
-    }
+    //private void FavoriteSermon()
+    //{
+    //    //Bolak-balik antara warna asli (white) dan warna silhouette (hitam)
+    //    BTN_favoriteButton.image.color = BTN_favoriteButton.image.color == Color.white ? Color.black : Color.white;
+    //}
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,6 +46,10 @@ public class UIDictionary : MonoBehaviour
     /// Panel konfirmasi pas mau delete renungan
     /// </summary>
     public GameObject GO_deleteConfirmationPanel;
+    /// <summary>
+    /// Teks yang bakal ditampilkan pas mau delete renungan
+    /// </summary>
+    public TextMeshProUGUI TMPUGUI_deleteConfirmationText;
     /// <summary>
     /// Tombol YES untuk delete renungan
     /// </summary>
@@ -177,7 +182,6 @@ public class UIDictionary : MonoBehaviour
         foreach (UISavedSermonItem SCR_item in List_SCR_savedSermonItemList)
         {
             SCR_item.IMG_background.color = Color.white;
-            SCR_item.BTN_deleteButton.gameObject.SetActive(false);
         }
     }
 
@@ -186,6 +190,7 @@ public class UIDictionary : MonoBehaviour
     /// </summary>
     public void ShowDeleteConfirmation()
     {
+        TMPUGUI_deleteConfirmationText.text = $"Delete {DictionaryManager.Instance.SO_currDialogSelected.ENM_dialogTitle} from list?";
         GO_deleteConfirmationPanel.SetActive(true);
     }
 
