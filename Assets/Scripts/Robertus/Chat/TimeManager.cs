@@ -6,8 +6,10 @@ using UnityEngine;
 /// <summary>
 /// Mengatur logic waktu dan penjadwalan renungan
 /// </summary>
-public class LocalTime : MonoBehaviour
+public class TimeManager : MonoBehaviour
 {
+    public static TimeManager Instance { get; private set; }
+
     /// <summary>
     /// Waktu saat ini, tergantung device pemain
     /// </summary>
@@ -25,14 +27,65 @@ public class LocalTime : MonoBehaviour
     /// <summary>
     /// Jadwal aslinya, nanti diconvert dari SCR_sermonSchedule
     /// </summary>
-    private List<Schedule> List_SCR_sermonSchedule;
+    [HideInInspector] public List<Schedule> List_SCR_sermonSchedule;
 
     /// <summary>
     /// Ini untuk yield new return WaitForSeconds, tapi karena delaynya selalu 1 menit (jadi cuma ngecek ada renungan baru atau engga setiap satu menit), jadi diset di awal aja.
     /// </summary>
     private WaitForSeconds WFS_oneMinuteTimer;
 
+    /// <summary>
+    /// Banyak renungan yang ada di queue saat ini.
+    /// </summary>
+    private int i_queuedSermon;
+
+    /// <summary>
+    /// Banyak renungan yang ada di queue saat ini.
+    /// Pakai property seperti ini biar pas ngeset valuenya, dia bisa pastiin kalau valuenya ga pernah negatif.
+    /// </summary>
+    public int I_queuedSermon
+    {
+        get
+        {
+            Debug.Log($"Sermon queued: {i_queuedSermon}");
+            return i_queuedSermon;
+        }
+        set
+        {
+            Debug.Log($"Adding sermon, from {i_queuedSermon} to {value}");
+            //Memastikan jumlah renungan yang ada di dalam queue di antara 0 dan batas maksimum
+            i_queuedSermon = Mathf.Clamp(value, 0, I_maxQueuedSermon);
+        }
+    }
+
+    /// <summary>
+    /// Batas maksimum renungan yang boleh ada di queue. Selebihnya bakal hangus.
+    /// </summary>
+    public int I_maxQueuedSermon = 10;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     private void Start()
+    {
+        WFS_oneMinuteTimer = new WaitForSeconds(60);
+        StartCoroutine(WaitForRenungan());
+    }
+
+    /// <summary>
+    /// Dulunya ini ada di Start(), tapi karena sekarang ada fitur save/load, ini diatur di sana.
+    /// Kalau misalnya ga ada save file atau last loginnya kemarin-kemarin, bikin list schedule baru.
+    /// </summary>
+    public void SetupListSchedule()
     {
         //Convert jadwal yang diset di Inspector ke jadwal yang bisa diedit dan semacamnya.
         List_SCR_sermonSchedule = new List<Schedule>();
@@ -40,9 +93,20 @@ public class LocalTime : MonoBehaviour
         {
             List_SCR_sermonSchedule.Add(new Schedule(time.DT_ToDateTime(), false));
         }
+    }
 
-        WFS_oneMinuteTimer = new WaitForSeconds(60);
-        StartCoroutine(WaitForRenungan());
+    /// <summary>
+    /// Ini untuk keperluan save file. Cuma wrapper untuk List<\Schedule>
+    /// </summary>
+    [Serializable]
+    public class ListOfSchedule
+    {
+        public List<Schedule> List_schedules;
+
+        public ListOfSchedule(List<Schedule> list_schedules)
+        {
+            List_schedules = list_schedules;
+        }
     }
 
     /// <summary>
@@ -68,12 +132,9 @@ public class LocalTime : MonoBehaviour
             return;
 
         DT_localTime = DateTime.Now;
-        bool B_renunganIsReady = false;
 
         foreach (Schedule schedule in List_SCR_sermonSchedule)
         {
-            //Debug.Log($"Schedule {schedule.B_hasBeenShown}: {schedule.DT_time.Hour} : {schedule.DT_time.Minute} VS datetime now {DT_localTime.Hour} : {DT_localTime.Minute}");
-
             //Kalau jadwalnya udah pernah dijalanin sebelumnya, lewatin aja
             if (schedule.B_hasBeenShown) continue;
 
@@ -82,17 +143,13 @@ public class LocalTime : MonoBehaviour
                 (DT_localTime.Hour == schedule.DT_time.Hour && DT_localTime.Minute >= schedule.DT_time.Minute))
             {
                 schedule.B_hasBeenShown = true;
-                B_renunganIsReady = true;
-
-                //Game Design:
-                //Kalau misalnya lewat beberapa jadwal sekaligus (misal, baru interact dan jalanin renungan di jam 5 sore, padahal sudah ada renungan yang nunggu dari jam 12 dan jam 3), apakah pas interact:
-                //1. jalanin renungan, lalu yang sisanya dibuang. Saat ini, sistemnya udah kayak gini.
-                //2. jalanin renungan, tapi yang lain disimpan (diqueue), jadi abis renungannya habis, bisa langsung play renungan lain karena udah ada di queue. Sistem ini bisa diperoleh dengan cara menambahkan break; di akhir if condition ini.
-                //break;
+                //Tambah renungan di dalam queue
+                I_queuedSermon++;
             }
         }
 
-        if(B_renunganIsReady) RenunganIsReady();
+        //Kalau misalnya ada renungan di dalam queue, setup renungan dan tampilin tombol interact
+        if(I_queuedSermon > 0) RenunganIsReady();
     }
 
     /// <summary>
