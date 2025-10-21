@@ -26,7 +26,7 @@ public class UIDictionary : MonoBehaviour
     /// <summary>
     /// Ini digunakan untuk track semua item dalam list renungan yang sudah didownload. Berguna untuk reset UI seluruh item renungan.
     /// </summary>
-    private List<UISavedSermonItem> List_SCR_savedSermonItemList;
+    private List<UISavedSermoButton> List_SCR_savedSermonItemList;
     /// <summary>
     /// Tombol untuk membuka dan membaca isi dari renungan yang sudah terpilih.
     /// </summary>
@@ -39,7 +39,7 @@ public class UIDictionary : MonoBehaviour
     /// <summary>
     /// Item renungan yang saat ini dipilih. Ini digunakan untuk delete renungan, biar bisa dihapus dari UI juga.
     /// </summary>
-    [HideInInspector] public UISavedSermonItem SCR_currSelectedSermon;
+    [HideInInspector] public UISavedSermoButton SCR_currSelectedSermon;
 
     /// <summary>
     /// Panel konfirmasi pas mau delete renungan
@@ -76,7 +76,7 @@ public class UIDictionary : MonoBehaviour
     public void SetupAllListOfSermon()
     {
         //Mengosongkan list biar ga ada duplicate
-        if (List_SCR_savedSermonItemList == null) List_SCR_savedSermonItemList = new List<UISavedSermonItem>();
+        if (List_SCR_savedSermonItemList == null) List_SCR_savedSermonItemList = new List<UISavedSermoButton>();
         List_SCR_savedSermonItemList.Clear();
 
         //Menghapus UI lama biar ga ada duplicate
@@ -90,7 +90,7 @@ public class UIDictionary : MonoBehaviour
         {
             GameObject GO_savedSermon = Instantiate(PB_dictionaryListButton, TF_dictionaryListParent);
 
-            UISavedSermonItem SCR_savedSermonItem = GO_savedSermon.GetComponent<UISavedSermonItem>();
+            UISavedSermoButton SCR_savedSermonItem = GO_savedSermon.GetComponent<UISavedSermoButton>();
 
             //Setup judul dan dialogSO
             SCR_savedSermonItem.SCR_dialogSO = SO_savedDialog;
@@ -174,7 +174,7 @@ public class UIDictionary : MonoBehaviour
     {
         DictionaryManager.Instance.SO_currDialogSelected = null;
         SCR_currSelectedSermon = null;
-        foreach (UISavedSermonItem SCR_item in List_SCR_savedSermonItemList)
+        foreach (UISavedSermoButton SCR_item in List_SCR_savedSermonItemList)
         {
             SCR_item.IMG_background.color = Color.white;
             SCR_item.BTN_deleteButton.gameObject.SetActive(false);

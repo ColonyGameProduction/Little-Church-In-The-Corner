@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /// Container untuk Game Object renungan yang sudah didownload.
 /// </summary>
 [RequireComponent(typeof(Button))]
-public class UISavedSermonItem : MonoBehaviour
+public class UISavedSermoButton : MonoBehaviour
 {
     /// <summary>
     /// Judul renungan
