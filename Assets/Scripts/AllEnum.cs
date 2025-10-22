@@ -39,3 +39,12 @@ public enum ENM_LoopMethod
     LoopPlaylist
 }
 #endregion
+
+#region HUD
+public enum ENM_Room
+{
+    Church,
+    Office,
+    Bedroom
+}
+#endregion
