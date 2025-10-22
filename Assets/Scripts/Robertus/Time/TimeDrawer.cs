@@ -20,7 +20,7 @@ public class TimeDrawer : PropertyDrawer
         position = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);
 
         // Don't make child fields be indented
-        var indent = EditorGUI.indentLevel;
+        var I_indent = EditorGUI.indentLevel;
         EditorGUI.indentLevel = 0;
 
         // Calculate rects
@@ -38,15 +38,15 @@ public class TimeDrawer : PropertyDrawer
 
         // Draw fields - pass GUIContent.none to each so they are drawn without labels
         //Actually tambahin custom inspectornya di inspector
-        property.FindPropertyRelative("I_hour").intValue = DrawPaddedIntField(hourRect, property.FindPropertyRelative("I_hour").intValue, 0, 23);
-        property.FindPropertyRelative("I_minute").intValue = DrawPaddedIntField(minuteRect, property.FindPropertyRelative("I_minute").intValue, 0, 59);
+        property.FindPropertyRelative("I_hour").intValue = I_DrawPaddedIntField(hourRect, property.FindPropertyRelative("I_hour").intValue, 0, 23);
+        property.FindPropertyRelative("I_minute").intValue = I_DrawPaddedIntField(minuteRect, property.FindPropertyRelative("I_minute").intValue, 0, 59);
 
         //EditorGUI.PropertyField(hourRect, property.FindPropertyRelative("I_hour"), GUIContent.none);
         EditorGUI.LabelField(divisorRect, ":", divisiorGuiStyle);
         //EditorGUI.PropertyField(minuteRect, property.FindPropertyRelative("I_minute"), GUIContent.none);
 
-        // Set indent back to what it was
-        EditorGUI.indentLevel = indent;
+        // Set I_indent back to what it was
+        EditorGUI.indentLevel = I_indent;
 
         EditorGUI.EndProperty();
     }
@@ -54,12 +54,12 @@ public class TimeDrawer : PropertyDrawer
     //ChatGPT
     //Buat nunjukin angka di inspector sebagai 01, 02, dst.
     //Also bakal batasin angkanya dari min ke max
-    private int DrawPaddedIntField(Rect rect, int value, int min, int max)
+    private int I_DrawPaddedIntField(Rect rect, int value, int min, int max)
     {
         value = Mathf.Clamp(value, min, max);
-        string padded = value.ToString($"D2");
-        string newText = EditorGUI.DelayedTextField(rect, GUIContent.none, padded);
-        if (int.TryParse(newText, out int newValue))
+        string S_padded = value.ToString($"D2");
+        string S_newText = EditorGUI.DelayedTextField(rect, GUIContent.none, S_padded);
+        if (int.TryParse(S_newText, out int newValue))
             return newValue;
         return value;
     }
