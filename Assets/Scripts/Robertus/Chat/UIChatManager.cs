@@ -14,6 +14,35 @@ public class UIChatManager : MonoBehaviour
     public GameObject PB_chatBubble;
     [HideInInspector] public List<UIChatBubble> List_chatBubble;
     public Transform TF_chatBubbleParent;
+    /// <summary>
+    /// Game object yang berisi tombol-tombol untuk download renungan saat ini. Ini muncul pas renungan sudah selesai ditampilkan semuanya.
+    /// </summary>
+    public GameObject GO_optionToDownloadContainer;
+    /// <summary>
+    /// Game object yang berisi tombol untuk pergi ke menu list renungan yang sudah didownload. Ini muncul setelah pemain pilih salah satu opsi untuk download atau tidak renungan saat ini.
+    /// </summary>
+    public GameObject GO_downloadedSermonButtonContainer;
+    /// <summary>
+    /// Menu renungan yang sudah didownload
+    /// </summary>
+    public GameObject GO_dictionaryContainer;
+
+    /// <summary>
+    /// Tombol untuk download renungan saat ini
+    /// </summary>
+    public Button BTN_yesToDownloadButton;
+    /// <summary>
+    /// Tombol untuk tidak download renungan saat ini.
+    /// </summary>
+    public Button BTN_noToDownloadButton;
+    /// <summary>
+    /// Tombol untuk menampilkan menu list renungan yang sudah didownload
+    /// </summary>
+    public Button BTN_downloadedSermonsButton;
+    /// <summary>
+    /// Tombol untuk keluar dari menu list renungan yang sudah didownload
+    /// </summary>
+    public Button BTN_closeDownloadedSermonsButton;
 
     [Header("Data")]
     /// <summary>
@@ -37,6 +66,11 @@ public class UIChatManager : MonoBehaviour
     /// </summary>
     public float F_textAnimationSpeed = 1f;
 
+    /// <summary>
+    /// Action untuk menunjukkan kalau lagi ga ada renungan yang sedang ditampilkan.
+    /// </summary>
+    public static event Action ACT_NoCurrentSermonAvailable;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -52,11 +86,22 @@ public class UIChatManager : MonoBehaviour
     private void OnEnable()
     {
         ChatManager.ACT_PlayDialogue += SetupNextChatBubble;
+        BTN_yesToDownloadButton.onClick.AddListener(DownloadSermon);
+        BTN_yesToDownloadButton.onClick.AddListener(HideDownloadOptionsAndDialogue);
+        BTN_noToDownloadButton.onClick.AddListener(HideDownloadOptionsAndDialogue);
+        ChatManager.ACT_RenunganDone += ShowDownloadOptions;
+        BTN_downloadedSermonsButton.onClick.AddListener(ShowDownloadedSermons);
+        BTN_closeDownloadedSermonsButton.onClick.AddListener(HideDownloadedSermons);
     }
 
     private void OnDisable()
     {
         ChatManager.ACT_PlayDialogue -= SetupNextChatBubble;
+        BTN_yesToDownloadButton.onClick.RemoveAllListeners();
+        BTN_noToDownloadButton.onClick.RemoveAllListeners();
+        ChatManager.ACT_RenunganDone -= ShowDownloadOptions;
+        BTN_downloadedSermonsButton.onClick.RemoveAllListeners();
+        BTN_closeDownloadedSermonsButton.onClick.RemoveAllListeners();
     }
 
     #region Chat Bubble
@@ -71,10 +116,8 @@ public class UIChatManager : MonoBehaviour
         //Fade out semua chat bubble yang masih tersisa
         RemoveAllChatBubbles();
 
-        //Bersihin list chat bubble kalau misalnya ada yang tersisa, mungkin dari dialog-dialog sebelumnya.
-        if (List_chatBubble == null) List_chatBubble = new List<UIChatBubble>();
-        List_chatBubble.Clear();
-
+        //Renungan baru bakal dimulai, jadi tombol "Saved Sermon" dihilangin untuk sementara waktu
+        GO_downloadedSermonButtonContainer.SetActive(false);
 
         //Ini dialog/renungan saat ini.
         DialogSO SO_dialogSO = ChatManager.Instance.SO_currDialog;
@@ -107,6 +150,9 @@ public class UIChatManager : MonoBehaviour
         {
             SCR_chatBubble.FadeOutAndDestroyAnimation();
         }
+        //Bersihin list chat bubble kalau misalnya ada yang tersisa, mungkin dari dialog-dialog sebelumnya.
+        if (List_chatBubble == null) List_chatBubble = new List<UIChatBubble>();
+        List_chatBubble.Clear();
     }
 
     /// <summary>
@@ -181,5 +227,62 @@ public class UIChatManager : MonoBehaviour
             //Debug.Log($"{i} chat is fading, alpha at {F_alpha}");
         }
     }
+    #endregion
+
+    #region Dictionary
+
+    /// <summary>
+    /// Tampilkan pilihan untuk download renungan saat ini.
+    /// Dipanggil saat renungan sudah selesai ditampilkan.
+    /// </summary>
+    private void ShowDownloadOptions()
+    {
+        GO_optionToDownloadContainer.SetActive(true);
+    }
+
+    /// <summary>
+    /// Sembunyikan pilihan untuk download renungan saat ini.
+    /// Also sembunyikan semua chat bubble renungan saat ini.
+    /// Also (2) tampilkan tombol untuk pergi ke menu list renungan yang sudah didownload.
+    /// 
+    /// Ditampilkan saat pemain pilih salah satu opsi untuk download atau tidak.
+    /// </summary>
+    private void HideDownloadOptionsAndDialogue()
+    {
+        GO_optionToDownloadContainer.SetActive(false);
+        RemoveAllChatBubbles();
+        GO_downloadedSermonButtonContainer.SetActive(true);
+
+        //Sudah ga ada renungan yang berjalan.
+        ChatManager.Instance.SO_currDialog = null;
+        ACT_NoCurrentSermonAvailable?.Invoke();
+    }
+
+    /// <summary>
+    /// Dipanggil saat pemain pilih Yes untuk download renungan saat ini.
+    /// </summary>
+    private void DownloadSermon()
+    {
+        DictionaryManager.Instance.DownloadToDevice();
+    }
+
+    /// <summary>
+    /// Dipanggil saat pemain menekan tombol untuk menampilkan menu list renungan yang sudah didownload.
+    /// Ini bakal menyiapkan dan menampilkan list renungan yang sudah didownload.
+    /// </summary>
+    private void ShowDownloadedSermons()
+    {
+        DictionaryManager.Instance.SCR_UIDictionary.SetupAllListOfSermon();
+        GO_dictionaryContainer.SetActive(true);
+    }
+
+    /// <summary>
+    /// Dipanggil saat pemain menekan tombol exit atau keluar di dalam menu list renungan yang sudah didownload.
+    /// </summary>
+    private void HideDownloadedSermons()
+    {
+        GO_dictionaryContainer.SetActive(false);
+    }
+
     #endregion
 }

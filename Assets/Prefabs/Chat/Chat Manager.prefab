@@ -71,6 +71,13 @@ MonoBehaviour:
   PB_chatBubble: {fileID: 3222345978840826382, guid: ced12d870d030ad439db50dfe078883a, type: 3}
   List_chatBubble: []
   TF_chatBubbleParent: {fileID: 0}
+  GO_optionToDownloadContainer: {fileID: 0}
+  GO_downloadedSermonButtonContainer: {fileID: 0}
+  GO_dictionaryContainer: {fileID: 0}
+  BTN_yesToDownloadButton: {fileID: 0}
+  BTN_noToDownloadButton: {fileID: 0}
+  BTN_downloadedSermonsButton: {fileID: 0}
+  BTN_closeDownloadedSermonsButton: {fileID: 0}
   I_maxChatBubble: 2
   I_amountOfFadedChatBubbles: 1
   F_animationDuration: 0.5
@@ -85,11 +92,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8790204805922321323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c987d148a9575e40bad939baa957c15, type: 3}
+  m_Script: {fileID: 11500000, guid: 60bb77662a4fbeb499850fa27a9c642a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SCR_sermonSchedule:
-  - I_hour: 3
+  - I_hour: 5
     I_minute: 0
   - I_hour: 9
     I_minute: 0
@@ -97,7 +104,7 @@ MonoBehaviour:
     I_minute: 0
   - I_hour: 15
     I_minute: 0
-  - I_hour: 20
+  - I_hour: 21
     I_minute: 0
 --- !u!114 &79721989721427080
 MonoBehaviour:

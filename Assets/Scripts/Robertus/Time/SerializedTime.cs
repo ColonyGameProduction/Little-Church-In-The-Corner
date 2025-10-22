@@ -13,6 +13,7 @@ public class SerializedTime
 
     public DateTime DT_ToDateTime()
     {
-        return new DateTime(1, 1, 1, I_hour, I_minute, 0);
+        DateTime DT_now = DateTime.Now;
+        return new DateTime(DT_now.Year, DT_now.Month, DT_now.Day, I_hour, I_minute, 0);
     }
 }

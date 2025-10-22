@@ -37,6 +37,7 @@ public class ChatManager : MonoBehaviour
     public int I_amountOfTextAnimationDone;
 
     public static event Action<int> ACT_PlayDialogue;
+    public static event Action ACT_RenunganDone;
 
     private void Awake()
     {
@@ -52,12 +53,14 @@ public class ChatManager : MonoBehaviour
 
     private void OnEnable()
     {
-        LocalTime.ACT_interactIsReady += SetupRenungan;
+        TimeManager.ACT_interactIsReady += SetupRenungan;
+        UIChatManager.ACT_NoCurrentSermonAvailable += SetupRenungan;
     }
 
     private void OnDisable()
     {
-        LocalTime.ACT_interactIsReady -= SetupRenungan;
+        TimeManager.ACT_interactIsReady -= SetupRenungan;
+        UIChatManager.ACT_NoCurrentSermonAvailable -= SetupRenungan;
     }
 
     /// <summary>
@@ -83,7 +86,9 @@ public class ChatManager : MonoBehaviour
         yield return new WaitUntil(() => I_amountOfTextAnimationDone >= I_currDialogComponentIndex);
 
         Debug.Log("All dialogues done!");
-        SO_currDialog = null;
+
+        //Nunggu semuanya selesai dulu, baru munculin hal lain seperti opsi untuk download
+        ACT_RenunganDone?.Invoke();
     }
 
     /// <summary>
@@ -104,11 +109,19 @@ public class ChatManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Mengatur renungan baru. Ini seharusnya dipanggil dari RenunganIsReady yang ada di LocalTime.
+    /// Mengatur renungan baru. Ini seharusnya dipanggil dari RenunganIsReady yang ada di TimeManager.
+    /// Also dipanggil kalau misalnya ada renungan di queue dan seluruh renungan sudah selesai
     /// Ini bakal ngambil renungan random dan mengatur index dialog menjadi 0 kembali.
     /// </summary>
     public void SetupRenungan()
     {
+        //Kalau lagi ada renungan yang berjalan, jangan setup renungan.
+        if (SO_currDialog)
+            return;
+        //Kalau ga ada renungan dalam queue, jangan setup renungan.
+        if (TimeManager.Instance.I_queuedSermon <= 0)
+            return;
+
         SO_currDialog = SO_listOfDialogueSO.SO_GetRandomDialogSO();
         I_currDialogComponentIndex = 0;
     }
