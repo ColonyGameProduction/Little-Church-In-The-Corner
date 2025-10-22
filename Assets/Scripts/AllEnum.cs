@@ -6,12 +6,21 @@ public enum ENM_CharFace
 
 public enum ENM_DialogTitle
 {
+    None = 0,
     Test1 = 1,
     Test2 = 2,
     Sample = 3,
     SamplePanjang = 4,
 }
 #endregion
+
+//Ini nanti ganti ke punyanya Raden aja
+public enum ENM_Room
+{
+    Church = 1,
+    Work = 2,
+    Relax = 3
+}
 
 #region Music
 public enum ENM_PlaylistType

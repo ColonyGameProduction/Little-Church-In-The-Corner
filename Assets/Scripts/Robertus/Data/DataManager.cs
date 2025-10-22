@@ -29,6 +29,12 @@ public class DataManager : MonoBehaviour
     /// </summary>
     private string S_scheduleFilePath;
 
+    /// <summary>
+    /// Action untuk diinvoke kalau udah selesai ngeload data dari save file.
+    /// Tujuannya biar class yang butuh data itu nunggu dulu sampai ngeloadnya selesai.
+    /// </summary>
+    public static event Action ACT_loadDone;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -126,7 +132,7 @@ public class DataManager : MonoBehaviour
             }
         }
 
-        
+        ACT_loadDone?.Invoke();
     }
 
     /// <summary>
@@ -214,9 +220,9 @@ public class DataManager : MonoBehaviour
         StringBuilder SB_inSb = new StringBuilder(S_textToEncrypt);
         StringBuilder SB_outSb = new StringBuilder(S_textToEncrypt.Length);
         char c;
-        for (int i = 0; i < S_textToEncrypt.Length; i++)
+        for (int I_inputIndex = 0; I_inputIndex < S_textToEncrypt.Length; I_inputIndex++)
         {
-            c = SB_inSb[i];
+            c = SB_inSb[I_inputIndex];
             c = (char)(c ^ I_KEY);
             SB_outSb.Append(c);
         }
