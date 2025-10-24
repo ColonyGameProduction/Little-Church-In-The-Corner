@@ -9,38 +9,31 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AllDialogSO", menuName = "Chat/AllDialogSO")]
 public class ListOfDialogSO : ScriptableObject
 {
-    public List<DialogSO> List_SO_dialogSO;
+    public List<DialogTypeSO> List_SO_dialogTypeSO;
+
 
     /// <summary>
-    /// Ambil dialog tertentu berdasarkan title dari dialog tersebut
+    /// Ambil dialog di ruangan tertentu. Kalau dialog title none, maka dia bakal ambil random dialog.
     /// </summary>
-    /// <param name="ENM_dialogTitle">Title dari dialog</param>
+    /// <param name="ENM_room">Renungan dari ruangan mana</param>
+    /// <param name="ENM_dialogTitle">Judul renungan kalau ada</param>
     /// <returns>DialogSO</returns>
-    public DialogSO SO_GetDialogSO(ENM_DialogTitle ENM_dialogTitle)
+    public DialogSO SO_GetDialogSO(ENM_Room ENM_room, ENM_DialogTitle ENM_dialogTitle = ENM_DialogTitle.None)
     {
         DialogSO SO_dialogSO = null;
 
-        foreach (DialogSO dialogSO in List_SO_dialogSO)
+        foreach (DialogTypeSO dialogTypeSO in List_SO_dialogTypeSO)
         {
-            if(dialogSO.ENM_dialogTitle == ENM_dialogTitle)
+            if(dialogTypeSO.ENM_dialogType == ENM_room)
             {
-                SO_dialogSO = dialogSO;
+                if (ENM_dialogTitle == ENM_DialogTitle.None)
+                    SO_dialogSO = dialogTypeSO.SO_GetRandomDialogSO();
+                else
+                    SO_dialogSO = dialogTypeSO.SO_GetDialogSO(ENM_dialogTitle);
+                break;
             }
         }
         
         return SO_dialogSO;
-    }
-
-    /// <summary>
-    /// Ambil dialog dari list semua dialog secara acak.
-    /// </summary>
-    /// <returns></returns>
-    public DialogSO SO_GetRandomDialogSO()
-    {
-        int I_randomIndex = UnityEngine.Random.Range(0, List_SO_dialogSO.Count);
-        //Debug.Log(I_randomIndex);
-        //Debug.Log(List_SO_dialogSO.Count);
-
-        return List_SO_dialogSO[I_randomIndex];
     }
 }

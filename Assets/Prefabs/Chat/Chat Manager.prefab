@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4163369408196000471}
   - component: {fileID: 407744173426025695}
   - component: {fileID: 79721989721427080}
+  - component: {fileID: 6249780566139944933}
+  - component: {fileID: 7403249644718896462}
   m_Layer: 0
   m_Name: Chat Manager
   m_TagString: Untagged
@@ -30,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,8 +54,8 @@ MonoBehaviour:
     List_face:
     - ENM_characterFace: 1
       SPR_characterSprite: {fileID: -60164073, guid: 40a2b21dc4b32db488c118b88c604b09, type: 3}
-  SO_currDialog: {fileID: 0}
-  F_interval: 3
+  ENM_currDialog: 0
+  F_interval: 0.01
   I_currDialogComponentIndex: 0
   I_amountOfTextAnimationDone: 0
 --- !u!114 &4163369408196000471
@@ -82,7 +84,7 @@ MonoBehaviour:
   I_amountOfFadedChatBubbles: 1
   F_animationDuration: 0.5
   F_fadeOutDistance: 100
-  F_textAnimationSpeed: 3
+  F_textAnimationSpeed: 999
 --- !u!114 &407744173426025695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +108,8 @@ MonoBehaviour:
     I_minute: 0
   - I_hour: 21
     I_minute: 0
+  List_SCR_sermonSchedule: []
+  I_maxQueuedSermon: 10
 --- !u!114 &79721989721427080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,3 +123,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BTN_interact: {fileID: 0}
+--- !u!114 &6249780566139944933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790204805922321323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e735da7bf3f8854a841c350a309ebc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SO_currDialogSelected: {fileID: 0}
+  List_SO_allDownloadedDialog: []
+  SCR_UIDictionary: {fileID: 7403249644718896462}
+--- !u!114 &7403249644718896462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790204805922321323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558f774a478eb7549834b9afa49f2ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PB_dictionaryListButton: {fileID: 5032570416108590320, guid: dbd70a395b414374392c5c721cad2d4c, type: 3}
+  GO_currSavedDialogContainer: {fileID: 0}
+  TF_currSavedDialogContainer: {fileID: 0}
+  TF_dictionaryListParent: {fileID: 0}
+  BTN_openSelectedSermon: {fileID: 0}
+  BTN_closeSelectedSermon: {fileID: 0}
+  SCR_currSelectedSermon: {fileID: 0}
+  GO_deleteConfirmationPanel: {fileID: 0}
+  TMPUGUI_deleteConfirmationText: {fileID: 0}
+  BTN_yesDeleteSermon: {fileID: 0}
+  BTN_noDeleteSermon: {fileID: 0}

@@ -20,7 +20,7 @@ public class ChatManager : MonoBehaviour
     /// <summary>
     /// Dialog yang aktif saat ini
     /// </summary>
-    [HideInInspector] public DialogSO SO_currDialog;
+    [HideInInspector] public ENM_DialogTitle ENM_currDialog;
     /// <summary>
     /// Jeda antar teks dialog dalam satuan detik.
     /// </summary>
@@ -73,6 +73,11 @@ public class ChatManager : MonoBehaviour
     public IEnumerator DialogueSequence(float f_interval)
     {
         I_amountOfTextAnimationDone = 0;
+
+        //TODO: ganti supaya pakai TransitionManager.
+        Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
+        DialogSO SO_currDialog = SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church, ENM_currDialog);
+
         while (I_currDialogComponentIndex < SO_currDialog.SCR_dialogComponent.Count)
         {
             ACT_PlayDialogue?.Invoke(I_currDialogComponentIndex);
@@ -116,13 +121,15 @@ public class ChatManager : MonoBehaviour
     public void SetupRenungan()
     {
         //Kalau lagi ada renungan yang berjalan, jangan setup renungan.
-        if (SO_currDialog)
+        if (ENM_currDialog != ENM_DialogTitle.None)
             return;
         //Kalau ga ada renungan dalam queue, jangan setup renungan.
         if (TimeManager.Instance.I_queuedSermon <= 0)
             return;
 
-        SO_currDialog = SO_listOfDialogueSO.SO_GetRandomDialogSO();
+        //TODO: ganti supaya pakai TransitionManager.
+        Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
+        ENM_currDialog = SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church).ENM_dialogTitle;
         I_currDialogComponentIndex = 0;
     }
 }

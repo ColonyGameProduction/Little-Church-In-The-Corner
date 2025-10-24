@@ -58,7 +58,9 @@ public class DictionaryManager : MonoBehaviour
     {
         if (List_SO_allDownloadedDialog == null) List_SO_allDownloadedDialog = new List<DialogSO>();
 
-        List_SO_allDownloadedDialog.Add(ChatManager.Instance.SO_currDialog);
+        //TODO: ganti supaya pakai TransitionManager.
+        Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
+        List_SO_allDownloadedDialog.Add(ChatManager.Instance.SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church, ChatManager.Instance.ENM_currDialog));
 
         SaveToDevice();
     }

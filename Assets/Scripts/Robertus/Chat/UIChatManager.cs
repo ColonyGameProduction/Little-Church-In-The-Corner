@@ -120,7 +120,9 @@ public class UIChatManager : MonoBehaviour
         GO_downloadedSermonButtonContainer.SetActive(false);
 
         //Ini dialog/renungan saat ini.
-        DialogSO SO_dialogSO = ChatManager.Instance.SO_currDialog;
+        //TODO: ganti supaya pakai TransitionManager.
+        Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
+        DialogSO SO_dialogSO = ChatManager.Instance.SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church, ChatManager.Instance.ENM_currDialog); ;
 
         //Ini bakal membuat semua chat bubble yang bakal ada di dalam renungan, tetapi dia bakal didisable terlebih dahulu supaya ga kelihatan di UI. Nanti mereka bakal dienable kalau sudah waktunya.
         foreach (DialogComponent components in SO_dialogSO.SCR_dialogComponent)
@@ -195,36 +197,36 @@ public class UIChatManager : MonoBehaviour
     /// <param name="I_currentIndex">Index chat bubble saat ini</param>
     private void SetupPreviousChatBubbles(int I_currentIndex)
     {
-        for (int i = 0; i < List_chatBubble.Count; i++)
+        for (int I_chatBubbleIndex = 0; I_chatBubbleIndex < List_chatBubble.Count; I_chatBubbleIndex++)
         {
-            //Kalau i melebihi current index, break soalnya dialognya lom dimunculin.
-            if (i > I_currentIndex)
+            //Kalau I_chatBubbleIndex melebihi current index, break soalnya dialognya lom dimunculin.
+            if (I_chatBubbleIndex > I_currentIndex)
             {
-                //Debug.Log($"{i}. Reached the end of setup");
+                //Debug.Log($"{I_chatBubbleIndex}. Reached the end of setup");
                 break;
             }
 
             //Kalau chat bubblenya udah lama banget, hilangin. Ga jadi didisable soalnya ngaruh ke animasi fade outnya. Kalau didisable langsung, dia bakal abrupt gitu fade outnya.
-            if (I_currentIndex - i >= I_maxChatBubble + I_amountOfFadedChatBubbles)
+            if (I_currentIndex - I_chatBubbleIndex >= I_maxChatBubble + I_amountOfFadedChatBubbles)
             {
-                SetupChatBubble(i, 0f);
-                //List_chatBubble[i].gameObject.SetActive(false);
-                //Debug.Log($"{i} chat has expired, disabling");
+                SetupChatBubble(I_chatBubbleIndex, 0f);
+                //List_chatBubble[I_chatBubbleIndex].gameObject.SetActive(false);
+                //Debug.Log($"{I_chatBubbleIndex} chat has expired, disabling");
                 continue;
             }
 
             //Kalau chat bubblenya baru dan belum melebihi max chat bubble, maka transparansinya 1
-            if (I_currentIndex - i < I_maxChatBubble)
+            if (I_currentIndex - I_chatBubbleIndex < I_maxChatBubble)
             {
-                SetupChatBubble(i, 1f);
-                //Debug.Log($"{i} chat is new, alpha at 1");
+                SetupChatBubble(I_chatBubbleIndex, 1f);
+                //Debug.Log($"{I_chatBubbleIndex} chat is new, alpha at 1");
                 continue;
             }
 
             //Kalau chat bubblenya udah agak lama, mulai fade
-            float F_alpha = 1 - ((I_currentIndex - i + 1.0f - I_maxChatBubble) / (I_amountOfFadedChatBubbles + 1.0f));
-            SetupChatBubble(i, F_alpha);
-            //Debug.Log($"{i} chat is fading, alpha at {F_alpha}");
+            float F_alpha = 1 - ((I_currentIndex - I_chatBubbleIndex + 1.0f - I_maxChatBubble) / (I_amountOfFadedChatBubbles + 1.0f));
+            SetupChatBubble(I_chatBubbleIndex, F_alpha);
+            //Debug.Log($"{I_chatBubbleIndex} chat is fading, alpha at {F_alpha}");
         }
     }
     #endregion
@@ -254,7 +256,7 @@ public class UIChatManager : MonoBehaviour
         GO_downloadedSermonButtonContainer.SetActive(true);
 
         //Sudah ga ada renungan yang berjalan.
-        ChatManager.Instance.SO_currDialog = null;
+        ChatManager.Instance.ENM_currDialog = ENM_DialogTitle.None;
         ACT_NoCurrentSermonAvailable?.Invoke();
     }
 
