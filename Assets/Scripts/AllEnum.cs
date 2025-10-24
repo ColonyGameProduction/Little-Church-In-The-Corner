@@ -14,14 +14,6 @@ public enum ENM_DialogTitle
 }
 #endregion
 
-//Ini nanti ganti ke punyanya Raden aja
-public enum ENM_Room
-{
-    Church = 1,
-    Work = 2,
-    Relax = 3
-}
-
 #region Music
 public enum ENM_PlaylistType
 {
@@ -52,8 +44,8 @@ public enum ENM_LoopMethod
 #region HUD
 public enum ENM_Room
 {
-    Church,
-    Office,
-    Bedroom
+    Church = 1,
+    Office = 2,
+    Bedroom = 3
 }
 #endregion

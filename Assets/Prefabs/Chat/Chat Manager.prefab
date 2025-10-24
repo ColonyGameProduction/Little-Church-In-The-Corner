@@ -55,7 +55,7 @@ MonoBehaviour:
     - ENM_characterFace: 1
       SPR_characterSprite: {fileID: -60164073, guid: 40a2b21dc4b32db488c118b88c604b09, type: 3}
   ENM_currDialog: 0
-  F_interval: 0.01
+  F_interval: 3
   I_currDialogComponentIndex: 0
   I_amountOfTextAnimationDone: 0
 --- !u!114 &4163369408196000471
@@ -84,7 +84,7 @@ MonoBehaviour:
   I_amountOfFadedChatBubbles: 1
   F_animationDuration: 0.5
   F_fadeOutDistance: 100
-  F_textAnimationSpeed: 999
+  F_textAnimationSpeed: 5
 --- !u!114 &407744173426025695
 MonoBehaviour:
   m_ObjectHideFlags: 0

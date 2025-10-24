@@ -194,10 +194,10 @@ public class UIChatBubble : MonoBehaviour
         //Jumlah karakter yang sudah kelihatan saat ini
         int I_visibleCount = 0;
 
-        //Seberapa lama delay antar karakter.
-        WaitForSeconds delay = new WaitForSeconds(F_textSpeed);
+        //Seberapa lama WFS_delay antar karakter.
+        WaitForSeconds WFS_delay = new WaitForSeconds(F_textSpeed);
 
-        for (int i = 0; i < I_totalVisibleCharacters; i++)
+        for (int I_visibleChar = 0; I_visibleChar < I_totalVisibleCharacters; I_visibleChar++)
         {
             //Dia bakal nambah sesuai dengan text speed. Semakin besar text speed, jumlah karakter yang bakal kelihatan (per frame) semakin banyak
             I_visibleCount += I_CalculateCharactersPerFrame(F_textSpeed);
@@ -206,7 +206,7 @@ public class UIChatBubble : MonoBehaviour
             //Kalau misalnya teksnya terlalu panjang, ini bakal update ukuran chat bubble.
             UpdateChatBubbleSize();
 
-            yield return delay;
+            yield return WFS_delay;
             //Kalau ternyata semuanya sudah muncul, langsung keluar dari loop.
             if (I_visibleCount > I_totalVisibleCharacters) break;
         }
