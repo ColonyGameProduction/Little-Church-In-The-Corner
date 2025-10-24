@@ -75,9 +75,18 @@ public class TimeManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        WFS_oneMinuteTimer = new WaitForSeconds(60);
+        DataManager.ACT_loadDone += StartWaitForRenungan;
+    }
+
+    private void OnDisable()
+    {
+        DataManager.ACT_loadDone -= StartWaitForRenungan;
+    }
+
+    private void StartWaitForRenungan()
+    {
         StartCoroutine(WaitForRenungan());
     }
 
@@ -111,10 +120,12 @@ public class TimeManager : MonoBehaviour
 
     /// <summary>
     /// Cek renungan dari jadwal setiap satu menit.
+    /// Ini dijalankan setelah selesai loading data dari save file.
     /// </summary>
     /// <returns></returns>
     private IEnumerator WaitForRenungan()
     {
+        WFS_oneMinuteTimer = new WaitForSeconds(60);
         while (true)
         {
             CheckForRenungan();
@@ -128,7 +139,7 @@ public class TimeManager : MonoBehaviour
     private void CheckForRenungan()
     {
         //Lagi ada renungan yang jalan, jadi jangan mulai renungan lain
-        if (ChatManager.Instance.SO_currDialog)
+        if (ChatManager.Instance.ENM_currDialog != ENM_DialogTitle.None)
             return;
 
         DT_localTime = DateTime.Now;

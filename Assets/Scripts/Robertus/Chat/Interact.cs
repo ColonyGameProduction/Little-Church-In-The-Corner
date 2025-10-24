@@ -33,7 +33,7 @@ public class Interact : MonoBehaviour
     private void ShowInteractButton()
     {
         //Kalau lagi ada renungan yang berjalan, jangan tampilin interact button.
-        if (ChatManager.Instance.SO_currDialog)
+        if (ChatManager.Instance.ENM_currDialog != ENM_DialogTitle.None)
             return;
         //Kalau ga ada renungan dalam queue, jangan tampilin interact button.
         if (TimeManager.Instance.I_queuedSermon <= 0)

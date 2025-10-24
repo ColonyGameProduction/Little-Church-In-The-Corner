@@ -11,12 +11,6 @@ public class DialogSO : ScriptableObject
     public ENM_DialogTitle ENM_dialogTitle;
     public List<DialogComponent> SCR_dialogComponent;
 
-    //Aku ga tau ini buat apa kegunaannya
-    public DialogComponent SCR_GetDialogueComponent()
-    {
-        throw new NotImplementedException("Get Dialogue Component NOT IMPLEMENTED");
-    }
-
     public DialogSO(ENM_DialogTitle eNM_dialogTitle, List<DialogComponent> sCR_dialogComponent)
     {
         ENM_dialogTitle = eNM_dialogTitle;
