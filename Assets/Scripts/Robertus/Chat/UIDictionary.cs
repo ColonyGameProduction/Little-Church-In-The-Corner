@@ -100,12 +100,12 @@ public class UIDictionary : MonoBehaviour
             //Setup judul dan dialogSO
             SCR_savedSermonItem.SCR_dialogSO = SO_savedDialog;
             SCR_savedSermonItem.TMPUGUI_title.text = SO_savedDialog.ENM_dialogTitle.ToString();
+            SCR_savedSermonItem.IMG_background.color = Color.white;
 
             List_SCR_savedSermonItemList.Add(SCR_savedSermonItem);
         }
 
-        //Atur semua UI ke default.
-        DeselectAllSavedSermon();
+        SCR_currSelectedSermon = null;
     }
 
     /// <summary>
@@ -164,25 +164,11 @@ public class UIDictionary : MonoBehaviour
 
         //Hapus renungan yang sudah dipilih dari UI
         Destroy(SCR_currSelectedSermon.gameObject);
-        
-        //Balikin semua UI ke kondisi semula
-        DeselectAllSavedSermon();
+
+        SCR_currSelectedSermon = null;
 
         //Sembunyikan panel konfirmasi delete karena sudah ga dibutuhin lagi.
         HideDeleteConfirmation();
-    }
-
-    /// <summary>
-    /// Membalikkan semua UI item renungan dalam list ke dalam kondisi semula
-    /// </summary>
-    public void DeselectAllSavedSermon()
-    {
-        DictionaryManager.Instance.SO_currDialogSelected = null;
-        SCR_currSelectedSermon = null;
-        foreach (UISavedSermonItem SCR_item in List_SCR_savedSermonItemList)
-        {
-            SCR_item.IMG_background.color = Color.white;
-        }
     }
 
     /// <summary>
