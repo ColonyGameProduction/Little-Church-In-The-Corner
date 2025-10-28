@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 79721989721427080}
   - component: {fileID: 6249780566139944933}
   - component: {fileID: 7403249644718896462}
+  - component: {fileID: 7416180908611160759}
+  - component: {fileID: 4490439878260609983}
   m_Layer: 0
   m_Name: Chat Manager
   m_TagString: Untagged
@@ -53,9 +55,9 @@ MonoBehaviour:
   SCR_listOfFace:
     List_face:
     - ENM_characterFace: 1
-      SPR_characterSprite: {fileID: -60164073, guid: 40a2b21dc4b32db488c118b88c604b09, type: 3}
+      SPR_characterSprite: {fileID: 21300000, guid: 9655292dfd4465b48bf869f1461da2a7, type: 3}
   ENM_currDialog: 0
-  F_interval: 3
+  F_interval: 0.01
   I_currDialogComponentIndex: 0
   I_amountOfTextAnimationDone: 0
 --- !u!114 &4163369408196000471
@@ -80,11 +82,11 @@ MonoBehaviour:
   BTN_noToDownloadButton: {fileID: 0}
   BTN_downloadedSermonsButton: {fileID: 0}
   BTN_closeDownloadedSermonsButton: {fileID: 0}
-  I_maxChatBubble: 2
+  I_maxChatBubble: 999
   I_amountOfFadedChatBubbles: 1
   F_animationDuration: 0.5
   F_fadeOutDistance: 100
-  F_textAnimationSpeed: 5
+  F_textAnimationSpeed: 999
 --- !u!114 &407744173426025695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +163,56 @@ MonoBehaviour:
   TMPUGUI_deleteConfirmationText: {fileID: 0}
   BTN_yesDeleteSermon: {fileID: 0}
   BTN_noDeleteSermon: {fileID: 0}
+--- !u!114 &7416180908611160759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790204805922321323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59092a0e03660054a9ffe78ebc35d15f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  List_SCR_timeToSwitch:
+  - SCR_timeToSwitch:
+      I_hour: 0
+      I_minute: 0
+    CG_backgroundCanvasGroup: {fileID: 0}
+    COL_backgroundColor: {r: 0.101960786, g: 0.5176471, b: 0.57254905, a: 1}
+  - SCR_timeToSwitch:
+      I_hour: 6
+      I_minute: 0
+    CG_backgroundCanvasGroup: {fileID: 0}
+    COL_backgroundColor: {r: 0.8745098, g: 0.65882355, b: 0.47843137, a: 1}
+  - SCR_timeToSwitch:
+      I_hour: 11
+      I_minute: 0
+    CG_backgroundCanvasGroup: {fileID: 0}
+    COL_backgroundColor: {r: 0.49803922, g: 0.7529412, b: 0.6117647, a: 1}
+  - SCR_timeToSwitch:
+      I_hour: 15
+      I_minute: 0
+    CG_backgroundCanvasGroup: {fileID: 0}
+    COL_backgroundColor: {r: 0.8745098, g: 0.65882355, b: 0.47843137, a: 1}
+  - SCR_timeToSwitch:
+      I_hour: 18
+      I_minute: 0
+    CG_backgroundCanvasGroup: {fileID: 0}
+    COL_backgroundColor: {r: 0.101960786, g: 0.5176471, b: 0.57254905, a: 1}
+  SCR_dayNightCycleUI: {fileID: 4490439878260609983}
+--- !u!114 &4490439878260609983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790204805922321323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f33e4949dc9b7e4aa86b22f0413d532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IMG_background: {fileID: 0}
+  F_transitionDuration: 5

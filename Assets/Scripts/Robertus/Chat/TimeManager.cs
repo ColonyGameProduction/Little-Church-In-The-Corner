@@ -129,6 +129,7 @@ public class TimeManager : MonoBehaviour
         while (true)
         {
             CheckForRenungan();
+            DayNightCycleManager.Instance.SCR_dayNightCycleUI.ChangingBackground();
             yield return WFS_oneMinuteTimer;
         }
     }
