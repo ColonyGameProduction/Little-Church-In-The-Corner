@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fde86977fdcbf7459b9243c844b146d, type: 3}
+  m_Name: SkinSubtype_Floor
+  m_EditorClassIdentifier: 
+  ENM_skinType: 0
+  List_SCR_skin:
+  - GO_skinObject: {fileID: 1539182746360723901, guid: 346570e17a7947841b96b250098a6265, type: 3}
+    SPR_skinSprite: {fileID: 0}
+    MAT_skinMaterial: {fileID: 2100000, guid: b45be8e8a8fb60a4a8a52060e0d69c30, type: 2}
+    TEX_skinTexture: {fileID: 2800000, guid: 48cf200a5fb79254b9b262a0413c4084, type: 3}
+    ANM_activityAnimation: {fileID: 0}
+    I_price: 0
+    B_inInventory: 0
+    ENM_skinItem: 0
+  - GO_skinObject: {fileID: 1539182746360723901, guid: 346570e17a7947841b96b250098a6265, type: 3}
+    SPR_skinSprite: {fileID: 0}
+    MAT_skinMaterial: {fileID: 2100000, guid: b45be8e8a8fb60a4a8a52060e0d69c30, type: 2}
+    TEX_skinTexture: {fileID: 2800000, guid: ca9ddea36b7823849a531bf418215ba5, type: 3}
+    ANM_activityAnimation: {fileID: 0}
+    I_price: 0
+    B_inInventory: 0
+    ENM_skinItem: 1
+  - GO_skinObject: {fileID: 1539182746360723901, guid: 346570e17a7947841b96b250098a6265, type: 3}
+    SPR_skinSprite: {fileID: 0}
+    MAT_skinMaterial: {fileID: 2100000, guid: b45be8e8a8fb60a4a8a52060e0d69c30, type: 2}
+    TEX_skinTexture: {fileID: 2800000, guid: 42f836e89967738478f5a3e49eb7cf63, type: 3}
+    ANM_activityAnimation: {fileID: 0}
+    I_price: 0
+    B_inInventory: 0
+    ENM_skinItem: 2
+  - GO_skinObject: {fileID: 1539182746360723901, guid: 346570e17a7947841b96b250098a6265, type: 3}
+    SPR_skinSprite: {fileID: 0}
+    MAT_skinMaterial: {fileID: 2100000, guid: b45be8e8a8fb60a4a8a52060e0d69c30, type: 2}
+    TEX_skinTexture: {fileID: 2800000, guid: 467bb016687b0354d94d025129836d24, type: 3}
+    ANM_activityAnimation: {fileID: 0}
+    I_price: 0
+    B_inInventory: 0
+    ENM_skinItem: 3
+  - GO_skinObject: {fileID: 1539182746360723901, guid: 346570e17a7947841b96b250098a6265, type: 3}
+    SPR_skinSprite: {fileID: 0}
+    MAT_skinMaterial: {fileID: 2100000, guid: b45be8e8a8fb60a4a8a52060e0d69c30, type: 2}
+    TEX_skinTexture: {fileID: 2800000, guid: 1a99943a31c2dde48947c5e85fa52d4d, type: 3}
+    ANM_activityAnimation: {fileID: 0}
+    I_price: 0
+    B_inInventory: 0
+    ENM_skinItem: 4
+  - GO_skinObject: {fileID: 1539182746360723901, guid: 346570e17a7947841b96b250098a6265, type: 3}
+    SPR_skinSprite: {fileID: 0}
+    MAT_skinMaterial: {fileID: 2100000, guid: b45be8e8a8fb60a4a8a52060e0d69c30, type: 2}
+    TEX_skinTexture: {fileID: 2800000, guid: 64d3af779518d604c813bce3da0d8bed, type: 3}
+    ANM_activityAnimation: {fileID: 0}
+    I_price: 0
+    B_inInventory: 0
+    ENM_skinItem: 5
+  SCR_currEquippedSkin:
+    GO_skinObject: {fileID: 0}
+    SPR_skinSprite: {fileID: 0}
+    MAT_skinMaterial: {fileID: 0}
+    TEX_skinTexture: {fileID: 0}
+    ANM_activityAnimation: {fileID: 0}
+    I_price: 0
+    B_inInventory: 0
+    ENM_skinItem: 0

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4625c54ad28474348b3ebe2f04907c1f, type: 3}
+  m_Name: SkinType_Church
+  m_EditorClassIdentifier: 
+  ENM_skinRoom: 1
+  List_SO_skinSubType:
+  - {fileID: 11400000, guid: 9e68f998fac0b8c4eb6bac5b48d0a4e2, type: 2}
+  - {fileID: 11400000, guid: 31c954ed41909ab4cbb3ae5b20aff016, type: 2}
+  - {fileID: 11400000, guid: 99c19c0e4eb2d07409420bc947d0a026, type: 2}
