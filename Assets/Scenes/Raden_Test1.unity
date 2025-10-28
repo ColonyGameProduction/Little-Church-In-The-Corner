@@ -288,7 +288,7 @@ RectTransform:
   m_Father: {fileID: 1847490001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -345,7 +345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &66120635
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1302,7 +1302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &609844114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1500,7 +1500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &655751354
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1806,7 +1806,6 @@ MonoBehaviour:
   GO_church: {fileID: 1107596347}
   GO_office: {fileID: 1745927431}
   GO_bedRoom: {fileID: 1548227878}
-  GO_highlightRoomButton: {fileID: 0}
   IMG_church: {fileID: 1316623136}
   IMG_office: {fileID: 594508531}
   IMG_bedRoom: {fileID: 1066576130}
@@ -2445,9 +2444,9 @@ RectTransform:
   - {fileID: 594508530}
   m_Father: {fileID: 991905580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 255.8, y: -15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907288639
@@ -3072,7 +3071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &991905580
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4239,9 +4238,9 @@ RectTransform:
   - {fileID: 1066576129}
   m_Father: {fileID: 991905580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 431.6, y: -15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1442390171
@@ -4569,7 +4568,7 @@ RectTransform:
   m_Father: {fileID: 165775351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4841,9 +4840,9 @@ RectTransform:
   - {fileID: 1316623135}
   m_Father: {fileID: 991905580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80, y: -15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1672483745
@@ -5471,9 +5470,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SO_listOfPlaylistSO: {fileID: 11400000, guid: 0b94dc6ea370faa479858617eddad013, type: 2}
-  SO_currPlaylistTypeSO: {fileID: 11400000, guid: 1098a2a667d8eaf459c9cd2ecb01bfc2, type: 2}
+  SO_currPlaylistTypeSO: {fileID: 11400000, guid: 022473f60bba72e4e8509ac3024da077, type: 2}
   SCR_currSong:
     ADO_music: {fileID: 0}
+    BTN_self: {fileID: 0}
     S_titleAndAuthor: 
     ENM_musicCode: 0
   ENM_pauseAndPlay: 0

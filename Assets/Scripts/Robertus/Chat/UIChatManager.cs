@@ -64,7 +64,7 @@ public class UIChatManager : MonoBehaviour
     /// <summary>
     /// Ini seberapa cepat animasi teks. Semakin besar angkanya, semakin cepat.
     /// </summary>
-    public float F_textAnimationSpeed = 1f;
+    public float F_textAnimationSpeed;
 
     /// <summary>
     /// Action untuk menunjukkan kalau lagi ga ada renungan yang sedang ditampilkan.
@@ -121,7 +121,7 @@ public class UIChatManager : MonoBehaviour
 
         //Ini dialog/renungan saat ini.
         //TODO: ganti supaya pakai TransitionManager.
-        Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
+        //Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
         DialogSO SO_dialogSO = ChatManager.Instance.SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church, ChatManager.Instance.ENM_currDialog); ;
 
         //Ini bakal membuat semua chat bubble yang bakal ada di dalam renungan, tetapi dia bakal didisable terlebih dahulu supaya ga kelihatan di UI. Nanti mereka bakal dienable kalau sudah waktunya.

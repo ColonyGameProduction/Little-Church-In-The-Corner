@@ -89,23 +89,23 @@ public class UIPlaylist : MonoBehaviour
             Songs newSongs = new Songs();
 
             //GO_newButton.AddComponent<>();
-            //Button BTN_btn = GO_newButton.GetComponent<Button>();
-            //Songs _selectedSong = songs;
+            Button BTN_btn = GO_newButton.GetComponent<Button>();
+            Songs _selectedSong = songs;
 
-            /*Songs songComp = GO_newButton.GetComponent<Songs>();
-            if (songComp == null)
-            {
-                songComp = GO_newButton.AddComponent<Songs>();
-            }
-
-            songComp.ADO_music = songs.ADO_music;
-            songComp.S_titleAndAuthor = songs.S_titleAndAuthor;
-            songComp.ENM_musicCode = songs.ENM_musicCode;*/
-
-            //BTN_btn.onClick.AddListener(() =>
+            //Songs songComp = GO_newButton.GetComponent<Songs>();
+            //if (songComp == null)
             //{
-            //    SCR_MM.PlaySong(_selectedSong);
-            //});
+            //    songComp = GO_newButton.AddComponent<Songs>();
+            //}
+
+            //songComp.ADO_music = songs.ADO_music;
+            //songComp.S_titleAndAuthor = songs.S_titleAndAuthor;
+            //songComp.ENM_musicCode = songs.ENM_musicCode;
+
+            BTN_btn.onClick.AddListener(() =>
+            {
+                SCR_MM.PlaySong(_selectedSong);
+            });
         }
     }
 }

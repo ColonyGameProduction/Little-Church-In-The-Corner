@@ -119,27 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &1350925 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5405810025383455327, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &17074993 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7608462653864990490, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &88906734 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2851277573839109862, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &134674606
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +255,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134674606}
   m_CullTransparentMesh: 1
+--- !u!114 &182617148 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9075955063675587972, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
+  m_PrefabInstance: {fileID: 8214989223482856223}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ee330723e21b84190a2ee1110e2fb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &182617149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1575977837442633200, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
+  m_PrefabInstance: {fileID: 8214989223482856223}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dae073c9916b6446a2a28b64f15ade1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &199869204
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,11 +397,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &370129115 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2041449338956538631, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &391731904
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,16 +557,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436696908}
   m_CullTransparentMesh: 1
---- !u!1 &470080449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9190230105449596080, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &501370206 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1630793832848150943, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &586224459
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,21 +676,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1284182237}
+      - m_Target: {fileID: 182617148}
         m_TargetAssemblyTypeName: UIChatManager, Assembly-CSharp
         m_MethodName: SetupAllChats
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1284182235}
-        m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
-        m_MethodName: PlayDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -752,11 +726,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602285090}
   m_CullTransparentMesh: 1
---- !u!1 &664151754 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6843934217770340465, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &665966474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1112,7 +1081,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1284182235}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
         m_MethodName: SetupRenungan
         m_Mode: 1
@@ -1429,17 +1398,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728908124}
   m_CullTransparentMesh: 1
---- !u!114 &729738423 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3824434263070644653, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &790060143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,17 +1534,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790060143}
   m_CullTransparentMesh: 1
---- !u!114 &794188815 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4712667400902870491, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &805463177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,7 +1617,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1284182235}
+      - m_Target: {fileID: 182617149}
         m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
         m_MethodName: SetupRenungan
         m_Mode: 1
@@ -2106,11 +2053,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6783743889114845266, guid: ced12d870d030ad439db50dfe078883a, type: 3}
   m_PrefabInstance: {fileID: 823380287}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &919196720 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8790204805922321323, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-  m_PrefabInstance: {fileID: 999641291182101539}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &947175219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,11 +2307,6 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6783743889114845266, guid: ced12d870d030ad439db50dfe078883a, type: 3}
   m_PrefabInstance: {fileID: 975651319}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &990152027 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1205110839951120543, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &990152028 stripped
 RectTransform:
@@ -2836,7 +2773,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1284182237}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIChatManager, Assembly-CSharp
         m_MethodName: SetupAllChats
         m_Mode: 1
@@ -2848,7 +2785,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1284182235}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
         m_MethodName: PlayDialogue
         m_Mode: 1
@@ -3107,77 +3044,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273458357}
   m_CullTransparentMesh: 1
---- !u!114 &1284182235 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5903647496116288163, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-  m_PrefabInstance: {fileID: 999641291182101539}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919196720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dae073c9916b6446a2a28b64f15ade1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1284182237 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4163369408196000471, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-  m_PrefabInstance: {fileID: 999641291182101539}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919196720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34ee330723e21b84190a2ee1110e2fb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1284182241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919196720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e735da7bf3f8854a841c350a309ebc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SO_currDialogSelected: {fileID: 0}
-  List_SO_allDownloadedDialog: []
-  SCR_UIDictionary: {fileID: 1284182245}
---- !u!114 &1284182245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919196720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 558f774a478eb7549834b9afa49f2ab8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PB_dictionaryListButton: {fileID: 5032570416108590320, guid: dbd70a395b414374392c5c721cad2d4c, type: 3}
-  GO_currSavedDialogContainer: {fileID: 470080449}
-  TF_currSavedDialogContainer: {fileID: 370129115}
-  TF_dictionaryListParent: {fileID: 17074993}
-  BTN_openSelectedSermon: {fileID: 1575999821}
-  BTN_closeSelectedSermon: {fileID: 1793491633}
-  SCR_currSelectedSermon: {fileID: 0}
-  GO_deleteConfirmationPanel: {fileID: 1667979023}
-  TMPUGUI_deleteConfirmationText: {fileID: 1715163416}
-  BTN_yesDeleteSermon: {fileID: 2141797429}
-  BTN_noDeleteSermon: {fileID: 1716736633}
---- !u!114 &1377747712 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8749589012987808929, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1386615243
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,17 +3612,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1630793832848150943, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
   m_PrefabInstance: {fileID: 1441216295}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1575999821 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7426524229901791865, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1600392724
 GameObject:
   m_ObjectHideFlags: 0
@@ -4287,17 +4142,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 462.87, y: 256.26}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1793491633 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4104488104638370337, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1804678209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4896,17 +4740,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912618441}
   m_CullTransparentMesh: 1
---- !u!114 &2024747289 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4492846386190140257, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2109293453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5147,121 +4980,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141797427}
   m_CullTransparentMesh: 1
---- !u!1001 &999641291182101539
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 79721989721427080, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: BTN_interact
-      value: 
-      objectReference: {fileID: 794188815}
-    - target: {fileID: 407744173426025695, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: SCR_sermonSchedule.Array.data[4].I_hour
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 407744173426025695, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: SCR_sermonSchedule.Array.data[4].I_minute
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162714718477495340, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162714718477495340, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162714718477495340, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162714718477495340, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162714718477495340, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162714718477495340, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162714718477495340, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162714718477495340, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162714718477495340, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162714718477495340, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4163369408196000471, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: TF_chatBubbleParent
-      value: 
-      objectReference: {fileID: 501370206}
-    - target: {fileID: 4163369408196000471, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: F_textAnimationSpeed
-      value: 999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4163369408196000471, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: BTN_noToDownloadButton
-      value: 
-      objectReference: {fileID: 2024747289}
-    - target: {fileID: 4163369408196000471, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: GO_dictionaryContainer
-      value: 
-      objectReference: {fileID: 990152027}
-    - target: {fileID: 4163369408196000471, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: BTN_yesToDownloadButton
-      value: 
-      objectReference: {fileID: 729738423}
-    - target: {fileID: 4163369408196000471, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: BTN_downloadedSermonsButton
-      value: 
-      objectReference: {fileID: 1377747712}
-    - target: {fileID: 4163369408196000471, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: GO_optionToDownloadContainer
-      value: 
-      objectReference: {fileID: 88906734}
-    - target: {fileID: 4163369408196000471, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: BTN_closeDownloadedSermonsButton
-      value: 
-      objectReference: {fileID: 1350925}
-    - target: {fileID: 4163369408196000471, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: GO_downloadedSermonButtonContainer
-      value: 
-      objectReference: {fileID: 664151754}
-    - target: {fileID: 5903647496116288163, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: F_interval
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 8790204805922321323, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      propertyPath: m_Name
-      value: Chat Manager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8790204805922321323, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1284182241}
-    - targetCorrespondingSourceObject: {fileID: 8790204805922321323, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1284182245}
-  m_SourcePrefab: {fileID: 100100000, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
 --- !u!1001 &8214989223482856223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5393,6 +5111,10 @@ PrefabInstance:
     - target: {fileID: 1233136506930901025, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575977837442633200, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
+      propertyPath: F_interval
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1630793832848150943, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
       propertyPath: m_SizeDelta.y
@@ -6182,6 +5904,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9075955063675587972, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
+      propertyPath: I_maxChatBubble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9075955063675587972, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
+      propertyPath: F_textAnimationSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9188479596775877506, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6243,7 +5973,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 947175222}
-  - {fileID: 999641291182101539}
   - {fileID: 1386615247}
   - {fileID: 1005574143}
   - {fileID: 1192658476}
