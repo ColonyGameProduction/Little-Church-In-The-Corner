@@ -58,8 +58,8 @@ public class UISavedSermonItem : MonoBehaviour
     /// </summary>
     private void SelectSermon()
     {
-        //Pertama-tama, deselect semuanya supaya semuanya kembali ke default.
-        DictionaryManager.Instance.SCR_UIDictionary.DeselectAllSavedSermon();
+        //Pertama-tama, deselect renungan sebelumnya
+        if (DictionaryManager.Instance.SCR_UIDictionary.SCR_currSelectedSermon) DictionaryManager.Instance.SCR_UIDictionary.SCR_currSelectedSermon.IMG_background.color = Color.white;
         //Lalu, atur supaya renungan yang saat ini diseleksi adalah renungan ini.
         DictionaryManager.Instance.SO_currDialogSelected = SCR_dialogSO;
         DictionaryManager.Instance.SCR_UIDictionary.SCR_currSelectedSermon = this;
