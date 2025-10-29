@@ -255,28 +255,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134674606}
   m_CullTransparentMesh: 1
---- !u!114 &182617148 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9075955063675587972, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34ee330723e21b84190a2ee1110e2fb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &182617149 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1575977837442633200, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-  m_PrefabInstance: {fileID: 8214989223482856223}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dae073c9916b6446a2a28b64f15ade1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &199869204
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +654,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 182617148}
+      - m_Target: {fileID: 1186629673}
         m_TargetAssemblyTypeName: UIChatManager, Assembly-CSharp
         m_MethodName: SetupAllChats
         m_Mode: 1
@@ -1617,7 +1595,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 182617149}
+      - m_Target: {fileID: 1186629674}
         m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
         m_MethodName: SetupRenungan
         m_Mode: 1
@@ -2835,6 +2813,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058305800}
   m_CullTransparentMesh: 1
+--- !u!114 &1186629673 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9075955063675587972, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
+  m_PrefabInstance: {fileID: 8214989223482856223}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ee330723e21b84190a2ee1110e2fb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1186629674 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1575977837442633200, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
+  m_PrefabInstance: {fileID: 8214989223482856223}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dae073c9916b6446a2a28b64f15ade1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1192658473
 GameObject:
   m_ObjectHideFlags: 0
@@ -5112,10 +5112,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -25
       objectReference: {fileID: 0}
-    - target: {fileID: 1575977837442633200, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-      propertyPath: F_interval
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1630793832848150943, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -5903,14 +5899,6 @@ PrefabInstance:
     - target: {fileID: 8533731791987136766, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9075955063675587972, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-      propertyPath: I_maxChatBubble
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9075955063675587972, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
-      propertyPath: F_textAnimationSpeed
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9188479596775877506, guid: 5706c55f11c26e84abc05d24e954004c, type: 3}
       propertyPath: m_AnchorMax.y

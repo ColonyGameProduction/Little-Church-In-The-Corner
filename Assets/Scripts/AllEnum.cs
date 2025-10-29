@@ -58,3 +58,34 @@ public enum ENM_Room
     Bedroom = 2,
 }
 #endregion
+
+#region Skin
+public enum ENM_SkinItem
+{
+    Floor1,
+    Floor2,
+    Floor3,
+    Floor4,
+    Floor5,
+    Floor6,
+    Wall1,
+    Wall2,
+    Wall3,
+    Wall4,
+    Wall5,
+    Wall6,
+    ObjectTest1,
+    ObjectTest2,
+    ObjectTest3,
+    ObjectTest4,
+    ObjectTest5,
+}
+
+public enum ENM_SkinType
+{
+    Floor,
+    Wall,
+    ObjectTest,
+    Activity,
+}
+#endregion
