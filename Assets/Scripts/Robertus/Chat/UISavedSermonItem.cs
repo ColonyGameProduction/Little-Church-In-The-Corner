@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class UISavedSermonItem : MonoBehaviour
 {
     /// <summary>
-    /// Judul renungan
+    /// Judul renungan 
     /// </summary>
     public TextMeshProUGUI TMPUGUI_title;
     /// <summary>
