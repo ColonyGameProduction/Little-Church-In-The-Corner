@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Songs
 {
     public AudioClip ADO_music;
+    public Button BTN_self;
     public string S_titleAndAuthor;
     public ENM_MusicCode ENM_musicCode;
 
@@ -15,7 +16,6 @@ public class Songs
         // trus disini lu kasih onclick nya si PlayingThis Song yang dibawah
         // jadi lu add listener nya ditaro di UIPlaylist
 
-        /*BTN_self = GetComponent<Button>();
 
         if (BTN_self != null)
         {
@@ -28,7 +28,7 @@ public class Songs
                     MusicManager.Instance.PlaySong(this);
                 }
             });
-        }*/
+        }
     }
 
     public void PlayingThisSong()
