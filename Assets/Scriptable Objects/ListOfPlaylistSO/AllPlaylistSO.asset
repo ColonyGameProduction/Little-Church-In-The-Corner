@@ -15,3 +15,4 @@ MonoBehaviour:
   SO_playlistTypeSO:
   - {fileID: 11400000, guid: 022473f60bba72e4e8509ac3024da077, type: 2}
   - {fileID: 11400000, guid: 1098a2a667d8eaf459c9cd2ecb01bfc2, type: 2}
+  - {fileID: 11400000, guid: c4b341f098a6f0f41b0c8154815c0f8d, type: 2}

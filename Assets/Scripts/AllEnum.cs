@@ -26,7 +26,8 @@ public enum ENM_DialogTitle
 public enum ENM_PlaylistType
 {
     Rock = 1,
-    Jazz = 2
+    Jazz = 2,
+    Local = 3,
 }
 
 public enum ENM_MusicCode
@@ -34,6 +35,8 @@ public enum ENM_MusicCode
     Song1 = 101,
     Song2 = 102,
     Song3 = 103,
+
+    SongLocal1 = 301,
 }
 
 public enum ENM_PauseAndPlay
