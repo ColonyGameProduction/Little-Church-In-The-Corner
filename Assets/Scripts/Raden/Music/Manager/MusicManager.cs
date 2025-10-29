@@ -1,6 +1,25 @@
+using SFB; // standalon file browser (buat buka file explorer)
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
+
+[System.Serializable] // ini tuh data buat nyimpen inpo satu local musik
+public class LocalSongData
+{
+    public string S_filePath;
+    public string S_titleAndAuthor;
+    public ENM_MusicCode ENM_musicCode;
+}
+
+[System.Serializable] // ini tuh wrapper buat serialize list local musik ke JSON
+public class LocalSongsWrapper
+{
+    public List<LocalSongData> SCR_songs = new List<LocalSongData>();
+}
 
 public class MusicManager : MonoBehaviour
 {
@@ -22,6 +41,13 @@ public class MusicManager : MonoBehaviour
 
     [Header("Event")]
     public Action<Songs> ACT_playSong;
+
+    [Header("Local Songs")] // ini tuh list local musik yang udah di add ke dalem game
+    public List<LocalSongData> SCR_localSongs = new List<LocalSongData>();
+    private string S_savePath => Path.Combine(Application.persistentDataPath, "local_songs.json");
+
+    [Header("Playlist Lokal")]
+    public PlaylistTypeSO SO_playlistLocal;
 
     private AudioSource audioSource;
 
@@ -46,6 +72,9 @@ public class MusicManager : MonoBehaviour
             SCR_currSong = SO_currPlaylistTypeSO.SCR_playlist[0];
             PlaySong(SCR_currSong);
         }
+
+        // load semua local song yang udah ditambah sama pengguna
+        LoadLocalSongs();
     }
 
     // ini fungsi nge nge play lagunya
@@ -203,5 +232,102 @@ public class MusicManager : MonoBehaviour
     {
         PlayerPrefs.SetString("LastSong", SCR_currSong.S_titleAndAuthor);
         PlayerPrefs.Save();
+    }
+
+    // fungsi ini tuh buat buka file browser dan pilih2 lagu dari local storage pengguna
+    public void ImportLocalSong()
+    {
+        var paths = StandaloneFileBrowser.OpenFilePanel("Select Music File", "", new[] {
+        new ExtensionFilter("Audio Files", "mp3", "wav", "ogg")
+        }, false);
+
+        if (paths.Length == 0) return;
+        string path = paths[0];
+        StartCoroutine(LoadAndAddLocalSong(path));
+    }
+
+    // ini korutin buat nge-add file audio dari local path, terus namahin ke Playlist_Local abis itu di simpen di JSON
+    private IEnumerator LoadAndAddLocalSong(string path)
+    {
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + path, AudioType.UNKNOWN))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("Failed to load: " + path);
+                yield break;
+            }
+
+            AudioClip clip = DownloadHandlerAudioClip.GetContent(www);
+
+            Songs newSong = new Songs
+            {
+                ADO_music = clip,
+                S_titleAndAuthor = Path.GetFileNameWithoutExtension(path),
+                ENM_musicCode = ENM_MusicCode.SongLocal1
+            };
+
+            // Tambahin ke playlist local
+            SO_playlistLocal.SCR_playlist.Add(newSong);
+
+            // Simpen path ke list local
+            SCR_localSongs.Add(new LocalSongData
+            {
+                S_filePath = path,
+                S_titleAndAuthor = newSong.S_titleAndAuthor,
+                ENM_musicCode = newSong.ENM_musicCode
+            });
+
+            SaveLocalSongs();
+
+            FindAnyObjectByType<UIPlaylist>()?.SetupAllPlaylistSongs(SO_currPlaylistTypeSO.ENM_playlistType);
+        }
+    }
+    
+    // ini fungsi buat nyimpen semua local musik ke file JSON di local storage, jadi ini aktif pas pengguna abis nge-add musicnya
+    public void SaveLocalSongs()
+    {
+        LocalSongsWrapper wrapper = new LocalSongsWrapper { SCR_songs = SCR_localSongs };
+        string json = JsonUtility.ToJson(wrapper, true);
+        File.WriteAllText(S_savePath, json);
+        Debug.Log("Local songs saved: " + S_savePath);
+    }
+
+    // ini fungsi buat nge-add semua local musik dari JSON pas gamenya mulai
+    public void LoadLocalSongs()
+    {
+        if (!File.Exists(S_savePath)) return;
+
+        SO_playlistLocal.SCR_playlist.Clear();
+
+        string json = File.ReadAllText(S_savePath);
+        LocalSongsWrapper wrapper = JsonUtility.FromJson<LocalSongsWrapper>(json);
+
+        foreach (var songData in wrapper.SCR_songs)
+        {
+            StartCoroutine(LoadAudioFromPath(songData));
+        }
+    }
+
+    // ini buat nge-add 1 file audio sesuai data di JSON, ini tuh dipanggil sama LoadAudioFromPath() buat tiap musik
+    private IEnumerator LoadAudioFromPath(LocalSongData data)
+    {
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + data.S_filePath, AudioType.UNKNOWN))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                AudioClip clip = DownloadHandlerAudioClip.GetContent(www);
+                Songs newSong = new Songs
+                {
+                    ADO_music = clip,
+                    S_titleAndAuthor = data.S_titleAndAuthor,
+                    ENM_musicCode = data.ENM_musicCode
+                };
+                SO_playlistLocal.SCR_playlist.Add(newSong);
+            }
+        }
     }
 }
