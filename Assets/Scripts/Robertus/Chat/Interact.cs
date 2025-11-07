@@ -1,55 +1,45 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 /// <summary>
-/// Ini buat ngatur interact dengan chat
+/// Class untuk interact dengan NPC. Sekarang pakai 3D model dan bukan tombol, makanya ada IPointerClickHandler.
+/// Also, jangan lupa masukin komponen Physics Raycaster ke kamera.
 /// </summary>
-public class Interact : MonoBehaviour
+public class Interact : MonoBehaviour, IPointerClickHandler
 {
-    public Button BTN_interact;
-
-    private void Awake()
-    {
-        BTN_interact.gameObject.SetActive(false);
-    }
-
-    private void OnEnable()
-    {
-        TimeManager.ACT_interactIsReady += ShowInteractButton;
-        BTN_interact.onClick.AddListener(ClickInteractButton);
-        UIChatManager.ACT_NoCurrentSermonAvailable += ShowInteractButton;
-    }
-
-    private void OnDisable()
-    {
-        TimeManager.ACT_interactIsReady -= ShowInteractButton;
-        BTN_interact.onClick.RemoveListener(ClickInteractButton);
-        UIChatManager.ACT_NoCurrentSermonAvailable -= ShowInteractButton;
-    }
-
     /// <summary>
-    /// Cuma tampilin aja.
+    /// Kalau misalnya udah diklik dan diinteract, maka ga boleh didelete sebelum renungannya selesai.
     /// </summary>
-    private void ShowInteractButton()
-    {
-        //Kalau lagi ada renungan yang berjalan, jangan tampilin interact button.
-        if (ChatManager.Instance.ENM_currDialog != ENM_DialogTitle.None)
-            return;
-        //Kalau ga ada renungan dalam queue, jangan tampilin interact button.
-        if (TimeManager.Instance.I_queuedSermon <= 0)
-            return;
-
-        BTN_interact.gameObject.SetActive(true);
-    }
+    public bool B_hasBeenInteracted;
 
     /// <summary>
     /// Pas click, bakal setup chat, lalu sembunyiin tombol interactnya.
     /// </summary>
     private void ClickInteractButton()
     {
+        //Kalau masih ada renungan yang jalan, jangan interact lagi
+        if (ChatManager.Instance.ENM_currDialog != ENM_DialogTitle.None)
+            return;
+
+        //Kalau ga ada renungan dalam queue, jangan tampilin interact button.
+        if (TimeManager.Instance.I_queuedSermon <= 0)
+            return;
+
+        ChatManager.Instance.SetupRenungan();
         UIChatManager.Instance.SetupAllChats();
-        BTN_interact.gameObject.SetActive(false);
         //Kurangin queue renungan
         TimeManager.Instance.I_queuedSermon--;
+
+        B_hasBeenInteracted = true;
+    }
+
+    /// <summary>
+    /// Kalau NPC diklik
+    /// </summary>
+    /// <param name="eventData"></param>
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log($"CLICKED NPC {gameObject.name}", gameObject);
+        ClickInteractButton();
     }
 }
