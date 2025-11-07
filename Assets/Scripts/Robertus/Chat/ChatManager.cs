@@ -31,6 +31,11 @@ public class ChatManager : MonoBehaviour
     [HideInInspector] public int I_currDialogComponentIndex;
 
     /// <summary>
+    /// Berapa lama waktu setelah semua chat ditampilkan sebelum menampilkan pilihan untuk download
+    /// </summary>
+    public float F_delayBeforeShowingDownloadOptions = 1.5f;
+
+    /// <summary>
     /// Ini buat tahu apakah renungannya sudah selesai atau belum. Technically kalau dialog terakhir udah muncul, dia udah selesai. Tapi, gara-gara ada animasi teks muncul perlahan-lahan, jadi dia beneran udah selesai pas animasinya udah selesai.
     /// Animasi udah selesai atau belum, ditentuin dari variabel ini.
     /// </summary>
@@ -51,17 +56,17 @@ public class ChatManager : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        TimeManager.ACT_interactIsReady += SetupRenungan;
-        UIChatManager.ACT_NoCurrentSermonAvailable += SetupRenungan;
-    }
+    //private void OnEnable()
+    //{
+    //    TimeManager.ACT_interactIsReady += SetupRenungan;
+    //    UIChatManager.ACT_NoCurrentSermonAvailable += SetupRenungan;
+    //}
 
-    private void OnDisable()
-    {
-        TimeManager.ACT_interactIsReady -= SetupRenungan;
-        UIChatManager.ACT_NoCurrentSermonAvailable -= SetupRenungan;
-    }
+    //private void OnDisable()
+    //{
+    //    TimeManager.ACT_interactIsReady -= SetupRenungan;
+    //    UIChatManager.ACT_NoCurrentSermonAvailable -= SetupRenungan;
+    //}
 
     /// <summary>
     /// Mengatur jalannya dialog dalam renungan secara otomatis.
@@ -72,6 +77,9 @@ public class ChatManager : MonoBehaviour
     /// <returns></returns>
     public IEnumerator DialogueSequence(float f_interval)
     {
+        WaitForSeconds WFS_interval = new WaitForSeconds(f_interval);
+        WaitForSeconds WFS_delay = new WaitForSeconds(F_delayBeforeShowingDownloadOptions);
+
         I_amountOfTextAnimationDone = 0;
 
         //TODO: ganti supaya pakai TransitionManager.
@@ -84,13 +92,16 @@ public class ChatManager : MonoBehaviour
             I_currDialogComponentIndex++;
             //Keluar duluan biar ga usah nunggu selama f_interval, tapi nunggunya tergantung text animation.
             if (I_currDialogComponentIndex >= SO_currDialog.SCR_dialogComponent.Count) break;
-            yield return new WaitForSeconds(f_interval);
+            yield return WFS_interval;
         }
 
         //Kalau semua teks udah selesai animasinya, baru lanjut. Kalau belum, stay di sini.
         yield return new WaitUntil(() => I_amountOfTextAnimationDone >= I_currDialogComponentIndex);
 
         Debug.Log("All dialogues done!");
+
+        //Mungkin tambahin delay sedikit
+        yield return WFS_delay;
 
         //Nunggu semuanya selesai dulu, baru munculin hal lain seperti opsi untuk download
         ACT_RenunganDone?.Invoke();

@@ -12,7 +12,8 @@ public class DayNightSchedule
     /// </summary>
     public SerializedTime SCR_timeToSwitch;
 
-    // Pakai canvas group untuk keperluan animasi transisinya. Canvas group itu untuk gambar ruangan. Seharusnya ini sementara karena aslinya bakal pakai 3D model semua.
+    // Pakai canvas group untuk keperluan animasi transisinya. Canvas group itu untuk gambar dekorasi background 2D, yang ada pohon-pohonnya.
+    public CanvasGroup CG_backgroundDecorationCanvasGroup;
+    // Pakai canvas group untuk keperluan animasi transisinya. Canvas group yang ini untuk background beneran, yang ada warna dan gradasinya.
     public CanvasGroup CG_backgroundCanvasGroup;
-    public Color COL_backgroundColor;
 }

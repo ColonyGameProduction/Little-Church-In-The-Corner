@@ -8,10 +8,6 @@ using UnityEngine.UI;
 public class DayNightCycleUI : MonoBehaviour
 {
     /// <summary>
-    /// Background warna polos. Ini cuma bakal ganti warna doang.
-    /// </summary>
-    public Image IMG_background;
-    /// <summary>
     /// Waktu saat ini
     /// </summary>
     private DateTime DT_localTime;
@@ -79,21 +75,13 @@ public class DayNightCycleUI : MonoBehaviour
     /// <param name="SCR_dayNightData"></param>
     private void SetupBackground(DayNightSchedule SCR_dayNightData)
     {
-        Debug.Log("Setup background");
-        Debug.Log($"Warna dari {IMG_background.color} menjadi {SCR_dayNightData.COL_backgroundColor}");
-
         //Ada ini karena function di atas bakal override SCR_previousDayNightCycleSchedule
         DayNightSchedule SCR_previousDayNightData = SCR_previousDayNightCycleSchedule;
 
-        //Animasi untuk warna background yang polos.
-        LeanTween
-            .color(IMG_background.rectTransform, SCR_dayNightData.COL_backgroundColor, F_transitionDuration)
-            .setEase(LeanTweenType.easeInOutCubic);
-
-        //Animasi untuk warna ruangan
+        //Animasi untuk warna dekorasi pohon dan background
         if (SCR_previousDayNightData != null)
         {
-            //Cara kerjanya: dia bakal fade out transparansi dari ruangan sebelumnya dan fade in transparansi dari ruangan saat ini.
+            //Cara kerjanya: dia bakal fade out transparansi dari dekorasi sebelumnya dan fade in transparansi dari dekorasi saat ini.
             //"value", yaitu F_alphaValue, bakal berubah dari 1f ke 0f.
             //Makanya ada angka 1f di awal, dan 0f setelahnya
             LeanTween
@@ -101,14 +89,22 @@ public class DayNightCycleUI : MonoBehaviour
             .setEase(LeanTweenType.easeInOutCubic)
             .setOnUpdate((float F_alphaValue) =>
             {
-                //Ruangan sebelumnya bakal berubah alphanya dari 1f ke 0f
-                SCR_previousDayNightData.CG_backgroundCanvasGroup.alpha = F_alphaValue;
-                //Ruangan saat ini bakal berubah alphanya dari 0f ke 1f
+                //Dekorasi sebelumnya bakal berubah alphanya dari 1f ke 0f
+                SCR_previousDayNightData.CG_backgroundDecorationCanvasGroup.alpha = F_alphaValue;
+                //Dekorasi saat ini bakal berubah alphanya dari 0f ke 1f
+                SCR_dayNightData.CG_backgroundDecorationCanvasGroup.alpha = 1f - F_alphaValue;
+
+                //Background
+                SCR_previousDayNightCycleSchedule.CG_backgroundCanvasGroup.alpha = F_alphaValue;
                 SCR_dayNightData.CG_backgroundCanvasGroup.alpha = 1f - F_alphaValue;
             });
         }
         //Kalau misalnya sebelumnya belum pernah ada perubahan apa pun, maka ga usah pakai animasi.
-        else SCR_dayNightData.CG_backgroundCanvasGroup.alpha = 1f;
+        else
+        {
+            SCR_dayNightData.CG_backgroundDecorationCanvasGroup.alpha = 1f;
+            SCR_dayNightData.CG_backgroundCanvasGroup.alpha = 1f;
+        }
     }
 
     /// <summary>

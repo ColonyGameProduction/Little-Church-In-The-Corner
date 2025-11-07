@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5903647496116288163}
   - component: {fileID: 4163369408196000471}
   - component: {fileID: 407744173426025695}
-  - component: {fileID: 79721989721427080}
   - component: {fileID: 6249780566139944933}
   - component: {fileID: 7403249644718896462}
   - component: {fileID: 7416180908611160759}
@@ -112,19 +111,6 @@ MonoBehaviour:
     I_minute: 0
   List_SCR_sermonSchedule: []
   I_maxQueuedSermon: 10
---- !u!114 &79721989721427080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8790204805922321323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98b13f5212691c34c81cdc967d533e61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BTN_interact: {fileID: 0}
 --- !u!114 &6249780566139944933
 MonoBehaviour:
   m_ObjectHideFlags: 0

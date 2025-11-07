@@ -236,9 +236,12 @@ public class UIChatManager : MonoBehaviour
     /// <summary>
     /// Tampilkan pilihan untuk download renungan saat ini.
     /// Dipanggil saat renungan sudah selesai ditampilkan.
+    /// 
+    /// Ada SetAsLastSibling karena sekarang pilihannya dimasukkin ke dalam list chat bubble di dalam UI, sehingga harus pake itu biar pilihan downloadnya ditaro di paling bawah dalam list
     /// </summary>
     private void ShowDownloadOptions()
     {
+        GO_optionToDownloadContainer.transform.SetAsLastSibling();
         GO_optionToDownloadContainer.SetActive(true);
     }
 
