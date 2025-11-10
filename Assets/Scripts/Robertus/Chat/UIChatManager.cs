@@ -64,7 +64,7 @@ public class UIChatManager : MonoBehaviour
     /// <summary>
     /// Ini seberapa cepat animasi teks. Semakin besar angkanya, semakin cepat.
     /// </summary>
-    public float F_textAnimationSpeed = 1f;
+    public float F_textAnimationSpeed;
 
     /// <summary>
     /// Action untuk menunjukkan kalau lagi ga ada renungan yang sedang ditampilkan.
@@ -121,7 +121,7 @@ public class UIChatManager : MonoBehaviour
 
         //Ini dialog/renungan saat ini.
         //TODO: ganti supaya pakai TransitionManager.
-        Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
+        //Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
         DialogSO SO_dialogSO = ChatManager.Instance.SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church, ChatManager.Instance.ENM_currDialog); ;
 
         //Ini bakal membuat semua chat bubble yang bakal ada di dalam renungan, tetapi dia bakal didisable terlebih dahulu supaya ga kelihatan di UI. Nanti mereka bakal dienable kalau sudah waktunya.
@@ -236,9 +236,12 @@ public class UIChatManager : MonoBehaviour
     /// <summary>
     /// Tampilkan pilihan untuk download renungan saat ini.
     /// Dipanggil saat renungan sudah selesai ditampilkan.
+    /// 
+    /// Ada SetAsLastSibling karena sekarang pilihannya dimasukkin ke dalam list chat bubble di dalam UI, sehingga harus pake itu biar pilihan downloadnya ditaro di paling bawah dalam list
     /// </summary>
     private void ShowDownloadOptions()
     {
+        GO_optionToDownloadContainer.transform.SetAsLastSibling();
         GO_optionToDownloadContainer.SetActive(true);
     }
 

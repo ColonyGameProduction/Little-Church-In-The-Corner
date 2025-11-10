@@ -380,7 +380,7 @@ RectTransform:
   m_Father: {fileID: 1847490001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -659,7 +659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &66120635
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7571,7 +7571,7 @@ RectTransform:
   m_Father: {fileID: 165775351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10337,6 +10337,7 @@ MonoBehaviour:
   SO_currPlaylistTypeSO: {fileID: 11400000, guid: 022473f60bba72e4e8509ac3024da077, type: 2}
   SCR_currSong:
     ADO_music: {fileID: 0}
+    BTN_self: {fileID: 0}
     S_titleAndAuthor: 
     ENM_musicCode: 0
   ENM_pauseAndPlay: 0

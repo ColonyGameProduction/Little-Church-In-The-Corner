@@ -171,4 +171,10 @@ public class TimeManager : MonoBehaviour
     {
         ACT_interactIsReady?.Invoke();
     }
+
+    public void TestTambahRenunganBaru()
+    {
+        I_queuedSermon++;
+        RenunganIsReady();
+    }
 }

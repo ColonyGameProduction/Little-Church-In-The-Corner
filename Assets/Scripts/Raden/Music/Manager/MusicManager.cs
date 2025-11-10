@@ -67,6 +67,7 @@ public class MusicManager : MonoBehaviour
 
     private void Start()
     {
+        //ACT_playSong += PlaySong();
         if (SO_currPlaylistTypeSO != null && SO_currPlaylistTypeSO.SCR_playlist.Count > 0)
         {
             SCR_currSong = SO_currPlaylistTypeSO.SCR_playlist[0];
@@ -76,6 +77,7 @@ public class MusicManager : MonoBehaviour
         // load semua local song yang udah ditambah sama pengguna
         LoadLocalSongs();
     }
+
 
     // ini fungsi nge nge play lagunya
     public void PlaySong(Songs songs)
@@ -93,7 +95,7 @@ public class MusicManager : MonoBehaviour
         AssigningSongTitleAndAuthor(songs);
 
         // udah diganti ya seyenkkk
-        songs.PlayingThisSong();
+        //songs.PlayingThisSong();
     }
 
     // nah ini buat setup tombol pause sama playnya

@@ -86,18 +86,21 @@ public class UIPlaylist : MonoBehaviour
             TextMeshProUGUI TMPUGUI_text = GO_newButton.GetComponentInChildren<TextMeshProUGUI>();
             TMPUGUI_text.text = songs.S_titleAndAuthor;
 
+            Songs newSongs = new Songs();
+
+            //GO_newButton.AddComponent<>();
             Button BTN_btn = GO_newButton.GetComponent<Button>();
             Songs _selectedSong = songs;
 
-            /*Songs songComp = GO_newButton.GetComponent<Songs>();
-            if (songComp == null)
-            {
-                songComp = GO_newButton.AddComponent<Songs>();
-            }
+            //Songs songComp = GO_newButton.GetComponent<Songs>();
+            //if (songComp == null)
+            //{
+            //    songComp = GO_newButton.AddComponent<Songs>();
+            //}
 
-            songComp.ADO_music = songs.ADO_music;
-            songComp.S_titleAndAuthor = songs.S_titleAndAuthor;
-            songComp.ENM_musicCode = songs.ENM_musicCode;*/
+            //songComp.ADO_music = songs.ADO_music;
+            //songComp.S_titleAndAuthor = songs.S_titleAndAuthor;
+            //songComp.ENM_musicCode = songs.ENM_musicCode;
 
             BTN_btn.onClick.AddListener(() =>
             {
