@@ -4,109 +4,189 @@ using UnityEngine.EventSystems;
 public class MusicPanelSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     [Header("referensi")]
-    public RectTransform RT_musicPanelRootV2;
-    public GameObject GO_miniMusicPanelv2;
-    public GameObject GO_fullMusicPanelV2;
-    public GameObject GO_playlistMusicPanelV2;
-
+    public RectTransform RT_musicPanelRoot;
+    public GameObject GO_miniMusicPanel;
+    public GameObject GO_fullMusicPanel;
+    public GameObject GO_playlistMusicPanel;
     public CanvasGroup CG_miniCanvasGroup;
     public CanvasGroup CG_fullCanvasGroup;
     public CanvasGroup CG_playlistCanvasGroup;
 
-    [Header("y position buat setiap panel")]
-    public float F_miniY = -540f;
-    public float F_fullY = -200f;
+    [Header("Y position setiap panel")]
+    public float F_miniY = -940f;
+    public float F_fullY = -820f;
     public float F_playlistY = 0f;
-    public float F_swipeThreshold = 100f;
+    public float F_snapThreshold = 80f;
+    public float F_animationDuration = 0.25f;
 
-    public float F_fadeDuration = 0.25f;
+    private Vector2 V_dragStartPos;
+    private bool B_isDragging = false;
+    private ENM_PanelState ENM_currentState = ENM_PanelState.Mini;
 
-    public bool B_MiniMusicPanelActive;
-
-    private float F_currentTargetY;
-
-    private void Start()
+    void Start()
     {
-        // mulai dari posisi mini
-        F_currentTargetY = F_miniY;
-        B_MiniMusicPanelActive = true;
-        SetPanel(F_miniY);
-        UpdatePanelVisibilityImmediate();
+        SetPanelPosition(F_miniY, instant: true);
+        SetActivePanel(ENM_PanelState.Mini, instant: true);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        float F_deltaY = eventData.delta.y;
+        if (!B_isDragging)
+        {
+            V_dragStartPos = eventData.position;
+            B_isDragging = true;
+        }
 
-        // biar swipe up & down ke clamp di mini panel (dibawah) dan playlist panel (diatas)
-        float F_newY = RT_musicPanelRootV2.anchoredPosition.y + F_deltaY;
+        float F_dragDeltaY = eventData.position.y - V_dragStartPos.y;
+        float F_newY = Mathf.Clamp(RT_musicPanelRoot.anchoredPosition.y + F_dragDeltaY * 0.5f, F_miniY, F_playlistY);
 
-        F_newY = Mathf.Clamp(F_newY, F_miniY, F_playlistY);
+        SetPanelPosition(F_newY, instant: true);
+        V_dragStartPos = eventData.position;
 
-        RT_musicPanelRootV2.anchoredPosition = new Vector2(0, F_newY);
+        // fade realtime selama drag
+        UpdateFade(F_newY);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        float F_endY = RT_musicPanelRootV2.anchoredPosition.y;
+        B_isDragging = false;
+        float F_currentY = RT_musicPanelRoot.anchoredPosition.y;
 
-        if (F_endY > F_currentTargetY + F_swipeThreshold)
+        // tentuin state terdekat
+        float F_distMini = Mathf.Abs(F_currentY - F_miniY);
+        float F_distFull = Mathf.Abs(F_currentY - F_fullY);
+        float F_distPlaylist = Mathf.Abs(F_currentY - F_playlistY);
+
+        ENM_PanelState targetState;
+
+        if (F_distMini < F_distFull && F_distMini < F_distPlaylist)
         {
-            // swipe ke atas
-            if (F_currentTargetY == F_miniY)
-            {
-                F_currentTargetY = F_fullY;
-            }
-            else if (F_currentTargetY == F_fullY) 
-            {
-                F_currentTargetY = F_playlistY;
-            }
+            targetState = ENM_PanelState.Mini;
         }
-        else if (F_endY < F_currentTargetY - F_swipeThreshold)
+        else if (F_distFull < F_distPlaylist)
         {
-            // swipe ke bawah
-            if (F_currentTargetY == F_playlistY)
-            {
-                F_currentTargetY = F_fullY;
-            }
-            else if (F_currentTargetY == F_fullY) 
-            {
-                F_currentTargetY = F_miniY;
-            } 
+            targetState = ENM_PanelState.Full;
+        }
+        else
+        {
+            targetState = ENM_PanelState.Playlist;
         }
 
-        // Smooth snap anjay
-        LeanTween.moveY(RT_musicPanelRootV2, F_currentTargetY, 0.25f).setEaseOutCubic().setOnComplete(UpdatePanelVisibilitySmooth);
+        SnapToState(targetState);
     }
 
-    private void SetPanel(float y)
+    private void SetPanelPosition(float y, bool instant = false)
     {
-        RT_musicPanelRootV2.anchoredPosition = new Vector2(0, y);
+        if (instant)
+        {
+            var pos = RT_musicPanelRoot.anchoredPosition;
+            pos.y = y;
+            RT_musicPanelRoot.anchoredPosition = pos;
+        }
+        else
+        {
+            LeanTween.cancel(RT_musicPanelRoot.gameObject);
+            LeanTween.moveY(RT_musicPanelRoot, y, F_animationDuration).setEaseOutCubic().setOnUpdate(UpdateFade); // biar fadenya ikut halus waktu nge-snap
+        }
     }
 
-    private void UpdatePanelVisibilitySmooth()
+    private void SnapToState(ENM_PanelState target)
     {
-        FadePanel(CG_miniCanvasGroup, F_currentTargetY == F_miniY);
-        FadePanel(CG_fullCanvasGroup, F_currentTargetY == F_fullY);
-        FadePanel(CG_playlistCanvasGroup, F_currentTargetY == F_playlistY);
+        ENM_currentState = target;
+        float F_targetY = F_miniY;
+
+        switch (target)
+        {
+            case ENM_PanelState.Mini: F_targetY = F_miniY; break;
+            case ENM_PanelState.Full: F_targetY = F_fullY; break;
+            case ENM_PanelState.Playlist: F_targetY = F_playlistY; break;
+        }
+
+        SetPanelPosition(F_targetY);
+
+        AnimateFade(
+            miniIn: target == ENM_PanelState.Mini,
+            fullIn: target == ENM_PanelState.Full,
+            playlistIn: target == ENM_PanelState.Playlist
+        );
     }
 
-    private void UpdatePanelVisibilityImmediate()
+    private void SetActivePanel(ENM_PanelState state, bool instant = false)
     {
-        CG_miniCanvasGroup.alpha = F_currentTargetY == F_miniY ? 1 : 0;
-        CG_fullCanvasGroup.alpha = F_currentTargetY == F_fullY ? 1 : 0;
-        CG_playlistCanvasGroup.alpha = F_currentTargetY == F_playlistY ? 1 : 0;
+        GO_miniMusicPanel.SetActive(true);
+        GO_fullMusicPanel.SetActive(true);
+        GO_playlistMusicPanel.SetActive(true);
 
-        CG_miniCanvasGroup.interactable = F_currentTargetY == F_miniY;
-        CG_fullCanvasGroup.interactable = F_currentTargetY == F_fullY;
-        CG_playlistCanvasGroup.interactable = F_currentTargetY == F_playlistY;
+        float F_miniA = (state == ENM_PanelState.Mini) ? 1f : 0f;
+        float F_fullA = (state == ENM_PanelState.Full) ? 1f : 0f;
+        float F_playlistA = (state == ENM_PanelState.Playlist) ? 1f : 0f;
+
+        if (instant)
+        {
+            CG_miniCanvasGroup.alpha = F_miniA;
+            CG_fullCanvasGroup.alpha = F_fullA;
+            CG_playlistCanvasGroup.alpha = F_playlistA;
+
+            CG_miniCanvasGroup.blocksRaycasts = (state == ENM_PanelState.Mini);
+            CG_fullCanvasGroup.blocksRaycasts = (state == ENM_PanelState.Full);
+            CG_playlistCanvasGroup.blocksRaycasts = (state == ENM_PanelState.Playlist);
+        }
+        else
+        {
+            AnimateFade(
+                miniIn: state == ENM_PanelState.Mini,
+                fullIn: state == ENM_PanelState.Full,
+                playlistIn: state == ENM_PanelState.Playlist
+            );
+        }
     }
 
-    private void FadePanel(CanvasGroup cg, bool show)
+    // fade realtime berdasarkan posisi panel
+    private void UpdateFade(float y)
     {
-        LeanTween.alphaCanvas(cg, show ? 1f : 0f, F_fadeDuration);
-        cg.interactable = show;
-        cg.blocksRaycasts = show;
+        float F_tFull = Mathf.InverseLerp(F_miniY, F_fullY, y);
+        float F_tPlaylist = Mathf.InverseLerp(F_fullY, F_playlistY, y);
+
+        // mini -> full
+        CG_miniCanvasGroup.alpha = Mathf.Lerp(1f, 0f, F_tFull);
+        CG_fullCanvasGroup.alpha = Mathf.Lerp(0f, 1f, F_tFull);
+
+        // full -> playlist
+        if (y > F_fullY)
+        {
+            CG_fullCanvasGroup.alpha = Mathf.Lerp(1f, 0f, F_tPlaylist);
+            CG_playlistCanvasGroup.alpha = Mathf.Lerp(0f, 1f, F_tPlaylist);
+        }
+        else
+        {
+            CG_playlistCanvasGroup.alpha = 0f;
+        }
+    }
+
+    private void AnimateFade(bool miniIn, bool fullIn, bool playlistIn)
+    {
+        AnimateCanvas(CG_miniCanvasGroup, miniIn);
+        AnimateCanvas(CG_fullCanvasGroup, fullIn);
+        AnimateCanvas(CG_playlistCanvasGroup, playlistIn);
+
+        CG_miniCanvasGroup.blocksRaycasts = miniIn;
+        CG_fullCanvasGroup.blocksRaycasts = fullIn;
+        CG_playlistCanvasGroup.blocksRaycasts = playlistIn;
+    }
+
+
+    private void AnimateCanvas(CanvasGroup group, bool fadeIn)
+    {
+        LeanTween.cancel(group.gameObject);
+        float target = fadeIn ? 1f : 0f;
+
+        LeanTween.value(
+            group.gameObject,
+            group.alpha,
+            target,
+            F_animationDuration
+        )
+        .setOnUpdate((float val) => group.alpha = val)
+        .setEaseOutCubic();
     }
 }
-
