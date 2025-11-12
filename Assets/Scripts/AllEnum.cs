@@ -56,8 +56,8 @@ public enum ENM_LoopMethod
 #region HUD
 public enum ENM_Room
 {
-    Church = 0,
-    Office = 1,
+    Office = 0,
+    Church = 1,
     Bedroom = 2,
 }
 #endregion

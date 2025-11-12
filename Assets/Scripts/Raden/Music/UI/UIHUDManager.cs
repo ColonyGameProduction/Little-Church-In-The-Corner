@@ -39,8 +39,14 @@ public class UIHUDManager : MonoBehaviour
 
     public void RoomTransitionUI(ENM_Room room)
     {
-        STR_TM.Transition(room);
-        HighlightRoomButtonTransition(room);
+        //Ini nanti pindahin semua yang ada di RoomPositionManager ke sini
+        //Ini cuma sementara doang gara-gara aku mager
+        //- Robert
+        RoomPositionManager.Instance.I_roomIndex = (int)room;
+        RoomPositionManager.Instance.GoToPosition();
+
+        //STR_TM.Transition(room);
+        //HighlightRoomButtonTransition(room);
     }
 
     // ini buat nge highlight buttonya tapi ini buat contoh baek
