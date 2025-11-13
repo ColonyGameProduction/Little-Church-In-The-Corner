@@ -86,7 +86,7 @@ public class RoomPositionManager : MonoBehaviour
             Vector3 currentSize = new Vector3(GetBounds(List_GO_roomObjects[i]).extents.x, 0, 0);
             Vector3 prevSize = new Vector3(GetBounds(List_GO_roomObjects[i-1]).extents.x / 2, 0, 0);
 
-            currentPos += distanceFromCenter - centerOffset - currentSize - prevSize;
+            currentPos += distanceFromCenter + centerOffset + currentSize + prevSize;
 
             Vector3 newPos = new Vector3(currentPos.x, 0f, 0f);
 
@@ -149,8 +149,8 @@ public class RoomPositionManager : MonoBehaviour
     //Ini ditrigger di component Player Input
     private void OnSwipeStart()
     {
-        //Kalau lagi animasi pindah ruangan, disable swipe
-        if (LeanTween.isTweening(I_moveAnimationID)) return;
+        //Kalau lagi animasi pindah ruangan, animasi swipenya diberhentiin
+        if (LeanTween.isTweening(I_moveAnimationID)) LeanTween.cancel(I_moveAnimationID);
 
         if (cam == null) cam = Camera.main;
 
@@ -168,7 +168,8 @@ public class RoomPositionManager : MonoBehaviour
             //Debug.Log($"Mouse position = {Mouse.current.position.value}");
             //Debug.Log($"Mouse position world = {cam.ScreenToWorldPoint(Mouse.current.position.value)}");
             Vector3 displacement = V3_originalParentPos + (cam.ScreenToWorldPoint(Mouse.current.position.value) - V3_originalMousePos);
-            TF_parent.position = new Vector3(Mathf.Clamp(displacement.x, V2_minMaxPosition.x, V2_minMaxPosition.y), TF_parent.position.y, TF_parent.position.z);
+            //minmaxposition.y itu nilai terkecil, makanya dia duluan. Yeah, "terkecil" karena angkanya negatif.
+            TF_parent.position = new Vector3(Mathf.Clamp(displacement.x, V2_minMaxPosition.y, V2_minMaxPosition.x), TF_parent.position.y, TF_parent.position.z);
             //TF_parent.position = new Vector3(displacement.x, TF_parent.position.y, TF_parent.position.z);
             yield return null;
         }
@@ -176,8 +177,8 @@ public class RoomPositionManager : MonoBehaviour
 
     private void OnSwipeRelease()
     {
-        //Kalau lagi animasi pindah ruangan, disable swipe
-        if (LeanTween.isTweening(I_moveAnimationID)) return;
+        //Kalau lagi animasi pindah ruangan, animasi swipenya diberhentiin
+        if (LeanTween.isTweening(I_moveAnimationID)) LeanTween.cancel(I_moveAnimationID);
 
         if (COR_swipeUpdateCoroutine != null) StopCoroutine(COR_swipeUpdateCoroutine);
 

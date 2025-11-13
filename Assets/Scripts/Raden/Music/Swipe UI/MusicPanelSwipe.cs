@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class MusicPanelSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
 {
@@ -11,6 +12,8 @@ public class MusicPanelSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
     public CanvasGroup CG_miniCanvasGroup;
     public CanvasGroup CG_fullCanvasGroup;
     public CanvasGroup CG_playlistCanvasGroup;
+    // Ini buat ngambil Reference Resolution biar mouse position akurat dan sesuai dengan ukuran UI sebenarnya, soalnya eventPosition tergantung ukuran layar, dan ukurannya belum tentu sama dengan ukuran reference resolution di canvas UI. -Robert
+    public CanvasScaler UICanvasScaler;
 
     [Header("Y position setiap panel")]
     public float F_miniY = -940f;
@@ -20,6 +23,8 @@ public class MusicPanelSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
     public float F_animationDuration = 0.25f;
 
     private Vector2 V_dragStartPos;
+    // Ini biar dia ngedrag dari posisi awal musik panel, bukan di posisi sebenarnya (karena kalau posisi sebenarnya, dia kan selalu update pas dragging, jadi bakal terus menerus nambah posisinya. -Robert
+    private Vector2 V_musicPanelRootStartPos;
     private bool B_isDragging = false;
     private ENM_PanelState ENM_currentState = ENM_PanelState.Mini;
 
@@ -33,15 +38,19 @@ public class MusicPanelSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         if (!B_isDragging)
         {
-            V_dragStartPos = eventData.position;
+            // Cara kerja ini adalah dia bakal kaliin reference resolution dari canvas scaler UI (bagian tingginya) dengan posisi mouse saat ini, lalu dibagi dengan tinggi layar sebenarnya. Ini biar posisinya akurat dan nyesuaiin dengan reference resolution UI canvas dan bukan sesuaiin dengan ukuran layar -Robert
+            V_dragStartPos = UICanvasScaler.referenceResolution.y * eventData.position / Screen.height;
+            V_musicPanelRootStartPos = RT_musicPanelRoot.anchoredPosition;
             B_isDragging = true;
         }
 
-        float F_dragDeltaY = eventData.position.y - V_dragStartPos.y;
-        float F_newY = Mathf.Clamp(RT_musicPanelRoot.anchoredPosition.y + F_dragDeltaY * 0.5f, F_miniY, F_playlistY);
+        // Ini sama kayak di atas, tapi dia langsung ambil tingginya, lalu dikurangin dengan titik awal drag
+        float F_dragDeltaY = (UICanvasScaler.referenceResolution.y * eventData.position / Screen.height).y - V_dragStartPos.y;
+        float F_newY = Mathf.Clamp(V_musicPanelRootStartPos.y + F_dragDeltaY, F_miniY, F_playlistY);
 
         SetPanelPosition(F_newY, instant: true);
-        V_dragStartPos = eventData.position;
+        // Ini kayaknya ga perlu lagi -Robert
+        //V_dragStartPos = eventData.position;
 
         // fade realtime selama drag
         UpdateFade(F_newY);

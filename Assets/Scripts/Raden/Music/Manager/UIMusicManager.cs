@@ -42,7 +42,8 @@ public class UIMusicManager : MonoBehaviour
         BTN_pauseAndPlayFull.onClick.AddListener(() => SetupPauseAndPlayImage());
         BTN_next.onClick.AddListener(() => SCR_MM.ToggleNextSong());
         BTN_prev.onClick.AddListener(() => SCR_MM.TogglePrevSong());
-        BTN_playlist.onClick.AddListener(() => SetupPlaylistUI());
+        // Robert: ada ini biar kalau null reference, dia ga munculin error. Kayaknya ini ga kepake juga akhirnya?
+        if(BTN_playlist) BTN_playlist.onClick.AddListener(() => SetupPlaylistUI());
 
         // Event listener pas laguan berubah
         SCR_MM.ACT_playSong += UpdateSongNameUI;
