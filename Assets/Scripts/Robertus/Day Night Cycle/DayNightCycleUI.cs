@@ -95,7 +95,7 @@ public class DayNightCycleUI : MonoBehaviour
                 SCR_dayNightData.CG_backgroundDecorationCanvasGroup.alpha = 1f - F_alphaValue;
 
                 //Background
-                SCR_previousDayNightCycleSchedule.CG_backgroundCanvasGroup.alpha = F_alphaValue;
+                SCR_previousDayNightData.CG_backgroundCanvasGroup.alpha = F_alphaValue;
                 SCR_dayNightData.CG_backgroundCanvasGroup.alpha = 1f - F_alphaValue;
             });
         }
