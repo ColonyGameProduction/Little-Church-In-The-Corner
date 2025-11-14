@@ -17,7 +17,8 @@ public class UIMusicManager : MonoBehaviour
     [Header("Para Button")]
     public Button BTN_shuffle;
     public Button BTN_loop;
-    public Button BTN_pauseAndPlay;
+    public Button BTN_pauseAndPlayMini;
+    public Button BTN_pauseAndPlayFull;
     public Button BTN_next;
     public Button BTN_prev;
     public Button BTN_playlist;
@@ -37,10 +38,12 @@ public class UIMusicManager : MonoBehaviour
         // ini setupan buat button listener yak
         BTN_shuffle.onClick.AddListener(() => SetupShuffleButton());
         BTN_loop.onClick.AddListener(() => SetupLoopButtonMethod());
-        BTN_pauseAndPlay.onClick.AddListener(() => SetupPauseAndPlayImage());
+        BTN_pauseAndPlayMini.onClick.AddListener(() => SetupPauseAndPlayImage());
+        BTN_pauseAndPlayFull.onClick.AddListener(() => SetupPauseAndPlayImage());
         BTN_next.onClick.AddListener(() => SCR_MM.ToggleNextSong());
         BTN_prev.onClick.AddListener(() => SCR_MM.TogglePrevSong());
-        BTN_playlist.onClick.AddListener(() => SetupPlaylistUI());
+        // Robert: ada ini biar kalau null reference, dia ga munculin error. Kayaknya ini ga kepake juga akhirnya?
+        if(BTN_playlist) BTN_playlist.onClick.AddListener(() => SetupPlaylistUI());
 
         // Event listener pas laguan berubah
         SCR_MM.ACT_playSong += UpdateSongNameUI;

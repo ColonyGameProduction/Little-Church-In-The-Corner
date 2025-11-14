@@ -32,15 +32,22 @@ public class UIHUDManager : MonoBehaviour
         BTN_office.onClick.AddListener(() => RoomTransitionUI(ENM_Room.Office));
         BTN_bedRoom.onClick.AddListener(() => RoomTransitionUI(ENM_Room.Bedroom));
 
-        BTN_exit.onClick.AddListener(Exit);
-        BTN_setting.onClick.AddListener(Settings);
-        BTN_minimizeAndMaximize.onClick.AddListener(MinimizeAndMaximize);
+        // Robert: ada ini biar kalau null reference, dia ga munculin error. Kayaknya ini ga kepake juga akhirnya?
+        if(BTN_exit) BTN_exit.onClick.AddListener(Exit);
+        if (BTN_setting) BTN_setting.onClick.AddListener(Settings);
+        if(BTN_minimizeAndMaximize) BTN_minimizeAndMaximize.onClick.AddListener(MinimizeAndMaximize);
     }
 
     public void RoomTransitionUI(ENM_Room room)
     {
-        STR_TM.Transition(room);
-        HighlightRoomButtonTransition(room);
+        //Ini nanti pindahin semua yang ada di RoomPositionManager ke sini
+        //Ini cuma sementara doang gara-gara aku mager
+        //- Robert
+        RoomPositionManager.Instance.I_roomIndex = (int)room;
+        RoomPositionManager.Instance.GoToPosition();
+
+        //STR_TM.Transition(room);
+        //HighlightRoomButtonTransition(room);
     }
 
     // ini buat nge highlight buttonya tapi ini buat contoh baek

@@ -51,13 +51,20 @@ public enum ENM_LoopMethod
     LoopSong,
     LoopPlaylist
 }
+
+public enum ENM_PanelState
+{
+    Mini,
+    Full,
+    Playlist
+}
 #endregion
 
 #region HUD
 public enum ENM_Room
 {
-    Church = 0,
-    Office = 1,
+    Office = 0,
+    Church = 1,
     Bedroom = 2,
 }
 #endregion
