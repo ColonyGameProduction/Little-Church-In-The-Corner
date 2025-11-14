@@ -1,7 +1,8 @@
 #region Chat
 public enum ENM_CharFace
 {
-    Test1 = 1
+    Test1 = 1,
+    Test2 = 2,
 }
 
 public enum ENM_DialogTitle
@@ -11,6 +12,8 @@ public enum ENM_DialogTitle
     Test2 = 2,
     Sample = 3,
     SamplePanjang = 4,
+    QnATest1 = 5,
+    QnATest2 = 6,
 }
 #endregion
 

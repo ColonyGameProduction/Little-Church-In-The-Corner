@@ -82,9 +82,7 @@ public class ChatManager : MonoBehaviour
 
         I_amountOfTextAnimationDone = 0;
 
-        //TODO: ganti supaya pakai TransitionManager.
-        //Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
-        DialogSO SO_currDialog = SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church, ENM_currDialog);
+        DialogSO SO_currDialog = SO_listOfDialogueSO.SO_GetDialogSO(TransitionManager.Instance.ENM_room, ENM_currDialog);
 
         while (I_currDialogComponentIndex < SO_currDialog.SCR_dialogComponent.Count)
         {
@@ -135,12 +133,19 @@ public class ChatManager : MonoBehaviour
         if (ENM_currDialog != ENM_DialogTitle.None)
             return;
         ////Kalau ga ada renungan dalam queue, jangan setup renungan.
-        if (TimeManager.Instance.I_queuedSermon <= 0)
-            return;
 
-        //TODO: ganti supaya pakai TransitionManager.
-        //Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
-        ENM_currDialog = SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church).ENM_dialogTitle;
+        if (TransitionManager.Instance.ENM_room == ENM_Room.Office)
+        {
+            if (TimeManager.Instance.I_queuedQnA <= 0)
+                return;
+        }
+        else if (TransitionManager.Instance.ENM_room == ENM_Room.Church)
+        {
+            if (TimeManager.Instance.I_queuedSermon <= 0)
+                return;
+        }
+
+        ENM_currDialog = SO_listOfDialogueSO.SO_GetDialogSO(TransitionManager.Instance.ENM_room).ENM_dialogTitle;
         I_currDialogComponentIndex = 0;
     }
 }

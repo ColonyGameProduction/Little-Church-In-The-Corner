@@ -43,7 +43,7 @@ public class UIHUDManager : MonoBehaviour
         //Ini nanti pindahin semua yang ada di RoomPositionManager ke sini
         //Ini cuma sementara doang gara-gara aku mager
         //- Robert
-        RoomPositionManager.Instance.I_roomIndex = (int)room;
+        TransitionManager.Instance.ENM_room = room;
         RoomPositionManager.Instance.GoToPosition();
 
         //STR_TM.Transition(room);

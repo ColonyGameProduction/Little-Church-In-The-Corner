@@ -14,18 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ENM_dialogTitle: 2
   SCR_dialogComponent:
-  - COL_bubbleColour: {r: 1, g: 1, b: 1, a: 1}
+  - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
     S_stringText: Aliquam maximus odio vitae leo sollicitudin vehicula.
     ENM_charFace: 1
-  - COL_bubbleColour: {r: 1, g: 1, b: 1, a: 1}
+    B_isFlipped: 0
+  - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
     S_stringText: Morbi finibus dolor et felis egestas ullamcorper.
     ENM_charFace: 1
-  - COL_bubbleColour: {r: 1, g: 1, b: 1, a: 1}
+    B_isFlipped: 0
+  - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
     S_stringText: Donec efficitur leo ut ipsum eleifend lacinia.
     ENM_charFace: 1
-  - COL_bubbleColour: {r: 1, g: 1, b: 1, a: 1}
+    B_isFlipped: 0
+  - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
     S_stringText: Morbi a ligula sed ipsum tempus tempus id vitae tellus.
     ENM_charFace: 1
-  - COL_bubbleColour: {r: 1, g: 1, b: 1, a: 1}
+    B_isFlipped: 0
+  - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
     S_stringText: Donec nec tortor vitae orci congue tristique viverra sit amet ligula.
     ENM_charFace: 1
+    B_isFlipped: 0

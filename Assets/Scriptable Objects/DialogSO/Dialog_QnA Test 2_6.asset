@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b6bd73f7b64af4478ff9deae33193d4, type: 3}
-  m_Name: Dialog_Test 1_1
+  m_Name: Dialog_QnA Test 2_6
   m_EditorClassIdentifier: 
-  ENM_dialogTitle: 1
+  ENM_dialogTitle: 6
   SCR_dialogComponent:
   - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
-    S_stringText: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    S_stringText: Selamat pagi
     ENM_charFace: 1
     B_isFlipped: 0
+  - SPR_background: {fileID: 21300000, guid: 44f1cbb16d63de247b60d6b02d7d9277, type: 3}
+    S_stringText: Pagi pak
+    ENM_charFace: 2
+    B_isFlipped: 1
   - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
-    S_stringText: Nam mollis quam nec urna accumsan iaculis.
+    S_stringText: Ada keperluan apa kemari?
     ENM_charFace: 1
     B_isFlipped: 0
+  - SPR_background: {fileID: 21300000, guid: 44f1cbb16d63de247b60d6b02d7d9277, type: 3}
+    S_stringText: Ga ada pak.
+    ENM_charFace: 2
+    B_isFlipped: 1
   - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
-    S_stringText: Donec sagittis sem eget lorem suscipit feugiat.
-    ENM_charFace: 1
-    B_isFlipped: 0
-  - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
-    S_stringText: Aenean aliquet nisl eu risus consequat malesuada.
-    ENM_charFace: 1
-    B_isFlipped: 0
-  - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
-    S_stringText: Nunc in ex ornare, faucibus erat ac, accumsan augue.
+    S_stringText: Ok.
     ENM_charFace: 1
     B_isFlipped: 0

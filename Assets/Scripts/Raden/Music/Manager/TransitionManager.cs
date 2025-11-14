@@ -7,6 +7,8 @@ public class TransitionManager : MonoBehaviour
 
     public List<GameObject> GO_Ruangan; // sementara roomnya image dulu yaks
 
+    public ENM_Room ENM_room;
+
     private void Awake()
     {
         Instance = this;

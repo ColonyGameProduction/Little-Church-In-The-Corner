@@ -30,6 +30,11 @@ public class DataManager : MonoBehaviour
     private string S_scheduleFilePath;
 
     /// <summary>
+    /// Ini lokasi tempat penyimpanan SCR_schedule untuk QnA Kantor di device pemain
+    /// </summary>
+    private string S_QnAscheduleFilePath;
+
+    /// <summary>
     /// Action untuk diinvoke kalau udah selesai ngeload data dari save file.
     /// Tujuannya biar class yang butuh data itu nunggu dulu sampai ngeloadnya selesai.
     /// </summary>
@@ -46,7 +51,8 @@ public class DataManager : MonoBehaviour
             Instance = this;
         }
 
-        S_scheduleFilePath = Path.Combine(Application.persistentDataPath, "Data", "SCR_schedule.data"); ;
+        S_scheduleFilePath = Path.Combine(Application.persistentDataPath, "Data", "SCR_schedule.data");
+        S_QnAscheduleFilePath = Path.Combine(Application.persistentDataPath, "Data", "SCR_QnAschedule.data");
     }
 
     private void Start()
@@ -74,9 +80,11 @@ public class DataManager : MonoBehaviour
 
         //Schedule
         SaveXOR(S_scheduleFilePath, JsonUtility.ToJson(new TimeManager.ListOfSchedule(TimeManager.Instance.List_SCR_sermonSchedule)));
+        SaveXOR(S_QnAscheduleFilePath, JsonUtility.ToJson(new TimeManager.ListOfSchedule(TimeManager.Instance.List_SCR_qnaSchedule)));
 
         //Queue
         PlayerPrefs.SetInt("I_queuedSermon", TimeManager.Instance.I_queuedSermon);
+        PlayerPrefs.SetInt("I_queuedQnA", TimeManager.Instance.I_queuedQnA);
     }
 
     /// <summary>
@@ -94,17 +102,23 @@ public class DataManager : MonoBehaviour
 
         //Queue
         TimeManager.Instance.I_queuedSermon = PlayerPrefs.GetInt("I_queuedSermon");
+        TimeManager.Instance.I_queuedQnA = PlayerPrefs.GetInt("I_queuedQnA");
         //Hitung berapa hari sejak terakhir login.
         int I_daysSinceLastLogin = ((TimeSpan)(DateTime.Now - DT_lastLogin)).Days;
 
         //Schedule sebentar
         //Kalau misalnya last loginnya hari ini, load dari save file
         //else, bikin SCR_schedule baru buat hari ini
-        if (I_daysSinceLastLogin <= 0) LoadSchedule(S_scheduleFilePath);
+        if (I_daysSinceLastLogin <= 0)
+        {
+            LoadSchedule(S_scheduleFilePath);
+            LoadQnASchedule(S_QnAscheduleFilePath);
+        }
         else TimeManager.Instance.SetupListSchedule();
 
         Debug.Log($"It has been {I_daysSinceLastLogin} days since last login.");
 
+        #region Renungan Gereja
         //Hitung berapa banyak renungan yang mungkin terlewat dari last login sampai sekarang.
         //Misal, kalau sudah 4 hari ga login, maka sudah pasti 3 di antara 4 hari itu adalah 1 hari full, sehingga 3 kali banyaknya jadwal renungan per hari, yaitu 5. 3 x 5 = 15 renungan yang terlewat.
         //Mengapa ga 4 hari? Karena bisa saja hari pertama dia last loginnya di tengah atau akhir hari. Technically itu masih termasuk 1 hari. Jadi, itu nanti bakal dihitung di bawah.
@@ -132,6 +146,30 @@ public class DataManager : MonoBehaviour
             }
         }
 
+        #endregion
+
+        #region QnA Kantor
+        // Kurang lebih sama kayak di atas
+        int I_missedQnAs = (I_daysSinceLastLogin - 1) * TimeManager.Instance.List_SCR_qnaSchedule.Count;
+
+        Debug.Log($"You missed {I_missedQnAs} QnAs");
+
+        TimeManager.Instance.I_queuedQnA += I_missedQnAs;
+
+        if (I_daysSinceLastLogin > 0 && TimeManager.Instance.I_queuedQnA < TimeManager.Instance.I_maxQueuedQnA)
+        {
+            foreach (Schedule SCR_schedule in TimeManager.Instance.List_SCR_qnaSchedule)
+            {
+                if (DT_lastLogin.Hour > SCR_schedule.DT_time.Hour ||
+                    (DT_lastLogin.Hour == SCR_schedule.DT_time.Hour && DT_lastLogin.Minute >= SCR_schedule.DT_time.Minute))
+                {
+                    Debug.Log($"Schedule = {SCR_schedule} vs last login = {DT_lastLogin}");
+                    TimeManager.Instance.I_queuedQnA++;
+                }
+            }
+        }
+        #endregion
+
         ACT_loadDone?.Invoke();
     }
 
@@ -157,7 +195,16 @@ public class DataManager : MonoBehaviour
             //Kalau misalnya konversinya berhasil
             if (SCR_loadedData != null)
             {
-                Debug.Log(SCR_loadedData);
+                try
+                {
+                    Debug.Log(SCR_loadedData);
+                }
+                catch (Exception)
+                {
+
+                    Debug.LogError("ERROR: Data cannot be loaded");
+                    throw;
+                }
                 //Taro hasil konversinya ke dalam List asli, yang bisa dibaca dan diakses oleh class lain
                 TimeManager.Instance.List_SCR_sermonSchedule = SCR_loadedData.List_schedules;
 
@@ -182,6 +229,53 @@ public class DataManager : MonoBehaviour
             //{
             //    Debug.Log(SCR_schedule);
             //}
+        }
+    }
+
+    /// <summary>
+    /// Ngeload data SCR_schedule dari device pemain, kalau ada.
+    /// Kalau ga ada, atur SCR_schedule default.
+    /// </summary>
+    /// <param name="S_filePath">Lokasi tempat penyimpanan</param>
+    private void LoadQnASchedule(string S_filePath)
+    {
+        if (File.Exists(S_filePath))
+        {
+            string S_encryptedString = File.ReadAllText(S_filePath);
+
+            string S_decryptedString = S_EncryptDecrypt(S_encryptedString);
+
+            TimeManager.ListOfSchedule SCR_loadedData = JsonUtility.FromJson<TimeManager.ListOfSchedule>(S_decryptedString);
+
+            if (SCR_loadedData != null)
+            {
+                try
+                {
+                    Debug.Log(SCR_loadedData);
+                }
+                catch (Exception)
+                {
+
+                    Debug.LogError("ERROR: Data cannot be loaded");
+                    throw;
+                }
+
+                TimeManager.Instance.List_SCR_qnaSchedule = SCR_loadedData.List_schedules;
+
+                foreach (Schedule SCR_schedule in TimeManager.Instance.List_SCR_qnaSchedule)
+                {
+                    SCR_schedule.ConvertUnixToDateTime();
+                }
+            }
+            else
+            {
+                Debug.LogError("ERROR: Data cannot be loaded");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("WARNING: File doesn't exist");
+            TimeManager.Instance.SetupListSchedule();
         }
     }
 
@@ -216,7 +310,7 @@ public class DataManager : MonoBehaviour
     //XOR encryption by key, basiclly it takes ASCII code of character and ^ by key, does that to each character of string
     public string S_EncryptDecrypt(string S_textToEncrypt)
     {
-        Debug.Log("Encrypting/Decrypting\n" + S_textToEncrypt);
+        //Debug.Log("Encrypting/Decrypting\n" + S_textToEncrypt);
         StringBuilder SB_inSb = new StringBuilder(S_textToEncrypt);
         StringBuilder SB_outSb = new StringBuilder(S_textToEncrypt.Length);
         char c;
@@ -226,7 +320,7 @@ public class DataManager : MonoBehaviour
             c = (char)(c ^ I_KEY);
             SB_outSb.Append(c);
         }
-        Debug.Log("Result\n" + SB_outSb.ToString());
+        //Debug.Log("Result\n" + SB_outSb.ToString());
         return SB_outSb.ToString();
     }
     #endregion

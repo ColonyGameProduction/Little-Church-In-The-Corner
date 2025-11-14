@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-//TODO: JANGAN LUPA HAPUS INI
-[ExecuteAlways]
 public class RoomPositionManager : MonoBehaviour
 {
     public static RoomPositionManager Instance { get; private set; }
@@ -16,7 +14,6 @@ public class RoomPositionManager : MonoBehaviour
 
     public GameObject[] List_GO_roomObjects;
     public List<Vector3> List_V3_positions;
-    public int I_roomIndex;
 
     public float F_moveAnimationDuration = 0.5f;
     private int I_moveAnimationID;
@@ -100,13 +97,21 @@ public class RoomPositionManager : MonoBehaviour
 
     public void GoToNext()
     {
+        int I_roomIndex = (int)TransitionManager.Instance.ENM_room;
+
         I_roomIndex = Mathf.Clamp(I_roomIndex + 1, 0, List_V3_positions.Count - 1);
+
+        TransitionManager.Instance.ENM_room = (ENM_Room)I_roomIndex;
         GoToPosition();
     }
 
     public void GoToPrev()
     {
+        int I_roomIndex = (int)TransitionManager.Instance.ENM_room;
+
         I_roomIndex = Mathf.Clamp(I_roomIndex - 1, 0, List_V3_positions.Count - 1);
+
+        TransitionManager.Instance.ENM_room = (ENM_Room)I_roomIndex;
         GoToPosition();
     }
 
@@ -117,7 +122,7 @@ public class RoomPositionManager : MonoBehaviour
             .move(
                 TF_parent.gameObject,
                 new Vector3(
-                    List_V3_positions[I_roomIndex].x,
+                    List_V3_positions[(int)TransitionManager.Instance.ENM_room].x,
                     TF_parent.position.y,
                     TF_parent.position.z),
                 F_moveAnimationDuration)
@@ -127,7 +132,7 @@ public class RoomPositionManager : MonoBehaviour
         LeanTween
             .move(
                 RT_highlightRect,
-                new Vector2(RT_highlightRect.sizeDelta.x * I_roomIndex, 0f),
+                new Vector2(RT_highlightRect.sizeDelta.x * (int)TransitionManager.Instance.ENM_room, 0f),
                 F_moveAnimationDuration
             )
             .setEase(LeanTweenType.easeOutCubic);
@@ -135,7 +140,7 @@ public class RoomPositionManager : MonoBehaviour
         for (int i = 0; i < List_IMG_roomButtonActiveIcons.Count; i++)
         {
             float F_alpha = 0f;
-            if (i == I_roomIndex) F_alpha = 1f;
+            if (i == (int)TransitionManager.Instance.ENM_room) F_alpha = 1f;
             LeanTween
                 .alpha(
                 List_IMG_roomButtonActiveIcons[i].rectTransform,
@@ -182,17 +187,17 @@ public class RoomPositionManager : MonoBehaviour
 
         if (COR_swipeUpdateCoroutine != null) StopCoroutine(COR_swipeUpdateCoroutine);
 
-        int I_nextRoomIndex = I_roomIndex;
+        int I_nextRoomIndex = (int)TransitionManager.Instance.ENM_room;
 
         //Kalau misalnya udah cukup jauh swipenya, maka boleh pindah ke ruangan lain
-        if (Mathf.Abs(List_V3_positions[I_roomIndex].x - TF_parent.position.x) > F_swipeSensitivity)
+        if (Mathf.Abs(List_V3_positions[(int)TransitionManager.Instance.ENM_room].x - TF_parent.position.x) > F_swipeSensitivity)
         {
             float smallestDifference = float.PositiveInfinity;
 
             for (int i = 0; i < List_V3_positions.Count; i++)
             {
                 // Kalau i sama dengan ruangan saat ini, skip
-                if (I_roomIndex == i) continue;
+                if ((int)TransitionManager.Instance.ENM_room == i) continue;
 
                 //Debug.Log($"{i} Smallest difference {smallestDifference} vs difference {Mathf.Abs(List_V3_positions[i].x - TF_parent.position.x)}");
                 if (smallestDifference > Mathf.Abs(List_V3_positions[i].x - TF_parent.position.x))
@@ -203,7 +208,7 @@ public class RoomPositionManager : MonoBehaviour
             }
         }
 
-        I_roomIndex = I_nextRoomIndex;
+        TransitionManager.Instance.ENM_room = (ENM_Room)I_nextRoomIndex;
 
         GoToPosition();
     }

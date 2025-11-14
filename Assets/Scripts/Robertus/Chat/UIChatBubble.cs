@@ -52,9 +52,23 @@ public class UIChatBubble : MonoBehaviour
         //Pertama-tama dihide dulu soalnya ga semua dialog bakal dimunculin di awal. Dialog-dialog bakal dimunculin perlahan-lahan. Jadi, muncul atau engga bakal diatur di UIChatManager nantinya.
         Fade(0f);
 
-        IMG_chatBubble.color = SCR_dialogComponent.COL_bubbleColour;
+        IMG_chatBubble.sprite = SCR_dialogComponent.SPR_background;
         TMPUGUI_chatBubble.text = SCR_dialogComponent.S_stringText;
         IMG_face.sprite = ChatManager.Instance.SCR_listOfFace.SCR_GetFace(SCR_dialogComponent.ENM_charFace).SPR_characterSprite;
+
+        if (SCR_dialogComponent.B_isFlipped)
+        {
+            //https://discussions.unity.com/t/access-left-right-top-and-bottom-of-recttransform-via-script/129237/4
+            TMPUGUI_chatBubble.rectTransform.offsetMin = new Vector2(TMPUGUI_chatBubble.rectTransform.offsetMin.x * -1f, TMPUGUI_chatBubble.rectTransform.offsetMin.y);
+            TMPUGUI_chatBubble.rectTransform.offsetMax = new Vector2(TMPUGUI_chatBubble.rectTransform.offsetMax.x * -1f, TMPUGUI_chatBubble.rectTransform.offsetMax.y);
+
+            TMPUGUI_chatBubble.alignment = TextAlignmentOptions.MidlineRight;
+
+            IMG_face.rectTransform.anchorMin = new Vector2(1f, IMG_face.rectTransform.anchorMin.y);
+            IMG_face.rectTransform.anchorMax = new Vector2(1f, IMG_face.rectTransform.anchorMax.y);
+            IMG_face.rectTransform.localScale = new Vector3(-1f, IMG_face.rectTransform.localScale.y, IMG_face.rectTransform.localScale.z);
+            IMG_face.rectTransform.anchoredPosition = new Vector3(IMG_face.rectTransform.anchoredPosition.x * -1f, IMG_face.rectTransform.anchoredPosition.y);
+        }
     }
 
     /// <summary>
