@@ -112,6 +112,6 @@ public class UIPlaylist : MonoBehaviour
     // ini buat di taro di add button
     public void OnAddLocalSongButton()
     {
-        SCR_MM.ImportLocalSong();
+        FindAnyObjectByType<UniversalLocalSongImporter>().ImportLocalSong();
     }
 }

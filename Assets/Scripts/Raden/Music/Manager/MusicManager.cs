@@ -236,18 +236,6 @@ public class MusicManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    // fungsi ini tuh buat buka file browser dan pilih2 lagu dari local storage pengguna
-    public void ImportLocalSong()
-    {
-        var paths = StandaloneFileBrowser.OpenFilePanel("Select Music File", "", new[] {
-        new ExtensionFilter("Audio Files", "mp3", "wav", "ogg")
-        }, false);
-
-        if (paths.Length == 0) return;
-        string path = paths[0];
-        StartCoroutine(LoadAndAddLocalSong(path));
-    }
-
     // ini korutin buat nge-add file audio dari local path, terus namahin ke Playlist_Local abis itu di simpen di JSON
     private IEnumerator LoadAndAddLocalSong(string path)
     {
@@ -331,5 +319,34 @@ public class MusicManager : MonoBehaviour
                 SO_playlistLocal.SCR_playlist.Add(newSong);
             }
         }
+    }
+
+    public void AddLocalSong(AudioClip clip, string title, string path)
+    {
+        Songs newSong = new Songs
+        {
+            ADO_music = clip,
+            S_titleAndAuthor = title,
+            ENM_musicCode = ENM_MusicCode.SongLocal1
+        };
+
+        // Tambahkan ke playlist local
+        SO_playlistLocal.SCR_playlist.Add(newSong);
+
+        // Tambahkan ke list penyimpanan JSON
+        SCR_localSongs.Add(new LocalSongData
+        {
+            S_filePath = path,
+            S_titleAndAuthor = title,
+            ENM_musicCode = newSong.ENM_musicCode
+        });
+
+        // Save JSON
+        SaveLocalSongs();
+
+        // Update UI playlist kalo ada
+        FindAnyObjectByType<UIPlaylist>()?.SetupAllPlaylistSongs(SO_currPlaylistTypeSO.ENM_playlistType);
+
+        Debug.Log("Local song added from importer: " + title);
     }
 }
