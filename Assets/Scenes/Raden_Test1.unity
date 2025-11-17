@@ -3382,6 +3382,7 @@ MonoBehaviour:
   CG_miniCanvasGroup: {fileID: 677058727}
   CG_fullCanvasGroup: {fileID: 459825577}
   CG_playlistCanvasGroup: {fileID: 1712518360}
+  UICanvasScaler: {fileID: 1080252725}
   F_miniY: -940
   F_fullY: -760
   F_playlistY: 0

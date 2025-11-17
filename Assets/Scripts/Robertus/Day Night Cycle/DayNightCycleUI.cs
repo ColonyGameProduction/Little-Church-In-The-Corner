@@ -89,14 +89,21 @@ public class DayNightCycleUI : MonoBehaviour
             .setEase(LeanTweenType.easeInOutCubic)
             .setOnUpdate((float F_alphaValue) =>
             {
-                //Dekorasi sebelumnya bakal berubah alphanya dari 1f ke 0f
-                SCR_previousDayNightData.CG_backgroundDecorationCanvasGroup.alpha = F_alphaValue;
-                //Dekorasi saat ini bakal berubah alphanya dari 0f ke 1f
-                SCR_dayNightData.CG_backgroundDecorationCanvasGroup.alpha = 1f - F_alphaValue;
+                // Kalau misalnya yang sebelum dan yang sekarang sama, ga usah ada animasi
+                if (SCR_previousDayNightData.CG_backgroundDecorationCanvasGroup.gameObject != SCR_dayNightData.CG_backgroundDecorationCanvasGroup.gameObject)
+                {
+                    //Dekorasi sebelumnya bakal berubah alphanya dari 1f ke 0f
+                    SCR_previousDayNightData.CG_backgroundDecorationCanvasGroup.alpha = F_alphaValue;
+                    //Dekorasi saat ini bakal berubah alphanya dari 0f ke 1f
+                    SCR_dayNightData.CG_backgroundDecorationCanvasGroup.alpha = 1f - F_alphaValue;
+                }
 
-                //Background
-                SCR_previousDayNightCycleSchedule.CG_backgroundCanvasGroup.alpha = F_alphaValue;
-                SCR_dayNightData.CG_backgroundCanvasGroup.alpha = 1f - F_alphaValue;
+                if (SCR_previousDayNightData.CG_backgroundCanvasGroup.gameObject != SCR_dayNightData.CG_backgroundCanvasGroup.gameObject)
+                {
+                    //Background
+                    SCR_previousDayNightData.CG_backgroundCanvasGroup.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_backgroundCanvasGroup.alpha = 1f - F_alphaValue;
+                }
             });
         }
         //Kalau misalnya sebelumnya belum pernah ada perubahan apa pun, maka ga usah pakai animasi.
