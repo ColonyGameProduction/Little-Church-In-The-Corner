@@ -3,7 +3,17 @@ guid: 6b3787ff4ae8970469516215cc2080a6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_female_body
+    second: {fileID: 2100000, guid: e21b12689cd10b74e97609d4120cef49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_female_clothes
+    second: {fileID: 2100000, guid: 81ff4b16aa9f03f4e9fed9779fadcdd3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
