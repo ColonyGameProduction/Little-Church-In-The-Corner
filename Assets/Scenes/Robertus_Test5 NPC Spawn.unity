@@ -4914,7 +4914,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca737381d1de3fa4c82598fb1fa47cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GO_NPC: {fileID: 5178077339697534171}
+  List_GO_NPCs:
+  - {fileID: 1913857124}
+  - {fileID: 2089813114}
+  - {fileID: 99251963}
   SCR_officeInteract: {fileID: 8013267561480063086}
 --- !u!4 &678281906
 Transform:
@@ -16091,6 +16094,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898931780}
   m_Mesh: {fileID: -153830957423991239, guid: b7fcfed6594c2814fa8d24acb941d472, type: 3}
+--- !u!1 &1913857124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: de833ac872223094a999906d68e7045b, type: 3}
+  m_PrefabInstance: {fileID: 2045953690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1936261313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7808386553156376897, guid: 1c62616732f76b74d9027c74c69f2526, type: 3}
@@ -17159,7 +17167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ea167c7e6285d7741bd83afb84ce936c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20953,7 +20961,7 @@ GameObject:
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &5207159947044516921
 MonoBehaviour:
   m_ObjectHideFlags: 0

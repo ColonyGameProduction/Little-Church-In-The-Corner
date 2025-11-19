@@ -49,6 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   B_hasBeenInteracted: 0
+  List_GO_NPC:
+  - {fileID: 4196630704991810051}
+  - {fileID: 3985416317393709703}
+  - {fileID: 6500847190580328379}
 --- !u!1 &8013267561403120984
 GameObject:
   m_ObjectHideFlags: 0

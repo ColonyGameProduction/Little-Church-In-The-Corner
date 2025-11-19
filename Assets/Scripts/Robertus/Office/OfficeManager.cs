@@ -1,10 +1,20 @@
+using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class untuk mengatur visual dari ruangan office, seperti tombol interact dan NPC yang ada di dalamnya.
+/// </summary>
 public class OfficeManager : MonoBehaviour
 {
     public static OfficeManager Instance;
 
-    public GameObject GO_NPC;
+    /// <summary>
+    /// NPC yang duduk di kursi di office
+    /// </summary>
+    public List<GameObject> List_GO_NPCs;
+    /// <summary>
+    /// Tombol interact
+    /// </summary>
     public OfficeInteract SCR_officeInteract;
 
     private void Awake()
@@ -31,6 +41,11 @@ public class OfficeManager : MonoBehaviour
         UIChatManager.ACT_NoCurrentSermonAvailable -= FinishInteract;
     }
 
+    /// <summary>
+    /// Function untuk memunculkan tombol interact. Tombol interact muncul kalau:
+    /// 1. Sudah waktunya untuk muncul via jadwalnya yang ada di Time Manager
+    /// 2. Kalau misalnya udah selesai interact tapi masih ada QnA lain di dalam queue
+    /// </summary>
     public void SetupInteract()
     {
         //Kalau masih ada renungan yang jalan, jangan interact lagi
@@ -44,15 +59,42 @@ public class OfficeManager : MonoBehaviour
         SCR_officeInteract.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Kalau misalnya sudah selesai membaca semua renungan di dalam QnA, function ini bakal ditrigger.
+    /// Function ini bakal menyembunyikan NPC (karena dia anggapannya udah selesai mendengarkan QnA dari pastornya, lalu keluar dari ruangan), serta mengecek apakah ada QnA lain di dalam queue atau tidak. Kalau ada, maka tombol interact bakal dimunculin lagi.
+    /// </summary>
     public void FinishInteract()
     {
-        GO_NPC.SetActive(false);
+        HideAllNPC();
         if (TimeManager.Instance.I_queuedQnA <= 0) SCR_officeInteract.gameObject.SetActive(false);
         else SetupInteract();
     }
 
+    /// <summary>
+    /// Function untuk setup NPC. Untuk saat ini, functionnya cuma mengaktifkan game object NPC saja, tapi ke depannya mungkin bisa ditambah hal lain seperti animasi. Idk.
+    /// </summary>
     public void SetupNPC()
     {
-        GO_NPC.SetActive(true);
+        ShowRandomNPC();
+    }
+
+    /// <summary>
+    /// Function untuk sembunyiin semua jenis NPC yang dapat dilihat.
+    /// </summary>
+    public void HideAllNPC()
+    {
+        foreach (GameObject GO_NPC in List_GO_NPCs)
+        {
+            GO_NPC.SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// Function untuk menunjukkan NPC yang random
+    /// </summary>
+    public void ShowRandomNPC()
+    {
+        if (List_GO_NPCs.Count <= 0) return;
+        List_GO_NPCs[Random.Range(0, List_GO_NPCs.Count)].SetActive(true);
     }
 }
