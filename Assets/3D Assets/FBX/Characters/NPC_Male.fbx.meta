@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a7ab6b7131bbed940b63900abeecb30b
+guid: 30b86069ab1c08049a479ab8f99d730a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_male_body
-    second: {fileID: 2100000, guid: fbb33e7afaf843940b7f22d227ec663a, type: 2}
+    second: {fileID: 2100000, guid: 6012f964905d1bf43999e2008594cfef, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_male_body.001
-    second: {fileID: 2100000, guid: 8dad5b2420473c84395336f1cd40dda2, type: 2}
+    second: {fileID: 2100000, guid: ca469c6574d5aa3499aefb223509a00d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_male_clothes.001
-    second: {fileID: 2100000, guid: 124446ce87bd73a43b806b4cf4ae4cd1, type: 2}
+      name: M_male_clothes
+    second: {fileID: 2100000, guid: a7b4d98958dd9c8479e6b7b4ead9bf7c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -108,11 +108,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 76494875c6e68db478b3b60e7c67113f, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
