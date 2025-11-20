@@ -3189,6 +3189,13 @@ MonoBehaviour:
   BTN_playlist: {fileID: 2024711397}
   TMPGUI_titleAndAuthor: {fileID: 1946993003}
   SLR_progressBar: {fileID: 1614831934}
+  SPR_shuffleOn: {fileID: 21300000, guid: f07663dcf42d07745b507c883e62667e, type: 3}
+  SPR_shuffleOff: {fileID: 21300000, guid: cdfe9df1ab83be34085550e3a0178293, type: 3}
+  IMG_shuffleButton: {fileID: 1993343011}
+  SPR_NoLoop: {fileID: 21300000, guid: 38f2557c50180064898a63a8c17c19d7, type: 3}
+  SPR_loopSong: {fileID: 21300000, guid: 9d0d3e9c92b5f2b4483cace7023f43af, type: 3}
+  SPR_loopPlaylist: {fileID: 21300000, guid: fd0976deab7ab0a4abb1ec4723f823da, type: 3}
+  IMG_loopButton: {fileID: 325151648}
 --- !u!4 &894199958
 Transform:
   m_ObjectHideFlags: 0

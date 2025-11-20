@@ -2,14 +2,14 @@ using UnityEngine;
 using System.Collections;
 using System.IO;
 using UnityEngine.Networking;
-using SFB; // Only for PC
+using SFB; // only for PC
 #if UNITY_ANDROID || UNITY_IOS
 using NativeFilePickerNamespace;
 #endif
 
 public class UniversalLocalSongImporter : MonoBehaviour
 {
-    public MusicManager musicManager;
+    public MusicManager SCR_MM;
 
     public void ImportLocalSong()
     {
@@ -37,41 +37,69 @@ public class UniversalLocalSongImporter : MonoBehaviour
         if (paths.Length > 0)
         {
             string path = paths[0];
+
+            // CEK DUPLIKAT DULU
+            if (SCR_MM.IsSongAlreadyAdded(path))
+            {
+                Debug.LogWarning("Song already added sebelumnya!");
+                return;
+            }
+
             StartCoroutine(AddSongFromPath(path));
+
         }
     }
 
     // ANDROID
-    private void ImportAndroid()
+    private async void ImportAndroid()
     {
-#if UNITY_ANDROID
-        // Request permission
-        var permission = AndroidRuntimePermissions.RequestPermission("android.permission.READ_EXTERNAL_STORAGE");
+        Debug.Log("IMPORT ANDROID DIPANGGIL!");
 
-        if (permission == AndroidRuntimePermissions.Permission.Denied)
+        // minta read_media_audio (android 13)
+        var p1 = await AndroidRuntimePermissions.RequestPermissionAsync("android.permission.READ_MEDIA_AUDIO");
+
+        // minta read_external_storage (android 12 ke bawah)
+        var p2 = await AndroidRuntimePermissions.RequestPermissionAsync("android.permission.READ_EXTERNAL_STORAGE");
+
+        if (p1 != AndroidRuntimePermissions.Permission.Granted && p2 != AndroidRuntimePermissions.Permission.Granted)
         {
-            Debug.LogError("READ_EXTERNAL_STORAGE permission denied.");
+            Debug.LogError("Permission Denied!");
             return;
         }
 
         NativeFilePicker.PickFile((path) =>
         {
-            if (path != null)
+            Debug.Log("PATH SELECTED: " + path);
+
+            if (!string.IsNullOrEmpty(path))
             {
+                // CEK DUPLIKAT DULU
+                if (SCR_MM.IsSongAlreadyAdded(path))
+                {
+                    Debug.LogWarning("Song already added sebelumnya!");
+                    return;
+                }
+
                 StartCoroutine(AddSongFromPath(path));
             }
         }, new string[] { "audio/*" });
-#endif
     }
 
     // IOS
-    private void ImportIOS()
+    private void ImportIOS() // riweh ini
     {
 #if UNITY_IOS
         NativeFilePicker.PickFile((path) =>
         {
             if (path != null)
             {
+                // CEK DUPLIKAT DULU
+                if (musicManager.IsSongAlreadyAdded(path))
+                {
+                    Debug.LogWarning("Song already added sebelumnya!");
+                    return;
+                }
+
                 StartCoroutine(AddSongFromPath(path));
             }
         }, new string[] { "public.audio" }); // iOS audio UTI
@@ -96,7 +124,6 @@ public class UniversalLocalSongImporter : MonoBehaviour
             AudioClip clip = DownloadHandlerAudioClip.GetContent(www);
             string title = Path.GetFileNameWithoutExtension(path);
 
-            // === Tambah ke MusicManager kamu ===
             Songs newSong = new Songs
             {
                 ADO_music = clip,
@@ -104,7 +131,7 @@ public class UniversalLocalSongImporter : MonoBehaviour
                 ENM_musicCode = ENM_MusicCode.SongLocal1
             };
 
-            musicManager.AddLocalSong(clip, title, path);
+            SCR_MM.AddLocalSong(clip, title, path);
 
             Debug.Log("Song imported successfully: " + title);
         }

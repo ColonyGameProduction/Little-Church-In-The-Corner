@@ -294,6 +294,8 @@ public class MusicManager : MonoBehaviour
         string json = File.ReadAllText(S_savePath);
         LocalSongsWrapper wrapper = JsonUtility.FromJson<LocalSongsWrapper>(json);
 
+        SCR_localSongs = wrapper.SCR_songs;
+
         foreach (var songData in wrapper.SCR_songs)
         {
             StartCoroutine(LoadAudioFromPath(songData));
@@ -323,6 +325,13 @@ public class MusicManager : MonoBehaviour
 
     public void AddLocalSong(AudioClip clip, string title, string path)
     {
+        // CEK DUPLIKAT
+        if (IsSongAlreadyAdded(path))
+        {
+            Debug.LogWarning("Gagal Add: File ini sudah ditambahkan sebelumnya!");
+            return;
+        }
+
         Songs newSong = new Songs
         {
             ADO_music = clip,
@@ -330,10 +339,10 @@ public class MusicManager : MonoBehaviour
             ENM_musicCode = ENM_MusicCode.SongLocal1
         };
 
-        // Tambahkan ke playlist local
+        // tambah ke playlist local
         SO_playlistLocal.SCR_playlist.Add(newSong);
 
-        // Tambahkan ke list penyimpanan JSON
+        // tambah ke liset penyimpanan JASON
         SCR_localSongs.Add(new LocalSongData
         {
             S_filePath = path,
@@ -341,12 +350,24 @@ public class MusicManager : MonoBehaviour
             ENM_musicCode = newSong.ENM_musicCode
         });
 
-        // Save JSON
+        // save JSON
         SaveLocalSongs();
 
-        // Update UI playlist kalo ada
         FindAnyObjectByType<UIPlaylist>()?.SetupAllPlaylistSongs(SO_currPlaylistTypeSO.ENM_playlistType);
 
         Debug.Log("Local song added from importer: " + title);
+    }
+
+    // cek nih lagu udah pernah di tambain belom ini
+    public bool IsSongAlreadyAdded(string path)
+    {
+        foreach (var song in SCR_localSongs)
+        {
+            if (song.S_filePath == path)
+            {
+                return true; // udah pernah diadd
+            }
+        }
+        return false;
     }
 }
