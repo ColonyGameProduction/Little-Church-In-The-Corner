@@ -1,7 +1,10 @@
 #region Chat
 public enum ENM_CharFace
 {
-    Test1 = 1
+    // Muka cowok
+    Test1 = 1,
+    // Muka cewek
+    Test2 = 2,
 }
 
 public enum ENM_DialogTitle
@@ -11,16 +14,16 @@ public enum ENM_DialogTitle
     Test2 = 2,
     Sample = 3,
     SamplePanjang = 4,
+    QnATest1 = 5,
+    QnATest2 = 6,
+}
+
+public enum ENM_ChatBubbleBackground
+{
+    White = 0,
+    Orange = 1,
 }
 #endregion
-
-//Ini nanti ganti ke punyanya Raden aja
-//public enum ENM_Room
-//{
-//    Church = 1,
-//    Work = 2,
-//    Relax = 3
-//}
 
 #region Music
 public enum ENM_PlaylistType
@@ -63,6 +66,7 @@ public enum ENM_PanelState
 #region HUD
 public enum ENM_Room
 {
+    // Aku pindahin office jadi yang pertama gara-gara di tombol UInya, office yang pertama
     Office = 0,
     Church = 1,
     Bedroom = 2,

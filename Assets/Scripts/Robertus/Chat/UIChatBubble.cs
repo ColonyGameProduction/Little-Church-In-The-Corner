@@ -52,9 +52,30 @@ public class UIChatBubble : MonoBehaviour
         //Pertama-tama dihide dulu soalnya ga semua dialog bakal dimunculin di awal. Dialog-dialog bakal dimunculin perlahan-lahan. Jadi, muncul atau engga bakal diatur di UIChatManager nantinya.
         Fade(0f);
 
-        IMG_chatBubble.color = SCR_dialogComponent.COL_bubbleColour;
+        IMG_chatBubble.sprite = ChatManager.Instance.SCR_listOfChatBubbleBackground.SCR_GetChatBubbleBackground(SCR_dialogComponent.ENM_background).SPR_backgroundSprite;
         TMPUGUI_chatBubble.text = SCR_dialogComponent.S_stringText;
         IMG_face.sprite = ChatManager.Instance.SCR_listOfFace.SCR_GetFace(SCR_dialogComponent.ENM_charFace).SPR_characterSprite;
+
+        // Kalau ternyata posisi muka orang di sebelah kanan dan bukan di kiri (defaultnya), maka pengaturannya sebagai berikut
+        if (SCR_dialogComponent.B_isFlipped)
+        {
+            //https://discussions.unity.com/t/access-left-right-top-and-bottom-of-recttransform-via-script/129237/4
+            // Ini bakal membuat RectTransform "Left" dan "Right" dibalik seperti biasanya. Jadi, kalau biasanya Left 22, Right -22, maka sekarang Left jadi -22 dan Right jadi 22.
+            // Left dan Right itu "margin" dari rect transform untuk teksnya.
+            TMPUGUI_chatBubble.rectTransform.offsetMin = new Vector2(TMPUGUI_chatBubble.rectTransform.offsetMin.x * -1f, TMPUGUI_chatBubble.rectTransform.offsetMin.y);
+            TMPUGUI_chatBubble.rectTransform.offsetMax = new Vector2(TMPUGUI_chatBubble.rectTransform.offsetMax.x * -1f, TMPUGUI_chatBubble.rectTransform.offsetMax.y);
+
+            // Posisikan teksnya supaya jadi Right.
+            TMPUGUI_chatBubble.alignment = TextAlignmentOptions.MidlineRight;
+
+            // Ini mengatur anchor supaya anchoringnya dari kanan, sehingga posisi mukanya ada di kanan kotak dialog.
+            IMG_face.rectTransform.anchorMin = new Vector2(1f, IMG_face.rectTransform.anchorMin.y);
+            IMG_face.rectTransform.anchorMax = new Vector2(1f, IMG_face.rectTransform.anchorMax.y);
+            // Flip local scale di sumbu X. Kurang lebih flip sprite mukanya.
+            IMG_face.rectTransform.localScale = new Vector3(-1f, IMG_face.rectTransform.localScale.y, IMG_face.rectTransform.localScale.z);
+            // Posisikan mukanya di sebelah kanan.
+            IMG_face.rectTransform.anchoredPosition = new Vector3(IMG_face.rectTransform.anchoredPosition.x * -1f, IMG_face.rectTransform.anchoredPosition.y);
+        }
     }
 
     /// <summary>

@@ -54,6 +54,9 @@ public class ChurchManager : MonoBehaviour
             List_SCR_activeNPC.Add(SCR_spawnedNPC);
             List_SCR_inactiveNPC.RemoveAt(I_spawnedIndex);
 
+            // Munculin NPC random
+            SCR_spawnedNPC.HideAllNPC();
+            SCR_spawnedNPC.ShowRandomNPC();
             SCR_spawnedNPC.gameObject.SetActive(true);
         }
 

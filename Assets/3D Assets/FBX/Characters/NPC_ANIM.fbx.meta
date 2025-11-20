@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0424f35e98141b44ea69039422237d01
+guid: de833ac872223094a999906d68e7045b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_priest_body
-    second: {fileID: 2100000, guid: e2573c9895b08ac4eaeca98eb4130045, type: 2}
+    second: {fileID: 2100000, guid: e02a2f25f9a31bb4b869f3f301c9f0b2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -94,9 +94,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: C_WALK
-      takeName: C_WALK
-      internalID: 5225235824195874093
+      name: C_HI
+      takeName: C_HI
+      internalID: 8480357772451698580
       firstFrame: 0
       lastFrame: 89
       wrapMode: 0
@@ -105,8 +105,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -123,9 +123,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: C_HI
-      takeName: C_HI
-      internalID: 8480357772451698580
+      name: C_WALK
+      takeName: C_WALK
+      internalID: 5225235824195874093
       firstFrame: 0
       lastFrame: 89
       wrapMode: 0
@@ -134,8 +134,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -209,6 +209,35 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: T_POSE
+      takeName: T_POSE
+      internalID: 231375626610895610
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -259,122 +288,7 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton:
-    - name: NPC_ANIM(Clone)
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Armature
-      parentName: NPC_ANIM(Clone)
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: -6.123234e-17, y: 1, z: -6.123234e-17, w: 6.123234e-17}
-      scale: {x: 0.30344707, y: 0.30344707, z: 0.30344707}
-    - name: Bone
-      parentName: Armature
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: -0.00000003090862, y: -0.7071068, z: 0.7071068, w: -0.00000003090862}
-      scale: {x: 1.0000005, y: 0.99999994, z: 0.99999994}
-    - name: Bone.003
-      parentName: Bone
-      position: {x: -0.0037511531, y: 0.000000110281185, z: -1.1527989}
-      rotation: {x: -0.102818474, y: 0.008342485, z: 0.0008714836, w: 0.9946648}
-      scale: {x: 1.0000008, y: 1.0000001, z: 1.0000001}
-    - name: arm.L
-      parentName: Bone.003
-      position: {x: 3.0695446e-11, y: 0.000000019743311, z: -0.6363254}
-      rotation: {x: -0.07644065, y: -0.7379655, z: -0.068032205, w: -0.6670348}
-      scale: {x: 0.9999997, y: 0.99999934, z: 0.9999993}
-    - name: arm.001.L
-      parentName: arm.L
-      position: {x: -0.000000085115744, y: 0.0000000013969839, z: -0.35848314}
-      rotation: {x: -0.011073292, y: -0.02037376, z: 0.00022561842, w: 0.9997312}
-      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000002}
-    - name: arm.002.L
-      parentName: arm.001.L
-      position: {x: -0.000000048294623, y: 0.00000000225009, z: -0.42942792}
-      rotation: {x: -0.00000016205009, y: -0.0060127922, z: 0.00000019761497, w: 0.999982}
-      scale: {x: 0.9999998, y: 1, z: 1}
-    - name: arm.003.L
-      parentName: arm.002.L
-      position: {x: -0.000000033900733, y: -0.0000000031495802, z: -0.46483222}
-      rotation: {x: 0.0000025711172, y: 0.13355516, z: -0.000000017600062, w: 0.9910415}
-      scale: {x: 0.9999995, y: 0.99999976, z: 1}
-    - name: Bone.009
-      parentName: Bone.003
-      position: {x: 9.62018e-10, y: 0.000000034644472, z: -0.63632554}
-      rotation: {x: -0.10281119, y: 0.008432574, z: -0.000000030847705, w: -0.9946652}
-      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
-    - name: Eye.L
-      parentName: Bone.009
-      position: {x: -0.31248808, y: 0.6859337, z: -0.7427056}
-      rotation: {x: -0.000000059604638, y: -0, z: -0.0008761883, w: 0.9999997}
-      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000002}
-    - name: Eye.R
-      parentName: Bone.009
-      position: {x: 0.34328532, y: 0.6847846, z: -0.7427056}
-      rotation: {x: -0.000000059604638, y: -0, z: -0.0008761883, w: 0.9999997}
-      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000002}
-    - name: arm.R
-      parentName: Bone.003
-      position: {x: 0.0283911, y: -0.000097905475, z: -0.63585925}
-      rotation: {x: 0.07500131, y: -0.749076, z: -0.06906846, w: 0.6545912}
-      scale: {x: 0.99999964, y: 0.9999996, z: 0.99999887}
-    - name: arm.001.R
-      parentName: arm.R
-      position: {x: 0.000000088726665, y: -0.0000000088475645, z: -0.35848317}
-      rotation: {x: -0.011073392, y: 0.020374022, z: -0.00022556251, w: 0.99973106}
-      scale: {x: 0.9999998, y: 0.99999976, z: 1.0000001}
-    - name: arm.002.R
-      parentName: arm.001.R
-      position: {x: 0.00000016742229, y: 0.0000000111595, z: -0.4294279}
-      rotation: {x: -0.00000017601995, y: 0.006012819, z: -0.00000018160787, w: 0.999982}
-      scale: {x: 1.0000012, y: 1.0000006, z: 1.0000012}
-    - name: arm.003.R
-      parentName: arm.002.R
-      position: {x: -0.000000025785766, y: 0.000000008238203, z: -0.46483228}
-      rotation: {x: 0.0000026185787, y: -0.1335551, z: -0.00000004291866, w: 0.9910414}
-      scale: {x: 0.9999998, y: 1.0000001, z: 1.0000002}
-    - name: Bone.004
-      parentName: Bone
-      position: {x: -0.0037511531, y: 0.000000110281185, z: -1.1527989}
-      rotation: {x: -0.9977448, y: 0.00000011894043, z: 0.00000000800168, w: 0.06712147}
-      scale: {x: 1.0000004, y: 1.0000125, z: 1.0000001}
-    - name: Bone.001.L
-      parentName: Bone.004
-      position: {x: -0.23056273, y: 0.010235563, z: -0.31856441}
-      rotation: {x: -0.022220187, y: -0.06726361, z: -0.9974867, w: -0.0014850383}
-      scale: {x: 1, y: 1.0000004, z: 1.0000006}
-    - name: Bone.002.L
-      parentName: Bone.001.L
-      position: {x: -2.9439207e-10, y: -0.0000000024233486, z: -0.44136375}
-      rotation: {x: -0.02873442, y: 0.019711731, z: 0.0005609867, w: 0.9993926}
-      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000011}
-    - name: Bone.001.R
-      parentName: Bone.004
-      position: {x: 0.23806505, y: 0.010235436, z: -0.31856453}
-      rotation: {x: 0.022220211, y: -0.06726361, z: -0.9974867, w: 0.0014848022}
-      scale: {x: 1, y: 1.0000004, z: 1.0000007}
-    - name: Bone.002.R
-      parentName: Bone.001.R
-      position: {x: 0.000000009819075, y: 0.0000000019981599, z: -0.4413637}
-      rotation: {x: -0.02873448, y: -0.019711766, z: -0.0005609893, w: 0.9993926}
-      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000008}
-    - name: Bone.001
-      parentName: Bone
-      position: {x: -5.335259e-16, y: 2.2387984, z: -1.7824829}
-      rotation: {x: -0, y: -0, z: -0, w: 1}
-      scale: {x: 1.0000004, y: 1, z: 1}
-    - name: c_priest_clothes.002
-      parentName: NPC_ANIM(Clone)
-      position: {x: 0, y: 0.02648439, z: 0}
-      rotation: {x: 6.1232336e-17, y: 1, z: 6.1232336e-17, w: 0.00000004371139}
-      scale: {x: 1, y: 1, z: 1}
-    - name: c_priest_clothes.005
-      parentName: NPC_ANIM(Clone)
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 6.1232336e-17, y: 1, z: 6.1232336e-17, w: 0.00000004371139}
-      scale: {x: 1.0226614, y: 1.0226614, z: 1.0226614}
+    skeleton: []
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -385,7 +299,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
