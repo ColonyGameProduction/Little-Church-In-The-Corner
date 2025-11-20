@@ -319,7 +319,7 @@ public class DataManager : MonoBehaviour
     //XOR encryption by key, basiclly it takes ASCII code of character and ^ by key, does that to each character of string
     public string S_EncryptDecrypt(string S_textToEncrypt)
     {
-        //Debug.Log("Encrypting/Decrypting\n" + S_textToEncrypt);
+        Debug.Log("Encrypting/Decrypting\n" + S_textToEncrypt);
         StringBuilder SB_inSb = new StringBuilder(S_textToEncrypt);
         StringBuilder SB_outSb = new StringBuilder(S_textToEncrypt.Length);
         char c;
@@ -329,7 +329,7 @@ public class DataManager : MonoBehaviour
             c = (char)(c ^ I_KEY);
             SB_outSb.Append(c);
         }
-        //Debug.Log("Result\n" + SB_outSb.ToString());
+        Debug.Log("Result\n" + SB_outSb.ToString());
         return SB_outSb.ToString();
     }
     #endregion

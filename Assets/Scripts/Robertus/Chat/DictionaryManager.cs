@@ -147,7 +147,7 @@ public class DictionaryManager : MonoBehaviour
                     (
                         new SaveDataDialogComponent
                         (
-                            SCR_component.SPR_background,
+                            SCR_component.ENM_background,
                             SCR_component.S_stringText,
                             SCR_component.ENM_charFace,
                             SCR_component.B_isFlipped
@@ -179,7 +179,7 @@ public class DictionaryManager : MonoBehaviour
                     (
                         new DialogComponent
                         (
-                            SCR_component.SPR_background,
+                            SCR_component.ENM_background,
                             SCR_component.S_stringText,
                             SCR_component.ENM_charFace,
                             SCR_component.B_isFlipped
@@ -238,14 +238,14 @@ public class DictionaryManager : MonoBehaviour
     [Serializable]
     public class SaveDataDialogComponent
     {
-        public Sprite SPR_background;
+        public ENM_ChatBubbleBackground ENM_background;
         public string S_stringText;
         public ENM_CharFace ENM_charFace;
         public bool B_isFlipped;
 
-        public SaveDataDialogComponent(Sprite SPR_background, string stringText, ENM_CharFace eNM_charFace, bool b_isFlipped)
+        public SaveDataDialogComponent(ENM_ChatBubbleBackground ENM_background, string stringText, ENM_CharFace eNM_charFace, bool b_isFlipped)
         {
-            this.SPR_background = SPR_background;
+            this.ENM_background = ENM_background;
             S_stringText = stringText;
             ENM_charFace = eNM_charFace;
             B_isFlipped = b_isFlipped;
@@ -253,7 +253,7 @@ public class DictionaryManager : MonoBehaviour
 
         public override string ToString()
         {
-            return $"Sprite = {SPR_background}, charface = {ENM_charFace}\nText = {S_stringText}";
+            return $"Sprite = {ENM_background}, charface = {ENM_charFace}\nText = {S_stringText}";
         }
     }
 

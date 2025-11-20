@@ -17,15 +17,13 @@ public enum ENM_DialogTitle
     QnATest1 = 5,
     QnATest2 = 6,
 }
-#endregion
 
-//Ini nanti ganti ke punyanya Raden aja
-//public enum ENM_Room
-//{
-//    Church = 1,
-//    Work = 2,
-//    Relax = 3
-//}
+public enum ENM_ChatBubbleBackground
+{
+    White = 0,
+    Orange = 1,
+}
+#endregion
 
 #region Music
 public enum ENM_PlaylistType

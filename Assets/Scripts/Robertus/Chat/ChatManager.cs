@@ -18,6 +18,10 @@ public class ChatManager : MonoBehaviour
     /// </summary>
     public ListOfFace SCR_listOfFace;
     /// <summary>
+    /// List semua background yang dapat dipakai oleh chat bubble
+    /// </summary>
+    public ListOfChatBubbleBackground SCR_listOfChatBubbleBackground;
+    /// <summary>
     /// Dialog yang aktif saat ini
     /// </summary>
     [HideInInspector] public ENM_DialogTitle ENM_currDialog;

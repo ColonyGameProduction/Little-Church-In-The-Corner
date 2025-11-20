@@ -14,23 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ENM_dialogTitle: 6
   SCR_dialogComponent:
-  - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
+  - ENM_background: 0
     S_stringText: Selamat pagi
     ENM_charFace: 1
     B_isFlipped: 0
-  - SPR_background: {fileID: 21300000, guid: 44f1cbb16d63de247b60d6b02d7d9277, type: 3}
+  - ENM_background: 1
     S_stringText: Pagi pak
     ENM_charFace: 2
     B_isFlipped: 1
-  - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
+  - ENM_background: 0
     S_stringText: Ada keperluan apa kemari?
     ENM_charFace: 1
     B_isFlipped: 0
-  - SPR_background: {fileID: 21300000, guid: 44f1cbb16d63de247b60d6b02d7d9277, type: 3}
+  - ENM_background: 1
     S_stringText: Ga ada pak.
     ENM_charFace: 2
     B_isFlipped: 1
-  - SPR_background: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
+  - ENM_background: 0
     S_stringText: Ok.
     ENM_charFace: 1
     B_isFlipped: 0

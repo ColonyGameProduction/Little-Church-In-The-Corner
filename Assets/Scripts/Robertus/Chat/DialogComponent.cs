@@ -7,7 +7,7 @@ using UnityEngine;
 [Serializable]
 public class DialogComponent
 {
-    public Sprite SPR_background;
+    public ENM_ChatBubbleBackground ENM_background;
     [TextArea]
     public string S_stringText;
     public ENM_CharFace ENM_charFace;
@@ -16,9 +16,9 @@ public class DialogComponent
     /// </summary>
     public bool B_isFlipped;
 
-    public DialogComponent(Sprite SPR_background, string stringText, ENM_CharFace eNM_charFace, bool B_isFlipped)
+    public DialogComponent(ENM_ChatBubbleBackground ENM_background, string stringText, ENM_CharFace eNM_charFace, bool B_isFlipped)
     {
-        this.SPR_background = SPR_background;
+        this.ENM_background = ENM_background;
         S_stringText = stringText;
         ENM_charFace = eNM_charFace;
         this.B_isFlipped = B_isFlipped;

@@ -24,10 +24,6 @@ public class UISavedSermonItem : MonoBehaviour
     /// Kalau diselect, warna backgroundnya bakal berubah
     /// </summary>
     public Image IMG_background;
-    /// <summary>
-    /// Warna yang bakal dipakai untuk renungan yang sedang diseleksi. Defaultnya abu-abu.
-    /// </summary>
-    public Color COL_selectedColor = Color.gray;
 
     /// <summary>
     /// Tombol delete renungan. Ini bakal menampilkan panel konfirmasi terlebih dahulu. Also, ini juga hanya muncul kalau renungan diseleksi.
@@ -59,12 +55,12 @@ public class UISavedSermonItem : MonoBehaviour
     private void SelectSermon()
     {
         //Pertama-tama, deselect renungan sebelumnya
-        if (DictionaryManager.Instance.SCR_UIDictionary.SCR_currSelectedSermon) DictionaryManager.Instance.SCR_UIDictionary.SCR_currSelectedSermon.IMG_background.color = Color.white;
+        if (DictionaryManager.Instance.SCR_UIDictionary.SCR_currSelectedSermon) DictionaryManager.Instance.SCR_UIDictionary.SCR_currSelectedSermon.IMG_background.gameObject.SetActive(false);
         //Lalu, atur supaya renungan yang saat ini diseleksi adalah renungan ini.
         DictionaryManager.Instance.SO_currDialogSelected = SCR_dialogSO;
         DictionaryManager.Instance.SCR_UIDictionary.SCR_currSelectedSermon = this;
         //Lalu ubah UInya
-        IMG_background.color = COL_selectedColor;
+        IMG_background.gameObject.SetActive(true);
     }
 
     /// <summary>
