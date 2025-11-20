@@ -1,0 +1,5 @@
+Z:/repo v2/Little-Church-In-The-Corner/.utmp/RelWithDebInfo/586w5u3n/arm64-v8a/CMakeFiles/edit_cache.dir
+Z:/repo v2/Little-Church-In-The-Corner/.utmp/RelWithDebInfo/586w5u3n/arm64-v8a/CMakeFiles/rebuild_cache.dir
+Z:/repo v2/Little-Church-In-The-Corner/.utmp/RelWithDebInfo/586w5u3n/arm64-v8a/GameActivity/CMakeFiles/game.dir
+Z:/repo v2/Little-Church-In-The-Corner/.utmp/RelWithDebInfo/586w5u3n/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+Z:/repo v2/Little-Church-In-The-Corner/.utmp/RelWithDebInfo/586w5u3n/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
