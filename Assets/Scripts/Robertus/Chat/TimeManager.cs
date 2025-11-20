@@ -20,7 +20,7 @@ public class TimeManager : MonoBehaviour
     public static event Action ACT_interactIsReady;
 
     /// <summary>
-    /// Kalau waktunya sesuai dengan jadwal QnA, maka trigger action ini
+    /// Kalau waktunya sesuai dengan jadwal QnA Office, maka trigger action ini
     /// </summary>
     public static event Action ACT_interactQnAIsReady;
 
@@ -217,6 +217,7 @@ public class TimeManager : MonoBehaviour
 
     /// <summary>
     /// Cek apakah bisa akses QnA kantor baru berdasarkan jadwal dan waktu saat ini
+    /// Kurang lebih mirip seperti yang di atas, tapi pakai List QnA Schedule dan kalau memang ada yang baru, dia panggil QnAIsReady.
     /// </summary>
     private void CheckForQnA()
     {
@@ -261,13 +262,18 @@ public class TimeManager : MonoBehaviour
         ACT_interactQnAIsReady?.Invoke();
     }
 
+    /// <summary>
+    /// Ini untuk tombol testing tambah renungan baru.
+    /// </summary>
     public void TestTambahRenunganBaru()
     {
+        // Kalau tombol dipencet dan saat ini sedang ada di ruangan office, maka tambah QnA baru
         if (TransitionManager.Instance.ENM_room == ENM_Room.Office)
         {
             I_queuedQnA++;
             QnAIsReady();
         }
+        // Kalau tombol dipencet dan saat ini sedang ada di ruangan gereja, maka tambah renungan (NPC) baru
         else if(TransitionManager.Instance.ENM_room == ENM_Room.Church)
         {
             I_queuedSermon++;

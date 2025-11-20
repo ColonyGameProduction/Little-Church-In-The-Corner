@@ -789,9 +789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30092956}
   - component: {fileID: 30092952}
-  - component: {fileID: 30092955}
   - component: {fileID: 30092954}
-  - component: {fileID: 30092953}
   m_Layer: 0
   m_Name: UI Camera
   m_TagString: MainCamera
@@ -850,22 +848,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &30092953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30092951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EventMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_MaxRayIntersections: 0
 --- !u!114 &30092954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,14 +892,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &30092955
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30092951}
-  m_Enabled: 1
 --- !u!4 &30092956
 Transform:
   m_ObjectHideFlags: 0
@@ -1979,8 +1953,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 187932206}
-  - component: {fileID: 187932207}
-  - component: {fileID: 187932208}
   m_Layer: 0
   m_Name: Rooms
   m_TagString: Untagged
@@ -2006,64 +1978,6 @@ Transform:
   - {fileID: 931622395}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &187932207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187932205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bad59e0ae42468448abf06f6589829a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TF_parent: {fileID: 187932206}
-  List_GO_roomObjects:
-  - {fileID: 764687839}
-  - {fileID: 620457300}
-  - {fileID: 931622394}
-  List_V3_positions:
-  - {x: -0, y: -0, z: -0}
-  - {x: -7.0168734, y: -0, z: -0}
-  - {x: -13.614529, y: -0, z: -0}
-  F_moveAnimationDuration: 0.5
-  F_swipeSensitivity: 0.5
-  RT_highlightRect: {fileID: 1841956920}
-  List_IMG_roomButtonActiveIcons:
-  - {fileID: 464295034}
-  - {fileID: 1330699036}
-  - {fileID: 1794749949}
---- !u!114 &187932208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187932205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: UI
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &193530301
 GameObject:
   m_ObjectHideFlags: 0
@@ -7914,7 +7828,6 @@ GameObject:
   m_Component:
   - component: {fileID: 947175222}
   - component: {fileID: 947175221}
-  - component: {fileID: 947175220}
   - component: {fileID: 947175223}
   - component: {fileID: 947175224}
   m_Layer: 0
@@ -7924,14 +7837,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &947175220
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947175219}
-  m_Enabled: 1
 --- !u!20 &947175221
 Camera:
   m_ObjectHideFlags: 0
@@ -10610,6 +10515,7 @@ GameObject:
   - component: {fileID: 1176507735}
   - component: {fileID: 1176507734}
   - component: {fileID: 1176507733}
+  - component: {fileID: 1176507736}
   m_Layer: 0
   m_Name: UI HUD Manager
   m_TagString: Untagged
@@ -10630,6 +10536,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GO_Ruangan: []
+  TF_parent: {fileID: 187932206}
+  List_GO_roomObjects:
+  - {fileID: 764687839}
+  - {fileID: 620457300}
+  - {fileID: 931622394}
+  List_V3_positions: []
+  F_moveAnimationDuration: 0.5
+  F_swipeSensitivity: 0.5
   ENM_room: 0
 --- !u!114 &1176507734
 MonoBehaviour:
@@ -10653,6 +10567,12 @@ MonoBehaviour:
   BTN_church: {fileID: 59130317}
   BTN_office: {fileID: 241647074}
   BTN_bedRoom: {fileID: 1538121080}
+  RT_highlightRect: {fileID: 1841956920}
+  List_IMG_roomButtonActiveIcons:
+  - {fileID: 464295034}
+  - {fileID: 1330699036}
+  - {fileID: 1794749949}
+  F_moveAnimationDuration: 0.5
   BTN_exit: {fileID: 0}
   BTN_setting: {fileID: 0}
   BTN_minimizeAndMaximize: {fileID: 0}
@@ -10671,6 +10591,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1176507736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176507732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: UI
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1192658473
 GameObject:
   m_ObjectHideFlags: 0
@@ -15573,7 +15523,6 @@ GameObject:
   - component: {fileID: 1817286968}
   - component: {fileID: 1817286967}
   - component: {fileID: 1817286966}
-  - component: {fileID: 1817286965}
   m_Layer: 0
   m_Name: BG Camera
   m_TagString: MainCamera
@@ -15581,22 +15530,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1817286965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817286964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EventMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_MaxRayIntersections: 0
 --- !u!114 &1817286966
 MonoBehaviour:
   m_ObjectHideFlags: 0

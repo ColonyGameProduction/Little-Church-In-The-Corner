@@ -132,8 +132,11 @@ public class ChatManager : MonoBehaviour
         //Kalau lagi ada renungan yang berjalan, jangan setup renungan.
         if (ENM_currDialog != ENM_DialogTitle.None)
             return;
-        ////Kalau ga ada renungan dalam queue, jangan setup renungan.
 
+        ////Kalau ga ada renungan dalam queue, jangan setup renungan.
+        ///Tergantung ruangan. Kalau misalnya ruangannya office, maka cek queue QnA.
+        ///Kalau di gereja, cek queue renungan.
+        ///Ruangannya tergantung ruangan saat ini.
         if (TransitionManager.Instance.ENM_room == ENM_Room.Office)
         {
             if (TimeManager.Instance.I_queuedQnA <= 0)

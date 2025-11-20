@@ -1,7 +1,9 @@
 #region Chat
 public enum ENM_CharFace
 {
+    // Muka cowok
     Test1 = 1,
+    // Muka cewek
     Test2 = 2,
 }
 
@@ -66,6 +68,7 @@ public enum ENM_PanelState
 #region HUD
 public enum ENM_Room
 {
+    // Aku pindahin office jadi yang pertama gara-gara di tombol UInya, office yang pertama
     Office = 0,
     Church = 1,
     Bedroom = 2,

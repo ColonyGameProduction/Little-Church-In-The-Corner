@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,12 @@ public class UIHUDManager : MonoBehaviour
     public Button BTN_office;
     public Button BTN_bedRoom;
 
+    // Ini bagian untuk tombol - Robert
+    public RectTransform RT_highlightRect;
+    public List<Image> List_IMG_roomButtonActiveIcons;
+
+    public float F_moveAnimationDuration = 0.5f;
+
     [Header("Ini Button buat yang diatas itu")]
     public Button BTN_exit;
     public Button BTN_setting;
@@ -32,7 +39,7 @@ public class UIHUDManager : MonoBehaviour
         BTN_office.onClick.AddListener(() => RoomTransitionUI(ENM_Room.Office));
         BTN_bedRoom.onClick.AddListener(() => RoomTransitionUI(ENM_Room.Bedroom));
 
-        // Robert: ada ini biar kalau null reference, dia ga munculin error. Kayaknya ini ga kepake juga akhirnya?
+        // Robert: ada ini (if BTN_exit dst.) biar kalau null reference, dia ga munculin error. Kayaknya ini ga kepake juga akhirnya?
         if(BTN_exit) BTN_exit.onClick.AddListener(Exit);
         if (BTN_setting) BTN_setting.onClick.AddListener(Settings);
         if(BTN_minimizeAndMaximize) BTN_minimizeAndMaximize.onClick.AddListener(MinimizeAndMaximize);
@@ -44,28 +51,49 @@ public class UIHUDManager : MonoBehaviour
         //Ini cuma sementara doang gara-gara aku mager
         //- Robert
         TransitionManager.Instance.ENM_room = room;
-        RoomPositionManager.Instance.GoToPosition();
+        TransitionManager.Instance.GoToPosition();
 
         //STR_TM.Transition(room);
-        //HighlightRoomButtonTransition(room);
+        HighlightRoomButtonTransition(room);
     }
 
     // ini buat nge highlight buttonya tapi ini buat contoh baek
     public void HighlightRoomButtonTransition(ENM_Room room)
     {
-        ResetHighlight();
+        //ResetHighlight();
 
-        switch (room)
+        //switch (room)
+        //{
+        //    case ENM_Room.Church:
+        //        IMG_church.color = Color.white;
+        //        break;
+        //    case ENM_Room.Office:
+        //        IMG_office.color = Color.white;
+        //        break;
+        //    case ENM_Room.Bedroom:
+        //        IMG_bedRoom.color = Color.white;
+        //        break;
+        //}
+
+        LeanTween
+            .move(
+                RT_highlightRect,
+                new Vector2(RT_highlightRect.sizeDelta.x * (int)TransitionManager.Instance.ENM_room, 0f),
+                F_moveAnimationDuration
+            )
+            .setEase(LeanTweenType.easeOutCubic);
+
+        for (int I_activeIconsIndex = 0; I_activeIconsIndex < List_IMG_roomButtonActiveIcons.Count; I_activeIconsIndex++)
         {
-            case ENM_Room.Church:
-                IMG_church.color = Color.white;
-                break;
-            case ENM_Room.Office:
-                IMG_office.color = Color.white;
-                break;
-            case ENM_Room.Bedroom:
-                IMG_bedRoom.color = Color.white;
-                break;
+            float F_alpha = 0f;
+            if (I_activeIconsIndex == (int)TransitionManager.Instance.ENM_room) F_alpha = 1f;
+            LeanTween
+                .alpha(
+                List_IMG_roomButtonActiveIcons[I_activeIconsIndex].rectTransform,
+                F_alpha,
+                F_moveAnimationDuration
+                )
+                .setEase(LeanTweenType.easeOutCubic);
         }
     }
 

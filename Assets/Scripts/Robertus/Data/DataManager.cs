@@ -195,6 +195,10 @@ public class DataManager : MonoBehaviour
             //Kalau misalnya konversinya berhasil
             if (SCR_loadedData != null)
             {
+                // Ada ini karena kalau misalnya ada pembaruan data, maka data lama ga bisa digunakan.
+                // Contoh asli: ku ganti data DialogComponent, menghapus Color dan menggantinya dengan Sprite. Gara-gara itu, bisa muncul error.
+                // Kalau error, maka kasi tau kalau ada error itu.
+                // Tapi, kalau engga, lewatin seperti biasa.
                 try
                 {
                     Debug.Log(SCR_loadedData);
@@ -235,6 +239,7 @@ public class DataManager : MonoBehaviour
     /// <summary>
     /// Ngeload data SCR_schedule dari device pemain, kalau ada.
     /// Kalau ga ada, atur SCR_schedule default.
+    /// ... Kurang lebih kayak di atas
     /// </summary>
     /// <param name="S_filePath">Lokasi tempat penyimpanan</param>
     private void LoadQnASchedule(string S_filePath)
@@ -249,6 +254,10 @@ public class DataManager : MonoBehaviour
 
             if (SCR_loadedData != null)
             {
+                // Ada ini karena kalau misalnya ada pembaruan data, maka data lama ga bisa digunakan.
+                // Contoh asli: ku ganti data DialogComponent, menghapus Color dan menggantinya dengan Sprite. Gara-gara itu, bisa muncul error.
+                // Kalau error, maka kasi tau kalau ada error itu.
+                // Tapi, kalau engga, lewatin seperti biasa.
                 try
                 {
                     Debug.Log(SCR_loadedData);

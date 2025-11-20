@@ -100,6 +100,10 @@ public class DictionaryManager : MonoBehaviour
             //Kalau misalnya konversinya berhasil
             if (SCR_loadedData != null)
             {
+                // Ada ini karena kalau misalnya ada pembaruan data, maka data lama ga bisa digunakan.
+                // Contoh asli: ku ganti data DialogComponent, menghapus Color dan menggantinya dengan Sprite. Gara-gara itu, bisa muncul error.
+                // Kalau error, maka kasi tau kalau ada error itu.
+                // Tapi, kalau engga, lewatin seperti biasa.
                 try
                 {
                     Debug.Log(SCR_loadedData);
