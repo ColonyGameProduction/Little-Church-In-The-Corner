@@ -58,9 +58,7 @@ public class DictionaryManager : MonoBehaviour
     {
         if (List_SO_allDownloadedDialog == null) List_SO_allDownloadedDialog = new List<DialogSO>();
 
-        //TODO: ganti supaya pakai TransitionManager.
-        //Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
-        List_SO_allDownloadedDialog.Add(ChatManager.Instance.SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church, ChatManager.Instance.ENM_currDialog));
+        List_SO_allDownloadedDialog.Add(ChatManager.Instance.SO_listOfDialogueSO.SO_GetDialogSO(TransitionManager.Instance.ENM_room, ChatManager.Instance.ENM_currDialog));
 
         SaveToDevice();
     }
@@ -102,7 +100,20 @@ public class DictionaryManager : MonoBehaviour
             //Kalau misalnya konversinya berhasil
             if (SCR_loadedData != null)
             {
-                Debug.Log(SCR_loadedData);
+                // Ada ini karena kalau misalnya ada pembaruan data, maka data lama ga bisa digunakan.
+                // Contoh asli: ku ganti data DialogComponent, menghapus Color dan menggantinya dengan Sprite. Gara-gara itu, bisa muncul error.
+                // Kalau error, maka kasi tau kalau ada error itu.
+                // Tapi, kalau engga, lewatin seperti biasa.
+                try
+                {
+                    Debug.Log(SCR_loadedData);
+                }
+                catch (Exception)
+                {
+
+                    Debug.LogError("ERROR: Data cannot be loaded");
+                    throw;
+                }
                 //Taro hasil konversinya ke dalam List asli, yang bisa dibaca dan diakses oleh class lain
                 List_SO_allDownloadedDialog = SCR_loadedData.List_SO_ConvertSaveData();
             }
@@ -136,9 +147,10 @@ public class DictionaryManager : MonoBehaviour
                     (
                         new SaveDataDialogComponent
                         (
-                            SCR_component.COL_bubbleColour,
+                            SCR_component.ENM_background,
                             SCR_component.S_stringText,
-                            SCR_component.ENM_charFace
+                            SCR_component.ENM_charFace,
+                            SCR_component.B_isFlipped
                         )
                     );
                 }
@@ -167,9 +179,10 @@ public class DictionaryManager : MonoBehaviour
                     (
                         new DialogComponent
                         (
-                            SCR_component.COL_bubbleColour,
+                            SCR_component.ENM_background,
                             SCR_component.S_stringText,
-                            SCR_component.ENM_charFace
+                            SCR_component.ENM_charFace,
+                            SCR_component.B_isFlipped
                         )
                     );
                 }
@@ -225,20 +238,22 @@ public class DictionaryManager : MonoBehaviour
     [Serializable]
     public class SaveDataDialogComponent
     {
-        public Color COL_bubbleColour = Color.white;
+        public ENM_ChatBubbleBackground ENM_background;
         public string S_stringText;
         public ENM_CharFace ENM_charFace;
+        public bool B_isFlipped;
 
-        public SaveDataDialogComponent(Color cOL_bubbleColour, string stringText, ENM_CharFace eNM_charFace)
+        public SaveDataDialogComponent(ENM_ChatBubbleBackground ENM_background, string stringText, ENM_CharFace eNM_charFace, bool b_isFlipped)
         {
-            COL_bubbleColour = cOL_bubbleColour;
+            this.ENM_background = ENM_background;
             S_stringText = stringText;
             ENM_charFace = eNM_charFace;
+            B_isFlipped = b_isFlipped;
         }
 
         public override string ToString()
         {
-            return $"Color = {COL_bubbleColour}, charface = {ENM_charFace}\nText = {S_stringText}";
+            return $"Sprite = {ENM_background}, charface = {ENM_charFace}\nText = {S_stringText}";
         }
     }
 

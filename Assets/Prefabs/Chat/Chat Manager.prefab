@@ -55,9 +55,18 @@ MonoBehaviour:
     List_face:
     - ENM_characterFace: 1
       SPR_characterSprite: {fileID: 21300000, guid: 9655292dfd4465b48bf869f1461da2a7, type: 3}
+    - ENM_characterFace: 2
+      SPR_characterSprite: {fileID: 21300000, guid: 53fcb296d35d4d74790ae9ff87268be2, type: 3}
+  SCR_listOfChatBubbleBackground:
+    List_backgrounds:
+    - ENM_chatBubbleBackground: 0
+      SPR_backgroundSprite: {fileID: 21300000, guid: 50cb4facf57a7eb41b7cb78af7a63408, type: 3}
+    - ENM_chatBubbleBackground: 1
+      SPR_backgroundSprite: {fileID: 21300000, guid: 44f1cbb16d63de247b60d6b02d7d9277, type: 3}
   ENM_currDialog: 0
   F_interval: 0.01
   I_currDialogComponentIndex: 0
+  F_delayBeforeShowingDownloadOptions: 1.5
   I_amountOfTextAnimationDone: 0
 --- !u!114 &4163369408196000471
 MonoBehaviour:
@@ -110,7 +119,20 @@ MonoBehaviour:
   - I_hour: 21
     I_minute: 0
   List_SCR_sermonSchedule: []
+  SCR_qnaSchedule:
+  - I_hour: 5
+    I_minute: 0
+  - I_hour: 9
+    I_minute: 0
+  - I_hour: 12
+    I_minute: 0
+  - I_hour: 15
+    I_minute: 0
+  - I_hour: 21
+    I_minute: 0
+  List_SCR_qnaSchedule: []
   I_maxQueuedSermon: 10
+  I_maxQueuedQnA: 3
 --- !u!114 &6249780566139944933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +171,7 @@ MonoBehaviour:
   TMPUGUI_deleteConfirmationText: {fileID: 0}
   BTN_yesDeleteSermon: {fileID: 0}
   BTN_noDeleteSermon: {fileID: 0}
+  TMPUGUI_sermonTitle: {fileID: 0}
 --- !u!114 &7416180908611160759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,28 +188,28 @@ MonoBehaviour:
   - SCR_timeToSwitch:
       I_hour: 0
       I_minute: 0
+    CG_backgroundDecorationCanvasGroup: {fileID: 0}
     CG_backgroundCanvasGroup: {fileID: 0}
-    COL_backgroundColor: {r: 0.101960786, g: 0.5176471, b: 0.57254905, a: 1}
   - SCR_timeToSwitch:
       I_hour: 6
       I_minute: 0
+    CG_backgroundDecorationCanvasGroup: {fileID: 0}
     CG_backgroundCanvasGroup: {fileID: 0}
-    COL_backgroundColor: {r: 0.8745098, g: 0.65882355, b: 0.47843137, a: 1}
   - SCR_timeToSwitch:
       I_hour: 11
       I_minute: 0
+    CG_backgroundDecorationCanvasGroup: {fileID: 0}
     CG_backgroundCanvasGroup: {fileID: 0}
-    COL_backgroundColor: {r: 0.49803922, g: 0.7529412, b: 0.6117647, a: 1}
   - SCR_timeToSwitch:
       I_hour: 15
       I_minute: 0
+    CG_backgroundDecorationCanvasGroup: {fileID: 0}
     CG_backgroundCanvasGroup: {fileID: 0}
-    COL_backgroundColor: {r: 0.8745098, g: 0.65882355, b: 0.47843137, a: 1}
   - SCR_timeToSwitch:
       I_hour: 18
       I_minute: 0
+    CG_backgroundDecorationCanvasGroup: {fileID: 0}
     CG_backgroundCanvasGroup: {fileID: 0}
-    COL_backgroundColor: {r: 0.101960786, g: 0.5176471, b: 0.57254905, a: 1}
   SCR_dayNightCycleUI: {fileID: 4490439878260609983}
 --- !u!114 &4490439878260609983
 MonoBehaviour:
@@ -200,5 +223,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f33e4949dc9b7e4aa86b22f0413d532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IMG_background: {fileID: 0}
   F_transitionDuration: 5

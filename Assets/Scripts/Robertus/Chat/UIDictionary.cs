@@ -59,6 +59,11 @@ public class UIDictionary : MonoBehaviour
     /// </summary>
     public Button BTN_noDeleteSermon;
 
+    /// <summary>
+    /// Judul renungan
+    /// </summary>
+    public TextMeshProUGUI TMPUGUI_sermonTitle;
+
     private void OnEnable()
     {
         BTN_openSelectedSermon.onClick.AddListener(OpeningSavedSermon);
@@ -100,7 +105,7 @@ public class UIDictionary : MonoBehaviour
             //Setup judul dan dialogSO
             SCR_savedSermonItem.SCR_dialogSO = SO_savedDialog;
             SCR_savedSermonItem.TMPUGUI_title.text = SO_savedDialog.ENM_dialogTitle.ToString();
-            SCR_savedSermonItem.IMG_background.color = Color.white;
+            SCR_savedSermonItem.IMG_background.gameObject.SetActive(false);
 
             List_SCR_savedSermonItemList.Add(SCR_savedSermonItem);
         }
@@ -140,6 +145,7 @@ public class UIDictionary : MonoBehaviour
             SCR_UIChatBubble.Fade(1f);
         }
 
+        TMPUGUI_sermonTitle.text = DictionaryManager.Instance.SO_currDialogSelected.ENM_dialogTitle.ToString();
     }
 
     /// <summary>
