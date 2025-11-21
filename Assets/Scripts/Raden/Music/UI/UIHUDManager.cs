@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class UIHUDManager : MonoBehaviour
 {
+    public static UIHUDManager Instance;
+
     public TransitionManager STR_TM;
 
     [Header("Para gameobject Room")]
@@ -33,6 +35,10 @@ public class UIHUDManager : MonoBehaviour
     public Button BTN_setting;
     public Button BTN_minimizeAndMaximize;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         BTN_church.onClick.AddListener(() => RoomTransitionUI(ENM_Room.Church));

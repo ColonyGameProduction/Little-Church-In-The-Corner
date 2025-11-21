@@ -127,17 +127,17 @@ public class TransitionManager : MonoBehaviour
 
         if (COR_swipeUpdateCoroutine != null) StopCoroutine(COR_swipeUpdateCoroutine);
 
-        int I_nextRoomIndex = (int)TransitionManager.Instance.ENM_room;
+        int I_nextRoomIndex = (int)ENM_room;
 
         //Kalau misalnya udah cukup jauh swipenya, maka boleh pindah ke ruangan lain
-        if (Mathf.Abs(List_V3_positions[(int)TransitionManager.Instance.ENM_room].x - TF_parent.position.x) > F_swipeSensitivity)
+        if (Mathf.Abs(List_V3_positions[(int)ENM_room].x - TF_parent.position.x) > F_swipeSensitivity)
         {
             float F_smallestDifference = float.PositiveInfinity;
 
             for (int I_positionIndex = 0; I_positionIndex < List_V3_positions.Count; I_positionIndex++)
             {
                 // Kalau I_roomIndex sama dengan ruangan saat ini, skip
-                if ((int)TransitionManager.Instance.ENM_room == I_positionIndex) continue;
+                if ((int)ENM_room == I_positionIndex) continue;
 
                 //Debug.Log($"{I_roomIndex} Smallest difference {F_smallestDifference} vs difference {Mathf.Abs(List_V3_positions[I_roomIndex].x - TF_parent.position.x)}");
                 if (F_smallestDifference > Mathf.Abs(List_V3_positions[I_positionIndex].x - TF_parent.position.x))
@@ -148,7 +148,7 @@ public class TransitionManager : MonoBehaviour
             }
         }
 
-        TransitionManager.Instance.ENM_room = (ENM_Room)I_nextRoomIndex;
+        ENM_room = (ENM_Room)I_nextRoomIndex;
 
         GoToPosition();
     }
@@ -187,12 +187,14 @@ public class TransitionManager : MonoBehaviour
             .move(
                 TF_parent.gameObject,
                 new Vector3(
-                    List_V3_positions[(int)TransitionManager.Instance.ENM_room].x,
+                    List_V3_positions[(int)ENM_room].x,
                     TF_parent.position.y,
                     TF_parent.position.z),
                 F_moveAnimationDuration)
             .setEase(LeanTweenType.easeOutCubic)
             .id;
+
+        UIHUDManager.Instance.HighlightRoomButtonTransition(ENM_room);
     }
 
     public void Transition(ENM_Room targetRoom)
