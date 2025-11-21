@@ -778,8 +778,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ca6ee10406f57d04f8b8c7f7aad33ac6, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2228,6 +2228,9 @@ MonoBehaviour:
   BTN_church: {fileID: 1672483745}
   BTN_office: {fileID: 907288639}
   BTN_bedRoom: {fileID: 1442390171}
+  RT_highlightRect: {fileID: 0}
+  List_IMG_roomButtonActiveIcons: []
+  F_moveAnimationDuration: 0.5
   BTN_exit: {fileID: 1542662277}
   BTN_setting: {fileID: 2044447420}
   BTN_minimizeAndMaximize: {fileID: 2065580233}
@@ -2551,8 +2554,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 33cbcabee34bbbf4391475e5a862a1b5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3392,7 +3395,7 @@ MonoBehaviour:
   UICanvasScaler: {fileID: 1080252725}
   F_miniY: -940
   F_fullY: -760
-  F_playlistY: 0
+  F_playlistY: -94
   F_snapThreshold: 80
   F_animationDuration: 0.25
 --- !u!114 &913881360
@@ -6571,15 +6574,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.32941177, g: 0.33333334, b: 0.7411765, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2fffedda40625454aa92487c0d09001a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7054,6 +7057,8 @@ MonoBehaviour:
   PB_songsButton: {fileID: 3576159583064318989, guid: 437d3bc69605fc6409a7e18a79e5cbf5, type: 3}
   TF_playlistButtonParent: {fileID: 1470879938}
   TF_songsButtonParent: {fileID: 1163169675}
+  SPR_playlistNormal: {fileID: 21300000, guid: 68b3669af64d0ad43a43bb7de3c3bcf9, type: 3}
+  SPR_playlistSelected: {fileID: 21300000, guid: 0b63aa6a597a53e49833108b90940f6c, type: 3}
 --- !u!224 &1937454424
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7603,6 +7608,12 @@ MonoBehaviour:
   - {fileID: 1107596347}
   - {fileID: 1745927431}
   - {fileID: 1548227878}
+  TF_parent: {fileID: 0}
+  List_GO_roomObjects: []
+  List_V3_positions: []
+  F_moveAnimationDuration: 0.5
+  F_swipeSensitivity: 0.5
+  ENM_room: 0
 --- !u!114 &2018410136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7615,7 +7626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed44b17c463cc74a8f032882311cf48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicManager: {fileID: 2018410132}
+  SCR_MM: {fileID: 0}
 --- !u!1 &2024711395
 GameObject:
   m_ObjectHideFlags: 0
