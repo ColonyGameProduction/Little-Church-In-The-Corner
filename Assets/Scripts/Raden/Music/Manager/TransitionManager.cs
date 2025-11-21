@@ -183,6 +183,8 @@ public class TransitionManager : MonoBehaviour
     // Ini pindahin ke TransitionManager, ke Transition()
     public void GoToPosition()
     {
+        if (LeanTween.isTweening(I_moveAnimationID)) LeanTween.cancel(I_moveAnimationID);
+
         I_moveAnimationID = LeanTween
             .move(
                 TF_parent.gameObject,
