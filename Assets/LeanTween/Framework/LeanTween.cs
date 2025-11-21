@@ -902,6 +902,7 @@ public class LeanTween : MonoBehaviour {
     public static bool isTweening( int uniqueId ){
         int backId = uniqueId & 0xFFFF;
         int backCounter = uniqueId >> 16;
+        // Tambahan: biar ga error -Robert
         if (tweens == null) return false;
         if (backId < 0 || backId >= maxTweens) return false;
         // Debug.Log("tweens[backId].counter:"+tweens[backId].counter+" backCounter:"+backCounter +" toggle:"+tweens[backId].toggle);

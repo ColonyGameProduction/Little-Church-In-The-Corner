@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Elshad_Test1.unity
     guid: a7407b55c40cc4e41a51404fa491b030
+  - enabled: 0
+    path: Assets/Scenes/Robertus_Test1.unity
+    guid: 4a13a509dad0eda4a94effca1d73e68f
   - enabled: 1
     path: Assets/Scenes/Raden_Test1.unity
     guid: f3a791fe46e4a2b4298dd9f346044d4d

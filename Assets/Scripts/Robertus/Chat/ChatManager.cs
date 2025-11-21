@@ -18,6 +18,10 @@ public class ChatManager : MonoBehaviour
     /// </summary>
     public ListOfFace SCR_listOfFace;
     /// <summary>
+    /// List semua background yang dapat dipakai oleh chat bubble
+    /// </summary>
+    public ListOfChatBubbleBackground SCR_listOfChatBubbleBackground;
+    /// <summary>
     /// Dialog yang aktif saat ini
     /// </summary>
     [HideInInspector] public ENM_DialogTitle ENM_currDialog;
@@ -82,9 +86,7 @@ public class ChatManager : MonoBehaviour
 
         I_amountOfTextAnimationDone = 0;
 
-        //TODO: ganti supaya pakai TransitionManager.
-        //Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
-        DialogSO SO_currDialog = SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church, ENM_currDialog);
+        DialogSO SO_currDialog = SO_listOfDialogueSO.SO_GetDialogSO(TransitionManager.Instance.ENM_room, ENM_currDialog);
 
         while (I_currDialogComponentIndex < SO_currDialog.SCR_dialogComponent.Count)
         {
@@ -134,13 +136,23 @@ public class ChatManager : MonoBehaviour
         //Kalau lagi ada renungan yang berjalan, jangan setup renungan.
         if (ENM_currDialog != ENM_DialogTitle.None)
             return;
-        ////Kalau ga ada renungan dalam queue, jangan setup renungan.
-        if (TimeManager.Instance.I_queuedSermon <= 0)
-            return;
 
-        //TODO: ganti supaya pakai TransitionManager.
-        //Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
-        ENM_currDialog = SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church).ENM_dialogTitle;
+        ////Kalau ga ada renungan dalam queue, jangan setup renungan.
+        ///Tergantung ruangan. Kalau misalnya ruangannya office, maka cek queue QnA.
+        ///Kalau di gereja, cek queue renungan.
+        ///Ruangannya tergantung ruangan saat ini.
+        if (TransitionManager.Instance.ENM_room == ENM_Room.Office)
+        {
+            if (TimeManager.Instance.I_queuedQnA <= 0)
+                return;
+        }
+        else if (TransitionManager.Instance.ENM_room == ENM_Room.Church)
+        {
+            if (TimeManager.Instance.I_queuedSermon <= 0)
+                return;
+        }
+
+        ENM_currDialog = SO_listOfDialogueSO.SO_GetDialogSO(TransitionManager.Instance.ENM_room).ENM_dialogTitle;
         I_currDialogComponentIndex = 0;
     }
 }
