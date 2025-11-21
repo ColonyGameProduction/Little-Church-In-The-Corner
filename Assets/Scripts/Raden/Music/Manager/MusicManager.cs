@@ -236,18 +236,6 @@ public class MusicManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    // fungsi ini tuh buat buka file browser dan pilih2 lagu dari local storage pengguna
-    public void ImportLocalSong()
-    {
-        var paths = StandaloneFileBrowser.OpenFilePanel("Select Music File", "", new[] {
-        new ExtensionFilter("Audio Files", "mp3", "wav", "ogg")
-        }, false);
-
-        if (paths.Length == 0) return;
-        string path = paths[0];
-        StartCoroutine(LoadAndAddLocalSong(path));
-    }
-
     // ini korutin buat nge-add file audio dari local path, terus namahin ke Playlist_Local abis itu di simpen di JSON
     private IEnumerator LoadAndAddLocalSong(string path)
     {
@@ -306,6 +294,8 @@ public class MusicManager : MonoBehaviour
         string json = File.ReadAllText(S_savePath);
         LocalSongsWrapper wrapper = JsonUtility.FromJson<LocalSongsWrapper>(json);
 
+        SCR_localSongs = wrapper.SCR_songs;
+
         foreach (var songData in wrapper.SCR_songs)
         {
             StartCoroutine(LoadAudioFromPath(songData));
@@ -331,5 +321,53 @@ public class MusicManager : MonoBehaviour
                 SO_playlistLocal.SCR_playlist.Add(newSong);
             }
         }
+    }
+
+    public void AddLocalSong(AudioClip clip, string title, string path)
+    {
+        // CEK DUPLIKAT
+        if (IsSongAlreadyAdded(path))
+        {
+            Debug.LogWarning("Gagal Add: File ini sudah ditambahkan sebelumnya!");
+            return;
+        }
+
+        Songs newSong = new Songs
+        {
+            ADO_music = clip,
+            S_titleAndAuthor = title,
+            ENM_musicCode = ENM_MusicCode.SongLocal1
+        };
+
+        // tambah ke playlist local
+        SO_playlistLocal.SCR_playlist.Add(newSong);
+
+        // tambah ke liset penyimpanan JASON
+        SCR_localSongs.Add(new LocalSongData
+        {
+            S_filePath = path,
+            S_titleAndAuthor = title,
+            ENM_musicCode = newSong.ENM_musicCode
+        });
+
+        // save JSON
+        SaveLocalSongs();
+
+        FindAnyObjectByType<UIPlaylist>()?.SetupAllPlaylistSongs(SO_currPlaylistTypeSO.ENM_playlistType);
+
+        Debug.Log("Local song added from importer: " + title);
+    }
+
+    // cek nih lagu udah pernah di tambain belom ini
+    public bool IsSongAlreadyAdded(string path)
+    {
+        foreach (var song in SCR_localSongs)
+        {
+            if (song.S_filePath == path)
+            {
+                return true; // udah pernah diadd
+            }
+        }
+        return false;
     }
 }

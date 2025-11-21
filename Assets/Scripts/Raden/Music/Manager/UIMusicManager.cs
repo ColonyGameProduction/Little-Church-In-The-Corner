@@ -29,9 +29,16 @@ public class UIMusicManager : MonoBehaviour
     public TextMeshProUGUI TMPGUI_titleAndAuthor;
     public Slider SLR_progressBar;
 
-    //[Header("Sprites (for changing icons)")]
-    //public Sprite SPR_playIcon;
-    //public Sprite SPR_pauseIcon;
+    [Header("shuffle icons")]
+    public Sprite SPR_shuffleOn;
+    public Sprite SPR_shuffleOff;
+    public Image IMG_shuffleButton;
+
+    [Header("loop icons")]
+    public Sprite SPR_NoLoop;
+    public Sprite SPR_loopSong;
+    public Sprite SPR_loopPlaylist;
+    public Image IMG_loopButton;
 
     private void Start()
     {
@@ -44,6 +51,10 @@ public class UIMusicManager : MonoBehaviour
         BTN_prev.onClick.AddListener(() => SCR_MM.TogglePrevSong());
         // Robert: ada ini biar kalau null reference, dia ga munculin error. Kayaknya ini ga kepake juga akhirnya?
         if(BTN_playlist) BTN_playlist.onClick.AddListener(() => SetupPlaylistUI());
+
+        // set ui icon diawal
+        UpdateShuffleUI();
+        UpdateLoopUI();
 
         // Event listener pas laguan berubah
         SCR_MM.ACT_playSong += UpdateSongNameUI;
@@ -60,19 +71,53 @@ public class UIMusicManager : MonoBehaviour
     // setup buat button shuffle
     public void SetupShuffleButton()
     {
-        //jangan lupa ntar dikasih logic buat UI nya
-        //yang gonta ganti image
         SCR_MM.ToggleShuffle();
+
+        UpdateShuffleUI();
+
         Debug.Log("Shuffle toggled!");
+    }
+
+    // buat update ui dari shuffle button
+    public void UpdateShuffleUI()
+    {
+        if (SCR_MM.B_isShuffling)
+        {
+            IMG_shuffleButton.sprite = SPR_shuffleOn;
+        }
+        else
+        {
+            IMG_shuffleButton.sprite = SPR_shuffleOff;
+        }
     }
 
     // setup buat button loop
     public void SetupLoopButtonMethod()
     {
-        //jangan lupa ntar dikasih logic buat UI nya
-        //yang gonta ganti image
         SCR_MM.ToggleLoopMethod();
+
+        UpdateLoopUI();
+
         Debug.Log("Loop method: " + SCR_MM.ENM_loopMethod);
+    }
+
+    // buat update ui loop button
+    public void UpdateLoopUI()
+    {
+        switch (SCR_MM.ENM_loopMethod)
+        {
+            case ENM_LoopMethod.NoLoop:
+                IMG_loopButton.sprite = SPR_NoLoop;
+                break;
+
+            case ENM_LoopMethod.LoopSong:
+                IMG_loopButton.sprite = SPR_loopSong;
+                break;
+
+            case ENM_LoopMethod.LoopPlaylist:
+                IMG_loopButton.sprite = SPR_loopPlaylist;
+                break;
+        }
     }
 
     // setup buat button pause sama play (ini assetnya blon ada jadi if if-an nya nggk dipake duls)
