@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.InputSystem.Composites;
 
 public class UIPlaylist : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class UIPlaylist : MonoBehaviour
     [Header("Para Parent")]
     public Transform TF_playlistButtonParent;
     public Transform TF_songsButtonParent;
+
+    [Header("Playlist Button Sprites")]
+    public Sprite SPR_playlistNormal;
+    public Sprite SPR_playlistSelected;
+
+    private GameObject GO_currentSelectedPlaylistButton = null;
 
     private List<GameObject> GO_playlistButtons = new List<GameObject>();
     private List<GameObject> GO_songButtons = new List<GameObject>();
@@ -50,10 +57,51 @@ public class UIPlaylist : MonoBehaviour
             BTN_btn.onClick.AddListener(() =>
             {
                 SetupAllPlaylistSongs(playlistType);
+                HighlightPlaylistButton(GO_newButton);
             });
 
             GO_playlistButtons.Add(GO_newButton);
         }
+    }
+
+    private void HighlightPlaylistButton(GameObject selectedButton)
+    {
+        // deklarasi warna normal sama warna selected
+        Color normalColor;
+        ColorUtility.TryParseHtmlString("#14465D", out normalColor);
+        Color selectedColor = Color.white;
+
+        // reset semua button ke sprite normalan
+        foreach (GameObject btn in GO_playlistButtons)
+        {
+            btn.GetComponent<Image>().sprite = SPR_playlistNormal;
+
+            TextMeshProUGUI txt = btn.GetComponentInChildren<TextMeshProUGUI>();
+
+            if (txt != null)
+            {
+                txt.color = normalColor;
+            }
+        }
+
+        Image img = selectedButton.GetComponent<Image>();
+
+        // ganti yang button yg dipilih ke selected sprite
+        if (img != null)
+        {
+            img.sprite = SPR_playlistSelected;
+        }
+
+        TextMeshProUGUI selectedText = selectedButton.GetComponentInChildren<TextMeshProUGUI>();
+
+        // ganti warna text di button jadi selected color
+        if (selectedText != null)
+        {
+            selectedText.color = selectedColor;
+        }
+
+        // simpen referensi
+        GO_currentSelectedPlaylistButton = selectedButton;
     }
 
     // nentuin mana playlist yang jalan duluan
@@ -65,6 +113,12 @@ public class UIPlaylist : MonoBehaviour
         }
 
         SetupAllPlaylistSongs(SCR_MM.SO_currPlaylistTypeSO.ENM_playlistType);
+
+        // highlight playlist pertama
+        if (GO_playlistButtons.Count > 0)
+        {
+            HighlightPlaylistButton(GO_playlistButtons[0]);
+        }
     }
 
     // buat nge setup song musik button
