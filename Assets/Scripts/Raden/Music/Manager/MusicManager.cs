@@ -44,7 +44,13 @@ public class MusicManager : MonoBehaviour
 
     [Header("Local Songs")] // ini tuh list local musik yang udah di add ke dalem game
     public List<LocalSongData> SCR_localSongs = new List<LocalSongData>();
-    private string S_savePath => Path.Combine(Application.persistentDataPath, "local_songs.json");
+
+    //private string S_savePath => Path.Combine(Application.persistentDataPath, "local_songs.json");
+
+    private string S_savePath => Path.Combine(
+    Application.persistentDataPath,
+    $"{Application.platform}_local_songs.json");
+
 
     [Header("Playlist Lokal")]
     public PlaylistTypeSO SO_playlistLocal;
@@ -282,11 +288,15 @@ public class MusicManager : MonoBehaviour
         string json = JsonUtility.ToJson(wrapper, true);
         File.WriteAllText(S_savePath, json);
         Debug.Log("Local songs saved: " + S_savePath);
+
+        Debug.Log($"[SAVE] Local songs saved to: {S_savePath}");
     }
 
     // ini fungsi buat nge-add semua local musik dari JSON pas gamenya mulai
     public void LoadLocalSongs()
     {
+        Debug.Log($"[LOAD] Checking file: {S_savePath}");
+
         if (!File.Exists(S_savePath)) return;
 
         SO_playlistLocal.SCR_playlist.Clear();
