@@ -17,6 +17,15 @@ public class OfficeManager : MonoBehaviour
     /// </summary>
     public OfficeInteract SCR_officeInteract;
 
+    /// <summary>
+    /// 3D Model pastor pas lagi ga ada QnA
+    /// </summary>
+    public GameObject GO_priestIdle;
+    /// <summary>
+    /// 3D Model pastor pas lagi QnA, ngobrol dengan NPC
+    /// </summary>
+    public GameObject GO_priestActive;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -66,6 +75,7 @@ public class OfficeManager : MonoBehaviour
     public void FinishInteract()
     {
         HideAllNPC();
+        SetPriestActive(false);
         if (TimeManager.Instance.I_queuedQnA <= 0) SCR_officeInteract.gameObject.SetActive(false);
         else SetupInteract();
     }
@@ -76,6 +86,7 @@ public class OfficeManager : MonoBehaviour
     public void SetupNPC()
     {
         ShowRandomNPC();
+        SetPriestActive(true);
     }
 
     /// <summary>
@@ -96,5 +107,15 @@ public class OfficeManager : MonoBehaviour
     {
         if (List_GO_NPCs.Count <= 0) return;
         List_GO_NPCs[Random.Range(0, List_GO_NPCs.Count)].SetActive(true);
+    }
+
+    /// <summary>
+    /// Function buat pindahin posisi pastor dari idle ke mode QnA
+    /// </summary>
+    /// <param name="status">Kalau True, dia bakal pindah dari Idle ke QnA. Kalau false, sebaliknya</param>
+    public void SetPriestActive(bool status)
+    {
+        GO_priestIdle.SetActive(!status);
+        GO_priestActive.SetActive(status);
     }
 }
