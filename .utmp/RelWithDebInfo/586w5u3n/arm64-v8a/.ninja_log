@@ -1,0 +1,10 @@
+# ninja log v5
+24	1761	7856693574666033	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	c0635ef4cf656445
+1	1792	7856693575011644	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c2eb0f02cde31562
+32	1814	7856693575296992	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	11f15f4079de540
+59	1834	7856693575457735	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	f96deba4424d2988
+16	1862	7856693575802227	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	d4ab5a4ca42996d4
+50	1975	7856693576894798	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	d1b5309d4333b4e4
+41	2116	7856693578327925	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	d040ce38db8bc5ec
+9	2245	7856693579577474	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	b4f9fc3b3a7cbc9c
+2259	2405	7856693581228254	Z:/repo v2/Little-Church-In-The-Corner/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/586w5u3n/obj/arm64-v8a/libgame.so	f7fbb6eb7204da63

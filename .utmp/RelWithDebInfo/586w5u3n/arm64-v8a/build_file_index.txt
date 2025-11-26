@@ -1,0 +1,2 @@
+Z:\repo v2\Little-Church-In-The-Corner\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+Z:\repo v2\Little-Church-In-The-Corner\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

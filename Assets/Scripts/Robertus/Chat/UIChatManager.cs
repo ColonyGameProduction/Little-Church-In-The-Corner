@@ -120,9 +120,7 @@ public class UIChatManager : MonoBehaviour
         GO_downloadedSermonButtonContainer.SetActive(false);
 
         //Ini dialog/renungan saat ini.
-        //TODO: ganti supaya pakai TransitionManager.
-        //Debug.LogError("WARNING: Ganti codingan SetupRenungan supaya memakai ruangan saat ini");
-        DialogSO SO_dialogSO = ChatManager.Instance.SO_listOfDialogueSO.SO_GetDialogSO(ENM_Room.Church, ChatManager.Instance.ENM_currDialog); ;
+        DialogSO SO_dialogSO = ChatManager.Instance.SO_listOfDialogueSO.SO_GetDialogSO(TransitionManager.Instance.ENM_room, ChatManager.Instance.ENM_currDialog); ;
 
         //Ini bakal membuat semua chat bubble yang bakal ada di dalam renungan, tetapi dia bakal didisable terlebih dahulu supaya ga kelihatan di UI. Nanti mereka bakal dienable kalau sudah waktunya.
         foreach (DialogComponent components in SO_dialogSO.SCR_dialogComponent)

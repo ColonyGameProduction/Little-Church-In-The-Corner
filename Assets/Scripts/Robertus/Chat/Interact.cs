@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,6 +12,11 @@ public class Interact : MonoBehaviour, IPointerClickHandler
     /// Kalau misalnya udah diklik dan diinteract, maka ga boleh didelete sebelum renungannya selesai.
     /// </summary>
     public bool B_hasBeenInteracted;
+
+    /// <summary>
+    /// List semua jenis NPC yang bisa muncul. Ini biar NPC yang muncul random dan ga itu-itu aja.
+    /// </summary>
+    public List<GameObject> List_GO_NPC;
 
     /// <summary>
     /// Pas click, bakal setup chat, lalu sembunyiin tombol interactnya.
@@ -41,5 +47,25 @@ public class Interact : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log($"CLICKED NPC {gameObject.name}", gameObject);
         ClickInteractButton();
+    }
+
+    /// <summary>
+    /// Function untuk sembunyiin semua jenis NPC yang dapat dilihat.
+    /// </summary>
+    public void HideAllNPC()
+    {
+        foreach (GameObject GO_NPC in List_GO_NPC)
+        {
+            GO_NPC.SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// Function untuk menunjukkan NPC yang random
+    /// </summary>
+    public void ShowRandomNPC()
+    {
+        if (List_GO_NPC.Count <= 0) return;
+        List_GO_NPC[Random.Range(0, List_GO_NPC.Count)].SetActive(true);
     }
 }
