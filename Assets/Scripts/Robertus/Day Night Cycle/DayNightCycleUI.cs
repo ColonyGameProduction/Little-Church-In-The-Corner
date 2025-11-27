@@ -98,7 +98,7 @@ public class DayNightCycleUI : MonoBehaviour
 
                 if(SCR_previousDayNightData.CG_buttonPlaylistCanvasGroup.gameObject != SCR_dayNightData.CG_buttonPlaylistCanvasGroup.gameObject)
                 {
-                    //button
+                    //playlist button
                     SCR_previousDayNightData.CG_buttonPlaylistCanvasGroup.alpha = F_alphaValue;
                     SCR_dayNightData.CG_buttonPlaylistCanvasGroup.alpha = 1f - F_alphaValue;
                 }
