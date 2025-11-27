@@ -89,6 +89,20 @@ public class DayNightCycleUI : MonoBehaviour
             .setEase(LeanTweenType.easeInOutCubic)
             .setOnUpdate((float F_alphaValue) =>
             {
+                if(SCR_previousDayNightData.CG_playlistBackgroundCanvasGroup.gameObject != SCR_dayNightData.CG_playlistBackgroundCanvasGroup.gameObject)
+                {
+                    //playlist Background
+                    SCR_previousDayNightData.CG_playlistBackgroundCanvasGroup.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_playlistBackgroundCanvasGroup.alpha = 1f - F_alphaValue;
+                }
+
+                if(SCR_previousDayNightData.CG_buttonPlaylistCanvasGroup.gameObject != SCR_dayNightData.CG_buttonPlaylistCanvasGroup.gameObject)
+                {
+                    //button
+                    SCR_previousDayNightData.CG_buttonPlaylistCanvasGroup.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_buttonPlaylistCanvasGroup.alpha = 1f - F_alphaValue;
+                }
+
                 // Kalau misalnya yang sebelum dan yang sekarang sama, ga usah ada animasi
                 if (SCR_previousDayNightData.CG_backgroundDecorationCanvasGroup.gameObject != SCR_dayNightData.CG_backgroundDecorationCanvasGroup.gameObject)
                 {
@@ -111,6 +125,8 @@ public class DayNightCycleUI : MonoBehaviour
         {
             SCR_dayNightData.CG_backgroundDecorationCanvasGroup.alpha = 1f;
             SCR_dayNightData.CG_backgroundCanvasGroup.alpha = 1f;
+            SCR_dayNightData.CG_playlistBackgroundCanvasGroup.alpha = 1f;
+            SCR_dayNightData.CG_buttonPlaylistCanvasGroup.alpha = 1f;
         }
     }
 
