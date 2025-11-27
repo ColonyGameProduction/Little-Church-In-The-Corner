@@ -32,4 +32,8 @@ public class DayNightSchedule
     public CanvasGroup CG_savedSermonListScrollbar;
     public CanvasGroup CG_savedSermonChatScrollbar;
     public CanvasGroup CG_chatScrollbar;
+    //buat background playlist
+    public CanvasGroup CG_playlistBackgroundCanvasGroup;
+    //buat button pilih playlist
+    public CanvasGroup CG_buttonPlaylistCanvasGroup;
 }

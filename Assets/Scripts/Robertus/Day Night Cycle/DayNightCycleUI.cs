@@ -94,6 +94,20 @@ public class DayNightCycleUI : MonoBehaviour
             .setEase(LeanTweenType.easeInOutCubic)
             .setOnUpdate((float F_alphaValue) =>
             {
+                if(SCR_previousDayNightData.CG_playlistBackgroundCanvasGroup.gameObject != SCR_dayNightData.CG_playlistBackgroundCanvasGroup.gameObject)
+                {
+                    //playlist Background
+                    SCR_previousDayNightData.CG_playlistBackgroundCanvasGroup.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_playlistBackgroundCanvasGroup.alpha = 1f - F_alphaValue;
+                }
+
+                if(SCR_previousDayNightData.CG_buttonPlaylistCanvasGroup.gameObject != SCR_dayNightData.CG_buttonPlaylistCanvasGroup.gameObject)
+                {
+                    //button
+                    SCR_previousDayNightData.CG_buttonPlaylistCanvasGroup.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_buttonPlaylistCanvasGroup.alpha = 1f - F_alphaValue;
+                }
+
                 // Kalau misalnya yang sebelum dan yang sekarang sama, ga usah ada animasi
                 if (SCR_previousDayNightData.CG_backgroundDecorationCanvasGroup.gameObject != SCR_dayNightData.CG_backgroundDecorationCanvasGroup.gameObject)
                 {
@@ -236,6 +250,8 @@ public class DayNightCycleUI : MonoBehaviour
             SCR_dayNightData.CG_savedSermonListScrollbar.alpha = 1f;
             SCR_dayNightData.CG_savedSermonChatScrollbar.alpha = 1f;
             SCR_dayNightData.CG_chatScrollbar.alpha = 1f;
+            SCR_dayNightData.CG_playlistBackgroundCanvasGroup.alpha = 1f;
+            SCR_dayNightData.CG_buttonPlaylistCanvasGroup.alpha = 1f;
         }
     }
 
@@ -263,6 +279,8 @@ public class DayNightCycleUI : MonoBehaviour
             SCR_schedule.CG_savedSermonListScrollbar.alpha = 0f;
             SCR_schedule.CG_savedSermonChatScrollbar.alpha = 0f;
             SCR_schedule.CG_chatScrollbar.alpha = 0f;
+            SCR_dayNightData.CG_playlistBackgroundCanvasGroup.alpha = 0f;
+            SCR_dayNightData.CG_buttonPlaylistCanvasGroup.alpha = 0f;
         }
     }
 
