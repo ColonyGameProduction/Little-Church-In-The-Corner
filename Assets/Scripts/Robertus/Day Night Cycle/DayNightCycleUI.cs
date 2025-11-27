@@ -279,8 +279,8 @@ public class DayNightCycleUI : MonoBehaviour
             SCR_schedule.CG_savedSermonListScrollbar.alpha = 0f;
             SCR_schedule.CG_savedSermonChatScrollbar.alpha = 0f;
             SCR_schedule.CG_chatScrollbar.alpha = 0f;
-            SCR_dayNightData.CG_playlistBackgroundCanvasGroup.alpha = 0f;
-            SCR_dayNightData.CG_buttonPlaylistCanvasGroup.alpha = 0f;
+            SCR_schedule.CG_playlistBackgroundCanvasGroup.alpha = 0f;
+            SCR_schedule.CG_buttonPlaylistCanvasGroup.alpha = 0f;
         }
     }
 
