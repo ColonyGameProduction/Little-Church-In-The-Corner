@@ -26,6 +26,11 @@ public class DayNightCycleUI : MonoBehaviour
     /// </summary>
     private float F_offsetMenitTesting;
 
+    private void Awake()
+    {
+        HideAll();
+    }
+
     /// <summary>
     /// Function untuk mengecek dan mengubah background. Ini dipanggil di TimeManager, barengan dengan waktu untuk mengecek renungan.
     /// </summary>
@@ -104,6 +109,111 @@ public class DayNightCycleUI : MonoBehaviour
                     SCR_previousDayNightData.CG_backgroundCanvasGroup.alpha = F_alphaValue;
                     SCR_dayNightData.CG_backgroundCanvasGroup.alpha = 1f - F_alphaValue;
                 }
+
+                //Header
+                if (SCR_previousDayNightData.CG_header.gameObject != SCR_dayNightData.CG_header.gameObject)
+                {
+                    SCR_previousDayNightData.CG_header.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_header.alpha = 1f - F_alphaValue;
+                }
+
+                //Highlight slider buat button ruangan
+                if (SCR_previousDayNightData.CG_roomButtonsHighlight.gameObject != SCR_dayNightData.CG_roomButtonsHighlight.gameObject)
+                {
+                    SCR_previousDayNightData.CG_roomButtonsHighlight.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_roomButtonsHighlight.alpha = 1f - F_alphaValue;
+                }
+
+                //Tombol ruangan office
+                if (SCR_previousDayNightData.CG_officeRoomButton.gameObject != SCR_dayNightData.CG_officeRoomButton.gameObject)
+                {
+                    SCR_previousDayNightData.CG_officeRoomButton.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_officeRoomButton.alpha = 1f - F_alphaValue;
+                }
+
+                //Tombol ruangan gereja
+                if (SCR_previousDayNightData.CG_churchRoomButton.gameObject != SCR_dayNightData.CG_churchRoomButton.gameObject)
+                {
+                    SCR_previousDayNightData.CG_churchRoomButton.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_churchRoomButton.alpha = 1f - F_alphaValue;
+                }
+
+                //Tombol ruangan kamar tidur
+                if (SCR_previousDayNightData.CG_bedroomRoomButton.gameObject != SCR_dayNightData.CG_bedroomRoomButton.gameObject)
+                {
+                    SCR_previousDayNightData.CG_bedroomRoomButton.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_bedroomRoomButton.alpha = 1f - F_alphaValue;
+                }
+
+                //Tombol hamburger yang di samping
+                if (SCR_previousDayNightData.CG_hamburgerButton.gameObject != SCR_dayNightData.CG_hamburgerButton.gameObject)
+                {
+                    SCR_previousDayNightData.CG_hamburgerButton.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_hamburgerButton.alpha = 1f - F_alphaValue;
+                }
+
+                //Saved Sermon: background luar
+                if (SCR_previousDayNightData.CG_savedSermonOuterBackground.gameObject != SCR_dayNightData.CG_savedSermonOuterBackground.gameObject)
+                {
+                    SCR_previousDayNightData.CG_savedSermonOuterBackground.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_savedSermonOuterBackground.alpha = 1f - F_alphaValue;
+                }
+
+                //Saved Sermon: background dalam
+                if (SCR_previousDayNightData.CG_savedSermonInnerBackground.gameObject != SCR_dayNightData.CG_savedSermonInnerBackground.gameObject)
+                {
+                    SCR_previousDayNightData.CG_savedSermonInnerBackground.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_savedSermonInnerBackground.alpha = 1f - F_alphaValue;
+                }
+
+                //Saved sermon: tombol baca
+                if (SCR_previousDayNightData.CG_savedSermonReadButton.gameObject != SCR_dayNightData.CG_savedSermonReadButton.gameObject)
+                {
+                    SCR_previousDayNightData.CG_savedSermonReadButton.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_savedSermonReadButton.alpha = 1f - F_alphaValue;
+                }
+
+                //Saved sermon: background konfirmasi penghapusan
+                if (SCR_previousDayNightData.CG_savedSermonDeleteConfirmationBackground.gameObject != SCR_dayNightData.CG_savedSermonDeleteConfirmationBackground.gameObject)
+                {
+                    SCR_previousDayNightData.CG_savedSermonDeleteConfirmationBackground.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_savedSermonDeleteConfirmationBackground.alpha = 1f - F_alphaValue;
+                }
+
+                //Saved sermon: background pas baca renungannya
+                if (SCR_previousDayNightData.CG_savedSermonReadBackground.gameObject != SCR_dayNightData.CG_savedSermonReadBackground.gameObject)
+                {
+                    SCR_previousDayNightData.CG_savedSermonReadBackground.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_savedSermonReadBackground.alpha = 1f - F_alphaValue;
+                }
+
+                //Saved sermon: tombol done
+                if (SCR_previousDayNightData.CG_savedSermonDoneButton.gameObject != SCR_dayNightData.CG_savedSermonDoneButton.gameObject)
+                {
+                    SCR_previousDayNightData.CG_savedSermonDoneButton.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_savedSermonDoneButton.alpha = 1f - F_alphaValue;
+                }
+
+                //Saved sermon: list scrollbar
+                if (SCR_previousDayNightData.CG_savedSermonListScrollbar.gameObject != SCR_dayNightData.CG_savedSermonListScrollbar.gameObject)
+                {
+                    SCR_previousDayNightData.CG_savedSermonListScrollbar.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_savedSermonListScrollbar.alpha = 1f - F_alphaValue;
+                }
+
+                //Saved sermon: chat scrollbar
+                if (SCR_previousDayNightData.CG_savedSermonChatScrollbar.gameObject != SCR_dayNightData.CG_savedSermonChatScrollbar.gameObject)
+                {
+                    SCR_previousDayNightData.CG_savedSermonChatScrollbar.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_savedSermonChatScrollbar.alpha = 1f - F_alphaValue;
+                }
+
+                //Chat scrollbar
+                if (SCR_previousDayNightData.CG_chatScrollbar.gameObject != SCR_dayNightData.CG_chatScrollbar.gameObject)
+                {
+                    SCR_previousDayNightData.CG_chatScrollbar.alpha = F_alphaValue;
+                    SCR_dayNightData.CG_chatScrollbar.alpha = 1f - F_alphaValue;
+                }
             });
         }
         //Kalau misalnya sebelumnya belum pernah ada perubahan apa pun, maka ga usah pakai animasi.
@@ -111,6 +221,48 @@ public class DayNightCycleUI : MonoBehaviour
         {
             SCR_dayNightData.CG_backgroundDecorationCanvasGroup.alpha = 1f;
             SCR_dayNightData.CG_backgroundCanvasGroup.alpha = 1f;
+            SCR_dayNightData.CG_header.alpha = 1f;
+            SCR_dayNightData.CG_roomButtonsHighlight.alpha = 1f;
+            SCR_dayNightData.CG_officeRoomButton.alpha = 1f;
+            SCR_dayNightData.CG_churchRoomButton.alpha = 1f;
+            SCR_dayNightData.CG_bedroomRoomButton.alpha = 1f;
+            SCR_dayNightData.CG_hamburgerButton.alpha = 1f;
+            SCR_dayNightData.CG_savedSermonOuterBackground.alpha = 1f;
+            SCR_dayNightData.CG_savedSermonInnerBackground.alpha = 1f;
+            SCR_dayNightData.CG_savedSermonReadButton.alpha = 1f;
+            SCR_dayNightData.CG_savedSermonDeleteConfirmationBackground.alpha = 1f;
+            SCR_dayNightData.CG_savedSermonReadBackground.alpha = 1f;
+            SCR_dayNightData.CG_savedSermonDoneButton.alpha = 1f;
+            SCR_dayNightData.CG_savedSermonListScrollbar.alpha = 1f;
+            SCR_dayNightData.CG_savedSermonChatScrollbar.alpha = 1f;
+            SCR_dayNightData.CG_chatScrollbar.alpha = 1f;
+        }
+    }
+
+    /// <summary>
+    /// Ini tujuannya untuk menyembunyikan semua aset yang ada day night cyclenya. Anggap aja mereset semuanya biar yang bener bisa ditampilin.
+    /// </summary>
+    private void HideAll()
+    {
+        foreach (DayNightSchedule SCR_schedule in DayNightCycleManager.Instance.List_SCR_timeToSwitch)
+        {
+            SCR_schedule.CG_backgroundDecorationCanvasGroup.alpha = 0f;
+            SCR_schedule.CG_backgroundCanvasGroup.alpha = 0f;
+            SCR_schedule.CG_header.alpha = 0f;
+            SCR_schedule.CG_roomButtonsHighlight.alpha = 0f;
+            SCR_schedule.CG_officeRoomButton.alpha = 0f;
+            SCR_schedule.CG_churchRoomButton.alpha = 0f;
+            SCR_schedule.CG_bedroomRoomButton.alpha = 0f;
+            SCR_schedule.CG_hamburgerButton.alpha = 0f;
+            SCR_schedule.CG_savedSermonOuterBackground.alpha = 0f;
+            SCR_schedule.CG_savedSermonInnerBackground.alpha = 0f;
+            SCR_schedule.CG_savedSermonReadButton.alpha = 0f;
+            SCR_schedule.CG_savedSermonDeleteConfirmationBackground.alpha = 0f;
+            SCR_schedule.CG_savedSermonReadBackground.alpha = 0f;
+            SCR_schedule.CG_savedSermonDoneButton.alpha = 0f;
+            SCR_schedule.CG_savedSermonListScrollbar.alpha = 0f;
+            SCR_schedule.CG_savedSermonChatScrollbar.alpha = 0f;
+            SCR_schedule.CG_chatScrollbar.alpha = 0f;
         }
     }
 
