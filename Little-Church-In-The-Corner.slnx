@@ -1,4 +1,7 @@
 ﻿<Solution>
+  <Project Path="NativeFilePicker.Runtime.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="NativeFilePicker.Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="AndroidRuntimePermissions.Runtime.csproj" />
 </Solution>
