@@ -16,4 +16,8 @@ public class DayNightSchedule
     public CanvasGroup CG_backgroundDecorationCanvasGroup;
     // Pakai canvas group untuk keperluan animasi transisinya. Canvas group yang ini untuk background beneran, yang ada warna dan gradasinya.
     public CanvasGroup CG_backgroundCanvasGroup;
+    //buat background playlist
+    public CanvasGroup CG_playlistBackgroundCanvasGroup;
+    //buat button pilih playlist
+    public CanvasGroup CG_buttonPlaylistCanvasGroup;
 }
