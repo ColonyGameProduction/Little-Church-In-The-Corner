@@ -16,11 +16,16 @@ public class UIMusicManager : MonoBehaviour
 
     [Header("Para Button")]
     public Button BTN_shuffle;
+    public Button BTN_shuffleForPlaylist;
     public Button BTN_loop;
+    public Button BTN_loopForPlaylist;
     public Button BTN_pauseAndPlayMini;
     public Button BTN_pauseAndPlayFull;
+    public Button BTN_pauseAndPlayPlaylist;
     public Button BTN_next;
+    public Button BTN_nextForPlaylist;
     public Button BTN_prev;
+    public Button BTN_prevForPlaylist;
     public Button BTN_playlist;
 
     [Header("Semua UI Element")]
@@ -33,24 +38,31 @@ public class UIMusicManager : MonoBehaviour
     public Sprite SPR_shuffleOn;
     public Sprite SPR_shuffleOff;
     public Image IMG_shuffleButton;
+    public Image IMG_shuffleButtonForPlaylist;
 
     [Header("loop icons")]
     public Sprite SPR_NoLoop;
     public Sprite SPR_loopSong;
     public Sprite SPR_loopPlaylist;
     public Image IMG_loopButton;
+    public Image IMG_loopButtonForPlaylist;
 
     private void Start()
     {
         // ini setupan buat button listener yak
         BTN_shuffle.onClick.AddListener(() => SetupShuffleButton());
+        BTN_shuffleForPlaylist.onClick.AddListener(() => SetupShuffleButton());
         BTN_loop.onClick.AddListener(() => SetupLoopButtonMethod());
+        BTN_loopForPlaylist.onClick.AddListener(() => SetupLoopButtonMethod());
         BTN_pauseAndPlayMini.onClick.AddListener(() => SetupPauseAndPlayImage());
         BTN_pauseAndPlayFull.onClick.AddListener(() => SetupPauseAndPlayImage());
+        BTN_pauseAndPlayPlaylist.onClick.AddListener(() => SetupPauseAndPlayImage());
         BTN_next.onClick.AddListener(() => SCR_MM.ToggleNextSong());
+        BTN_nextForPlaylist.onClick.AddListener(() => SCR_MM.ToggleNextSong());
         BTN_prev.onClick.AddListener(() => SCR_MM.TogglePrevSong());
+        BTN_prevForPlaylist.onClick.AddListener(() => SCR_MM.TogglePrevSong());
         // Robert: ada ini biar kalau null reference, dia ga munculin error. Kayaknya ini ga kepake juga akhirnya?
-        if(BTN_playlist) BTN_playlist.onClick.AddListener(() => SetupPlaylistUI());
+        if (BTN_playlist) BTN_playlist.onClick.AddListener(() => SetupPlaylistUI());
 
         // set ui icon diawal
         UpdateShuffleUI();
@@ -84,10 +96,12 @@ public class UIMusicManager : MonoBehaviour
         if (SCR_MM.B_isShuffling)
         {
             IMG_shuffleButton.sprite = SPR_shuffleOn;
+            IMG_shuffleButtonForPlaylist.sprite = SPR_shuffleOn;
         }
         else
         {
             IMG_shuffleButton.sprite = SPR_shuffleOff;
+            IMG_shuffleButtonForPlaylist.sprite = SPR_shuffleOff;
         }
     }
 
@@ -108,14 +122,17 @@ public class UIMusicManager : MonoBehaviour
         {
             case ENM_LoopMethod.NoLoop:
                 IMG_loopButton.sprite = SPR_NoLoop;
+                IMG_loopButtonForPlaylist.sprite = SPR_NoLoop;
                 break;
 
             case ENM_LoopMethod.LoopSong:
                 IMG_loopButton.sprite = SPR_loopSong;
+                IMG_loopButtonForPlaylist.sprite = SPR_loopSong;
                 break;
 
             case ENM_LoopMethod.LoopPlaylist:
                 IMG_loopButton.sprite = SPR_loopPlaylist;
+                IMG_loopButtonForPlaylist.sprite = SPR_loopPlaylist;
                 break;
         }
     }
