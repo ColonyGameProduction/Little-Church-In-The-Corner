@@ -1446,7 +1446,7 @@ GameObject:
   - component: {fileID: 82643135}
   - component: {fileID: 82643134}
   - component: {fileID: 82643133}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Selected Button Night
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2210,7 +2210,7 @@ GameObject:
   - component: {fileID: 183046265}
   - component: {fileID: 183046264}
   - component: {fileID: 183046263}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Playlist Background Evening
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3447,7 +3447,7 @@ GameObject:
   - component: {fileID: 271840382}
   - component: {fileID: 271840381}
   - component: {fileID: 271840380}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas Playlist Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3461,7 +3461,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271840379}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -3728,7 +3728,7 @@ GameObject:
   - component: {fileID: 351712776}
   - component: {fileID: 351712775}
   - component: {fileID: 351712774}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Playlist Background Day
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9128,7 +9128,7 @@ GameObject:
   - component: {fileID: 892692126}
   - component: {fileID: 892692125}
   - component: {fileID: 892692124}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Selected Button Evening
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17243,7 +17243,7 @@ GameObject:
   - component: {fileID: 1722639567}
   - component: {fileID: 1722639566}
   - component: {fileID: 1722639565}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Playlist Background Night
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17513,7 +17513,7 @@ GameObject:
   - component: {fileID: 1764939198}
   - component: {fileID: 1764939197}
   - component: {fileID: 1764939196}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Selected Button Day
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23715,7 +23715,7 @@ PrefabInstance:
       objectReference: {fileID: 5024538449375376341}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[3].SCR_timeToSwitch.I_hour
@@ -23806,6 +23806,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 82643133}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[0].CG_playlistBackgroundCanvasGroup
       value: 
       objectReference: {fileID: 1722639565}
@@ -23830,21 +23850,101 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1109508626}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1109508626}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1478571810}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1722639565}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[3]'
+      value: 
+      objectReference: {fileID: 82643133}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[1].CG_backgroundDecorationCanvasGroup
       value: 
       objectReference: {fileID: 244112342}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[0]'
+      value: 
+      objectReference: {fileID: 244112342}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[1]'
+      value: 
+      objectReference: {fileID: 287620216}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 183046263}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[3]'
+      value: 
+      objectReference: {fileID: 892692124}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[2].CG_backgroundDecorationCanvasGroup
       value: 
       objectReference: {fileID: 244112342}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[0]'
+      value: 
+      objectReference: {fileID: 244112342}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[1]'
+      value: 
+      objectReference: {fileID: 28334553}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 351712774}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1764939196}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[3].CG_backgroundDecorationCanvasGroup
       value: 
       objectReference: {fileID: 1109508626}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[0]'
+      value: 
+      objectReference: {fileID: 244112342}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[1]'
+      value: 
+      objectReference: {fileID: 287620216}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 183046263}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[3]'
+      value: 
+      objectReference: {fileID: 892692124}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[4].CG_backgroundDecorationCanvasGroup
       value: 
       objectReference: {fileID: 1722639565}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1109508626}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1478571810}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1722639565}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[3]'
+      value: 
+      objectReference: {fileID: 82643133}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[5].CG_backgroundDecorationCanvasGroup
       value: 

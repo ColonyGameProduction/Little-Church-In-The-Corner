@@ -34851,6 +34851,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 334339372}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[0].CG_playlistBackgroundCanvasGroup
       value: 
       objectReference: {fileID: 470910121}
@@ -34875,21 +34895,401 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1109508626}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1109508626}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1478571810}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 461285916}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[3]'
+      value: 
+      objectReference: {fileID: 319361950}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[4]'
+      value: 
+      objectReference: {fileID: 926644630}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1962760220}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1434166227}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[7]'
+      value: 
+      objectReference: {fileID: 153470273}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[8]'
+      value: 
+      objectReference: {fileID: 334339372}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[9]'
+      value: 
+      objectReference: {fileID: 390321145}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[1].CG_backgroundDecorationCanvasGroup
       value: 
       objectReference: {fileID: 244112342}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[0]'
+      value: 
+      objectReference: {fileID: 244112342}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[1]'
+      value: 
+      objectReference: {fileID: 287620216}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 25537075}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1554530319}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[4]'
+      value: 
+      objectReference: {fileID: 689490659}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[5]'
+      value: 
+      objectReference: {fileID: 604906112}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[6]'
+      value: 
+      objectReference: {fileID: 507539949}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[7]'
+      value: 
+      objectReference: {fileID: 1542444274}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[8]'
+      value: 
+      objectReference: {fileID: 813321646}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[9]'
+      value: 
+      objectReference: {fileID: 200826231}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[2].CG_backgroundDecorationCanvasGroup
       value: 
       objectReference: {fileID: 244112342}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[0]'
+      value: 
+      objectReference: {fileID: 244112342}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[1]'
+      value: 
+      objectReference: {fileID: 28334553}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 132866913}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1782853201}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2094006384}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[5]'
+      value: 
+      objectReference: {fileID: 57149870}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[6]'
+      value: 
+      objectReference: {fileID: 475510908}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[7]'
+      value: 
+      objectReference: {fileID: 171083852}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[8]'
+      value: 
+      objectReference: {fileID: 7174255273101874682}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[9]'
+      value: 
+      objectReference: {fileID: 413471535}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[3].CG_backgroundDecorationCanvasGroup
       value: 
       objectReference: {fileID: 244112342}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[0]'
+      value: 
+      objectReference: {fileID: 244112342}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[1]'
+      value: 
+      objectReference: {fileID: 287620216}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 25537075}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1554530319}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[4]'
+      value: 
+      objectReference: {fileID: 689490659}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[5]'
+      value: 
+      objectReference: {fileID: 604906112}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[6]'
+      value: 
+      objectReference: {fileID: 507539949}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[7]'
+      value: 
+      objectReference: {fileID: 1542444274}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[8]'
+      value: 
+      objectReference: {fileID: 813321646}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[9]'
+      value: 
+      objectReference: {fileID: 200826231}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[4].CG_backgroundDecorationCanvasGroup
       value: 
       objectReference: {fileID: 1109508626}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1109508626}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1478571810}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[2]'
+      value: 
+      objectReference: {fileID: 461285916}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[3]'
+      value: 
+      objectReference: {fileID: 319361950}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[4]'
+      value: 
+      objectReference: {fileID: 926644630}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1962760220}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1434166227}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[7]'
+      value: 
+      objectReference: {fileID: 153470273}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[8]'
+      value: 
+      objectReference: {fileID: 334339372}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[9]'
+      value: 
+      objectReference: {fileID: 390321145}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1412829939}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[11]'
+      value: 
+      objectReference: {fileID: 2099044482}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[12]'
+      value: 
+      objectReference: {fileID: 1671062310}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[13]'
+      value: 
+      objectReference: {fileID: 1356899368}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[14]'
+      value: 
+      objectReference: {fileID: 912267209}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[15]'
+      value: 
+      objectReference: {fileID: 836142288}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[16]'
+      value: 
+      objectReference: {fileID: 927263592}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[17]'
+      value: 
+      objectReference: {fileID: 470910121}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[0].List_CG_canvasGroups.Array.data[18]'
+      value: 
+      objectReference: {fileID: 1924124178}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1034839511}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[11]'
+      value: 
+      objectReference: {fileID: 610261708}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[12]'
+      value: 
+      objectReference: {fileID: 985977458}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[13]'
+      value: 
+      objectReference: {fileID: 469406855}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[14]'
+      value: 
+      objectReference: {fileID: 1450964289}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[15]'
+      value: 
+      objectReference: {fileID: 1283734375}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[16]'
+      value: 
+      objectReference: {fileID: 2123986125}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[17]'
+      value: 
+      objectReference: {fileID: 281155197}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[1].List_CG_canvasGroups.Array.data[18]'
+      value: 
+      objectReference: {fileID: 2063908013}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1034243429}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[11]'
+      value: 
+      objectReference: {fileID: 8691924858793770154}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[12]'
+      value: 
+      objectReference: {fileID: 1090100952}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[13]'
+      value: 
+      objectReference: {fileID: 1535111713}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[14]'
+      value: 
+      objectReference: {fileID: 1885489411}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[15]'
+      value: 
+      objectReference: {fileID: 1885280853}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[16]'
+      value: 
+      objectReference: {fileID: 786846117}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[17]'
+      value: 
+      objectReference: {fileID: 281155197}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[2].List_CG_canvasGroups.Array.data[18]'
+      value: 
+      objectReference: {fileID: 2063908013}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1034839511}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[11]'
+      value: 
+      objectReference: {fileID: 610261708}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[12]'
+      value: 
+      objectReference: {fileID: 985977458}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[13]'
+      value: 
+      objectReference: {fileID: 469406855}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[14]'
+      value: 
+      objectReference: {fileID: 1450964289}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[15]'
+      value: 
+      objectReference: {fileID: 1283734375}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[16]'
+      value: 
+      objectReference: {fileID: 2123986125}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[17]'
+      value: 
+      objectReference: {fileID: 281155197}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[3].List_CG_canvasGroups.Array.data[18]'
+      value: 
+      objectReference: {fileID: 2063908013}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1412829939}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[11]'
+      value: 
+      objectReference: {fileID: 2099044482}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[12]'
+      value: 
+      objectReference: {fileID: 1671062310}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[13]'
+      value: 
+      objectReference: {fileID: 1356899368}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[14]'
+      value: 
+      objectReference: {fileID: 912267209}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[15]'
+      value: 
+      objectReference: {fileID: 836142288}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[16]'
+      value: 
+      objectReference: {fileID: 927263592}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[17]'
+      value: 
+      objectReference: {fileID: 470910121}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: 'List_SCR_timeToSwitch.Array.data[4].List_CG_canvasGroups.Array.data[18]'
+      value: 
+      objectReference: {fileID: 1924124178}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[0].CG_savedSermonDeleteConfirmationBackground
       value: 
