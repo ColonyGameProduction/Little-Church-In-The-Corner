@@ -21,6 +21,12 @@ public class UIPlaylist : MonoBehaviour
     public Sprite SPR_playlistNormal;
     public Sprite SPR_playlistSelected;
 
+    [Header("playlist theme")] // --> ini chat variablenya hehe
+    public Sprite SPR_playlistPagi;
+    public Sprite SPR_playlistSore;
+    public Sprite SPR_playlistMalam;
+    public Image IMG_playlistTheme;
+
     private GameObject GO_currentSelectedPlaylistButton = null;
 
     private List<GameObject> GO_playlistButtons = new List<GameObject>();
