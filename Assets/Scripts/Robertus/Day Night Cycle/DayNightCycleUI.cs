@@ -26,6 +26,16 @@ public class DayNightCycleUI : MonoBehaviour
     /// </summary>
     private float F_offsetMenitTesting;
 
+    /// <summary>
+    /// Karena Raden pasang spritenya lewat codingan, jadi harus gini untuk sementara waktu
+    /// </summary>
+    [HideInInspector] public Sprite SPR_currentSelectedPlaylistButton;
+
+    /// <summary>
+    /// Karena Raden pasang spritenya lewat codingan, jadi harus gini untuk sementara waktu. + aku mager buat bikin yang lebih rapi
+    /// </summary>
+    public UIPlaylist SCR_UIPlaylist;
+
     private void Awake()
     {
         HideAll();
@@ -137,6 +147,10 @@ public class DayNightCycleUI : MonoBehaviour
                 CG_canvasGroup.alpha = 1f;
             }
         }
+
+        // Karena Raden pasang spritenya pake codingan, jadi harus gini dulu untuk sementara
+        SPR_currentSelectedPlaylistButton = SCR_dayNightData.SPR_playlistSelectedButton;
+        if(SCR_UIPlaylist.IMG_selectedButton) SCR_UIPlaylist.IMG_selectedButton.sprite = SPR_currentSelectedPlaylistButton;
     }
 
     /// <summary>
