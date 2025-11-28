@@ -34474,6 +34474,10 @@ PrefabInstance:
       propertyPath: GO_downloadedSermonButtonContainer
       value: 
       objectReference: {fileID: 6843934219068024662}
+    - target: {fileID: 4490439878260609983, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: MAT_lightRays
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d6c14e096cf0234a94d754d8883139f, type: 2}
     - target: {fileID: 7403249644718896462, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: BTN_noDeleteSermon
       value: 
@@ -34619,21 +34623,101 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1434166227}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[0].COL_lightRaysColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[0].COL_lightRaysColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[0].COL_lightRaysColor.g
+      value: 0.84705883
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[0].COL_lightRaysColor.r
+      value: 0.61960787
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[1].CG_bedroomRoomButton
       value: 
       objectReference: {fileID: 507539949}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[1].COL_lightRaysColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[1].COL_lightRaysColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[1].COL_lightRaysColor.g
+      value: 0.7019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[1].COL_lightRaysColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[2].CG_bedroomRoomButton
       value: 
       objectReference: {fileID: 475510908}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[2].COL_lightRaysColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[2].COL_lightRaysColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[2].COL_lightRaysColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[2].COL_lightRaysColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[3].CG_bedroomRoomButton
       value: 
       objectReference: {fileID: 507539949}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[3].COL_lightRaysColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[3].COL_lightRaysColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[3].COL_lightRaysColor.g
+      value: 0.7019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[3].COL_lightRaysColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[4].CG_bedroomRoomButton
       value: 
       objectReference: {fileID: 1434166227}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[4].COL_lightRaysColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[4].COL_lightRaysColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[4].COL_lightRaysColor.g
+      value: 0.84705883
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
+      propertyPath: List_SCR_timeToSwitch.Array.data[4].COL_lightRaysColor.r
+      value: 0.61960787
+      objectReference: {fileID: 0}
     - target: {fileID: 7416180908611160759, guid: d625221579090d54da3ef8f51bb64ff0, type: 3}
       propertyPath: List_SCR_timeToSwitch.Array.data[0].CG_roomButtonsHighlight
       value: 

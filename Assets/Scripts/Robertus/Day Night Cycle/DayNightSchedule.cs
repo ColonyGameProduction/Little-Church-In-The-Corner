@@ -16,4 +16,6 @@ public class DayNightSchedule
     /// Sekarang pakai list canvas group biar kalau ada tambahan, ga perlu repot-repot otak-atik codingan lagi.
     /// </summary>
     public CanvasGroup[] List_CG_canvasGroups;
+
+    public Color COL_lightRaysColor;
 }

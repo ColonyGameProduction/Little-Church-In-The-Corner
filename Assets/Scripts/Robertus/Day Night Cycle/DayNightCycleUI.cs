@@ -26,6 +26,8 @@ public class DayNightCycleUI : MonoBehaviour
     /// </summary>
     private float F_offsetMenitTesting;
 
+    public Material MAT_lightRays;
+
     private void Awake()
     {
         HideAll();
@@ -128,6 +130,10 @@ public class DayNightCycleUI : MonoBehaviour
                         .setEase(LeanTweenType.easeInOutCubic);
                 }
             }
+
+            LeanTween
+                .value(gameObject, MAT_lightRays.color, SCR_dayNightData.COL_lightRaysColor, F_transitionDuration)
+                .setOnUpdate(UpdateLightRaysColor);
         }
         //Kalau misalnya sebelumnya belum pernah ada perubahan apa pun, maka ga usah pakai animasi.
         else
@@ -136,7 +142,14 @@ public class DayNightCycleUI : MonoBehaviour
             {
                 CG_canvasGroup.alpha = 1f;
             }
+
+            UpdateLightRaysColor(SCR_dayNightData.COL_lightRaysColor);
         }
+    }
+
+    private void UpdateLightRaysColor(Color newColor)
+    {
+        MAT_lightRays.color = newColor;
     }
 
     /// <summary>
