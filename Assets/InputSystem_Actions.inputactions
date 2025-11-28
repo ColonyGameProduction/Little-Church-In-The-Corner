@@ -587,6 +587,15 @@
                     "processors": "",
                     "interactions": "Press",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Swipe",
+                    "type": "PassThrough",
+                    "id": "fbc8f17f-8281-4b89-99cd-63fac8dcef6d",
+                    "expectedControlType": "Delta",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1049,6 +1058,28 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "SwipeStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d14314ae-59da-4704-b910-39024cc2dc95",
+                    "path": "<Touchscreen>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Touch",
+                    "action": "Swipe",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "583d9d35-2c2a-4766-90e9-d5ca9e222f85",
+                    "path": "<Pointer>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Swipe",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
