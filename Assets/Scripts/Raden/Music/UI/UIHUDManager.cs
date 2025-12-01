@@ -26,7 +26,7 @@ public class UIHUDManager : MonoBehaviour
 
     // Ini bagian untuk tombol - Robert
     public RectTransform RT_highlightRect;
-    public List<Image> List_IMG_roomButtonActiveIcons;
+    public List<CanvasGroup> List_CG_roomButtonActiveIcons;
 
     public float F_moveAnimationDuration = 0.5f;
 
@@ -89,17 +89,13 @@ public class UIHUDManager : MonoBehaviour
             )
             .setEase(LeanTweenType.easeOutCubic);
 
-        for (int I_activeIconsIndex = 0; I_activeIconsIndex < List_IMG_roomButtonActiveIcons.Count; I_activeIconsIndex++)
+        for (int I_activeIconsIndex = 0; I_activeIconsIndex < List_CG_roomButtonActiveIcons.Count; I_activeIconsIndex++)
         {
             float F_alpha = 0f;
             if (I_activeIconsIndex == (int)TransitionManager.Instance.ENM_room) F_alpha = 1f;
+            
             LeanTween
-                .alpha(
-                List_IMG_roomButtonActiveIcons[I_activeIconsIndex].rectTransform,
-                F_alpha,
-                F_moveAnimationDuration
-                )
-                .setEase(LeanTweenType.easeOutCubic);
+                .alphaCanvas(List_CG_roomButtonActiveIcons[I_activeIconsIndex], F_alpha, F_moveAnimationDuration);
         }
     }
 

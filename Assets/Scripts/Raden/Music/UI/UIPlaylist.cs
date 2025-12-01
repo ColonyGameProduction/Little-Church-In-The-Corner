@@ -19,12 +19,19 @@ public class UIPlaylist : MonoBehaviour
 
     [Header("Playlist Button Sprites")]
     public Sprite SPR_playlistNormal;
-    public Sprite SPR_playlistSelected;
+
+    [Header("playlist theme")] // --> ini chat variablenya hehe
+    public Sprite SPR_playlistPagi;
+    public Sprite SPR_playlistSore;
+    public Sprite SPR_playlistMalam;
+    public Image IMG_playlistTheme;
 
     private GameObject GO_currentSelectedPlaylistButton = null;
 
     private List<GameObject> GO_playlistButtons = new List<GameObject>();
     private List<GameObject> GO_songButtons = new List<GameObject>();
+
+    public Image IMG_selectedButton;
 
     private void Start()
     {
@@ -89,7 +96,8 @@ public class UIPlaylist : MonoBehaviour
         // ganti yang button yg dipilih ke selected sprite
         if (img != null)
         {
-            img.sprite = SPR_playlistSelected;
+            img.sprite = DayNightCycleManager.Instance.SCR_dayNightCycleUI.SPR_currentSelectedPlaylistButton;
+            IMG_selectedButton = img;
         }
 
         TextMeshProUGUI selectedText = selectedButton.GetComponentInChildren<TextMeshProUGUI>();

@@ -105,14 +105,22 @@ public class TransitionManager : MonoBehaviour
 
     private IEnumerator SwipeUpdate()
     {
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
         Vector3 V3_originalMousePos = cam.ScreenToWorldPoint(Mouse.current.position.value);
+#elif UNITY_ANDROID
+        Vector3 V3_originalMousePos = cam.ScreenToWorldPoint(Touchscreen.current.position.value);
+#endif
         Vector3 V3_originalParentPos = TF_parent.position;
         Vector2 V2_minMaxPosition = new Vector2(List_V3_positions[0].x, List_V3_positions[List_V3_positions.Count - 1].x);
         while (true)
         {
             //Debug.Log($"Mouse position = {Mouse.current.position.value}");
             //Debug.Log($"Mouse position world = {cam.ScreenToWorldPoint(Mouse.current.position.value)}");
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
             Vector3 displacement = V3_originalParentPos + (cam.ScreenToWorldPoint(Mouse.current.position.value) - V3_originalMousePos);
+#elif UNITY_ANDROID
+            Vector3 displacement = V3_originalParentPos + (cam.ScreenToWorldPoint(Touchscreen.current.position.value) - V3_originalMousePos);
+#endif
             //minmaxposition.y itu nilai terkecil, makanya dia duluan. Yeah, "terkecil" karena angkanya negatif.
             TF_parent.position = new Vector3(Mathf.Clamp(displacement.x, V2_minMaxPosition.y, V2_minMaxPosition.x), TF_parent.position.y, TF_parent.position.z);
             //TF_parent.position = new Vector3(displacement.x, TF_parent.position.y, TF_parent.position.z);

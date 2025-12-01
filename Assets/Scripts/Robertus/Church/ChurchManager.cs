@@ -16,9 +16,16 @@ public class ChurchManager : MonoBehaviour
     /// </summary>
     public List<Interact> List_SCR_activeNPC;
 
+    public Animator AC_priestAnimatorController;
+
     private void Awake()
     {
         List_SCR_activeNPC = new List<Interact>();
+    }
+
+    private void Start()
+    {
+        AC_priestAnimatorController.SetBool("B_isStanding", true);
     }
 
     private void OnEnable()

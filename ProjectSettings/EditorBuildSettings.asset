@@ -11,8 +11,14 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Robertus_Test1.unity
     guid: 4a13a509dad0eda4a94effca1d73e68f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Raden_Test1.unity
     guid: f3a791fe46e4a2b4298dd9f346044d4d
+  - enabled: 0
+    path: Assets/Scenes/Robertus_Test5 NPC Spawn.unity
+    guid: 07b37b9a1d6d50b4ea4f640242b6cacc
+  - enabled: 1
+    path: Assets/Scenes/Robertus_Test8 2 camera.unity
+    guid: 27cb0ead864b322449054f63e7003fe8
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

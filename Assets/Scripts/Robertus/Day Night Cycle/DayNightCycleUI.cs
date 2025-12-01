@@ -27,6 +27,21 @@ public class DayNightCycleUI : MonoBehaviour
     private float F_offsetMenitTesting;
 
     /// <summary>
+    /// Karena Raden pasang spritenya lewat codingan, jadi harus gini untuk sementara waktu
+    /// </summary>
+    [HideInInspector] public Sprite SPR_currentSelectedPlaylistButton;
+
+    /// <summary>
+    /// Karena Raden pasang spritenya lewat codingan, jadi harus gini untuk sementara waktu. + aku mager buat bikin yang lebih rapi
+    /// </summary>
+    public UIPlaylist SCR_UIPlaylist;
+
+    private void Awake()
+    {
+        HideAll();
+    }
+
+    /// <summary>
     /// Function untuk mengecek dan mengubah background. Ini dipanggil di TimeManager, barengan dengan waktu untuk mengecek renungan.
     /// </summary>
     public void ChangingBackground()
@@ -70,6 +85,24 @@ public class DayNightCycleUI : MonoBehaviour
     }
 
     /// <summary>
+    /// Cek apakah aset day night cycle yang sebelumnya sama dengan yang mau diubah saat ini. Kalau sama, maka ga usah ada transisi.
+    /// </summary>
+    /// <param name="CG_current">Aset saat ini</param>
+    /// <param name="List_CG_allPrevious">Semua aset sebelumnya. Bakal dicek satu-satu.</param>
+    /// <returns>True kalau ternyata aset sekarang sama dengan salah satu aset sebelumnya.</returns>
+    public bool CheckIfPreviousScheduleIsTheSame(CanvasGroup CG_current, CanvasGroup[] List_CG_allPrevious)
+    {
+        foreach (CanvasGroup CG_previous in List_CG_allPrevious)
+        {
+            if (CG_previous.gameObject == CG_current.gameObject)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /// <summary>
     /// Function sebenarnya yang mengubah background. Function ini juga mengatur animasi transisinya.
     /// </summary>
     /// <param name="SCR_dayNightData"></param>
@@ -81,36 +114,56 @@ public class DayNightCycleUI : MonoBehaviour
         //Animasi untuk warna dekorasi pohon dan background
         if (SCR_previousDayNightData != null)
         {
-            //Cara kerjanya: dia bakal fade out transparansi dari dekorasi sebelumnya dan fade in transparansi dari dekorasi saat ini.
-            //"value", yaitu F_alphaValue, bakal berubah dari 1f ke 0f.
-            //Makanya ada angka 1f di awal, dan 0f setelahnya
-            LeanTween
-            .value(1f, 0f, F_transitionDuration)
-            .setEase(LeanTweenType.easeInOutCubic)
-            .setOnUpdate((float F_alphaValue) =>
+            // Canvas group yang sebelumnya difade jadi transparan
+            foreach (CanvasGroup canvasGroup in SCR_previousDayNightData.List_CG_canvasGroups)
             {
-                // Kalau misalnya yang sebelum dan yang sekarang sama, ga usah ada animasi
-                if (SCR_previousDayNightData.CG_backgroundDecorationCanvasGroup.gameObject != SCR_dayNightData.CG_backgroundDecorationCanvasGroup.gameObject)
+                // Kalau misalnya sama dengan yang saat ini, maka jangan fade out.
+                // Tapi ini "if"nya ngecek kalau ga sama. 
+                if (!CheckIfPreviousScheduleIsTheSame(canvasGroup, SCR_dayNightData.List_CG_canvasGroups))
                 {
-                    //Dekorasi sebelumnya bakal berubah alphanya dari 1f ke 0f
-                    SCR_previousDayNightData.CG_backgroundDecorationCanvasGroup.alpha = F_alphaValue;
-                    //Dekorasi saat ini bakal berubah alphanya dari 0f ke 1f
-                    SCR_dayNightData.CG_backgroundDecorationCanvasGroup.alpha = 1f - F_alphaValue;
+                    LeanTween
+                        .alphaCanvas(canvasGroup, 0f, F_transitionDuration)
+                        .setEase(LeanTweenType.easeInOutCubic);
                 }
+            }
 
-                if (SCR_previousDayNightData.CG_backgroundCanvasGroup.gameObject != SCR_dayNightData.CG_backgroundCanvasGroup.gameObject)
+            // Canvas group yang sekarang difade jadi kelihatan
+            foreach (CanvasGroup canvasGroup in SCR_dayNightData.List_CG_canvasGroups)
+            {
+                // Kalau misalnya sama dengan yang sebelumnya, ga usah fade in soalnya emang udah kelihatan
+                if (!CheckIfPreviousScheduleIsTheSame(canvasGroup, SCR_previousDayNightData.List_CG_canvasGroups))
                 {
-                    //Background
-                    SCR_previousDayNightData.CG_backgroundCanvasGroup.alpha = F_alphaValue;
-                    SCR_dayNightData.CG_backgroundCanvasGroup.alpha = 1f - F_alphaValue;
+                    LeanTween
+                        .alphaCanvas(canvasGroup, 1f, F_transitionDuration)
+                        .setEase(LeanTweenType.easeInOutCubic);
                 }
-            });
+            }
         }
         //Kalau misalnya sebelumnya belum pernah ada perubahan apa pun, maka ga usah pakai animasi.
         else
         {
-            SCR_dayNightData.CG_backgroundDecorationCanvasGroup.alpha = 1f;
-            SCR_dayNightData.CG_backgroundCanvasGroup.alpha = 1f;
+            foreach (CanvasGroup CG_canvasGroup in SCR_dayNightData.List_CG_canvasGroups)
+            {
+                CG_canvasGroup.alpha = 1f;
+            }
+        }
+
+        // Karena Raden pasang spritenya pake codingan, jadi harus gini dulu untuk sementara
+        SPR_currentSelectedPlaylistButton = SCR_dayNightData.SPR_playlistSelectedButton;
+        if(SCR_UIPlaylist.IMG_selectedButton) SCR_UIPlaylist.IMG_selectedButton.sprite = SPR_currentSelectedPlaylistButton;
+    }
+
+    /// <summary>
+    /// Ini tujuannya untuk menyembunyikan semua aset yang ada day night cyclenya. Anggap aja mereset semuanya biar yang bener bisa ditampilin.
+    /// </summary>
+    private void HideAll()
+    {
+        foreach (DayNightSchedule SCR_schedule in DayNightCycleManager.Instance.List_SCR_timeToSwitch)
+        {
+            foreach (CanvasGroup CG_canvasGroup in SCR_schedule.List_CG_canvasGroups)
+            {
+                CG_canvasGroup.alpha = 0f;
+            }
         }
     }
 
