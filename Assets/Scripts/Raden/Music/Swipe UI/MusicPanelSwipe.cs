@@ -25,8 +25,8 @@ public class MusicPanelSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
     private Vector2 V_dragStartPos;
     // Ini biar dia ngedrag dari posisi awal musik panel, bukan di posisi sebenarnya (karena kalau posisi sebenarnya, dia kan selalu update pas dragging, jadi bakal terus menerus nambah posisinya. -Robert
     private Vector2 V_musicPanelRootStartPos;
-    private bool B_isDragging = false;
-    private ENM_PanelState ENM_currentState = ENM_PanelState.Mini;
+    public bool B_isDragging = false;
+    public ENM_PanelState ENM_currentState = ENM_PanelState.Mini;
 
     void Start()
     {
