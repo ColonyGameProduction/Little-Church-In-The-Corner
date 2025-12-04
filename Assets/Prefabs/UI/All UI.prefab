@@ -5965,28 +5965,28 @@ MonoBehaviour:
   GO_prev: {fileID: 5950466517208193891}
   GO_playlist: {fileID: 1196581270507371293}
   BTN_shuffle: {fileID: 5103121650377434919}
-  BTN_shuffleForPlaylist: {fileID: 0}
+  BTN_shuffleForPlaylist: {fileID: 6865723970709712536}
   BTN_loop: {fileID: 9174786251167394709}
-  BTN_loopForPlaylist: {fileID: 0}
+  BTN_loopForPlaylist: {fileID: 1078568344897136100}
   BTN_pauseAndPlayMini: {fileID: 6341176610345464691}
   BTN_pauseAndPlayFull: {fileID: 3211989841990228731}
-  BTN_pauseAndPlayPlaylist: {fileID: 0}
+  BTN_pauseAndPlayPlaylist: {fileID: 3801481516685301764}
   BTN_next: {fileID: 9153141143500596440}
-  BTN_nextForPlaylist: {fileID: 0}
+  BTN_nextForPlaylist: {fileID: 559758681618784216}
   BTN_prev: {fileID: 9153141143500596440}
-  BTN_prevForPlaylist: {fileID: 0}
+  BTN_prevForPlaylist: {fileID: 9122017969816519348}
   BTN_playlist: {fileID: 0}
   TMPGUI_titleAndAuthor: {fileID: 2902868640381697366}
   SLR_progressBar: {fileID: 116209409996104834}
   SPR_shuffleOn: {fileID: 21300000, guid: f07663dcf42d07745b507c883e62667e, type: 3}
   SPR_shuffleOff: {fileID: 21300000, guid: cdfe9df1ab83be34085550e3a0178293, type: 3}
   IMG_shuffleButton: {fileID: 5648286817036620175}
-  IMG_shuffleButtonForPlaylist: {fileID: 0}
+  IMG_shuffleButtonForPlaylist: {fileID: 7414074825153382692}
   SPR_NoLoop: {fileID: 21300000, guid: 38f2557c50180064898a63a8c17c19d7, type: 3}
   SPR_loopSong: {fileID: 21300000, guid: 9d0d3e9c92b5f2b4483cace7023f43af, type: 3}
   SPR_loopPlaylist: {fileID: 21300000, guid: fd0976deab7ab0a4abb1ec4723f823da, type: 3}
   IMG_loopButton: {fileID: 8769988045192930887}
-  IMG_loopButtonForPlaylist: {fileID: 0}
+  IMG_loopButtonForPlaylist: {fileID: 3569502431085211379}
 --- !u!1 &4843322448011988890
 GameObject:
   m_ObjectHideFlags: 0
@@ -14269,7 +14269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 423323251028823243, guid: 4a3cde86a6aa3c94c857cefbb62dc1b6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00091552734
+      value: 0.00048828125
       objectReference: {fileID: 0}
     - target: {fileID: 1544780052719600120, guid: 4a3cde86a6aa3c94c857cefbb62dc1b6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -14309,7 +14309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2461672260565015358, guid: 4a3cde86a6aa3c94c857cefbb62dc1b6, type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3170919982595225724, guid: 4a3cde86a6aa3c94c857cefbb62dc1b6, type: 3}
       propertyPath: m_Pivot.x
