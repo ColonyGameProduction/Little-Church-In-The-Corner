@@ -100,6 +100,9 @@ public class MusicManager : MonoBehaviour
         ENM_pauseAndPlay = ENM_PauseAndPlay.Play;
         AssigningSongTitleAndAuthor(songs);
 
+        // Aku mager otak-atik lagi, jadi pake ini aja yah -Robert
+        ACT_playSong?.Invoke(songs);
+
         // udah diganti ya seyenkkk
         //songs.PlayingThisSong();
     }

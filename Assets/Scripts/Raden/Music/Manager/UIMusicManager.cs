@@ -69,7 +69,7 @@ public class UIMusicManager : MonoBehaviour
         UpdateLoopUI();
 
         // Event listener pas laguan berubah
-        SCR_MM.ACT_playSong += UpdateSongNameUI;
+        //SCR_MM.ACT_playSong += UpdateSongNameUI;
     }
 
     private void Update()
