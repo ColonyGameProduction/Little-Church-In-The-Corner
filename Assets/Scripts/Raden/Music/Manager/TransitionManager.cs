@@ -31,6 +31,11 @@ public class TransitionManager : MonoBehaviour
     /// </summary>
     public ENM_Room ENM_room;
 
+    /// <summary>
+    /// Ini buat tau apakah menu playlist lagi dibuka atau engga
+    /// </summary>
+    public MusicPanelSwipe SCR_musicPanelSwipe;
+
     private void Awake()
     {
         Instance = this;
@@ -94,6 +99,11 @@ public class TransitionManager : MonoBehaviour
     //Ini ditrigger di component Player Input
     private void OnSwipeStart()
     {
+        //Kalau lagi dibuka menu playlist lagu, jangan bolehin swipe
+        if (SCR_musicPanelSwipe.ENM_currentState == ENM_PanelState.Playlist) return;
+        //Kalau lagi dragging music panel, jangan bolehin swipe ruangan
+        if (SCR_musicPanelSwipe.B_isDragging) return;
+
         //Kalau lagi animasi pindah ruangan, animasi swipenya diberhentiin
         if (LeanTween.isTweening(I_moveAnimationID)) LeanTween.cancel(I_moveAnimationID);
 
@@ -114,6 +124,9 @@ public class TransitionManager : MonoBehaviour
         Vector2 V2_minMaxPosition = new Vector2(List_V3_positions[0].x, List_V3_positions[List_V3_positions.Count - 1].x);
         while (true)
         {
+            //Kalau lagi dragging music panel, jangan bolehin swipe ruangan
+            if (SCR_musicPanelSwipe.B_isDragging) yield break;
+
             //Debug.Log($"Mouse position = {Mouse.current.position.value}");
             //Debug.Log($"Mouse position world = {cam.ScreenToWorldPoint(Mouse.current.position.value)}");
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
@@ -130,6 +143,11 @@ public class TransitionManager : MonoBehaviour
 
     private void OnSwipeRelease()
     {
+        //Kalau lagi dibuka menu playlist lagu, jangan bolehin swipe
+        if (SCR_musicPanelSwipe.ENM_currentState == ENM_PanelState.Playlist) return;
+        //Kalau lagi dragging music panel, jangan bolehin swipe ruangan
+        if (SCR_musicPanelSwipe.B_isDragging) return;
+
         //Kalau lagi animasi pindah ruangan, animasi swipenya diberhentiin
         if (LeanTween.isTweening(I_moveAnimationID)) LeanTween.cancel(I_moveAnimationID);
 

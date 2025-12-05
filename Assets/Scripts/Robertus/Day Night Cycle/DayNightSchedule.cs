@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -17,5 +18,38 @@ public class DayNightSchedule
     /// </summary>
     public CanvasGroup[] List_CG_canvasGroups;
 
+    /// <summary>
+    /// Tombol selection. Pakai ini dan bukan canvas group karena Raden pasang selected button dengan codingan
+    /// </summary>
     public Sprite SPR_playlistSelectedButton;
+
+    /// <summary>
+    /// Ini warna light rays untuk waktu itu
+    /// </summary>
+    public Color COL_lightRaysColor;
+    
+    /// <summary>
+    /// Warna lighting di seluruh scene
+    /// </summary>
+    public Color COL_lightingColor;
+
+    /// <summary>
+    /// Warna spotlight di setiap ruangan.
+    /// </summary>
+    public Color COL_spotlightColor;
+
+    /// <summary>
+    /// Seberapa terang pencahayaan utama
+    /// </summary>
+    public float F_mainLightingIntensity;
+
+    /// <summary>
+    /// Seberapa terang pencahayaan kedua (buat terangin tembok dkk.)
+    /// </summary>
+    public float F_secondaryLightingIntensity;
+
+    // Ku mager bikin rapi, jadi seadanya dulu aja yak
+    public Sprite SPR_playButton;
+    public Sprite SPR_pauseButton;
+    public List<ChatBubbleBackground> List_SCR_chatBubbleBackground;
 }

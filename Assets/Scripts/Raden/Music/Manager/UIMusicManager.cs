@@ -47,6 +47,13 @@ public class UIMusicManager : MonoBehaviour
     public Image IMG_loopButton;
     public Image IMG_loopButtonForPlaylist;
 
+    [Header("Pause Play Icons")]
+    public Image IMG_pauseAndPlayIconMini;
+    public Image IMG_pauseAndPlayIconFull;
+    public Image IMG_pauseAndPlayIconPlaylist;
+    private Sprite SPR_currentPlaySprite;
+    private Sprite SPR_currentPauseSprite;
+
     private void Start()
     {
         // ini setupan buat button listener yak
@@ -69,7 +76,7 @@ public class UIMusicManager : MonoBehaviour
         UpdateLoopUI();
 
         // Event listener pas laguan berubah
-        SCR_MM.ACT_playSong += UpdateSongNameUI;
+        //SCR_MM.ACT_playSong += UpdateSongNameUI;
     }
 
     private void Update()
@@ -142,13 +149,25 @@ public class UIMusicManager : MonoBehaviour
     {
         SCR_MM.TogglePauseAndPlayMusic();
 
+        SetupPauseAndPlayImage(SPR_currentPlaySprite, SPR_currentPauseSprite);
+    }
+
+    public void SetupPauseAndPlayImage(Sprite SPR_playIcon, Sprite SPR_pauseIcon)
+    {
+        SPR_currentPlaySprite = SPR_playIcon;
+        SPR_currentPauseSprite = SPR_pauseIcon;
+
         if (SCR_MM.ENM_pauseAndPlay == ENM_PauseAndPlay.Paused)
         {
-            //IMG_pauseAndPlay.sprite = SPR_playIcon;
+            IMG_pauseAndPlayIconMini.sprite = SPR_playIcon;
+            IMG_pauseAndPlayIconFull.sprite = SPR_playIcon;
+            IMG_pauseAndPlayIconPlaylist.sprite = SPR_playIcon;
         }
         else
         {
-            //IMG_pauseAndPlay.sprite = SPR_pauseIcon;
+            IMG_pauseAndPlayIconMini.sprite = SPR_pauseIcon;
+            IMG_pauseAndPlayIconFull.sprite = SPR_pauseIcon;
+            IMG_pauseAndPlayIconPlaylist.sprite = SPR_pauseIcon;
         }
     }
 

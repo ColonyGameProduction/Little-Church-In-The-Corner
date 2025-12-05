@@ -31,12 +31,16 @@ public class UIPlaylist : MonoBehaviour
     private List<GameObject> GO_playlistButtons = new List<GameObject>();
     private List<GameObject> GO_songButtons = new List<GameObject>();
 
+    private Dictionary<Songs, Image> DICT_songButtonsHighlight = new Dictionary<Songs, Image>();
+
     public Image IMG_selectedButton;
 
     private void Start()
     {
         SetupAllPlaylistButton();
         SetupAllPlaylistSongsFirstTime();
+
+        MusicManager.Instance.ACT_playSong += HighlightSongsButton;
     }
 
     // buat nge setup playlist tab button
@@ -112,6 +116,24 @@ public class UIPlaylist : MonoBehaviour
         GO_currentSelectedPlaylistButton = selectedButton;
     }
 
+    /// <summary>
+    /// Buat highlight lagu mana yang lagi diputar di playlist
+    /// </summary>
+    /// <param name="songs">Lagu saat ini</param>
+    private void HighlightSongsButton(Songs songs)
+    {
+        foreach (KeyValuePair<Songs, Image> KVP_highlight in DICT_songButtonsHighlight)
+        {
+            KVP_highlight.Value.color = Color.clear;
+        }
+
+        if (DICT_songButtonsHighlight.TryGetValue(songs, out Image IMG_highlight))
+        {
+            IMG_highlight.color = Color.white;
+        }
+        else Debug.LogWarning("WARNING: ga ketemu tombol dengan lagu " + songs.ENM_musicCode);
+    }
+
     // nentuin mana playlist yang jalan duluan
     public void SetupAllPlaylistSongsFirstTime()
     {
@@ -138,6 +160,7 @@ public class UIPlaylist : MonoBehaviour
             Destroy(TF_child.gameObject);
         }
         GO_songButtons.Clear();
+        DICT_songButtonsHighlight.Clear();
 
         PlaylistTypeSO playlistTypeSO = SCR_MM.SO_listOfPlaylistSO.SO_GetPlaylistTypeSO(playlistType);
         SCR_MM.SO_currPlaylistTypeSO = playlistTypeSO;
@@ -154,6 +177,8 @@ public class UIPlaylist : MonoBehaviour
             Button BTN_btn = GO_newButton.GetComponent<Button>();
             Songs _selectedSong = songs;
 
+            DICT_songButtonsHighlight.TryAdd(songs, GO_newButton.GetComponent<Image>());
+
             //Songs songComp = GO_newButton.GetComponent<Songs>();
             //if (songComp == null)
             //{
@@ -169,6 +194,8 @@ public class UIPlaylist : MonoBehaviour
                 SCR_MM.PlaySong(_selectedSong);
             });
         }
+
+        HighlightSongsButton(SCR_MM.SCR_currSong);
     }
 
     // ini buat di taro di add button
