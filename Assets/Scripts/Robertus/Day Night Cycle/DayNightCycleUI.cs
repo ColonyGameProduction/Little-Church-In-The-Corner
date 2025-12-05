@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 /// <summary>
 /// Class yang mengatur UI dari day night cycle, terutama untuk animasi dan pergantian warna ruangan dan background.
@@ -36,10 +38,32 @@ public class DayNightCycleUI : MonoBehaviour
     /// </summary>
     public UIPlaylist SCR_UIPlaylist;
 
-    private void Awake()
-    {
-        HideAll();
-    }
+    /// <summary>
+    /// Karena Raden pasang spritenya lewat codingan, jadi harus gini untuk sementara waktu. + aku mager buat bikin yang lebih rapi
+    /// </summary>
+    public UIMusicManager SCR_UIMusicManager;
+
+    /// <summary>
+    /// Untuk ganti warna light rays
+    /// </summary>
+    public Material MAT_lightRays;
+
+    /// <summary>
+    /// Lighting di scene
+    /// </summary>
+    public Light LIGHT_directionalLight;
+
+    /// <summary>
+    /// Lighting kedua di scene buat terangin tembok dkk.
+    /// </summary>
+    public Light LIGHT_secondaryDirectionalLight;
+
+    /// <summary>
+    /// Semua lampu spotlight di setiap ruangan
+    /// </summary>
+    public Light[] List_LIGHT_spotlights;
+
+    public List<ChatBubbleBackground> List_currentChatBubbleBackgrounds;
 
     /// <summary>
     /// Function untuk mengecek dan mengubah background. Ini dipanggil di TimeManager, barengan dengan waktu untuk mengecek renungan.
@@ -138,6 +162,39 @@ public class DayNightCycleUI : MonoBehaviour
                         .setEase(LeanTweenType.easeInOutCubic);
                 }
             }
+
+            // Ini ganti warna light rays
+            LeanTween
+                .value(gameObject, MAT_lightRays.color, SCR_dayNightData.COL_lightRaysColor, F_transitionDuration)
+                .setOnUpdate(UpdateLightRaysColor);
+
+            // Ini ganti warna pencahayaan
+            LeanTween
+                .value(gameObject, LIGHT_directionalLight.color, SCR_dayNightData.COL_lightingColor, F_transitionDuration)
+                .setOnUpdate(UpdateLightingColor);
+
+            // Ini ganti warna spotlight
+            LeanTween
+                .value(gameObject, List_LIGHT_spotlights[0].color, SCR_dayNightData.COL_spotlightColor, F_transitionDuration/2f)
+                // Ada delay biar estetik
+                .setDelay(F_transitionDuration/2f)
+                .setOnUpdate(UpdateSpotlightColor);
+
+            // Ini ganti intenstity lighting utama
+            LeanTween
+                .value(LIGHT_directionalLight.intensity, SCR_dayNightData.F_mainLightingIntensity, F_transitionDuration)
+                .setOnUpdate((value) =>
+                {
+                    LIGHT_directionalLight.intensity = value;
+                });
+
+            // Ini ganti intenstity lighting secondary
+            LeanTween
+                .value(LIGHT_secondaryDirectionalLight.intensity, SCR_dayNightData.F_secondaryLightingIntensity, F_transitionDuration)
+                .setOnUpdate((value) =>
+                {
+                    LIGHT_secondaryDirectionalLight.intensity = value;
+                });
         }
         //Kalau misalnya sebelumnya belum pernah ada perubahan apa pun, maka ga usah pakai animasi.
         else
@@ -146,17 +203,60 @@ public class DayNightCycleUI : MonoBehaviour
             {
                 CG_canvasGroup.alpha = 1f;
             }
+
+            UpdateLightRaysColor(SCR_dayNightData.COL_lightRaysColor);
+
+            UpdateLightingColor(SCR_dayNightData.COL_lightingColor);
+
+            UpdateSpotlightColor(SCR_dayNightData.COL_spotlightColor);
+
+            LIGHT_directionalLight.intensity = SCR_dayNightData.F_mainLightingIntensity;
+            LIGHT_secondaryDirectionalLight.intensity = SCR_dayNightData.F_secondaryLightingIntensity;
         }
 
         // Karena Raden pasang spritenya pake codingan, jadi harus gini dulu untuk sementara
         SPR_currentSelectedPlaylistButton = SCR_dayNightData.SPR_playlistSelectedButton;
         if(SCR_UIPlaylist.IMG_selectedButton) SCR_UIPlaylist.IMG_selectedButton.sprite = SPR_currentSelectedPlaylistButton;
+
+        SCR_UIMusicManager.SetupPauseAndPlayImage(SCR_dayNightData.SPR_playButton, SCR_dayNightData.SPR_pauseButton);
+
+        List_currentChatBubbleBackgrounds = SCR_dayNightData.List_SCR_chatBubbleBackground;
+    }
+
+    /// <summary>
+    /// Ganti warna semua light rays
+    /// </summary>
+    /// <param name="newColor">Warna baru</param>
+    private void UpdateLightRaysColor(Color newColor)
+    {
+        MAT_lightRays.color = newColor;
+    }
+
+    /// <summary>
+    /// Ganti warna lighting di scene
+    /// </summary>
+    /// <param name="newColor">Warna baru</param>
+    private void UpdateLightingColor(Color newColor)
+    {
+        LIGHT_directionalLight.color = newColor;
+    }
+
+    /// <summary>
+    /// Ganti warna spotlight di scene
+    /// </summary>
+    /// <param name="newColor">Warna baru</param>
+    private void UpdateSpotlightColor(Color newColor)
+    {
+        foreach (Light spotlight in List_LIGHT_spotlights)
+        {
+            spotlight.color = newColor;
+        }
     }
 
     /// <summary>
     /// Ini tujuannya untuk menyembunyikan semua aset yang ada day night cyclenya. Anggap aja mereset semuanya biar yang bener bisa ditampilin.
     /// </summary>
-    private void HideAll()
+    public void HideAll()
     {
         foreach (DayNightSchedule SCR_schedule in DayNightCycleManager.Instance.List_SCR_timeToSwitch)
         {

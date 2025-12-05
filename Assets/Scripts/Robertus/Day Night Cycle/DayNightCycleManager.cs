@@ -19,6 +19,8 @@ public class DayNightCycleManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        SCR_dayNightCycleUI.HideAll();
     }
 
     /// <summary>

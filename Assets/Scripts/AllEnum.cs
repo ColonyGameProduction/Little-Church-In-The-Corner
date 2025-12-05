@@ -2,9 +2,9 @@
 public enum ENM_CharFace
 {
     // Muka cowok
-    Test1 = 1,
+    Cowo = 1,
     // Muka cewek
-    Test2 = 2,
+    Cewe = 2,
 }
 
 public enum ENM_DialogTitle
@@ -20,8 +20,8 @@ public enum ENM_DialogTitle
 
 public enum ENM_ChatBubbleBackground
 {
-    White = 0,
-    Orange = 1,
+    Kiri = 0,
+    Kanan = 1,
 }
 #endregion
 

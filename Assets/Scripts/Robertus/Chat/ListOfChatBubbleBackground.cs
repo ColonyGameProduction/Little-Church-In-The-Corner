@@ -29,4 +29,19 @@ public class ListOfChatBubbleBackground
 
         return backgroundResult;
     }
+
+    public ChatBubbleBackground SCR_GetChatBubbleBackgroundFromDayNightUI(ENM_ChatBubbleBackground ENM_chatBubbleBackground)
+    {
+        ChatBubbleBackground backgroundResult = null;
+
+        foreach (ChatBubbleBackground background in DayNightCycleManager.Instance.SCR_dayNightCycleUI.List_currentChatBubbleBackgrounds)
+        {
+            if (background.ENM_chatBubbleBackground == ENM_chatBubbleBackground)
+            {
+                backgroundResult = background;
+            }
+        }
+
+        return backgroundResult;
+    }
 }
