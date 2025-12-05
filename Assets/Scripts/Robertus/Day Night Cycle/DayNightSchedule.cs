@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -46,4 +47,9 @@ public class DayNightSchedule
     /// Seberapa terang pencahayaan kedua (buat terangin tembok dkk.)
     /// </summary>
     public float F_secondaryLightingIntensity;
+
+    // Ku mager bikin rapi, jadi seadanya dulu aja yak
+    public Sprite SPR_playButton;
+    public Sprite SPR_pauseButton;
+    public List<ChatBubbleBackground> List_SCR_chatBubbleBackground;
 }

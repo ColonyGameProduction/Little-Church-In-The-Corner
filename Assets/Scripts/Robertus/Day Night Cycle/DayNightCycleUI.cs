@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI;
@@ -38,6 +39,11 @@ public class DayNightCycleUI : MonoBehaviour
     public UIPlaylist SCR_UIPlaylist;
 
     /// <summary>
+    /// Karena Raden pasang spritenya lewat codingan, jadi harus gini untuk sementara waktu. + aku mager buat bikin yang lebih rapi
+    /// </summary>
+    public UIMusicManager SCR_UIMusicManager;
+
+    /// <summary>
     /// Untuk ganti warna light rays
     /// </summary>
     public Material MAT_lightRays;
@@ -56,6 +62,8 @@ public class DayNightCycleUI : MonoBehaviour
     /// Semua lampu spotlight di setiap ruangan
     /// </summary>
     public Light[] List_LIGHT_spotlights;
+
+    public List<ChatBubbleBackground> List_currentChatBubbleBackgrounds;
 
     /// <summary>
     /// Function untuk mengecek dan mengubah background. Ini dipanggil di TimeManager, barengan dengan waktu untuk mengecek renungan.
@@ -209,6 +217,10 @@ public class DayNightCycleUI : MonoBehaviour
         // Karena Raden pasang spritenya pake codingan, jadi harus gini dulu untuk sementara
         SPR_currentSelectedPlaylistButton = SCR_dayNightData.SPR_playlistSelectedButton;
         if(SCR_UIPlaylist.IMG_selectedButton) SCR_UIPlaylist.IMG_selectedButton.sprite = SPR_currentSelectedPlaylistButton;
+
+        SCR_UIMusicManager.SetupPauseAndPlayImage(SCR_dayNightData.SPR_playButton, SCR_dayNightData.SPR_pauseButton);
+
+        List_currentChatBubbleBackgrounds = SCR_dayNightData.List_SCR_chatBubbleBackground;
     }
 
     /// <summary>

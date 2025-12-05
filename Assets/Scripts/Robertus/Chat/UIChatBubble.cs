@@ -52,7 +52,7 @@ public class UIChatBubble : MonoBehaviour
         //Pertama-tama dihide dulu soalnya ga semua dialog bakal dimunculin di awal. Dialog-dialog bakal dimunculin perlahan-lahan. Jadi, muncul atau engga bakal diatur di UIChatManager nantinya.
         Fade(0f);
 
-        IMG_chatBubble.sprite = ChatManager.Instance.SCR_listOfChatBubbleBackground.SCR_GetChatBubbleBackground(SCR_dialogComponent.ENM_background).SPR_backgroundSprite;
+        IMG_chatBubble.sprite = ChatManager.Instance.SCR_listOfChatBubbleBackground.SCR_GetChatBubbleBackgroundFromDayNightUI(SCR_dialogComponent.ENM_background).SPR_backgroundSprite;
         TMPUGUI_chatBubble.text = SCR_dialogComponent.S_stringText;
         IMG_face.sprite = ChatManager.Instance.SCR_listOfFace.SCR_GetFace(SCR_dialogComponent.ENM_charFace).SPR_characterSprite;
 

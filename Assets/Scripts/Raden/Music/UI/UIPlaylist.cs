@@ -194,6 +194,8 @@ public class UIPlaylist : MonoBehaviour
                 SCR_MM.PlaySong(_selectedSong);
             });
         }
+
+        HighlightSongsButton(SCR_MM.SCR_currSong);
     }
 
     // ini buat di taro di add button
