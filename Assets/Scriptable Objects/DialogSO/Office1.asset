@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6bd73f7b64af4478ff9deae33193d4, type: 3}
+  m_Name: Office1
+  m_EditorClassIdentifier: 
+  ENM_dialogTitle: 1
+  SCR_dialogComponent:
+  - ENM_background: 1
+    S_stringText: Terima kasih sudah mau mendengarkan saya. Saya datang karena merasa
+      bimbang.
+    ENM_charFace: 2
+    B_isFlipped: 1
+  - ENM_background: 0
+    S_stringText: Saya ada di sini untuk Anda. Silakan ceritakan apa yang mengganggu
+      hati. Apa yang membuat Anda merasa bimbang?
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 1
+    S_stringText: Belakangan ini iman saya diuji. Saya mulai bertanya tentang Tuhan.
+      Apakah Dia benar-benar ada dan peduli? Saya merasa sangat jauh dari-Nya.
+    ENM_charFace: 2
+    B_isFlipped: 1
+  - ENM_background: 0
+    S_stringText: Itu wajar. Setiap orang beriman pernah ragu. Keraguan bukan berarti
+      Anda lemah. Itu adalah kesempatan untuk bertumbuh.
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 1
+    S_stringText: Tapi keraguan ini menyiksa, Pak/Bu. Saya merasa bersalah kepada
+      Tuhan. Seolah saya kurang percaya dan kurang setia. Apa yang harus saya lakukan
+      sekarang?
+    ENM_charFace: 2
+    B_isFlipped: 1
+  - ENM_background: 0
+    S_stringText: Jangan hakimi diri terlalu keras. Justru, datanglah pada Tuhan
+      dengan jujur. Katakan pada-Nya, "Saya butuh kepastian." Dia mengerti hati Anda
+      yang bergumul.
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 0
+    S_stringText: Ingatlah kisah Thomas? Dia baru percaya setelah melihat. Tuhan
+      tidak marah, Dia mendekatinya. Kasih-Nya menerima semua kelemahan.
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 1
+    S_stringText: Jadi, saya boleh jujur tentang keraguan? Saya tidak akan dihukum
+      karena jujur?
+    ENM_charFace: 2
+    B_isFlipped: 1
+  - ENM_background: 0
+    S_stringText: Tentu. Kejujuran adalah awal iman sejati. Mazmur mengajarkan kita
+      mencurahkan hati. Tuhan ingin hubungan yang tulus. Bukan hanya pura-pura kuat
+      di hadapan-Nya.
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 1
+    S_stringText: Lalu, bagaimana cara menemukan kepastian itu? Saya ingin iman saya
+      kokoh kembali.
+    ENM_charFace: 2
+    B_isFlipped: 1
+  - ENM_background: 0
+    S_stringText: Mulai lagi dari dasar, Bapak/Ibu. Fokus pada karya Kristus di kayu
+      salib. Itu bukti terbesar cinta dan janji-Nya. Baca ulang Injil Yohanes 3:16.
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 0
+    S_stringText: Ambil waktu setiap hari. Latihanlah indra rohani Anda. Rasakan
+      kehadiran-Nya di sekitar Anda. Dalam berkat kecil yang Anda terima. Kepastian
+      iman datang perlahan.
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 1
+    S_stringText: Saya akan coba lakukan itu. Saya akan jujur dalam doa saya. Terima
+      kasih atas nasihat yang menenangkan.
+    ENM_charFace: 2
+    B_isFlipped: 1
+  - ENM_background: 0
+    S_stringText: Anda tidak pernah sendirian. Saya akan mendoakan perjuangan Anda.
+      Jangan pernah menyerah pada kasih-Nya. Damai Kristus menyertai Anda selalu.
+    ENM_charFace: 1
+    B_isFlipped: 0

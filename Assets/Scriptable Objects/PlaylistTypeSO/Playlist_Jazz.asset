@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ENM_playlistType: 2
   SCR_playlist:
-  - ADO_music: {fileID: 8300000, guid: 0bfaf10cf24737a42ae4d27953ebdeb5, type: 3}
+  - ADO_music: {fileID: 8300000, guid: 2ec6ce2c132fc1e41a70fc331b3f6dad, type: 3}
     BTN_self: {fileID: 0}
-    S_titleAndAuthor: Tulsa
+    S_titleAndAuthor: Kusorakan Haleluya - Symphony Worship
     ENM_musicCode: 101
-  - ADO_music: {fileID: 8300000, guid: bef74404cbcc8be41bd4902db406a19d, type: 3}
+  - ADO_music: {fileID: 8300000, guid: 4af891a98e4b5cc45bdc55f02a36a36d, type: 3}
     BTN_self: {fileID: 0}
-    S_titleAndAuthor: Washington DC
+    S_titleAndAuthor: Tak Tertandingi - NDC
     ENM_musicCode: 102
-  - ADO_music: {fileID: 8300000, guid: bd60ac003198cfd4cbde7cd25fd0d05e, type: 3}
+  - ADO_music: {fileID: 8300000, guid: bea822f7c98263f48bc8204866a8c188, type: 3}
     BTN_self: {fileID: 0}
-    S_titleAndAuthor: Austin
+    S_titleAndAuthor: Telah Lahir - Sound Of Praise
     ENM_musicCode: 103

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6bd73f7b64af4478ff9deae33193d4, type: 3}
+  m_Name: Church1
+  m_EditorClassIdentifier: 
+  ENM_dialogTitle: 5
+  SCR_dialogComponent:
+  - ENM_background: 0
+    S_stringText: Saudara-saudari terkasih. Marilah kita renungkan sebentar. Sudahkah
+      kita siapkan diri hari ini? Tubuh memerlukan sarapan sehat. Namun, bagaimana
+      dengan jiwa kita?
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 0
+    S_stringText: Disiplin rohani sangat penting. Khususnya, waktu renungan harian.
+      Ini adalah saat kita bertemu Tuhan. Bukan sekadar rutinitas saja. Tapi saat
+      kita menerima kekuatan.
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 0
+    S_stringText: Banyak dari kita berkata, "Sibuk." "Tidak punya waktu untuk Alkitab."
+      Padahal, tanpa Firman-Nya, kita lemah. Kita bagaikan domba tanpa gembala. Mudah
+      sekali tersesat di dunia ini.
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 0
+    S_stringText: Jangan biarkan hari dimulai. Sebelum Anda mendengar suara-Nya.
+      Buka Injil, baca sepenggal saja. Pegang janji-Nya di dalam hati. Firman adalah
+      pedang Roh.
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 0
+    S_stringText: 'Saat renungan, fokus pada pesan-Nya. Tanyakan pada diri sendiri:
+      Apa yang Tuhan ingin saya lakukan? Bagaimana ayat ini menegur saya? Ketaatan
+      adalah bukti iman sejati.'
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 0
+    S_stringText: Renungan mengusir kegelisahan. Dia memberi damai sejahtera Ilahi.
+      Saat badai masalah datang melanda. Kita berdiri teguh di atas batu karang.
+      Sebab Firman-Nya telah menguatkan.
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 0
+    S_stringText: Jadi, ambil waktu sebentar. Duduk tenang, jauhkan gangguan. Tuhan
+      menanti Anda di sana. Jadikan renungan prioritas utama. Maka, hidup Anda akan
+      berbuah lebat.
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 0
+    S_stringText: Mari kita akhiri dengan doa. Memohon Roh Kudus menuntun kita. Supaya
+      kita setia pada Firman-Nya. Sejak pagi hingga malam hari nanti. Amin.
+    ENM_charFace: 1
+    B_isFlipped: 0

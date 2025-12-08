@@ -28,16 +28,20 @@ public enum ENM_ChatBubbleBackground
 #region Music
 public enum ENM_PlaylistType
 {
-    Rock = 1,
-    Jazz = 2,
+    Worship = 1,
+    Praise = 2,
     Local = 3,
 }
 
 public enum ENM_MusicCode
 {
-    Song1 = 101,
-    Song2 = 102,
-    Song3 = 103,
+    Worship1 = 101,
+    Worship2 = 102,
+    Worship3 = 103,
+
+    Praise1 = 201,
+    Praise2 = 202,
+    Praise3 = 203,
 
     SongLocal1 = 301,
 }

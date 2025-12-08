@@ -14,4 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ENM_playlistType: 1
   SCR_playlist:
-  - {fileID: 0}
+  - ADO_music: {fileID: 8300000, guid: 0a8d490982849f945bf2324d84928c76, type: 3}
+    BTN_self: {fileID: 0}
+    S_titleAndAuthor: Kubersyukur Bapa - Symphony Worship
+    ENM_musicCode: 201
+  - ADO_music: {fileID: 8300000, guid: 949a0357a75ad924381949611126498f, type: 3}
+    BTN_self: {fileID: 0}
+    S_titleAndAuthor: Way Maker - Leeland
+    ENM_musicCode: 202
+  - ADO_music: {fileID: 8300000, guid: 0edd09b880d77464e9342584f9e25905, type: 3}
+    BTN_self: {fileID: 0}
+    S_titleAndAuthor: Bukti KebesaranMu - NDC Worship
+    ENM_musicCode: 203
