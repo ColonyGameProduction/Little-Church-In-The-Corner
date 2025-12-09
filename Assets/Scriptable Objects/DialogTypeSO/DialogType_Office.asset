@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List_SO_dialogSO:
   - {fileID: 11400000, guid: af5ad1288ebb15b45be2f132b339b96e, type: 2}
-  - {fileID: 11400000, guid: b7c129e4dc7ae3a4790ba5dadb83479d, type: 2}
   ENM_dialogType: 0

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6bd73f7b64af4478ff9deae33193d4, type: 3}
+  m_Name: Church2
+  m_EditorClassIdentifier: 
+  ENM_dialogTitle: 6
+  SCR_dialogComponent:
+  - ENM_background: 0
+    S_stringText: Selamat pagi
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 1
+    S_stringText: Pagi pak
+    ENM_charFace: 2
+    B_isFlipped: 1
+  - ENM_background: 0
+    S_stringText: Ada keperluan apa kemari?
+    ENM_charFace: 1
+    B_isFlipped: 0
+  - ENM_background: 1
+    S_stringText: Ga ada pak.
+    ENM_charFace: 2
+    B_isFlipped: 1
+  - ENM_background: 0
+    S_stringText: Ok.
+    ENM_charFace: 1
+    B_isFlipped: 0
