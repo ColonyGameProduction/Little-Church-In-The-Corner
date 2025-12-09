@@ -76,20 +76,39 @@ public class UIChatBubble : MonoBehaviour
             // Posisikan mukanya di sebelah kanan.
             IMG_face.rectTransform.anchoredPosition = new Vector3(IMG_face.rectTransform.anchoredPosition.x * -1f, IMG_face.rectTransform.anchoredPosition.y);
         }
+
+        TMPUGUI_chatBubble.ForceMeshUpdate();
+        B_moveUpAnimationDone = true;
     }
 
     /// <summary>
     /// Mengubah ukuran chat bubble supaya mengikuti panjang teks, tetapi dia ga bakal kurang dari ukuran minimal (makanya ada Mathf.Max).
     /// </summary>
-    private void UpdateChatBubbleSize()
+    public void UpdateChatBubbleSize(int I_delayedFrames = 0)
     {
         // Ada ini biar ga stuttering pas ngeresize ukuran chat bubble. Soalnya mereka pakai variabel yang sama, yaitu LE_layoutElement, jadi tabrakan pas update valuenya.
         if (!B_moveUpAnimationDone) return;
-        LE_chatBubble.minHeight = Mathf.Max
-            (
-                TMPUGUI_chatBubble.renderedHeight + TMPUGUI_chatBubble.margin.y + TMPUGUI_chatBubble.margin.w,
-                F_minHeight
-            );
+        if (I_delayedFrames <= 0)
+        {
+            LE_chatBubble.minHeight = Mathf.Max
+                (
+                    TMPUGUI_chatBubble.renderedHeight + TMPUGUI_chatBubble.margin.y + TMPUGUI_chatBubble.margin.w,
+                    F_minHeight
+                );
+        }
+        else
+        {
+            StartCoroutine(UpdateChatBubbleSizeWithDelay(I_delayedFrames));
+        }
+    }
+
+    private IEnumerator UpdateChatBubbleSizeWithDelay(int I_delayedFrames)
+    {
+        for (int i = 0; i < I_delayedFrames; i++)
+        {
+            yield return null;
+        }
+        UpdateChatBubbleSize();
     }
 
     /// <summary>

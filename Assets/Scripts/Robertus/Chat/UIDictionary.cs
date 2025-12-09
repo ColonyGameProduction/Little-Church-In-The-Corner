@@ -140,6 +140,7 @@ public class UIDictionary : MonoBehaviour
             GO_chatBubble.SetActive(true);
 
             SCR_UIChatBubble.Setup(SCR_components);
+            SCR_UIChatBubble.UpdateChatBubbleSize(I_delayedFrames: 1);
 
             //Tapi di sini, langsung munculin semuanya. Ga seperti UIChatManager yang satu per satu munculnya.
             SCR_UIChatBubble.Fade(1f);
