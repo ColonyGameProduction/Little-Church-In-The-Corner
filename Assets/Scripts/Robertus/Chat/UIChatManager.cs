@@ -258,6 +258,8 @@ public class UIChatManager : MonoBehaviour
 
         //Sudah ga ada renungan yang berjalan.
         ChatManager.Instance.ENM_currDialog = ENM_DialogTitle.None;
+        //Enable swipe lagi
+        ChatManager.Instance.SCR_disableRoomSwipe.enabled = false;
         ACT_NoCurrentSermonAvailable?.Invoke();
     }
 
@@ -277,6 +279,8 @@ public class UIChatManager : MonoBehaviour
     {
         DictionaryManager.Instance.SCR_UIDictionary.SetupAllListOfSermon();
         GO_dictionaryContainer.SetActive(true);
+        // Jangan bolehin swipe ruangan
+        TransitionManager.Instance.B_enableSwipe = false;
     }
 
     /// <summary>
@@ -285,6 +289,8 @@ public class UIChatManager : MonoBehaviour
     private void HideDownloadedSermons()
     {
         GO_dictionaryContainer.SetActive(false);
+        // Bolehin swipe ruangan
+        TransitionManager.Instance.B_enableSwipe = true;
     }
 
     #endregion

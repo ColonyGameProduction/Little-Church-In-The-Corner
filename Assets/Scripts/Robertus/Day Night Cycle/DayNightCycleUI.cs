@@ -138,6 +138,8 @@ public class DayNightCycleUI : MonoBehaviour
         //Animasi untuk warna dekorasi pohon dan background
         if (SCR_previousDayNightData != null)
         {
+            Debug.Log(SCR_previousDayNightData);
+            Debug.Log(SCR_previousDayNightData.List_CG_canvasGroups);
             // Canvas group yang sebelumnya difade jadi transparan
             foreach (CanvasGroup canvasGroup in SCR_previousDayNightData.List_CG_canvasGroups)
             {
