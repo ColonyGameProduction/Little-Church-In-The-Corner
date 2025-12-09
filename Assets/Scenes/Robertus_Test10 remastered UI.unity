@@ -11402,11 +11402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1365598225814744782, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
       propertyPath: F_animationDuration
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1365598225814744782, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
       propertyPath: F_textAnimationSpeed
-      value: 50
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1366021912042152067, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
       propertyPath: m_Sprite
@@ -11662,7 +11662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2306485429931209159, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -875
+      value: -175
       objectReference: {fileID: 0}
     - target: {fileID: 2373944614822689590, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -14288,6 +14288,24 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 888efa9b5a692534a874d80dd2b813f8, type: 3}
+    - target: {fileID: 7461909699925641041, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
+      propertyPath: m_text
+      value: This is flipped! asdas dasd asd asd asdasdasd la dkalsdk alsdk laskdlas
+        lasdla klasdk laskdl kasdlk asldk kasdla dklas dklaskd las dkasd lkasdkl
+        aksd lkasdkl asldk lasd klasdksald
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461909699925641041, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
+      propertyPath: m_margin.w
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461909699925641041, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
+      propertyPath: m_margin.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461909699925641041, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7522633760046328077, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -14719,6 +14737,10 @@ PrefabInstance:
     - target: {fileID: 8846368042583081382, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852157311686667962, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
+      propertyPath: F_interval
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8852157311686667962, guid: 001e8d251eba2fc4fbba126d3c5a9f6c, type: 3}
       propertyPath: SCR_disableRoomSwipe

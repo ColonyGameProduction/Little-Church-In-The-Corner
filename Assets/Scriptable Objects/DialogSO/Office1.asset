@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6bd73f7b64af4478ff9deae33193d4, type: 3}
   m_Name: Office1
   m_EditorClassIdentifier: 
-  ENM_dialogTitle: 1
+  ENM_dialogTitle: 8
   SCR_dialogComponent:
   - ENM_background: 1
     S_stringText: Terima kasih sudah mau mendengarkan saya. Saya datang karena merasa

@@ -55,6 +55,7 @@ public class UIChatBubble : MonoBehaviour
         IMG_chatBubble.sprite = ChatManager.Instance.SCR_listOfChatBubbleBackground.SCR_GetChatBubbleBackgroundFromDayNightUI(SCR_dialogComponent.ENM_background).SPR_backgroundSprite;
         TMPUGUI_chatBubble.text = SCR_dialogComponent.S_stringText;
         IMG_face.sprite = ChatManager.Instance.SCR_listOfFace.SCR_GetFace(SCR_dialogComponent.ENM_charFace).SPR_characterSprite;
+        TMPUGUI_chatBubble.alignment = TextAlignmentOptions.Left;
 
         // Kalau ternyata posisi muka orang di sebelah kanan dan bukan di kiri (defaultnya), maka pengaturannya sebagai berikut
         if (SCR_dialogComponent.B_isFlipped)
@@ -66,7 +67,7 @@ public class UIChatBubble : MonoBehaviour
             TMPUGUI_chatBubble.rectTransform.offsetMax = new Vector2(TMPUGUI_chatBubble.rectTransform.offsetMax.x * -1f, TMPUGUI_chatBubble.rectTransform.offsetMax.y);
 
             // Posisikan teksnya supaya jadi Right.
-            TMPUGUI_chatBubble.alignment = TextAlignmentOptions.MidlineRight;
+            TMPUGUI_chatBubble.alignment = TextAlignmentOptions.Right;
 
             // Ini mengatur anchor supaya anchoringnya dari kanan, sehingga posisi mukanya ada di kanan kotak dialog.
             IMG_face.rectTransform.anchorMin = new Vector2(1f, IMG_face.rectTransform.anchorMin.y);

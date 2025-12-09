@@ -16,6 +16,8 @@ public enum ENM_DialogTitle
     SamplePanjang = 4,
     QnATest1 = 5,
     QnATest2 = 6,
+    Renungan1 = 7,
+    Konsultasi1 = 8,
 }
 
 public enum ENM_ChatBubbleBackground
