@@ -31,14 +31,12 @@ public class TransitionManager : MonoBehaviour
     /// </summary>
     public ENM_Room ENM_room;
 
-    /// <summary>
-    /// Ini buat tau apakah menu playlist lagi dibuka atau engga
-    /// </summary>
-    public MusicPanelSwipe SCR_musicPanelSwipe;
+    public bool B_enableSwipe;
 
     private void Awake()
     {
         Instance = this;
+        B_enableSwipe = true;
     }
 
     private void Start()
@@ -99,10 +97,8 @@ public class TransitionManager : MonoBehaviour
     //Ini ditrigger di component Player Input
     private void OnSwipeStart()
     {
-        //Kalau lagi dibuka menu playlist lagu, jangan bolehin swipe
-        if (SCR_musicPanelSwipe.ENM_currentState == ENM_PanelState.Playlist) return;
-        //Kalau lagi dragging music panel, jangan bolehin swipe ruangan
-        if (SCR_musicPanelSwipe.B_isDragging) return;
+        // Misal: kalau lagi buka playlist lagu, kalau lagi buka menu lain, kalau mau ngeswipe di area kotak dialog, dst.
+        if (!B_enableSwipe) return;
 
         //Kalau lagi animasi pindah ruangan, animasi swipenya diberhentiin
         if (LeanTween.isTweening(I_moveAnimationID)) LeanTween.cancel(I_moveAnimationID);
@@ -125,7 +121,7 @@ public class TransitionManager : MonoBehaviour
         while (true)
         {
             //Kalau lagi dragging music panel, jangan bolehin swipe ruangan
-            if (SCR_musicPanelSwipe.B_isDragging) yield break;
+            if (!B_enableSwipe) yield break;
 
             //Debug.Log($"Mouse position = {Mouse.current.position.value}");
             //Debug.Log($"Mouse position world = {cam.ScreenToWorldPoint(Mouse.current.position.value)}");
@@ -143,10 +139,7 @@ public class TransitionManager : MonoBehaviour
 
     private void OnSwipeRelease()
     {
-        //Kalau lagi dibuka menu playlist lagu, jangan bolehin swipe
-        if (SCR_musicPanelSwipe.ENM_currentState == ENM_PanelState.Playlist) return;
-        //Kalau lagi dragging music panel, jangan bolehin swipe ruangan
-        if (SCR_musicPanelSwipe.B_isDragging) return;
+        if (!B_enableSwipe) return;
 
         //Kalau lagi animasi pindah ruangan, animasi swipenya diberhentiin
         if (LeanTween.isTweening(I_moveAnimationID)) LeanTween.cancel(I_moveAnimationID);

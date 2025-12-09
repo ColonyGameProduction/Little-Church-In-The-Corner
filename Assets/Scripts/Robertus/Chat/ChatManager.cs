@@ -45,6 +45,11 @@ public class ChatManager : MonoBehaviour
     /// </summary>
     public int I_amountOfTextAnimationDone;
 
+    /// <summary>
+    /// Ini cuma aktif kalau misalnya ada chat. Kalau ga ada chat, swiping bakal tetep nyala.
+    /// </summary>
+    public DisableRoomSwipe SCR_disableRoomSwipe;
+
     public static event Action<int> ACT_PlayDialogue;
     public static event Action ACT_RenunganDone;
 
@@ -86,12 +91,16 @@ public class ChatManager : MonoBehaviour
 
         I_amountOfTextAnimationDone = 0;
 
+        SCR_disableRoomSwipe.enabled = true;
+
         DialogSO SO_currDialog = SO_listOfDialogueSO.SO_GetDialogSO(TransitionManager.Instance.ENM_room, ENM_currDialog);
 
         while (I_currDialogComponentIndex < SO_currDialog.SCR_dialogComponent.Count)
         {
             ACT_PlayDialogue?.Invoke(I_currDialogComponentIndex);
             I_currDialogComponentIndex++;
+            // Ini buat nungguin animasi teksnya kelar dulu, baru lanjut ke teks selanjutnya
+            yield return new WaitUntil(() => I_amountOfTextAnimationDone >= I_currDialogComponentIndex);
             //Keluar duluan biar ga usah nunggu selama f_interval, tapi nunggunya tergantung text animation.
             if (I_currDialogComponentIndex >= SO_currDialog.SCR_dialogComponent.Count) break;
             yield return WFS_interval;

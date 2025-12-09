@@ -42,6 +42,7 @@ public class MusicPanelSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
             V_dragStartPos = UICanvasScaler.referenceResolution.y * eventData.position / Screen.height;
             V_musicPanelRootStartPos = RT_musicPanelRoot.anchoredPosition;
             B_isDragging = true;
+            TransitionManager.Instance.B_enableSwipe = false;
         }
 
         // Ini sama kayak di atas, tapi dia langsung ambil tingginya, lalu dikurangin dengan titik awal drag
@@ -59,6 +60,8 @@ public class MusicPanelSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         B_isDragging = false;
+        TransitionManager.Instance.B_enableSwipe = true;
+        
         float F_currentY = RT_musicPanelRoot.anchoredPosition.y;
 
         // tentuin state terdekat
@@ -106,9 +109,18 @@ public class MusicPanelSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
 
         switch (target)
         {
-            case ENM_PanelState.Mini: F_targetY = F_miniY; break;
-            case ENM_PanelState.Full: F_targetY = F_fullY; break;
-            case ENM_PanelState.Playlist: F_targetY = F_playlistY; break;
+            case ENM_PanelState.Mini:
+                F_targetY = F_miniY;
+                TransitionManager.Instance.B_enableSwipe = true;
+                break;
+            case ENM_PanelState.Full:
+                F_targetY = F_fullY;
+                TransitionManager.Instance.B_enableSwipe = true;
+                break;
+            case ENM_PanelState.Playlist:
+                F_targetY = F_playlistY;
+                TransitionManager.Instance.B_enableSwipe = false;
+                break;
         }
 
         SetPanelPosition(F_targetY);
