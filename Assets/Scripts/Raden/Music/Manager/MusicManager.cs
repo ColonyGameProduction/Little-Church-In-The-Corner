@@ -45,6 +45,10 @@ public class MusicManager : MonoBehaviour
     [Header("Local Songs")] // ini tuh list local musik yang udah di add ke dalem game
     public List<LocalSongData> SCR_localSongs = new List<LocalSongData>();
 
+    [Header("Shuffle Fix")]
+    private List<int> I_shuffleQueue = new List<int>();
+    private int I_shufflePointer = 0;
+
     //private string S_savePath => Path.Combine(Application.persistentDataPath, "local_songs.json");
 
     private string S_savePath => Path.Combine(
@@ -122,10 +126,47 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    private void GenerateShuffleQueue()
+    {
+        I_shuffleQueue.Clear();
+
+        var list = SO_currPlaylistTypeSO.SCR_playlist;
+
+        // masukin semua index
+        for (int i = 0; i < list.Count; i++)
+        {
+            I_shuffleQueue.Add(i);
+        }
+
+        // acak list
+        for (int i = 0; i < I_shuffleQueue.Count; i++)
+        {
+            int I_rand = UnityEngine.Random.Range(0, I_shuffleQueue.Count);
+            int I_temp = I_shuffleQueue[i];
+            I_shuffleQueue[i] = I_shuffleQueue[I_rand];
+            I_shuffleQueue[I_rand] = I_temp;
+        }
+
+        // pastikan lagu pertama dalam queue BUKAN lagu yang sedang diputar
+        int I_currIndex = list.IndexOf(SCR_currSong);
+        if (I_shuffleQueue.Contains(I_currIndex) && I_shuffleQueue[0] == I_currIndex)
+        {
+            I_shuffleQueue.Remove(I_currIndex);
+            I_shuffleQueue.Add(I_currIndex);
+        }
+
+        I_shufflePointer = 0;
+    }
+
     // ini buat setup tombol shuffle
     public void ToggleShuffle()
     {
         B_isShuffling = !B_isShuffling;
+
+        if (B_isShuffling)
+        {
+            GenerateShuffleQueue();
+        }
     }
 
     // ini setup buat metode loop (no loop, loop, loop playlist)
@@ -149,7 +190,22 @@ public class MusicManager : MonoBehaviour
 
         if (B_isShuffling)
         {
-            I_nextIndex = UnityEngine.Random.Range(0, list.Count);
+            if (I_shuffleQueue.Count == 0)
+            {
+                GenerateShuffleQueue();
+            }
+
+            // kalau pointer sudah habis, regenerate shuffle baru
+            if (I_shufflePointer >= I_shuffleQueue.Count)
+            {
+                GenerateShuffleQueue();
+            }
+
+            I_nextIndex = I_shuffleQueue[I_shufflePointer];
+            I_shufflePointer++;
+
+            PlaySong(list[I_nextIndex]);
+            return;
         }
         else
         {
@@ -174,7 +230,14 @@ public class MusicManager : MonoBehaviour
 
         if (B_isShuffling)
         {
-            I_prevIndex = UnityEngine.Random.Range(0, list.Count);
+            I_shufflePointer = Mathf.Max(0, I_shufflePointer - 2);
+
+            I_prevIndex = I_shuffleQueue[Mathf.Clamp(I_shufflePointer, 0, I_shuffleQueue.Count - 1)];
+
+            I_shufflePointer++;
+
+            PlaySong(list[I_prevIndex]);
+            return;
         }
         else
         {
@@ -369,6 +432,64 @@ public class MusicManager : MonoBehaviour
         FindAnyObjectByType<UIPlaylist>()?.SetupAllPlaylistSongs(SO_currPlaylistTypeSO.ENM_playlistType);
 
         Debug.Log("Local song added from importer: " + title);
+    }
+
+    public void DeleteCurrentLocalSong()
+    {
+        if (SCR_currSong == null)
+        {
+            Debug.LogWarning("tidak ada lagu yang sedang diputer.");
+            return;
+        }
+
+        // (1) CARI DATA LOCAL SONG BERDASARKAN TITLE
+        LocalSongData targetData = SCR_localSongs.Find(x =>
+            x.S_titleAndAuthor == SCR_currSong.S_titleAndAuthor);
+
+        if (targetData == null)
+        {
+            Debug.LogWarning("lagu ini bukan lagu lokal, gak bisa dihapus.");
+            return;
+        }
+
+        string removedPath = targetData.S_filePath;
+
+        // (2) REMOVE dari SCR_localSongs
+        SCR_localSongs.Remove(targetData);
+
+        // (3) REMOVE dari playlist local (SO_playlistLocal)
+        Songs songInPlaylist = SO_playlistLocal.SCR_playlist.Find(x =>
+            x.S_titleAndAuthor == SCR_currSong.S_titleAndAuthor);
+
+        if (songInPlaylist != null)
+            SO_playlistLocal.SCR_playlist.Remove(songInPlaylist);
+
+        // (4) SAVE JSON lagi
+        SaveLocalSongs();
+
+        Debug.Log($"lagu lokal berhasil diapus: {SCR_currSong.S_titleAndAuthor}");
+
+        // (5) HANDLE KALAU LAGUNYA SEDANG DIPUTAR
+        if (audioSource.clip == SCR_currSong.ADO_music)
+        {
+            audioSource.Stop();
+
+            // kalau masih ada lagu lain, play lagu pertama
+            if (SO_playlistLocal.SCR_playlist.Count > 0)
+            {
+                PlaySong(SO_playlistLocal.SCR_playlist[0]);
+            }
+            else
+            {
+                // kalau playlist udah kosong
+                SCR_currSong = null;
+                audioSource.clip = null;
+                Debug.Log("playlist lokal kosong setelah penghapusan.");
+            }
+        }
+
+        // (6) UPDATE UI
+        FindAnyObjectByType<UIPlaylist>()?.SetupAllPlaylistSongs(SO_currPlaylistTypeSO.ENM_playlistType);
     }
 
     // cek nih lagu udah pernah di tambain belom ini
