@@ -108,6 +108,7 @@ public class ChurchManager : MonoBehaviour
         //Karena NPC yang udah diinteract ga boleh didespawn sebelum renungan selesai
         int I_difference = TimeManager.Instance.I_queuedSermon - List_SCR_activeNPC.Count(NPC => !NPC.B_hasBeenInteracted);
         Debug.Log("Active NPCs that haven't been interacted: " + List_SCR_activeNPC.Count(NPC => !NPC.B_hasBeenInteracted));
+        Debug.Log("Queued sermon: " + TimeManager.Instance.I_queuedSermon);
 
         // Kalau ternyata NPCnya kurang
         if (I_difference > 0)
