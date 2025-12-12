@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6bd73f7b64af4478ff9deae33193d4, type: 3}
   m_Name: Church1
   m_EditorClassIdentifier: 
-  ENM_dialogTitle: 5
+  ENM_dialogTitle: 7
   SCR_dialogComponent:
   - ENM_background: 0
     S_stringText: Saudara-saudari terkasih. Marilah kita renungkan sebentar. Sudahkah

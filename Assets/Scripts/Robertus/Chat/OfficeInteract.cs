@@ -11,6 +11,14 @@ public class OfficeInteract : MonoBehaviour, IPointerClickHandler
     /// </summary>
     private void ClickInteractButton()
     {
+        //Kalau masih ada renungan yang jalan, jangan interact lagi
+        if (ChatManager.Instance.ENM_currDialog != ENM_DialogTitle.None)
+            return;
+
+        //Kalau ga ada qna dalam queue, jangan bolehin klik interact button.
+        if (TimeManager.Instance.I_queuedQnA <= 0)
+            return;
+
         //Dua line di bawah ini tetep sama seperti Interact Church
         ChatManager.Instance.SetupRenungan();
         UIChatManager.Instance.SetupAllChats();
