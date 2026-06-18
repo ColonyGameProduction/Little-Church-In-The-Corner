@@ -30,6 +30,8 @@ public class ChurchManager : MonoBehaviour
 
     private void OnEnable()
     {
+        // Ga pake ini sekarang karena NPC interact ga perlu lagi
+
         TimeManager.ACT_interactIsReady += SetupNPCs;
         UIChatManager.ACT_NoCurrentSermonAvailable += DespawnInteractedNPC;
     }
