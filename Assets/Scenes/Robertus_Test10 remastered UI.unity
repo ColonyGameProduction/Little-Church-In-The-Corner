@@ -6334,6 +6334,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 760649329908486105, guid: c4b58d07178b08642905242ba9698a47, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd2c18f791e925e4ebda59c49ee2f2dc, type: 3}
     - target: {fileID: 914526327262065094, guid: c4b58d07178b08642905242ba9698a47, type: 3}
       propertyPath: m_Name
       value: Bible Tap
@@ -6370,6 +6374,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2990609499460223609, guid: c4b58d07178b08642905242ba9698a47, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd2c18f791e925e4ebda59c49ee2f2dc, type: 3}
     - target: {fileID: 3302666158510663859, guid: c4b58d07178b08642905242ba9698a47, type: 3}
       propertyPath: m_Camera
       value: 
