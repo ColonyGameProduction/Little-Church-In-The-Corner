@@ -1,0 +1,3494 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928b0741cd687454781376cf5e0c26cc, type: 3}
+  m_Name: AllVerseSO
+  m_EditorClassIdentifier: Assembly-CSharp::AllVerseSO
+  books:
+  - bookID: 1
+    book: Genesis
+    passages:
+    - passageID: 1001
+      title: The Beginning
+      pages:
+      - pageID: 11001
+        verses:
+        - verse: 'In the beginning God created the heavens and the earth. '
+        - verse: Now the earth was formless and empty, darkness was over the surface
+            of the deep, and the Spirit of God was hovering over the waters.
+      - pageID: 21001
+        verses:
+        - verse: "And God said, \u201CLet there be light,\u201D and there was light. "
+      - pageID: 31001
+        verses:
+        - verse: God saw that the light was good, and he separated the light from
+            the darkness.
+        - verse: "God called the light \u201Cday,\u201D and the darkness he called
+            \u201Cnight.\u201D And there was evening, and there was morning\u2014the
+            first day."
+      - pageID: 41001
+        verses:
+        - verse: "And God said, \u201CLet there be a vault between the waters to
+            separate water from water.\u201D"
+        - verse: So God made the vault and separated the water under the vault from
+            the water above it. And it was so.
+        - verse: "God called the vault \u201Csky.\u201D And there was evening, and
+            there was morning\u2014the second day."
+      - pageID: 51001
+        verses:
+        - verse: "And God said, \u201CLet the water under the sky be gathered to
+            one place, and let dry ground appear.\u201D And it was so."
+        - verse: "God called the dry ground \u201Cland,\u201D and the gathered waters
+            he called \u201Cseas.\u201D And God saw that it was good."
+      - pageID: 61001
+        verses:
+        - verse: "Then God said, \u201CLet the land produce vegetation: seed-bearing
+            plants and trees on the land that bear fruit with seed in it, according
+            to their various kinds.\u201D And it was so."
+        - verse: 'The land produced vegetation: plants bearing seed according to
+            their kinds and trees bearing fruit with seed in it according to their
+            kinds. And God saw that it was good.'
+        - verse: "And there was evening, and there was morning\u2014the third day."
+      - pageID: 71001
+        verses:
+        - verse: "And God said, \u201CLet there be lights in the vault of the sky
+            to separate the day from the night, and let them serve as signs to mark
+            sacred times, and days and years,"
+        - verse: "and let them be lights in the vault of the sky to give light on
+            the earth.\u201D And it was so."
+      - pageID: 81001
+        verses:
+        - verse: " God made two great lights\u2014the greater light to govern the
+            day and the lesser light to govern the night. He also made the stars."
+        - verse: God set them in the vault of the sky to give light on the earth,
+        - verse: to govern the day and the night, and to separate light from darkness.
+            And God saw that it was good.
+      - pageID: 91001
+        verses:
+        - verse: "And there was evening, and there was morning\u2014the fourth day."
+      - pageID: 101001
+        verses:
+        - verse: "And God said, \u201CLet the water teem with living creatures, and
+            let birds fly above the earth across the vault of the sky.\u201D"
+        - verse: So God created the great creatures of the sea and every living thing
+            with which the water teems and that moves about in it, according to their
+            kinds, and every winged bird according to its kind. And God saw that
+            it was good.
+      - pageID: 111001
+        verses:
+        - verse: "God blessed them and said, \u201CBe fruitful and increase in number
+            and fill the water in the seas, and let the birds increase on the earth.\u201D"
+        - verse: "And there was evening, and there was morning\u2014the fifth day."
+      - pageID: 121001
+        verses:
+        - verse: "And God said, \u201CLet the land produce living creatures according
+            to their kinds: the livestock, the creatures that move along the ground,
+            and the wild animals, each according to its kind.\u201D And it was so."
+        - verse: God made the wild animals according to their kinds, the livestock
+            according to their kinds, and all the creatures that move along the ground
+            according to their kinds. And God saw that it was good.
+      - pageID: 131001
+        verses:
+        - verse: "Then God said, \u201CLet us make mankind in our image, in our likeness,
+            so that they may rule over the fish in the sea and the birds in the sky,
+            over the livestock and all the wild animals,[a] and over all the creatures
+            that move along the ground.\u201D"
+      - pageID: 141001
+        verses:
+        - verse: "So God created mankind in his own image,\r\n    in the image of
+            God he created them;\r\n    male and female he created them."
+      - pageID: 151001
+        verses:
+        - verse: "God blessed them and said to them, \u201CBe fruitful and increase
+            in number; fill the earth and subdue it. Rule over the fish in the sea
+            and the birds in the sky and over every living creature that moves on
+            the ground.\u201D"
+        - verse: "Then God said, \u201CI give you every seed-bearing plant on the
+            face of the whole earth and every tree that has fruit with seed in it.
+            They will be yours for food."
+        - verse: "And to all the beasts of the earth and all the birds in the sky
+            and all the creatures that move along the ground\u2014everything that
+            has the breath of life in it\u2014I give every green plant for food.\u201D
+            And it was so."
+      - pageID: 161001
+        verses:
+        - verse: "God saw all that he had made, and it was very good. And there was
+            evening, and there was morning\u2014the sixth day."
+      - pageID: 171001
+        verses:
+        - verse: Thus the heavens and the earth were completed in all their vast
+            array.
+        - verse: By the seventh day God had finished the work he had been doing;
+            so on the seventh day he rested from all his work.
+        - verse: Then God blessed the seventh day and made it holy, because on it
+            he rested from all the work of creating that he had done.
+    - passageID: 1002
+      title: Adam and Eve
+      pages:
+      - pageID: 11002
+        verses:
+        - verse: This is the account of the heavens and the earth when they were
+            created, when the Lord God made the earth and the heavens.
+        - verse: Now no shrub had yet appeared on the earth and no plant had yet
+            sprung up, for the Lord God had not sent rain on the earth and there
+            was no one to work the ground,
+        - verse: but streams came up from the earth and watered the whole surface
+            of the ground.
+      - pageID: 21002
+        verses:
+        - verse: Then the Lord God formed a man from the dust of the ground and breathed
+            into his nostrils the breath of life, and the man became a living being.
+      - pageID: 31002
+        verses:
+        - verse: Now the Lord God had planted a garden in the east, in Eden; and
+            there he put the man he had formed.
+        - verse: "The Lord God made all kinds of trees grow out of the ground\u2014trees
+            that were pleasing to the eye and good for food. In the middle of the
+            garden were the tree of life and the tree of the knowledge of good and
+            evil."
+      - pageID: 41002
+        verses:
+        - verse: A river watering the garden flowed from Eden; from there it was
+            separated into four headwaters.
+        - verse: The name of the first is the Pishon; it winds through the entire
+            land of Havilah, where there is gold.
+        - verse: (The gold of that land is good; aromatic resin and onyx are also
+            there.)
+        - verse: The name of the second river is the Gihon; it winds through the
+            entire land of Cush.
+        - verse: The name of the third river is the Tigris; it runs along the east
+            side of Ashur. And the fourth river is the Euphrates.
+      - pageID: 51002
+        verses:
+        - verse: The Lord God took the man and put him in the Garden of Eden to work
+            it and take care of it.
+        - verse: "And the Lord God commanded the man, \u201CYou are free to eat from
+            any tree in the garden;"
+        - verse: "but you must not eat from the tree of the knowledge of good and
+            evil, for when you eat from it you will certainly die.\u201D"
+      - pageID: 61002
+        verses:
+        - verse: "The Lord God said, \u201CIt is not good for the man to be alone.
+            I will make a helper suitable for him.\u201D"
+      - pageID: 71002
+        verses:
+        - verse: Now the Lord God had formed out of the ground all the wild animals
+            and all the birds in the sky. He brought them to the man to see what
+            he would name them; and whatever the man called each living creature,
+            that was its name.
+        - verse: So the man gave names to all the livestock, the birds in the sky
+            and all the wild animals. But for Adam no suitable helper was found.
+      - pageID: 81002
+        verses:
+        - verse: "So the Lord God caused the man to fall into a deep sleep; and while
+            he was sleeping, he took one of the man\u2019s ribs and then closed up
+            the place with flesh."
+        - verse: Then the Lord God made a woman from the rib he had taken out of
+            the man, and he brought her to the man.
+        - verse: "The man said,\r\n\r\n\u201CThis is now bone of my bones\r\n   
+            and flesh of my flesh;\r\nshe shall be called \u2018woman,\u2019\r\n   
+            for she was taken out of man.\u201D"
+      - pageID: 91002
+        verses:
+        - verse: That is why a man leaves his father and mother and is united to
+            his wife, and they become one flesh.
+        - verse: Adam and his wife were both naked, and they felt no shame.
+    - passageID: 1003
+      title: The Fall
+      pages:
+      - pageID: 11003
+        verses:
+        - verse: "Now the serpent was more crafty than any of the wild animals the
+            Lord God had made. He said to the woman, \u201CDid God really say, \u2018You
+            must not eat from any tree in the garden\u2019?\u201D"
+        - verse: "The woman said to the serpent, \u201CWe may eat fruit from the
+            trees in the garden,"
+        - verse: "but God did say, \u2018You must not eat fruit from the tree that
+            is in the middle of the garden, and you must not touch it, or you will
+            die.\u2019\u201D"
+      - pageID: 21003
+        verses:
+        - verse: "\u201CYou will not certainly die,\u201D the serpent said to the
+            woman."
+        - verse: "\u201CFor God knows that when you eat from it your eyes will be
+            opened, and you will be like God, knowing good and evil.\u201D"
+      - pageID: 31003
+        verses:
+        - verse: When the woman saw that the fruit of the tree was good for food
+            and pleasing to the eye, and also desirable for gaining wisdom, she took
+            some and ate it. She also gave some to her husband, who was with her,
+            and he ate it.
+      - pageID: 41003
+        verses:
+        - verse: Then the eyes of both of them were opened, and they realized they
+            were naked; so they sewed fig leaves together and made coverings for
+            themselves.
+        - verse: Then the man and his wife heard the sound of the Lord God as he
+            was walking in the garden in the cool of the day, and they hid from the
+            Lord God among the trees of the garden.
+      - pageID: 51003
+        verses:
+        - verse: "But the Lord God called to the man, \u201CWhere are you?\u201D"
+        - verse: "He answered, \u201CI heard you in the garden, and I was afraid
+            because I was naked; so I hid.\u201D"
+        - verse: "And he said, \u201CWho told you that you were naked? Have you eaten
+            from the tree that I commanded you not to eat from?\u201D"
+      - pageID: 61003
+        verses:
+        - verse: "The man said, \u201CThe woman you put here with me\u2014she gave
+            me some fruit from the tree, and I ate it.\u201D"
+        - verse: "Then the Lord God said to the woman, \u201CWhat is this you have
+            done?\u201D The woman said, \u201CThe serpent deceived me, and I ate.\u201D"
+      - pageID: 71003
+        verses:
+        - verse: "So the Lord God said to the serpent, \u201CBecause you have done
+            this,\r\n\r\n\u201CCursed are you above all livestock\r\n    and all
+            wild animals!\r\nYou will crawl on your belly\r\n    and you will eat
+            dust\r\n    all the days of your life."
+        - verse: "And I will put enmity\n    between you and the woman,\n    and
+            between your offspring and hers;\nhe will crush your head,\n    and you
+            will strike his heel.\u201D"
+      - pageID: 81003
+        verses:
+        - verse: "To the woman he said,\r\n\r\n\u201CI will make your pains in childbearing
+            very severe;\r\n    with painful labor you will give birth to children.\r\nYour
+            desire will be for your husband,\r\n    and he will rule over you.\u201D"
+      - pageID: 91003
+        verses:
+        - verse: "To Adam he said, \u201CBecause you listened to your wife and ate
+            fruit from the tree about which I commanded you, \u2018You must not eat
+            from it,\u2019\r\n\r\n\u201CCursed is the ground because of you;\r\n   
+            through painful toil you will eat food from it\r\n    all the days of
+            your life."
+        - verse: "It will produce thorns and thistles for you,\r\n    and you will
+            eat the plants of the field."
+        - verse: "By the sweat of your brow\r\n    you will eat your food\r\nuntil
+            you return to the ground,\r\n    since from it you were taken;\r\nfor
+            dust you are\r\n    and to dust you will return.\u201D"
+      - pageID: 101003
+        verses:
+        - verse: Adam named his wife Eve, because she would become the mother of
+            all the living.
+        - verse: The Lord God made garments of skin for Adam and his wife and clothed
+            them.
+      - pageID: 111003
+        verses:
+        - verse: "And the Lord God said, \u201CThe man has now become like one of
+            us, knowing good and evil. He must not be allowed to reach out his hand
+            and take also from the tree of life and eat, and live forever.\u201D"
+        - verse: So the Lord God banished him from the Garden of Eden to work the
+            ground from which he had been taken.
+        - verse: After he drove the man out, he placed on the east side of the Garden
+            of Eden cherubim and a flaming sword flashing back and forth to guard
+            the way to the tree of life.
+    - passageID: 1004
+      title: Cain and Abel
+      pages:
+      - pageID: 11004
+        verses:
+        - verse: "Adam made love to his wife Eve, and she became pregnant and gave
+            birth to Cain. She said, \u201CWith the help of the Lord I have brought
+            forth a man.\u201D"
+        - verse: Later she gave birth to his brother Abel. Now Abel kept flocks,
+            and Cain worked the soil.
+      - pageID: 21004
+        verses:
+        - verse: In the course of time Cain brought some of the fruits of the soil
+            as an offering to the Lord.
+        - verse: "And Abel also brought an offering\u2014fat portions from some of
+            the firstborn of his flock. The Lord looked with favor on Abel and his
+            offering,"
+        - verse: but on Cain and his offering he did not look with favor. So Cain
+            was very angry, and his face was downcast.
+      - pageID: 31004
+        verses:
+        - verse: "Then the Lord said to Cain, \u201CWhy are you angry? Why is your
+            face downcast?"
+        - verse: "If you do what is right, will you not be accepted? But if you do
+            not do what is right, sin is crouching at your door; it desires to have
+            you, but you must rule over it.\u201D"
+      - pageID: 41004
+        verses:
+        - verse: "Now Cain said to his brother Abel, \u201CLet\u2019s go out to the
+            field.\u201D While they were in the field, Cain attacked his brother
+            Abel and killed him."
+        - verse: "Then the Lord said to Cain, \u201CWhere is your brother Abel?\u201D\r\n\r\n\u201CI
+            don\u2019t know,\u201D he replied. \u201CAm I my brother\u2019s keeper?\u201D"
+        - verse: "The Lord said, \u201CWhat have you done? Listen! Your brother\u2019s
+            blood cries out to me from the ground."
+      - pageID: 51004
+        verses:
+        - verse: "Now you are under a curse and driven from the ground, which opened
+            its mouth to receive your brother\u2019s blood from your hand."
+        - verse: "When you work the ground, it will no longer yield its crops for
+            you. You will be a restless wanderer on the earth.\u201D"
+        - verse: "Cain said to the Lord, \u201CMy punishment is more than I can bear."
+      - pageID: 61004
+        verses:
+        - verse: "Today you are driving me from the land, and I will be hidden from
+            your presence; I will be a restless wanderer on the earth, and whoever
+            finds me will kill me.\u201D"
+        - verse: "But the Lord said to him, \u201CNot so; anyone who kills Cain will
+            suffer vengeance seven times over.\u201D Then the Lord put a mark on
+            Cain so that no one who found him would kill him."
+        - verse: "So Cain went out from the Lord\u2019s presence and lived in the
+            land of Nod, east of Eden."
+      - pageID: 71004
+        verses:
+        - verse: Cain made love to his wife, and she became pregnant and gave birth
+            to Enoch. Cain was then building a city, and he named it after his son
+            Enoch.
+        - verse: To Enoch was born Irad, and Irad was the father of Mehujael, and
+            Mehujael was the father of Methushael, and Methushael was the father
+            of Lamech.
+        - verse: Lamech married two women, one named Adah and the other Zillah.
+        - verse: Adah gave birth to Jabal; he was the father of those who live in
+            tents and raise livestock.
+        - verse: "His brother\u2019s name was Jubal; he was the father of all who
+            play stringed instruments and pipes."
+        - verse: "Zillah also had a son, Tubal-Cain, who forged all kinds of tools
+            out of bronze and iron. Tubal-Cain\u2019s sister was Naamah."
+      - pageID: 81004
+        verses:
+        - verse: "Lamech said to his wives,\r\n\r\n\u201CAdah and Zillah, listen
+            to me;\r\n    wives of Lamech, hear my words.\r\nI have killed a man
+            for wounding me,\r\n    a young man for injuring me."
+        - verse: "If Cain is avenged seven times,\r\n    then Lamech seventy-seven
+            times.\u201D"
+      - pageID: 91004
+        verses:
+        - verse: "Adam made love to his wife again, and she gave birth to a son and
+            named him Seth, saying, \u201CGod has granted me another child in place
+            of Abel, since Cain killed him.\u201D"
+        - verse: 'Seth also had a son, and he named him Enosh.
+
+
+            At that
+            time people began to call on the name of the Lord.'
+    - passageID: 1005
+      title: Wickedness in the World
+      pages:
+      - pageID: 11005
+        verses:
+        - verse: When human beings began to increase in number on the earth and daughters
+            were born to them,
+        - verse: the sons of God saw that the daughters of humans were beautiful,
+            and they married any of them they chose.
+      - pageID: 21005
+        verses:
+        - verse: "Then the Lord said, \u201CMy Spirit will not contend with humans
+            forever, for they are mortal their days will be a hundred and twenty
+            years.\u201D"
+        - verse: "The Nephilim were on the earth in those days\u2014and also afterward\u2014when
+            the sons of God went to the daughters of humans and had children by them.
+            They were the heroes of old, men of renown."
+      - pageID: 31005
+        verses:
+        - verse: The Lord saw how great the wickedness of the human race had become
+            on the earth, and that every inclination of the thoughts of the human
+            heart was only evil all the time.
+        - verse: The Lord regretted that he had made human beings on the earth, and
+            his heart was deeply troubled.
+      - pageID: 41005
+        verses:
+        - verse: "So the Lord said, \u201CI will wipe from the face of the earth
+            the human race I have created\u2014and with them the animals, the birds
+            and the creatures that move along the ground\u2014for I regret that I
+            have made them.\u201D"
+        - verse: But Noah found favor in the eyes of the Lord.
+    - passageID: 1006
+      title: Noah and the Flood
+      pages:
+      - pageID: 41006
+        verses:
+        - verse: 'This is the account of Noah and his family.
+
+
+            Noah
+            was a righteous man, blameless among the people of his time, and he walked
+            faithfully with God.'
+      - pageID: 51006
+        verses:
+        - verse: 'Noah had three sons: Shem, Ham and Japheth.'
+        - verse: "Now the earth was corrupt in God\u2019s sight and was full of violence."
+        - verse: God saw how corrupt the earth had become, for all the people on
+            earth had corrupted their ways.
+      - pageID: 61006
+        verses:
+        - verse: "So God said to Noah, \u201CI am going to put an end to all people,
+            for the earth is filled with violence because of them. I am surely going
+            to destroy both them and the earth."
+        - verse: 'So make yourself an ark of cypress wood; make rooms in it and coat
+            it with pitch inside and out. '
+      - pageID: 71006
+        verses:
+        - verse: 'This is how you are to build it: The ark is to be three hundred
+            cubits long, fifty cubits wide and thirty cubits high.'
+        - verse: Make a roof for it, leaving below the roof an opening one cubit
+            high all around.Put a door in the side of the ark and make lower, middle
+            and upper decks.
+      - pageID: 81006
+        verses:
+        - verse: I am going to bring floodwaters on the earth to destroy all life
+            under the heavens, every creature that has the breath of life in it.
+            Everything on earth will perish.
+        - verse: "But I will establish my covenant with you, and you will enter the
+            ark\u2014you and your sons and your wife and your sons\u2019 wives with
+            you."
+      - pageID: 91006
+        verses:
+        - verse: You are to bring into the ark two of all living creatures, male
+            and female, to keep them alive with you.
+        - verse: Two of every kind of bird, of every kind of animal and of every
+            kind of creature that moves along the ground will come to you to be kept
+            alive.
+        - verse: "You are to take every kind of food that is to be eaten and store
+            it away as food for you and for them.\u201D"
+        - verse: Noah did everything just as God commanded him.
+    - passageID: 1007
+      title: Noah and the Flood II
+      pages:
+      - pageID: 11007
+        verses:
+        - verse: "The Lord then said to Noah, \u201CGo into the ark, you and your
+            whole family, because I have found you righteous in this generation."
+        - verse: Take with you seven pairs of every kind of clean animal, a male
+            and its mate, and one pair of every kind of unclean animal, a male and
+            its mate,
+        - verse: and also seven pairs of every kind of bird, male and female, to
+            keep their various kinds alive throughout the earth.
+      - pageID: 21007
+        verses:
+        - verse: "Seven days from now I will send rain on the earth for forty days
+            and forty nights, and I will wipe from the face of the earth every living
+            creature I have made.\u201D"
+        - verse: And Noah did all that the Lord commanded him.
+        - verse: Noah was six hundred years old when the floodwaters came on the
+            earth.
+        - verse: "And Noah and his sons and his wife and his sons\u2019 wives entered
+            the ark to escape the waters of the flood."
+      - pageID: 31007
+        verses:
+        - verse: Pairs of clean and unclean animals, of birds and of all creatures
+            that move along the ground,
+        - verse: male and female, came to Noah and entered the ark, as God had commanded
+            Noah.
+        - verse: And after the seven days the floodwaters came on the earth.
+      - pageID: 41007
+        verses:
+        - verse: "In the six hundredth year of Noah\u2019s life, on the seventeenth
+            day of the second month\u2014on that day all the springs of the great
+            deep burst forth, and the floodgates of the heavens were opened."
+        - verse: And rain fell on the earth forty days and forty nights.
+      - pageID: 51007
+        verses:
+        - verse: 'On that very day Noah and his sons, Shem, Ham and Japheth, together
+            with his wife and the wives of his three sons, entered the ark. '
+      - pageID: 61007
+        verses:
+        - verse: They had with them every wild animal according to its kind, all
+            livestock according to their kinds, every creature that moves along the
+            ground according to its kind and every bird according to its kind, everything
+            with wings.
+        - verse: Pairs of all creatures that have the breath of life in them came
+            to Noah and entered the ark.
+        - verse: The animals going in were male and female of every living thing,
+            as God had commanded Noah. Then the Lord shut him in.
+      - pageID: 71007
+        verses:
+        - verse: For forty days the flood kept coming on the earth, and as the waters
+            increased they lifted the ark high above the earth.
+        - verse: The waters rose and increased greatly on the earth, and the ark
+            floated on the surface of the water.
+        - verse: They rose greatly on the earth, and all the high mountains under
+            the entire heavens were covered
+        - verse: The waters rose and covered the mountains to a depth of more than
+            fifteen cubits.
+      - pageID: 81007
+        verses:
+        - verse: "Every living thing that moved on land perished\u2014birds, livestock,
+            wild animals, all the creatures that swarm over the earth, and all mankind."
+        - verse: Everything on dry land that had the breath of life in its nostrils
+            died.
+        - verse: Every living thing on the face of the earth was wiped out; people
+            and animals and the creatures that move along the ground and the birds
+            were wiped from the earth. Only Noah was left, and those with him in
+            the ark.
+      - pageID: 91007
+        verses:
+        - verse: The waters flooded the earth for a hundred and fifty days.
+    - passageID: 1008
+      title: Noah and the Flood III
+      pages:
+      - pageID: 11008
+        verses:
+        - verse: But God remembered Noah and all the wild animals and the livestock
+            that were with him in the ark, and he sent a wind over the earth, and
+            the waters receded.
+        - verse: Now the springs of the deep and the floodgates of the heavens had
+            been closed, and the rain had stopped falling from the sky.
+        - verse: The water receded steadily from the earth. At the end of the hundred
+            and fifty days the water had gone down,
+        - verse: and on the seventeenth day of the seventh month the ark came to
+            rest on the mountains of Ararat.
+      - pageID: 21008
+        verses:
+        - verse: The waters continued to recede until the tenth month, and on the
+            first day of the tenth month the tops of the mountains became visible.
+        - verse: After forty days Noah opened a window he had made in the ark
+        - verse: and sent out a raven, and it kept flying back and forth until the
+            water had dried up from the earth.
+        - verse: Then he sent out a dove to see if the water had receded from the
+            surface of the ground.
+      - pageID: 31008
+        verses:
+        - verse: But the dove could find nowhere to perch because there was water
+            over all the surface of the earth; so it returned to Noah in the ark.
+            He reached out his hand and took the dove and brought it back to himself
+            in the ark.
+        - verse: He waited seven more days and again sent out the dove from the ark.
+        - verse: When the dove returned to him in the evening, there in its beak
+            was a freshly plucked olive leaf! Then Noah knew that the water had receded
+            from the earth.
+      - pageID: 41008
+        verses:
+        - verse: He waited seven more days and sent the dove out again, but this
+            time it did not return to him.
+        - verse: "By the first day of the first month of Noah\u2019s six hundred
+            and first year, the water had dried up from the earth. Noah then removed
+            the covering from the ark and saw that the surface of the ground was
+            dry."
+        - verse: By the twenty-seventh day of the second month the earth was completely
+            dry.
+      - pageID: 51008
+        verses:
+        - verse: Then God said to Noah,
+        - verse: "\u201CCome out of the ark, you and your wife and your sons and
+            their wives."
+        - verse: "Bring out every kind of living creature that is with you\u2014the
+            birds, the animals, and all the creatures that move along the ground\u2014so
+            they can multiply on the earth and be fruitful and increase in number
+            on it.\u201D"
+      - pageID: 61008
+        verses:
+        - verse: "So Noah came out, together with his sons and his wife and his sons\u2019
+            wives."
+        - verse: "All the animals and all the creatures that move along the ground
+            and all the birds\u2014everything that moves on land\u2014came out of
+            the ark, one kind after another."
+      - pageID: 71008
+        verses:
+        - verse: Then Noah built an altar to the Lord and, taking some of all the
+            clean animals and clean birds, he sacrificed burnt offerings on it.
+        - verse: "The Lord smelled the pleasing aroma and said in his heart: \u201CNever
+            again will I curse the ground because of humans, even though every inclination
+            of the human heart is evil from childhood. And never again will I destroy
+            all living creatures, as I have done."
+      - pageID: 81008
+        verses:
+        - verse: "\u201CAs long as the earth endures,\r\nseedtime and harvest,\r\ncold
+            and heat,\r\nsummer and winter,\r\nday and night\r\nwill never cease.\u201D"
+    - passageID: 1009
+      title: God's Covenant with Noah
+      pages:
+      - pageID: 11009
+        verses:
+        - verse: "Then God blessed Noah and his sons, saying to them, \u201CBe fruitful
+            and increase in number and fill the earth."
+        - verse: The fear and dread of you will fall on all the beasts of the earth,
+            and on all the birds in the sky, on every creature that moves along the
+            ground, and on all the fish in the sea; they are given into your hands.
+      - pageID: 21009
+        verses:
+        - verse: Everything that lives and moves about will be food for you. Just
+            as I gave you the green plants, I now give you everything.
+        - verse: "\u201CBut you must not eat meat that has its lifeblood still in
+            it."
+        - verse: And for your lifeblood I will surely demand an accounting. I will
+            demand an accounting from every animal. And from each human being, too,
+            I will demand an accounting for the life of another human being.
+      - pageID: 31009
+        verses:
+        - verse: "\u201CWhoever sheds human blood,\r\n    by humans shall their blood
+            be shed;\r\nfor in the image of God\r\n    has God made mankind."
+        - verse: "As for you, be fruitful and increase in number; multiply on the
+            earth and increase upon it.\u201D"
+        - verse: 'Then God said to Noah and to his sons with him:'
+      - pageID: 41009
+        verses:
+        - verse: "\u201CI now establish my covenant with you and with your descendants
+            after you"
+        - verse: "and with every living creature that was with you\u2014the birds,
+            the livestock and all the wild animals, all those that came out of the
+            ark with you\u2014every living creature on earth."
+      - pageID: 51009
+        verses:
+        - verse: "I establish my covenant with you: Never again will all life be
+            destroyed by the waters of a flood; never again will there be a flood
+            to destroy the earth.\u201D"
+        - verse: "And God said, \u201CThis is the sign of the covenant I am making
+            between me and you and every living creature with you, a covenant for
+            all generations to come:"
+      - pageID: 61009
+        verses:
+        - verse: I have set my rainbow in the clouds, and it will be the sign of
+            the covenant between me and the earth.
+        - verse: Whenever I bring clouds over the earth and the rainbow appears in
+            the clouds,
+      - pageID: 71009
+        verses:
+        - verse: I will remember my covenant between me and you and all living creatures
+            of every kind. Never again will the waters become a flood to destroy
+            all life.
+        - verse: "Whenever the rainbow appears in the clouds, I will see it and remember
+            the everlasting covenant between God and all living creatures of every
+            kind on the earth.\u201D"
+      - pageID: 81009
+        verses:
+        - verse: "So God said to Noah, \u201CThis is the sign of the covenant I have
+            established between me and all life on the earth.\u201D"
+    - passageID: 1010
+      title: The Tower of Babel
+      pages:
+      - pageID: 11010
+        verses:
+        - verse: Now the whole world had one language and a common speech.
+        - verse: As people moved eastward, they found a plain in Shinar and settled
+            there.
+        - verse: "They said to each other, \u201CCome, let\u2019s make bricks and
+            bake them thoroughly.\u201D They used brick instead of stone, and tar
+            for mortar."
+      - pageID: 21010
+        verses:
+        - verse: "Then they said, \u201CCome, let us build ourselves a city, with
+            a tower that reaches to the heavens, so that we may make a name for ourselves;
+            otherwise we will be scattered over the face of the whole earth.\u201D"
+        - verse: But the Lord came down to see the city and the tower the people
+            were building.
+        - verse: "The Lord said, \u201CIf as one people speaking the same language
+            they have begun to do this, then nothing they plan to do will be impossible
+            for them."
+      - pageID: 31010
+        verses:
+        - verse: "Come, let us go down and confuse their language so they will not
+            understand each other.\u201D"
+        - verse: So the Lord scattered them from there over all the earth, and they
+            stopped building the city.
+      - pageID: 41010
+        verses:
+        - verse: "That is why it was called Babel\u2014because there the Lord confused
+            the language of the whole world. From there the Lord scattered them over
+            the face of the whole earth."
+    - passageID: 1011
+      title: The Call of Abram
+      pages:
+      - pageID: 11011
+        verses:
+        - verse: "The Lord had said to Abram, \u201CGo from your country, your people
+            and your father\u2019s household to the land I will show you."
+      - pageID: 21011
+        verses:
+        - verse: "\u201CI will make you into a great nation,\n    and I will bless
+            you;\nI will make your name great,\n    and you will be a blessing."
+        - verse: "I will bless those who bless you,\r\n    and whoever curses you
+            I will curse;\r\nand all peoples on earth\r\n    will be blessed through
+            you.\u201D"
+      - pageID: 31011
+        verses:
+        - verse: So Abram went, as the Lord had told him; and Lot went with him.
+            Abram was seventy-five years old when he set out from Harran.
+        - verse: He took his wife Sarai, his nephew Lot, all the possessions they
+            had accumulated and the people they had acquired in Harran, and they
+            set out for the land of Canaan, and they arrived there.
+      - pageID: 41011
+        verses:
+        - verse: Abram traveled through the land as far as the site of the great
+            tree of Moreh at Shechem. At that time the Canaanites were in the land.
+        - verse: "The Lord appeared to Abram and said, \u201CTo your offspring I
+            will give this land.\u201D So he built an altar there to the Lord, who
+            had appeared to him."
+      - pageID: 51011
+        verses:
+        - verse: From there he went on toward the hills east of Bethel and pitched
+            his tent, with Bethel on the west and Ai on the east. There he built
+            an altar to the Lord and called on the name of the Lord.
+        - verse: Then Abram set out and continued toward the Negev.
+    - passageID: 1012
+      title: Abram in Egypt
+      pages:
+      - pageID: 11012
+        verses:
+        - verse: Now there was a famine in the land, and Abram went down to Egypt
+            to live there for a while because the famine was severe.
+        - verse: "As he was about to enter Egypt, he said to his wife Sarai, \u201CI
+            know what a beautiful woman you are."
+      - pageID: 21012
+        verses:
+        - verse: "When the Egyptians see you, they will say, \u2018This is his wife.\u2019
+            Then they will kill me but will let you live."
+        - verse: "Say you are my sister, so that I will be treated well for your
+            sake and my life will be spared because of you.\u201D"
+      - pageID: 31012
+        verses:
+        - verse: When Abram came to Egypt, the Egyptians saw that Sarai was a very
+            beautiful woman.
+        - verse: "And when Pharaoh\u2019s officials saw her, they praised her to
+            Pharaoh, and she was taken into his palace."
+        - verse: He treated Abram well for her sake, and Abram acquired sheep and
+            cattle, male and female donkeys, male and female servants, and camels.
+      - pageID: 41012
+        verses:
+        - verse: "But the Lord inflicted serious diseases on Pharaoh and his household
+            because of Abram\u2019s wife Sarai."
+        - verse: "So Pharaoh summoned Abram. \u201CWhat have you done to me?\u201D
+            he said. \u201CWhy didn\u2019t you tell me she was your wife?"
+      - pageID: 51012
+        verses:
+        - verse: "Why did you say, \u2018She is my sister,\u2019 so that I took her
+            to be my wife? Now then, here is your wife. Take her and go!\u201D"
+        - verse: Then Pharaoh gave orders about Abram to his men, and they sent him
+            on his way, with his wife and everything he had.
+    - passageID: 1013
+      title: Abram and Lot Separate
+      pages:
+      - pageID: 11013
+        verses:
+        - verse: So Abram went up from Egypt to the Negev, with his wife and everything
+            he had, and Lot went with him.
+        - verse: Abram had become very wealthy in livestock and in silver and gold.
+      - pageID: 21013
+        verses:
+        - verse: From the Negev he went from place to place until he came to Bethel,
+            to the place between Bethel and Ai where his tent had been earlier
+        - verse: and where he had first built an altar. There Abram called on the
+            name of the Lord.
+      - pageID: 31013
+        verses:
+        - verse: Now Lot, who was moving about with Abram, also had flocks and herds
+            and tents.
+        - verse: But the land could not support them while they stayed together,
+            for their possessions were so great that they were not able to stay together.
+        - verse: "And quarreling arose between Abram\u2019s herders and Lot\u2019s.
+            The Canaanites and Perizzites were also living in the land at that time."
+      - pageID: 41013
+        verses:
+        - verse: "So Abram said to Lot, \u201CLet\u2019s not have any quarreling
+            between you and me, or between your herders and mine, for we are close
+            relatives."
+        - verse: "Is not the whole land before you? Let\u2019s part company. If you
+            go to the left, I\u2019ll go to the right; if you go to the right, I\u2019ll
+            go to the left.\u201D"
+      - pageID: 51013
+        verses:
+        - verse: Lot looked around and saw that the whole plain of the Jordan toward
+            Zoar was well watered, like the garden of the Lord, like the land of
+            Egypt. (This was before the Lord destroyed Sodom and Gomorrah.)
+      - pageID: 61013
+        verses:
+        - verse: 'So Lot chose for himself the whole plain of the Jordan and set
+            out toward the east. The two men parted company:'
+        - verse: Abram lived in the land of Canaan, while Lot lived among the cities
+            of the plain and pitched his tents near Sodom.
+      - pageID: 71013
+        verses:
+        - verse: Now the people of Sodom were wicked and were sinning greatly against
+            the Lord.
+      - pageID: 81013
+        verses:
+        - verse: "The Lord said to Abram after Lot had parted from him, \u201CLook
+            around from where you are, to the north and south, to the east and west."
+        - verse: All the land that you see I will give to you and your offspring
+            forever.
+        - verse: I will make your offspring like the dust of the earth, so that if
+            anyone could count the dust, then your offspring could be counted.
+      - pageID: 91013
+        verses:
+        - verse: "Go, walk through the length and breadth of the land, for I am giving
+            it to you.\u201D"
+        - verse: So Abram went to live near the great trees of Mamre at Hebron, where
+            he pitched his tents. There he built an altar to the Lord.
+    - passageID: 1014
+      title: Abram Rescues Lot
+      pages:
+      - pageID: 11014
+        verses:
+        - verse: At the time when Amraphel was king of Shinar, Arioch king of Ellasar,
+            Kedorlaomer king of Elam and Tidal king of Goyim,
+        - verse: these kings went to war against Bera king of Sodom, Birsha king
+            of Gomorrah, Shinab king of Admah, Shemeber king of Zeboyim, and the
+            king of Bela (that is, Zoar).
+        - verse: All these latter kings joined forces in the Valley of Siddim (that
+            is, the Dead Sea Valley).
+      - pageID: 21014
+        verses:
+        - verse: For twelve years they had been subject to Kedorlaomer, but in the
+            thirteenth year they rebelled.
+        - verse: In the fourteenth year, Kedorlaomer and the kings allied with him
+            went out and defeated the Rephaites in Ashteroth Karnaim, the Zuzites
+            in Ham, the Emites in Shaveh Kiriathaim
+        - verse: and the Horites in the hill country of Seir, as far as El Paran
+            near the desert.
+      - pageID: 31014
+        verses:
+        - verse: Then they turned back and went to En Mishpat (that is, Kadesh),
+            and they conquered the whole territory of the Amalekites, as well as
+            the Amorites who were living in Hazezon Tamar.
+        - verse: Then the king of Sodom, the king of Gomorrah, the king of Admah,
+            the king of Zeboyim and the king of Bela (that is, Zoar) marched out
+            and drew up their battle lines in the Valley of Siddim
+        - verse: "against Kedorlaomer king of Elam, Tidal king of Goyim, Amraphel
+            king of Shinar and Arioch king of Ellasar\u2014four kings against five."
+      - pageID: 41014
+        verses:
+        - verse: Now the Valley of Siddim was full of tar pits, and when the kings
+            of Sodom and Gomorrah fled, some of the men fell into them and the rest
+            fled to the hills.
+        - verse: The four kings seized all the goods of Sodom and Gomorrah and all
+            their food; then they went away.
+        - verse: "They also carried off Abram\u2019s nephew Lot and his possessions,
+            since he was living in Sodom."
+      - pageID: 51014
+        verses:
+        - verse: A man who had escaped came and reported this to Abram the Hebrew.
+            Now Abram was living near the great trees of Mamre the Amorite, a brother
+            of Eshkol and Aner, all of whom were allied with Abram.
+        - verse: When Abram heard that his relative had been taken captive, he called
+            out the 318 trained men born in his household and went in pursuit as
+            far as Dan.
+      - pageID: 61014
+        verses:
+        - verse: During the night Abram divided his men to attack them and he routed
+            them, pursuing them as far as Hobah, north of Damascus.
+        - verse: He recovered all the goods and brought back his relative Lot and
+            his possessions, together with the women and the other people.
+      - pageID: 71014
+        verses:
+        - verse: "After Abram returned from defeating Kedorlaomer and the kings allied
+            with him, the king of Sodom came out to meet him in the Valley of Shaveh
+            (that is, the King\u2019s Valley)."
+        - verse: Then Melchizedek king of Salem brought out bread and wine. He was
+            priest of God Most High,
+      - pageID: 81014
+        verses:
+        - verse: "and he blessed Abram, saying,\r\n\r\n\u201CBlessed be Abram by
+            God Most High,\r\n    Creator of heaven and earth."
+        - verse: "And praise be to God Most High,\r\n    who delivered your enemies
+            into your hand.\u201D\r\n\r\nThen Abram gave him a tenth of everything."
+      - pageID: 91014
+        verses:
+        - verse: "The king of Sodom said to Abram, \u201CGive me the people and keep
+            the goods for yourself.\u201D"
+        - verse: "But Abram said to the king of Sodom, \u201CWith raised hand I have
+            sworn an oath to the Lord, God Most High, Creator of heaven and earth,"
+      - pageID: 101014
+        verses:
+        - verse: "that I will accept nothing belonging to you, not even a thread
+            or the strap of a sandal, so that you will never be able to say, \u2018I
+            made Abram rich.\u2019"
+        - verse: "I will accept nothing but what my men have eaten and the share
+            that belongs to the men who went with me\u2014to Aner, Eshkol and Mamre.
+            Let them have their share.\u201D"
+    - passageID: 1015
+      title: The Lord's Covenant with Abram
+      pages:
+      - pageID: 11015
+        verses:
+        - verse: "After this, the word of the Lord came to Abram in a vision:\r\n\r\n\u201CDo
+            not be afraid, Abram.\r\n    I am your shield,\r\n    your very great
+            reward.\u201D"
+        - verse: "But Abram said, \u201CSovereign Lord, what can you give me since
+            I remain childless and the one who will inherit my estate is Eliezer
+            of Damascus?\u201D"
+        - verse: "And Abram said, \u201CYou have given me no children; so a servant
+            in my household will be my heir.\u201D"
+      - pageID: 21015
+        verses:
+        - verse: "Then the word of the Lord came to him: \u201CThis man will not
+            be your heir, but a son who is your own flesh and blood will be your
+            heir.\u201D"
+        - verse: "He took him outside and said, \u201CLook up at the sky and count
+            the stars\u2014if indeed you can count them.\u201D Then he said to him,
+            \u201CSo shall your offspring be.\u201D"
+        - verse: Abram believed the Lord, and he credited it to him as righteousness.
+      - pageID: 31015
+        verses:
+        - verse: "He also said to him, \u201CI am the Lord, who brought you out of
+            Ur of the Chaldeans to give you this land to take possession of it.\u201D"
+        - verse: "But Abram said, \u201CSovereign Lord, how can I know that I will
+            gain possession of it?\u201D"
+        - verse: "So the Lord said to him, \u201CBring me a heifer, a goat and a
+            ram, each three years old, along with a dove and a young pigeon.\u201D"
+      - pageID: 41015
+        verses:
+        - verse: Abram brought all these to him, cut them in two and arranged the
+            halves opposite each other; the birds, however, he did not cut in half.
+        - verse: Then birds of prey came down on the carcasses, but Abram drove them
+            away.
+        - verse: As the sun was setting, Abram fell into a deep sleep, and a thick
+            and dreadful darkness came over him.
+      - pageID: 51015
+        verses:
+        - verse: "Then the Lord said to him, \u201CKnow for certain that for four
+            hundred years your descendants will be strangers in a country not their
+            own and that they will be enslaved and mistreated there."
+        - verse: But I will punish the nation they serve as slaves, and afterward
+            they will come out with great possessions.
+        - verse: You, however, will go to your ancestors in peace and be buried at
+            a good old age.
+        - verse: "In the fourth generation your descendants will come back here,
+            for the sin of the Amorites has not yet reached its full measure.\u201D"
+      - pageID: 61015
+        verses:
+        - verse: When the sun had set and darkness had fallen, a smoking firepot
+            with a blazing torch appeared and passed between the pieces.
+        - verse: "On that day the Lord made a covenant with Abram and said, \u201CTo
+            your descendants I give this land, from the Wadi of Egypt to the great
+            river, the Euphrates\u2014"
+        - verse: the land of the Kenites, Kenizzites, Kadmonites,
+        - verse: Hittites, Perizzites, Rephaites,
+        - verse: "Amorites, Canaanites, Girgashites and Jebusites.\u201D"
+    - passageID: 1016
+      title: Joseph's Dreams
+      pages:
+      - pageID: 11016
+        verses:
+        - verse: Jacob lived in the land where his father had stayed, the land of
+            Canaan.
+        - verse: "This is the account of Jacob\u2019s family line.\r\n\r\nJoseph,
+            a young man of seventeen, was tending the flocks with his brothers, the
+            sons of Bilhah and the sons of Zilpah, his father\u2019s wives, and he
+            brought their father a bad report about them."
+      - pageID: 21016
+        verses:
+        - verse: Now Israel loved Joseph more than any of his other sons, because
+            he had been born to him in his old age; and he made an ornate robe for
+            him.
+        - verse: When his brothers saw that their father loved him more than any
+            of them, they hated him and could not speak a kind word to him.
+        - verse: Joseph had a dream, and when he told it to his brothers, they hated
+            him all the more.
+      - pageID: 31016
+        verses:
+        - verse: "He said to them, \u201CListen to this dream I had:"
+        - verse: "We were binding sheaves of grain out in the field when suddenly
+            my sheaf rose and stood upright, while your sheaves gathered around mine
+            and bowed down to it.\u201D"
+        - verse: "His brothers said to him, \u201CDo you intend to reign over us?
+            Will you actually rule us?\u201D And they hated him all the more because
+            of his dream and what he had said."
+      - pageID: 41016
+        verses:
+        - verse: "Then he had another dream, and he told it to his brothers. \u201CListen,\u201D
+            he said, \u201CI had another dream, and this time the sun and moon and
+            eleven stars were bowing down to me.\u201D"
+        - verse: "When he told his father as well as his brothers, his father rebuked
+            him and said, \u201CWhat is this dream you had? Will your mother and
+            I and your brothers actually come and bow down to the ground before you?\u201D"
+        - verse: His brothers were jealous of him, but his father kept the matter
+            in mind.
+    - passageID: 1017
+      title: Joseph Sold by His Brothers
+      pages:
+      - pageID: 11017
+        verses:
+        - verse: "Now his brothers had gone to graze their father\u2019s flocks near
+            Shechem,"
+        - verse: "and Israel said to Joseph, \u201CAs you know, your brothers are
+            grazing the flocks near Shechem. Come, I am going to send you to them.\u201D\r\n\r\n\u201CVery
+            well,\u201D he replied."
+      - pageID: 21017
+        verses:
+        - verse: "So he said to him, \u201CGo and see if all is well with your brothers
+            and with the flocks, and bring word back to me.\u201D Then he sent him
+            off from the Valley of Hebron.\r\n\r\nWhen Joseph arrived at Shechem,"
+        - verse: "a man found him wandering around in the fields and asked him, \u201CWhat
+            are you looking for?\u201D"
+        - verse: "He replied, \u201CI\u2019m looking for my brothers. Can you tell
+            me where they are grazing their flocks?\u201D"
+      - pageID: 31017
+        verses:
+        - verse: "\u201CThey have moved on from here,\u201D the man answered. \u201CI
+            heard them say, \u2018Let\u2019s go to Dothan.\u2019\u201D\r\n\r\nSo
+            Joseph went after his brothers and found them near Dothan."
+        - verse: But they saw him in the distance, and before he reached them, they
+            plotted to kill him.
+        - verse: "\u201CHere comes that dreamer!\u201D they said to each other."
+      - pageID: 41017
+        verses:
+        - verse: "\u201CCome now, let\u2019s kill him and throw him into one of these
+            cisterns and say that a ferocious animal devoured him. Then we\u2019ll
+            see what comes of his dreams.\u201D"
+        - verse: "When Reuben heard this, he tried to rescue him from their hands.
+            \u201CLet\u2019s not take his life,\u201D he said."
+        - verse: "\u201CDon\u2019t shed any blood. Throw him into this cistern here
+            in the wilderness, but don\u2019t lay a hand on him.\u201D Reuben said
+            this to rescue him from them and take him back to his father."
+      - pageID: 51017
+        verses:
+        - verse: "So when Joseph came to his brothers, they stripped him of his robe\u2014the
+            ornate robe he was wearing\u2014"
+        - verse: and they took him and threw him into the cistern. The cistern was
+            empty; there was no water in it.
+      - pageID: 61017
+        verses:
+        - verse: As they sat down to eat their meal, they looked up and saw a caravan
+            of Ishmaelites coming from Gilead. Their camels were loaded with spices,
+            balm and myrrh, and they were on their way to take them down to Egypt.
+      - pageID: 71017
+        verses:
+        - verse: "Judah said to his brothers, \u201CWhat will we gain if we kill
+            our brother and cover up his blood?"
+        - verse: "Come, let\u2019s sell him to the Ishmaelites and not lay our hands
+            on him; after all, he is our brother, our own flesh and blood.\u201D
+            His brothers agreed."
+      - pageID: 81017
+        verses:
+        - verse: So when the Midianite merchants came by, his brothers pulled Joseph
+            up out of the cistern and sold him for twenty shekels of silver to the
+            Ishmaelites, who took him to Egypt.
+      - pageID: 91017
+        verses:
+        - verse: When Reuben returned to the cistern and saw that Joseph was not
+            there, he tore his clothes.
+        - verse: "He went back to his brothers and said, \u201CThe boy isn\u2019t
+            there! Where can I turn now?\u201D"
+        - verse: "Then they got Joseph\u2019s robe, slaughtered a goat and dipped
+            the robe in the blood."
+      - pageID: 101017
+        verses:
+        - verse: "They took the ornate robe back to their father and said, \u201CWe
+            found this. Examine it to see whether it is your son\u2019s robe.\u201D"
+        - verse: "He recognized it and said, \u201CIt is my son\u2019s robe! Some
+            ferocious animal has devoured him. Joseph has surely been torn to pieces.\u201D"
+      - pageID: 111017
+        verses:
+        - verse: Then Jacob tore his clothes, put on sackcloth and mourned for his
+            son many days.
+        - verse: "All his sons and daughters came to comfort him, but he refused
+            to be comforted. \u201CNo,\u201D he said, \u201CI will continue to mourn
+            until I join my son in the grave.\u201D So his father wept for him."
+        - verse: "Meanwhile, the Midianites sold Joseph in Egypt to Potiphar, one
+            of Pharaoh\u2019s officials, the captain of the guard."
+    - passageID: 1018
+      title: Joseph and Potiphar's Wife
+      pages:
+      - pageID: 11018
+        verses:
+        - verse: "Now Joseph had been taken down to Egypt. Potiphar, an Egyptian
+            who was one of Pharaoh\u2019s officials, the captain of the guard, bought
+            him from the Ishmaelites who had taken him there."
+        - verse: The Lord was with Joseph so that he prospered, and he lived in the
+            house of his Egyptian master.
+        - verse: When his master saw that the Lord was with him and that the Lord
+            gave him success in everything he did,
+      - pageID: 21018
+        verses:
+        - verse: Joseph found favor in his eyes and became his attendant. Potiphar
+            put him in charge of his household, and he entrusted to his care everything
+            he owned.
+        - verse: From the time he put him in charge of his household and of all that
+            he owned, the Lord blessed the household of the Egyptian because of Joseph.
+            The blessing of the Lord was on everything Potiphar had, both in the
+            house and in the field.
+      - pageID: 31018
+        verses:
+        - verse: "So Potiphar left everything he had in Joseph\u2019s care; with
+            Joseph in charge, he did not concern himself with anything except the
+            food he ate. Now Joseph was well-built and handsome,"
+        - verse: "and after a while his master\u2019s wife took notice of Joseph
+            and said, \u201CCome to bed with me!\u201D"
+      - pageID: 41018
+        verses:
+        - verse: "But he refused. \u201CWith me in charge,\u201D he told her, \u201Cmy
+            master does not concern himself with anything in the house; everything
+            he owns he has entrusted to my care."
+        - verse: "No one is greater in this house than I am. My master has withheld
+            nothing from me except you, because you are his wife. How then could
+            I do such a wicked thing and sin against God?\u201D"
+        - verse: And though she spoke to Joseph day after day, he refused to go to
+            bed with her or even be with her.
+      - pageID: 51018
+        verses:
+        - verse: One day he went into the house to attend to his duties, and none
+            of the household servants was inside.
+        - verse: "She caught him by his cloak and said, \u201CCome to bed with me!\u201D
+            But he left his cloak in her hand and ran out of the house."
+        - verse: When she saw that he had left his cloak in her hand and had run
+            out of the house,
+      - pageID: 61018
+        verses:
+        - verse: "she called her household servants. \u201CLook,\u201D she said to
+            them, \u201Cthis Hebrew has been brought to us to make sport of us! He
+            came in here to sleep with me, but I screamed."
+        - verse: "When he heard me scream for help, he left his cloak beside me and
+            ran out of the house.\u201D"
+        - verse: She kept his cloak beside her until his master came home.
+      - pageID: 71018
+        verses:
+        - verse: "Then she told him this story: \u201CThat Hebrew slave you brought
+            us came to me to make sport of me."
+        - verse: "But as soon as I screamed for help, he left his cloak beside me
+            and ran out of the house.\u201D"
+        - verse: "When his master heard the story his wife told him, saying, \u201CThis
+            is how your slave treated me,\u201D he burned with anger."
+        - verse: "Joseph\u2019s master took him and put him in prison, the place
+            where the king\u2019s prisoners were confined. But while Joseph was there
+            in the prison,"
+      - pageID: 81018
+        verses:
+        - verse: the Lord was with him; he showed him kindness and granted him favor
+            in the eyes of the prison warden.
+        - verse: So the warden put Joseph in charge of all those held in the prison,
+            and he was made responsible for all that was done there.
+      - pageID: 91018
+        verses:
+        - verse: "The warden paid no attention to anything under Joseph\u2019s care,
+            because the Lord was with Joseph and gave him success in whatever he
+            did."
+    - passageID: 1019
+      title: The Cupbearer and the Baker
+      pages:
+      - pageID: 11019
+        verses:
+        - verse: Some time later, the cupbearer and the baker of the king of Egypt
+            offended their master, the king of Egypt.
+        - verse: Pharaoh was angry with his two officials, the chief cupbearer and
+            the chief baker,
+        - verse: and put them in custody in the house of the captain of the guard,
+            in the same prison where Joseph was confined.
+      - pageID: 21019
+        verses:
+        - verse: 'The captain of the guard assigned them to Joseph, and he attended
+            them.
+
+
+
+            After they had been in custody for some time,'
+        - verse: "each of the two men\u2014the cupbearer and the baker of the king
+            of Egypt, who were being held in prison\u2014had a dream the same night,
+            and each dream had a meaning of its own."
+      - pageID: 31019
+        verses:
+        - verse: When Joseph came to them the next morning, he saw that they were
+            dejected.
+        - verse: "So he asked Pharaoh\u2019s officials who were in custody with him
+            in his master\u2019s house, \u201CWhy do you look so sad today?\u201D"
+        - verse: "\u201CWe both had dreams,\u201D they answered, \u201Cbut there
+            is no one to interpret them.\u201D\r\n\r\nThen Joseph said to them, \u201CDo
+            not interpretations belong to God? Tell me your dreams.\u201D"
+      - pageID: 41019
+        verses:
+        - verse: "So the chief cupbearer told Joseph his dream. He said to him, \u201CIn
+            my dream I saw a vine in front of me,"
+        - verse: and on the vine were three branches. As soon as it budded, it blossomed,
+            and its clusters ripened into grapes.
+      - pageID: 51019
+        verses:
+        - verse: "Pharaoh\u2019s cup was in my hand, and I took the grapes, squeezed
+            them into Pharaoh\u2019s cup and put the cup in his hand.\u201D"
+        - verse: "\u201CThis is what it means,\u201D Joseph said to him. \u201CThe
+            three branches are three days."
+      - pageID: 61019
+        verses:
+        - verse: "Within three days Pharaoh will lift up your head and restore you
+            to your position, and you will put Pharaoh\u2019s cup in his hand, just
+            as you used to do when you were his cupbearer."
+        - verse: But when all goes well with you, remember me and show me kindness;
+            mention me to Pharaoh and get me out of this prison.
+        - verse: "I was forcibly carried off from the land of the Hebrews, and even
+            here I have done nothing to deserve being put in a dungeon.\u201D"
+      - pageID: 71019
+        verses:
+        - verse: "When the chief baker saw that Joseph had given a favorable interpretation,
+            he said to Joseph, \u201CI too had a dream: On my head were three baskets
+            of bread."
+        - verse: "In the top basket were all kinds of baked goods for Pharaoh, but
+            the birds were eating them out of the basket on my head.\u201D"
+      - pageID: 81019
+        verses:
+        - verse: "\u201CThis is what it means,\u201D Joseph said. \u201CThe three
+            baskets are three days."
+        - verse: "Within three days Pharaoh will lift off your head and impale your
+            body on a pole. And the birds will eat away your flesh.\u201D"
+      - pageID: 91019
+        verses:
+        - verse: "Now the third day was Pharaoh\u2019s birthday, and he gave a feast
+            for all his officials. He lifted up the heads of the chief cupbearer
+            and the chief baker in the presence of his officials:"
+      - pageID: 101019
+        verses:
+        - verse: "He restored the chief cupbearer to his position, so that he once
+            again put the cup into Pharaoh\u2019s hand\u2014"
+        - verse: but he impaled the chief baker, just as Joseph had said to them
+            in his interpretation.
+        - verse: The chief cupbearer, however, did not remember Joseph; he forgot
+            him.
+    - passageID: 1020
+      title: Pharaoh's Dreams
+      pages:
+      - pageID: 11020
+        verses:
+        - verse: 'When two full years had passed, Pharaoh had a dream: He was standing
+            by the Nile,'
+        - verse: when out of the river there came up seven cows, sleek and fat, and
+            they grazed among the reeds.
+      - pageID: 21020
+        verses:
+        - verse: After them, seven other cows, ugly and gaunt, came up out of the
+            Nile and stood beside those on the riverbank.
+        - verse: And the cows that were ugly and gaunt ate up the seven sleek, fat
+            cows. Then Pharaoh woke up.
+        - verse: 'He fell asleep again and had a second dream: Seven heads of grain,
+            healthy and good, were growing on a single stalk.'
+      - pageID: 31020
+        verses:
+        - verse: "After them, seven other heads of grain sprouted\u2014thin and scorched
+            by the east wind."
+        - verse: The thin heads of grain swallowed up the seven healthy, full heads.
+            Then Pharaoh woke up; it had been a dream.
+      - pageID: 41020
+        verses:
+        - verse: In the morning his mind was troubled, so he sent for all the magicians
+            and wise men of Egypt. Pharaoh told them his dreams, but no one could
+            interpret them for him.
+        - verse: "Then the chief cupbearer said to Pharaoh, \u201CToday I am reminded
+            of my shortcomings."
+        - verse: Pharaoh was once angry with his servants, and he imprisoned me and
+            the chief baker in the house of the captain of the guard.
+      - pageID: 51020
+        verses:
+        - verse: Each of us had a dream the same night, and each dream had a meaning
+            of its own.
+        - verse: Now a young Hebrew was there with us, a servant of the captain of
+            the guard. We told him our dreams, and he interpreted them for us, giving
+            each man the interpretation of his dream.
+        - verse: "And things turned out exactly as he interpreted them to us: I was
+            restored to my position, and the other man was impaled.\u201D"
+      - pageID: 61020
+        verses:
+        - verse: ' So Pharaoh sent for Joseph, and he was quickly brought from the
+            dungeon. When he had shaved and changed his clothes, he came before Pharaoh.'
+        - verse: "Pharaoh said to Joseph, \u201CI had a dream, and no one can interpret
+            it. But I have heard it said of you that when you hear a dream you can
+            interpret it.\u201D"
+        - verse: "\u201CI cannot do it,\u201D Joseph replied to Pharaoh, \u201Cbut
+            God will give Pharaoh the answer he desires.\u201D"
+      - pageID: 71020
+        verses:
+        - verse: "Then Pharaoh said to Joseph, \u201CIn my dream I was standing on
+            the bank of the Nile,"
+        - verse: when out of the river there came up seven cows, fat and sleek, and
+            they grazed among the reeds.
+        - verse: "After them, seven other cows came up\u2014scrawny and very ugly
+            and lean. I had never seen such ugly cows in all the land of Egypt."
+        - verse: The lean, ugly cows ate up the seven fat cows that came up first.
+      - pageID: 81020
+        verses:
+        - verse: But even after they ate them, no one could tell that they had done
+            so; they looked just as ugly as before. Then I woke up.
+        - verse: "\u201CIn my dream I saw seven heads of grain, full and good, growing
+            on a single stalk."
+        - verse: "After them, seven other heads sprouted\u2014withered and thin and
+            scorched by the east wind."
+        - verse: "The thin heads of grain swallowed up the seven good heads. I told
+            this to the magicians, but none of them could explain it to me.\u201D"
+      - pageID: 91020
+        verses:
+        - verse: "Then Joseph said to Pharaoh, \u201CThe dreams of Pharaoh are one
+            and the same. God has revealed to Pharaoh what he is about to do."
+        - verse: The seven good cows are seven years, and the seven good heads of
+            grain are seven years; it is one and the same dream.
+      - pageID: 101020
+        verses:
+        - verse: 'The seven lean, ugly cows that came up afterward are seven years,
+            and so are the seven worthless heads of grain scorched by the east wind:
+            They are seven years of famine.'
+      - pageID: 111020
+        verses:
+        - verse: "\u201CIt is just as I said to Pharaoh: God has shown Pharaoh what
+            he is about to do."
+        - verse: Seven years of great abundance are coming throughout the land of
+            Egypt,
+        - verse: but seven years of famine will follow them. Then all the abundance
+            in Egypt will be forgotten, and the famine will ravage the land.
+      - pageID: 121020
+        verses:
+        - verse: The abundance in the land will not be remembered, because the famine
+            that follows it will be so severe.
+        - verse: The reason the dream was given to Pharaoh in two forms is that the
+            matter has been firmly decided by God, and God will do it soon.
+        - verse: "\u201CAnd now let Pharaoh look for a discerning and wise man and
+            put him in charge of the land of Egypt."
+      - pageID: 131020
+        verses:
+        - verse: Let Pharaoh appoint commissioners over the land to take a fifth
+            of the harvest of Egypt during the seven years of abundance.
+        - verse: They should collect all the food of these good years that are coming
+            and store up the grain under the authority of Pharaoh, to be kept in
+            the cities for food.
+        - verse: "This food should be held in reserve for the country, to be used
+            during the seven years of famine that will come upon Egypt, so that the
+            country may not be ruined by the famine.\u201D"
+      - pageID: 141020
+        verses:
+        - verse: The plan seemed good to Pharaoh and to all his officials.
+        - verse: "So Pharaoh asked them, \u201CCan we find anyone like this man,
+            one in whom is the spirit of God?"
+      - pageID: 151020
+        verses:
+        - verse: "Then Pharaoh said to Joseph, \u201CSince God has made all this
+            known to you, there is no one so discerning and wise as you."
+        - verse: "You shall be in charge of my palace, and all my people are to submit
+            to your orders. Only with respect to the throne will I be greater than
+            you.\u201D"
+    - passageID: 1021
+      title: Joseph in Charge of Egypt
+      pages:
+      - pageID: 11021
+        verses:
+        - verse: "So Pharaoh said to Joseph, \u201CI hereby put you in charge of
+            the whole land of Egypt.\u201D"
+        - verse: "Then Pharaoh took his signet ring from his finger and put it on
+            Joseph\u2019s finger. He dressed him in robes of fine linen and put a
+            gold chain around his neck."
+        - verse: "He had him ride in a chariot as his second-in-command, and people
+            shouted before him, \u201CMake way!\u201D Thus he put him in charge of
+            the whole land of Egypt."
+        - verse: "Then Pharaoh said to Joseph, \u201CI am Pharaoh, but without your
+            word no one will lift hand or foot in all Egypt.\u201D"
+      - pageID: 21021
+        verses:
+        - verse: Pharaoh gave Joseph the name Zaphenath-Paneah and gave him Asenath
+            daughter of Potiphera, priest of On, to be his wife. And Joseph went
+            throughout the land of Egypt.
+        - verse: "Joseph was thirty years old when he entered the service of Pharaoh
+            king of Egypt. And Joseph went out from Pharaoh\u2019s presence and traveled
+            throughout Egypt."
+        - verse: During the seven years of abundance the land produced plentifully.
+      - pageID: 31021
+        verses:
+        - verse: Joseph collected all the food produced in those seven years of abundance
+            in Egypt and stored it in the cities. In each city he put the food grown
+            in the fields surrounding it.
+        - verse: Joseph stored up huge quantities of grain, like the sand of the
+            sea; it was so much that he stopped keeping records because it was beyond
+            measure.
+      - pageID: 41021
+        verses:
+        - verse: Before the years of famine came, two sons were born to Joseph by
+            Asenath daughter of Potiphera, priest of On.
+        - verse: "Joseph named his firstborn Manasseh and said, \u201CIt is because
+            God has made me forget all my trouble and all my father\u2019s household.\u201D"
+        - verse: "The second son he named Ephraim and said, \u201CIt is because God
+            has made me fruitful in the land of my suffering.\u201D"
+      - pageID: 51021
+        verses:
+        - verse: The seven years of abundance in Egypt came to an end,
+        - verse: and the seven years of famine began, just as Joseph had said. There
+            was famine in all the other lands, but in the whole land of Egypt there
+            was food.
+      - pageID: 61021
+        verses:
+        - verse: "When all Egypt began to feel the famine, the people cried to Pharaoh
+            for food. Then Pharaoh told all the Egyptians, \u201CGo to Joseph and
+            do what he tells you.\u201D"
+        - verse: When the famine had spread over the whole country, Joseph opened
+            all the storehouses and sold grain to the Egyptians, for the famine was
+            severe throughout Egypt.
+        - verse: And all the world came to Egypt to buy grain from Joseph, because
+            the famine was severe everywhere.
+    - passageID: 1022
+      title: Joseph's Brothers Go to Egypt
+      pages:
+      - pageID: 11022
+        verses:
+        - verse: "When Jacob learned that there was grain in Egypt, he said to his
+            sons, \u201CWhy do you just keep looking at each other?\u201D"
+        - verse: "He continued, \u201CI have heard that there is grain in Egypt.
+            Go down there and buy some for us, so that we may live and not die.\u201D"
+      - pageID: 21022
+        verses:
+        - verse: "Then ten of Joseph\u2019s brothers went down to buy grain from
+            Egypt."
+        - verse: "But Jacob did not send Benjamin, Joseph\u2019s brother, with the
+            others, because he was afraid that harm might come to him."
+        - verse: "So Israel\u2019s sons were among those who went to buy grain, for
+            there was famine in the land of Canaan also."
+      - pageID: 31022
+        verses:
+        - verse: "Now Joseph was the governor of the land, the person who sold grain
+            to all its people. So when Joseph\u2019s brothers arrived, they bowed
+            down to him with their faces to the ground."
+        - verse: "As soon as Joseph saw his brothers, he recognized them, but he
+            pretended to be a stranger and spoke harshly to them. \u201CWhere do
+            you come from?\u201D he asked.\r\n\r\n\u201CFrom the land of Canaan,\u201D
+            they replied, \u201Cto buy food.\u201D"
+        - verse: Although Joseph recognized his brothers, they did not recognize
+            him.
+      - pageID: 41022
+        verses:
+        - verse: "Then he remembered his dreams about them and said to them, \u201CYou
+            are spies! You have come to see where our land is unprotected.\u201D"
+        - verse: "\u201CNo, my lord,\u201D they answered. \u201CYour servants have
+            come to buy food."
+        - verse: "We are all the sons of one man. Your servants are honest men, not
+            spies.\u201D"
+        - verse: "\u201CNo!\u201D he said to them. \u201CYou have come to see where
+            our land is unprotected.\u201D"
+      - pageID: 51022
+        verses:
+        - verse: "But they replied, \u201CYour servants were twelve brothers, the
+            sons of one man, who lives in the land of Canaan. The youngest is now
+            with our father, and one is no more.\u201D"
+        - verse: "Joseph said to them, \u201CIt is just as I told you: You are spies!"
+      - pageID: 61022
+        verses:
+        - verse: 'And this is how you will be tested: As surely as Pharaoh lives,
+            you will not leave this place unless your youngest brother comes here.'
+        - verse: "Send one of your number to get your brother; the rest of you will
+            be kept in prison, so that your words may be tested to see if you are
+            telling the truth. If you are not, then as surely as Pharaoh lives, you
+            are spies!\u201D"
+        - verse: And he put them all in custody for three days.
+      - pageID: 71022
+        verses:
+        - verse: "On the third day, Joseph said to them, \u201CDo this and you will
+            live, for I fear God:"
+        - verse: If you are honest men, let one of your brothers stay here in prison,
+            while the rest of you go and take grain back for your starving households.
+        - verse: "But you must bring your youngest brother to me, so that your words
+            may be verified and that you may not die.\u201D This they proceeded to
+            do."
+      - pageID: 81022
+        verses:
+        - verse: "They said to one another, \u201CSurely we are being punished because
+            of our brother. We saw how distressed he was when he pleaded with us
+            for his life, but we would not listen; that\u2019s why this distress
+            has come on us.\u201D"
+        - verse: "Reuben replied, \u201CDidn\u2019t I tell you not to sin against
+            the boy? But you wouldn\u2019t listen! Now we must give an accounting
+            for his blood.\u201D"
+        - verse: They did not realize that Joseph could understand them, since he
+            was using an interpreter.
+      - pageID: 91022
+        verses:
+        - verse: He turned away from them and began to weep, but then came back and
+            spoke to them again. He had Simeon taken from them and bound before their
+            eyes.
+        - verse: "Joseph gave orders to fill their bags with grain, to put each man\u2019s
+            silver back in his sack, and to give them provisions for their journey.
+            After this was done for them,"
+        - verse: they loaded their grain on their donkeys and left.
+      - pageID: 101022
+        verses:
+        - verse: At the place where they stopped for the night one of them opened
+            his sack to get feed for his donkey, and he saw his silver in the mouth
+            of his sack.
+        - verse: "\u201CMy silver has been returned,\u201D he said to his brothers.
+            \u201CHere it is in my sack.\u201D\r\n\r\nTheir hearts sank and they
+            turned to each other trembling and said, \u201CWhat is this that God
+            has done to us?\u201D"
+      - pageID: 111022
+        verses:
+        - verse: When they came to their father Jacob in the land of Canaan, they
+            told him all that had happened to them. They said,
+        - verse: "\u201CThe man who is lord over the land spoke harshly to us and
+            treated us as though we were spying on the land."
+        - verse: "But we said to him, \u2018We are honest men; we are not spies."
+        - verse: "We were twelve brothers, sons of one father. One is no more, and
+            the youngest is now with our father in Canaan.\u2019"
+      - pageID: 121022
+        verses:
+        - verse: "\u201CThen the man who is lord over the land said to us, \u2018This
+            is how I will know whether you are honest men: Leave one of your brothers
+            here with me, and take food for your starving households and go."
+        - verse: "But bring your youngest brother to me so I will know that you are
+            not spies but honest men. Then I will give your brother back to you,
+            and you can trade in the land.\u2019\u201D"
+      - pageID: 131022
+        verses:
+        - verse: "As they were emptying their sacks, there in each man\u2019s sack
+            was his pouch of silver! When they and their father saw the money pouches,
+            they were frightened."
+        - verse: "Their father Jacob said to them, \u201CYou have deprived me of
+            my children. Joseph is no more and Simeon is no more, and now you want
+            to take Benjamin. Everything is against me!\u201D"
+      - pageID: 141022
+        verses:
+        - verse: "Then Reuben said to his father, \u201CYou may put both of my sons
+            to death if I do not bring him back to you. Entrust him to my care, and
+            I will bring him back.\u201D"
+        - verse: "But Jacob said, \u201CMy son will not go down there with you; his
+            brother is dead and he is the only one left. If harm comes to him on
+            the journey you are taking, you will bring my gray head down to the grave
+            in sorrow.\u201D"
+    - passageID: 1023
+      title: The Second Journey to Egypt
+      pages:
+      - pageID: 11023
+        verses:
+        - verse: Now the famine was still severe in the land.
+        - verse: "So when they had eaten all the grain they had brought from Egypt,
+            their father said to them, \u201CGo back and buy us a little more food.\u201D"
+      - pageID: 21023
+        verses:
+        - verse: "But Judah said to him, \u201CThe man warned us solemnly, \u2018You
+            will not see my face again unless your brother is with you.\u2019"
+        - verse: If you will send our brother along with us, we will go down and
+            buy food for you.
+        - verse: "But if you will not send him, we will not go down, because the
+            man said to us, \u2018You will not see my face again unless your brother
+            is with you.\u2019\u201D"
+      - pageID: 31023
+        verses:
+        - verse: "Israel asked, \u201CWhy did you bring this trouble on me by telling
+            the man you had another brother?\u201D"
+        - verse: "They replied, \u201CThe man questioned us closely about ourselves
+            and our family. \u2018Is your father still living?\u2019 he asked us.
+            \u2018Do you have another brother?\u2019 We simply answered his questions.
+            How were we to know he would say, \u2018Bring your brother down here\u2019?\u201D"
+        - verse: "Then Judah said to Israel his father, \u201CSend the boy along
+            with me and we will go at once, so that we and you and our children may
+            live and not die."
+      - pageID: 41023
+        verses:
+        - verse: I myself will guarantee his safety; you can hold me personally responsible
+            for him. If I do not bring him back to you and set him here before you,
+            I will bear the blame before you all my life.
+        - verse: "As it is, if we had not delayed, we could have gone and returned
+            twice.\u201D"
+        - verse: "Then their father Israel said to them, \u201CIf it must be, then
+            do this: Put some of the best products of the land in your bags and take
+            them down to the man as a gift\u2014a little balm and a little honey,
+            some spices and myrrh, some pistachio nuts and almonds."
+      - pageID: 51023
+        verses:
+        - verse: Take double the amount of silver with you, for you must return the
+            silver that was put back into the mouths of your sacks. Perhaps it was
+            a mistake.
+        - verse: Take your brother also and go back to the man at once.
+        - verse: "And may God Almighty grant you mercy before the man so that he
+            will let your other brother and Benjamin come back with you. As for me,
+            if I am bereaved, I am bereaved.\u201D"
+      - pageID: 61023
+        verses:
+        - verse: So the men took the gifts and double the amount of silver, and Benjamin
+            also. They hurried down to Egypt and presented themselves to Joseph.
+        - verse: "When Joseph saw Benjamin with them, he said to the steward of his
+            house, \u201CTake these men to my house, slaughter an animal and prepare
+            a meal; they are to eat with me at noon.\u201D"
+        - verse: "The man did as Joseph told him and took the men to Joseph\u2019s
+            house."
+      - pageID: 71023
+        verses:
+        - verse: "Now the men were frightened when they were taken to his house.
+            They thought, \u201CWe were brought here because of the silver that was
+            put back into our sacks the first time. He wants to attack us and overpower
+            us and seize us as slaves and take our donkeys.\u201D"
+      - pageID: 81023
+        verses:
+        - verse: "So they went up to Joseph\u2019s steward and spoke to him at the
+            entrance to the house."
+        - verse: "\u201CWe beg your pardon, our lord,\u201D they said, \u201Cwe came
+            down here the first time to buy food."
+        - verse: "But at the place where we stopped for the night we opened our sacks
+            and each of us found his silver\u2014the exact weight\u2014in the mouth
+            of his sack. So we have brought it back with us."
+        - verse: "We have also brought additional silver with us to buy food. We
+            don\u2019t know who put our silver in our sacks.\u201D"
+      - pageID: 91023
+        verses:
+        - verse: "\u201CIt\u2019s all right,\u201D he said. \u201CDon\u2019t be afraid.
+            Your God, the God of your father, has given you treasure in your sacks;
+            I received your silver.\u201D Then he brought Simeon out to them."
+        - verse: "The steward took the men into Joseph\u2019s house, gave them water
+            to wash their feet and provided fodder for their donkeys."
+        - verse: "They prepared their gifts for Joseph\u2019s arrival at noon, because
+            they had heard that they were to eat there."
+      - pageID: 101023
+        verses:
+        - verse: When Joseph came home, they presented to him the gifts they had
+            brought into the house, and they bowed down before him to the ground.
+        - verse: "He asked them how they were, and then he said, \u201CHow is your
+            aged father you told me about? Is he still living?\u201D"
+        - verse: "They replied, \u201CYour servant our father is still alive and
+            well.\u201D And they bowed down, prostrating themselves before him."
+      - pageID: 111023
+        verses:
+        - verse: "As he looked about and saw his brother Benjamin, his own mother\u2019s
+            son, he asked, \u201CIs this your youngest brother, the one you told
+            me about?\u201D And he said, \u201CGod be gracious to you, my son.\u201D"
+        - verse: Deeply moved at the sight of his brother, Joseph hurried out and
+            looked for a place to weep. He went into his private room and wept there.
+      - pageID: 121023
+        verses:
+        - verse: "After he had washed his face, he came out and, controlling himself,
+            said, \u201CServe the food.\u201D"
+        - verse: They served him by himself, the brothers by themselves, and the
+            Egyptians who ate with him by themselves, because Egyptians could not
+            eat with Hebrews, for that is detestable to Egyptians.
+      - pageID: 131023
+        verses:
+        - verse: The men had been seated before him in the order of their ages, from
+            the firstborn to the youngest; and they looked at each other in astonishment.
+        - verse: "When portions were served to them from Joseph\u2019s table, Benjamin\u2019s
+            portion was five times as much as anyone else\u2019s. So they feasted
+            and drank freely with him."
+    - passageID: 1024
+      title: A Silver Cup in a Sack
+      pages:
+      - pageID: 11024
+        verses:
+        - verse: "Now Joseph gave these instructions to the steward of his house:
+            \u201CFill the men\u2019s sacks with as much food as they can carry,
+            and put each man\u2019s silver in the mouth of his sack."
+        - verse: "Then put my cup, the silver one, in the mouth of the youngest one\u2019s
+            sack, along with the silver for his grain.\u201D And he did as Joseph
+            said."
+      - pageID: 21024
+        verses:
+        - verse: As morning dawned, the men were sent on their way with their donkeys.
+        - verse: "They had not gone far from the city when Joseph said to his steward,
+            \u201CGo after those men at once, and when you catch up with them, say
+            to them, \u2018Why have you repaid good with evil?"
+        - verse: "Isn\u2019t this the cup my master drinks from and also uses for
+            divination? This is a wicked thing you have done.\u2019\u201D"
+        - verse: When he caught up with them, he repeated these words to them.
+      - pageID: 31024
+        verses:
+        - verse: "But they said to him, \u201CWhy does my lord say such things? Far
+            be it from your servants to do anything like that!"
+        - verse: "We even brought back to you from the land of Canaan the silver
+            we found inside the mouths of our sacks. So why would we steal silver
+            or gold from your master\u2019s house?"
+        - verse: "If any of your servants is found to have it, he will die; and the
+            rest of us will become my lord\u2019s slaves.\u201D"
+        - verse: "\u201CVery well, then,\u201D he said, \u201Clet it be as you say.
+            Whoever is found to have it will become my slave; the rest of you will
+            be free from blame.\u201D"
+      - pageID: 41024
+        verses:
+        - verse: Each of them quickly lowered his sack to the ground and opened it.
+        - verse: "Then the steward proceeded to search, beginning with the oldest
+            and ending with the youngest. And the cup was found in Benjamin\u2019s
+            sack."
+        - verse: At this, they tore their clothes. Then they all loaded their donkeys
+            and returned to the city.
+      - pageID: 51024
+        verses:
+        - verse: Joseph was still in the house when Judah and his brothers came in,
+            and they threw themselves to the ground before him.
+        - verse: "Joseph said to them, \u201CWhat is this you have done? Don\u2019t
+            you know that a man like me can find things out by divination?\u201D"
+      - pageID: 61024
+        verses:
+        - verse: "\u201CWhat can we say to my lord?\u201D Judah replied. \u201CWhat
+            can we say? How can we prove our innocence? God has uncovered your servants\u2019
+            guilt. We are now my lord\u2019s slaves\u2014we ourselves and the one
+            who was found to have the cup.\u201D"
+        - verse: "But Joseph said, \u201CFar be it from me to do such a thing! Only
+            the man who was found to have the cup will become my slave. The rest
+            of you, go back to your father in peace.\u201D"
+      - pageID: 71024
+        verses:
+        - verse: "Then Judah went up to him and said: \u201CPardon your servant,
+            my lord, let me speak a word to my lord. Do not be angry with your servant,
+            though you are equal to Pharaoh himself."
+        - verse: "My lord asked his servants, \u2018Do you have a father or a brother?\u2019"
+        - verse: "And we answered, \u2018We have an aged father, and there is a young
+            son born to him in his old age. His brother is dead, and he is the only
+            one of his mother\u2019s sons left, and his father loves him.\u2019"
+      - pageID: 81024
+        verses:
+        - verse: "\u201CThen you said to your servants, \u2018Bring him down to me
+            so I can see him for myself.\u2019"
+        - verse: "And we said to my lord, \u2018The boy cannot leave his father;
+            if he leaves him, his father will die.\u2019"
+        - verse: "But you told your servants, \u2018Unless your youngest brother
+            comes down with you, you will not see my face again.\u2019"
+      - pageID: 91024
+        verses:
+        - verse: When we went back to your servant my father, we told him what my
+            lord had said.
+        - verse: " \u201CThen our father said, \u2018Go back and buy a little more
+            food.\u2019"
+        - verse: "But we said, \u2018We cannot go down. Only if our youngest brother
+            is with us will we go. We cannot see the man\u2019s face unless our youngest
+            brother is with us.\u2019"
+      - pageID: 101024
+        verses:
+        - verse: "\u201CYour servant my father said to us, \u2018You know that my
+            wife bore me two sons."
+        - verse: "One of them went away from me, and I said, \u201CHe has surely
+            been torn to pieces.\u201D And I have not seen him since. "
+        - verse: "If you take this one from me too and harm comes to him, you will
+            bring my gray head down to the grave in misery.\u2019"
+      - pageID: 111024
+        verses:
+        - verse: "\u201CSo now, if the boy is not with us when I go back to your
+            servant my father, and if my father, whose life is closely bound up with
+            the boy\u2019s life,"
+        - verse: "sees that the boy isn\u2019t there, he will die. Your servants
+            will bring the gray head of our father down to the grave in sorrow."
+      - pageID: 121024
+        verses:
+        - verse: "Your servant guaranteed the boy\u2019s safety to my father. I said,
+            \u2018If I do not bring him back to you, I will bear the blame before
+            you, my father, all my life!\u2019"
+        - verse: "\u201CNow then, please let your servant remain here as my lord\u2019s
+            slave in place of the boy, and let the boy return with his brothers."
+        - verse: "How can I go back to my father if the boy is not with me? No! Do
+            not let me see the misery that would come on my father.\u201D"
+    - passageID: 1025
+      title: Joseph Makes Himself Known
+      pages:
+      - pageID: 11025
+        verses:
+        - verse: "Then Joseph could no longer control himself before all his attendants,
+            and he cried out, \u201CHave everyone leave my presence!\u201D So there
+            was no one with Joseph when he made himself known to his brothers."
+        - verse: "And he wept so loudly that the Egyptians heard him, and Pharaoh\u2019s
+            household heard about it."
+      - pageID: 21025
+        verses:
+        - verse: "Joseph said to his brothers, \u201CI am Joseph! Is my father still
+            living?\u201D But his brothers were not able to answer him, because they
+            were terrified at his presence.\r\n\r"
+        - verse: "Then Joseph said to his brothers, \u201CCome close to me.\u201D
+            When they had done so, he said, \u201CI am your brother Joseph, the one
+            you sold into Egypt!"
+        - verse: And now, do not be distressed and do not be angry with yourselves
+            for selling me here, because it was to save lives that God sent me ahead
+            of you.
+      - pageID: 31025
+        verses:
+        - verse: For two years now there has been famine in the land, and for the
+            next five years there will be no plowing and reaping.
+        - verse: But God sent me ahead of you to preserve for you a remnant on earth
+            and to save your lives by a great deliverance.
+      - pageID: 41025
+        verses:
+        - verse: "\u201CSo then, it was not you who sent me here, but God. He made
+            me father to Pharaoh, lord of his entire household and ruler of all Egypt."
+        - verse: "Now hurry back to my father and say to him, \u2018This is what
+            your son Joseph says: God has made me lord of all Egypt. Come down to
+            me; don\u2019t delay."
+        - verse: "You shall live in the region of Goshen and be near me\u2014you,
+            your children and grandchildren, your flocks and herds, and all you have."
+      - pageID: 51025
+        verses:
+        - verse: "I will provide for you there, because five years of famine are
+            still to come. Otherwise you and your household and all who belong to
+            you will become destitute.\u2019"
+        - verse: "\u201CYou can see for yourselves, and so can my brother Benjamin,
+            that it is really I who am speaking to you."
+        - verse: "Tell my father about all the honor accorded me in Egypt and about
+            everything you have seen. And bring my father down here quickly.\u201D"
+      - pageID: 61025
+        verses:
+        - verse: Then he threw his arms around his brother Benjamin and wept, and
+            Benjamin embraced him, weeping.
+        - verse: And he kissed all his brothers and wept over them. Afterward his
+            brothers talked with him.
+        - verse: "When the news reached Pharaoh\u2019s palace that Joseph\u2019s
+            brothers had come, Pharaoh and all his officials were pleased."
+      - pageID: 71025
+        verses:
+        - verse: "Pharaoh said to Joseph, \u201CTell your brothers, \u2018Do this:
+            Load your animals and return to the land of Canaan,"
+        - verse: "and bring your father and your families back to me. I will give
+            you the best of the land of Egypt and you can enjoy the fat of the land.\u2019"
+      - pageID: 81025
+        verses:
+        - verse: "\u201CYou are also directed to tell them, \u2018Do this: Take some
+            carts from Egypt for your children and your wives, and get your father
+            and come."
+        - verse: "Never mind about your belongings, because the best of all Egypt
+            will be yours.\u2019\u201D"
+        - verse: So the sons of Israel did this. Joseph gave them carts, as Pharaoh
+            had commanded, and he also gave them provisions for their journey.
+      - pageID: 91025
+        verses:
+        - verse: To each of them he gave new clothing, but to Benjamin he gave three
+            hundred shekels of silver and five sets of clothes.
+        - verse: 'And this is what he sent to his father: ten donkeys loaded with
+            the best things of Egypt, and ten female donkeys loaded with grain and
+            bread and other provisions for his journey.'
+        - verse: "Then he sent his brothers away, and as they were leaving he said
+            to them, \u201CDon\u2019t quarrel on the way!\u201D"
+      - pageID: 101025
+        verses:
+        - verse: So they went up out of Egypt and came to their father Jacob in the
+            land of Canaan.
+        - verse: "They told him, \u201CJoseph is still alive! In fact, he is ruler
+            of all Egypt.\u201D Jacob was stunned; he did not believe them."
+      - pageID: 111025
+        verses:
+        - verse: But when they told him everything Joseph had said to them, and when
+            he saw the carts Joseph had sent to carry him back, the spirit of their
+            father Jacob revived.
+        - verse: "And Israel said, \u201CI\u2019m convinced! My son Joseph is still
+            alive. I will go and see him before I die.\u201D"
+  - bookID: 2
+    book: Exodus
+    passages:
+    - passageID: 2001
+      title: The Israelites Oppressed
+      pages:
+      - pageID: 12001
+        verses:
+        - verse: 'These are the names of the sons of Israel who went to Egypt with
+            Jacob, each with his family:'
+        - verse: Reuben, Simeon, Levi and Judah;
+        - verse: Issachar, Zebulun and Benjamin;
+        - verse: Dan and Naphtali; Gad and Asher.
+        - verse: The descendants of Jacob numbered seventy in all; Joseph was already
+            in Egypt.
+      - pageID: 22001
+        verses:
+        - verse: Now Joseph and all his brothers and all that generation died,
+        - verse: but the Israelites were exceedingly fruitful; they multiplied greatly,
+            increased in numbers and became so numerous that the land was filled
+            with them.
+        - verse: Then a new king, to whom Joseph meant nothing, came to power in
+            Egypt.
+        - verse: "\u201CLook,\u201D he said to his people, \u201Cthe Israelites have
+            become far too numerous for us."
+      - pageID: 32001
+        verses:
+        - verse: "Come, we must deal shrewdly with them or they will become even
+            more numerous and, if war breaks out, will join our enemies, fight against
+            us and leave the country.\u201D"
+        - verse: So they put slave masters over them to oppress them with forced
+            labor, and they built Pithom and Rameses as store cities for Pharaoh.
+        - verse: But the more they were oppressed, the more they multiplied and spread;
+            so the Egyptians came to dread the Israelites
+        - verse: and worked them ruthlessly.
+      - pageID: 42001
+        verses:
+        - verse: They made their lives bitter with harsh labor in brick and mortar
+            and with all kinds of work in the fields; in all their harsh labor the
+            Egyptians worked them ruthlessly.
+        - verse: The king of Egypt said to the Hebrew midwives, whose names were
+            Shiphrah and Puah,
+        - verse: "\u201CWhen you are helping the Hebrew women during childbirth on
+            the delivery stool, if you see that the baby is a boy, kill him; but
+            if it is a girl, let her live.\u201D"
+      - pageID: 52001
+        verses:
+        - verse: The midwives, however, feared God and did not do what the king of
+            Egypt had told them to do; they let the boys live.
+        - verse: "Then the king of Egypt summoned the midwives and asked them, \u201CWhy
+            have you done this? Why have you let the boys live?\u201D"
+        - verse: "The midwives answered Pharaoh, \u201CHebrew women are not like
+            Egyptian women; they are vigorous and give birth before the midwives
+            arrive.\u201D"
+      - pageID: 62001
+        verses:
+        - verse: So God was kind to the midwives and the people increased and became
+            even more numerous.
+        - verse: And because the midwives feared God, he gave them families of their
+            own.
+        - verse: "Then Pharaoh gave this order to all his people: \u201CEvery Hebrew
+            boy that is born you must throw into the Nile, but let every girl live.\u201D"
+    - passageID: 2002
+      title: The Birth of Moses
+      pages:
+      - pageID: 12002
+        verses:
+        - verse: Now a man of the tribe of Levi married a Levite woman,
+        - verse: and she became pregnant and gave birth to a son. When she saw that
+            he was a fine child, she hid him for three months.
+        - verse: But when she could hide him no longer, she got a papyrus basket
+            for him and coated it with tar and pitch. Then she placed the child in
+            it and put it among the reeds along the bank of the Nile.
+        - verse: His sister stood at a distance to see what would happen to him.
+      - pageID: 22002
+        verses:
+        - verse: "Then Pharaoh\u2019s daughter went down to the Nile to bathe, and
+            her attendants were walking along the riverbank. She saw the basket among
+            the reeds and sent her female slave to get it."
+        - verse: "She opened it and saw the baby. He was crying, and she felt sorry
+            for him. \u201CThis is one of the Hebrew babies,\u201D she said."
+      - pageID: 32002
+        verses:
+        - verse: "Then his sister asked Pharaoh\u2019s daughter, \u201CShall I go
+            and get one of the Hebrew women to nurse the baby for you?\u201D"
+        - verse: "\u201CYes, go,\u201D she answered. So the girl went and got the
+            baby\u2019s mother."
+        - verse: "Pharaoh\u2019s daughter said to her, \u201CTake this baby and nurse
+            him for me, and I will pay you.\u201D So the woman took the baby and
+            nursed him."
+      - pageID: 42002
+        verses:
+        - verse: "When the child grew older, she took him to Pharaoh\u2019s daughter
+            and he became her son. She named him Moses, saying, \u201CI drew him
+            out of the water.\u201D"
+    - passageID: 2003
+      title: Moses Flees to Midian
+      pages:
+      - pageID: 42003
+        verses:
+        - verse: One day, after Moses had grown up, he went out to where his own
+            people were and watched them at their hard labor. He saw an Egyptian
+            beating a Hebrew, one of his own people.
+        - verse: Looking this way and that and seeing no one, he killed the Egyptian
+            and hid him in the sand.
+      - pageID: 52003
+        verses:
+        - verse: "The next day he went out and saw two Hebrews fighting. He asked
+            the one in the wrong, \u201CWhy are you hitting your fellow Hebrew?\u201D"
+        - verse: "The man said, \u201CWho made you ruler and judge over us? Are you
+            thinking of killing me as you killed the Egyptian?\u201D Then Moses was
+            afraid and thought, \u201CWhat I did must have become known.\u201D"
+      - pageID: 62003
+        verses:
+        - verse: When Pharaoh heard of this, he tried to kill Moses, but Moses fled
+            from Pharaoh and went to live in Midian, where he sat down by a well.
+        - verse: "Now a priest of Midian had seven daughters, and they came to draw
+            water and fill the troughs to water their father\u2019s flock."
+      - pageID: 72003
+        verses:
+        - verse: Some shepherds came along and drove them away, but Moses got up
+            and came to their rescue and watered their flock.
+      - pageID: 82003
+        verses:
+        - verse: "When the girls returned to Reuel their father, he asked them, \u201CWhy
+            have you returned so early today?\u201D"
+        - verse: "They answered, \u201CAn Egyptian rescued us from the shepherds.
+            He even drew water for us and watered the flock.\u201D"
+        - verse: "\u201CAnd where is he?\u201D Reuel asked his daughters. \u201CWhy
+            did you leave him? Invite him to have something to eat.\u201D"
+      - pageID: 92003
+        verses:
+        - verse: Moses agreed to stay with the man, who gave his daughter Zipporah
+            to Moses in marriage.
+        - verse: "Zipporah gave birth to a son, and Moses named him Gershom, saying,
+            \u201CI have become a foreigner in a foreign land.\u201D"
+      - pageID: 102003
+        verses:
+        - verse: During that long period, the king of Egypt died. The Israelites
+            groaned in their slavery and cried out, and their cry for help because
+            of their slavery went up to God.
+        - verse: God heard their groaning and he remembered his covenant with Abraham,
+            with Isaac and with Jacob.
+        - verse: So God looked on the Israelites and was concerned about them.
+    - passageID: 2004
+      title: Moses and the Burning Bush
+      pages:
+      - pageID: 12004
+        verses:
+        - verse: Now Moses was tending the flock of Jethro his father-in-law, the
+            priest of Midian, and he led the flock to the far side of the wilderness
+            and came to Horeb, the mountain of God.
+        - verse: There the angel of the Lord appeared to him in flames of fire from
+            within a bush. Moses saw that though the bush was on fire it did not
+            burn up.
+      - pageID: 22004
+        verses:
+        - verse: "So Moses thought, \u201CI will go over and see this strange sight\u2014why
+            the bush does not burn up.\u201D"
+        - verse: "When the Lord saw that he had gone over to look, God called to
+            him from within the bush, \u201CMoses! Moses!\u201D\r\n\r\nAnd Moses
+            said, \u201CHere I am.\u201D"
+        - verse: "\u201CDo not come any closer,\u201D God said. \u201CTake off your
+            sandals, for the place where you are standing is holy ground.\u201D"
+      - pageID: 32004
+        verses:
+        - verse: "Then he said, \u201CI am the God of your father, the God of Abraham,
+            the God of Isaac and the God of Jacob.\u201D At this, Moses hid his face,
+            because he was afraid to look at God."
+        - verse: "The Lord said, \u201CI have indeed seen the misery of my people
+            in Egypt. I have heard them crying out because of their slave drivers,
+            and I am concerned about their suffering."
+      - pageID: 42004
+        verses:
+        - verse: "So I have come down to rescue them from the hand of the Egyptians
+            and to bring them up out of that land into a good and spacious land,
+            a land flowing with milk and honey\u2014the home of the Canaanites, Hittites,
+            Amorites, Perizzites, Hivites and Jebusites."
+        - verse: And now the cry of the Israelites has reached me, and I have seen
+            the way the Egyptians are oppressing them.
+        - verse: "So now, go. I am sending you to Pharaoh to bring my people the
+            Israelites out of Egypt.\u201D"
+      - pageID: 52004
+        verses:
+        - verse: "But Moses said to God, \u201CWho am I that I should go to Pharaoh
+            and bring the Israelites out of Egypt?\u201D"
+        - verse: "and God said, \u201CI will be with you. And this will be the sign
+            to you that it is I who have sent you: When you have brought the people
+            out of Egypt, you will worship God on this mountain.\u201D"
+      - pageID: 62004
+        verses:
+        - verse: "Moses said to God, \u201CSuppose I go to the Israelites and say
+            to them, \u2018The God of your fathers has sent me to you,\u2019 and
+            they ask me, \u2018What is his name?\u2019 Then what shall I tell them?\u201D"
+        - verse: "God said to Moses, \u201CI am who I am. This is what you are to
+            say to the Israelites: \u2018I am has sent me to you.\u2019\u201D"
+      - pageID: 72004
+        verses:
+        - verse: "God also said to Moses, \u201CSay to the Israelites, \u2018The
+            Lord, the God of your fathers\u2014the God of Abraham, the God of Isaac
+            and the God of Jacob\u2014has sent me to you.\u2019\r\n\r\n\u201CThis
+            is my name forever,\r\n    the name you shall call me\r\n    from generation
+            to generation."
+        - verse: "\u201CGo, assemble the elders of Israel and say to them, \u2018The
+            Lord, the God of your fathers\u2014the God of Abraham, Isaac and Jacob\u2014appeared
+            to me and said: I have watched over you and have seen what has been done
+            to you in Egypt."
+      - pageID: 82004
+        verses:
+        - verse: "And I have promised to bring you up out of your misery in Egypt
+            into the land of the Canaanites, Hittites, Amorites, Perizzites, Hivites
+            and Jebusites\u2014a land flowing with milk and honey.\u2019"
+        - verse: "\u201CThe elders of Israel will listen to you. Then you and the
+            elders are to go to the king of Egypt and say to him, \u2018The Lord,
+            the God of the Hebrews, has met with us. Let us take a three-day journey
+            into the wilderness to offer sacrifices to the Lord our God.\u2019"
+      - pageID: 92004
+        verses:
+        - verse: But I know that the king of Egypt will not let you go unless a mighty
+            hand compels him.
+        - verse: So I will stretch out my hand and strike the Egyptians with all
+            the wonders that I will perform among them. After that, he will let you
+            go.
+        - verse: "\u201CAnd I will make the Egyptians favorably disposed toward this
+            people, so that when you leave you will not go empty-handed."
+      - pageID: 102004
+        verses:
+        - verse: "Every woman is to ask her neighbor and any woman living in her
+            house for articles of silver and gold and for clothing, which you will
+            put on your sons and daughters. And so you will plunder the Egyptians.\u201D"
+    - passageID: 2005
+      title: Signs for Moses
+      pages:
+      - pageID: 12005
+        verses:
+        - verse: "Moses answered, \u201CWhat if they do not believe me or listen
+            to me and say, \u2018The Lord did not appear to you\u2019?\u201D"
+        - verse: "Then the Lord said to him, \u201CWhat is that in your hand?\u201D\r\n\r\n\u201CA
+            staff,\u201D he replied."
+        - verse: "The Lord said, \u201CThrow it on the ground.\u201D\r\n\r\nMoses
+            threw it on the ground and it became a snake, and he ran from it."
+      - pageID: 22005
+        verses:
+        - verse: "Then the Lord said to him, \u201CReach out your hand and take it
+            by the tail.\u201D So Moses reached out and took hold of the snake and
+            it turned back into a staff in his hand."
+        - verse: "\u201CThis,\u201D said the Lord, \u201Cis so that they may believe
+            that the Lord, the God of their fathers\u2014the God of Abraham, the
+            God of Isaac and the God of Jacob\u2014has appeared to you.\u201D"
+      - pageID: 32005
+        verses:
+        - verse: "Then the Lord said, \u201CPut your hand inside your cloak.\u201D
+            So Moses put his hand into his cloak, and when he took it out, the skin
+            was leprous\u2014it had become as white as snow."
+        - verse: "\u201CNow put it back into your cloak,\u201D he said. So Moses
+            put his hand back into his cloak, and when he took it out, it was restored,
+            like the rest of his flesh."
+        - verse: "Then the Lord said, \u201CIf they do not believe you or pay attention
+            to the first sign, they may believe the second."
+      - pageID: 42005
+        verses:
+        - verse: "But if they do not believe these two signs or listen to you, take
+            some water from the Nile and pour it on the dry ground. The water you
+            take from the river will become blood on the ground.\u201D"
+        - verse: "Moses said to the Lord, \u201CPardon your servant, Lord. I have
+            never been eloquent, neither in the past nor since you have spoken to
+            your servant. I am slow of speech and tongue.\u201D"
+      - pageID: 52005
+        verses:
+        - verse: "The Lord said to him, \u201CWho gave human beings their mouths?
+            Who makes them deaf or mute? Who gives them sight or makes them blind?
+            Is it not I, the Lord?"
+        - verse: "Now go; I will help you speak and will teach you what to say.\u201D"
+        - verse: "But Moses said, \u201CPardon your servant, Lord. Please send someone
+            else.\u201D"
+      - pageID: 62005
+        verses:
+        - verse: "Then the Lord\u2019s anger burned against Moses and he said, \u201CWhat
+            about your brother, Aaron the Levite? I know he can speak well. He is
+            already on his way to meet you, and he will be glad to see you."
+        - verse: You shall speak to him and put words in his mouth; I will help both
+            of you speak and will teach you what to do.
+        - verse: He will speak to the people for you, and it will be as if he were
+            your mouth and as if you were God to him.
+        - verse: "But take this staff in your hand so you can perform the signs with
+            it.\u201D"
+    - passageID: 2006
+      title: Moses Returns to Egypt
+      pages:
+      - pageID: 12006
+        verses:
+        - verse: "Then Moses went back to Jethro his father-in-law and said to him,
+            \u201CLet me return to my own people in Egypt to see if any of them are
+            still alive.\u201D\r\n\r\nJethro said, \u201CGo, and I wish you well.\u201D"
+        - verse: "Now the Lord had said to Moses in Midian, \u201CGo back to Egypt,
+            for all those who wanted to kill you are dead.\u201D"
+      - pageID: 22006
+        verses:
+        - verse: So Moses took his wife and sons, put them on a donkey and started
+            back to Egypt. And he took the staff of God in his hand.
+        - verse: "The Lord said to Moses, \u201CWhen you return to Egypt, see that
+            you perform before Pharaoh all the wonders I have given you the power
+            to do. But I will harden his heart so that he will not let the people
+            go."
+        - verse: "Then say to Pharaoh, \u2018This is what the Lord says: Israel is
+            my firstborn son,"
+      - pageID: 32006
+        verses:
+        - verse: "and I told you, \u201CLet my son go, so he may worship me.\u201D
+            But you refused to let him go; so I will kill your firstborn son.\u2019\u201D"
+        - verse: At a lodging place on the way, the Lord met Moses and was about
+            to kill him.
+      - pageID: 42006
+        verses:
+        - verse: "But Zipporah took a flint knife, cut off her son\u2019s foreskin
+            and touched Moses\u2019 feet with it. \u201CSurely you are a bridegroom
+            of blood to me,\u201D she said."
+        - verse: "So the Lord let him alone. (At that time she said \u201Cbridegroom
+            of blood,\u201D referring to circumcision.)"
+      - pageID: 52006
+        verses:
+        - verse: "The Lord said to Aaron, \u201CGo into the wilderness to meet Moses.\u201D
+            So he met Moses at the mountain of God and kissed him."
+        - verse: Then Moses told Aaron everything the Lord had sent him to say, and
+            also about all the signs he had commanded him to perform.
+        - verse: Moses and Aaron brought together all the elders of the Israelites,
+      - pageID: 62006
+        verses:
+        - verse: and Aaron told them everything the Lord had said to Moses. He also
+            performed the signs before the people,
+        - verse: and they believed. And when they heard that the Lord was concerned
+            about them and had seen their misery, they bowed down and worshiped.
+    - passageID: 2007
+      title: Bricks Without Straw
+      pages:
+      - pageID: 12007
+        verses:
+        - verse: "Afterward Moses and Aaron went to Pharaoh and said, \u201CThis
+            is what the Lord, the God of Israel, says: \u2018Let my people go, so
+            that they may hold a festival to me in the wilderness.\u2019\u201D"
+        - verse: "Pharaoh said, \u201CWho is the Lord, that I should obey him and
+            let Israel go? I do not know the Lord and I will not let Israel go.\u201D"
+      - pageID: 22007
+        verses:
+        - verse: "Then they said, \u201CThe God of the Hebrews has met with us. Now
+            let us take a three-day journey into the wilderness to offer sacrifices
+            to the Lord our God, or he may strike us with plagues or with the sword.\u201D"
+        - verse: "But the king of Egypt said, \u201CMoses and Aaron, why are you
+            taking the people away from their labor? Get back to your work!\u201D"
+        - verse: "Then Pharaoh said, \u201CLook, the people of the land are now numerous,
+            and you are stopping them from working.\u201D"
+      - pageID: 32007
+        verses:
+        - verse: 'That same day Pharaoh gave this order to the slave drivers and
+            overseers in charge of the people:'
+        - verse: "\u201CYou are no longer to supply the people with straw for making
+            bricks; let them go and gather their own straw."
+        - verse: "But require them to make the same number of bricks as before; don\u2019t
+            reduce the quota. They are lazy; that is why they are crying out, \u2018Let
+            us go and sacrifice to our God.\u2019"
+      - pageID: 42007
+        verses:
+        - verse: "Make the work harder for the people so that they keep working and
+            pay no attention to lies.\u201D"
+        - verse: "Then the slave drivers and the overseers went out and said to the
+            people, \u201CThis is what Pharaoh says: \u2018I will not give you any
+            more straw."
+        - verse: "Go and get your own straw wherever you can find it, but your work
+            will not be reduced at all.\u2019\u201D"
+      - pageID: 52007
+        verses:
+        - verse: "So the people scattered all over Egypt to gather stubble to use
+            for straw. 13 The slave drivers kept pressing them, saying, \u201CComplete
+            the work required of you for each day, just as when you had straw.\u201D"
+        - verse: "The slave drivers kept pressing them, saying, \u201CComplete the
+            work required of you for each day, just as when you had straw.\u201D"
+        - verse: "And Pharaoh\u2019s slave drivers beat the Israelite overseers they
+            had appointed, demanding, \u201CWhy haven\u2019t you met your quota of
+            bricks yesterday or today, as before?\u201D"
+      - pageID: 62007
+        verses:
+        - verse: "Then the Israelite overseers went and appealed to Pharaoh: \u201CWhy
+            have you treated your servants this way?"
+        - verse: "Your servants are given no straw, yet we are told, \u2018Make bricks!\u2019
+            Your servants are being beaten, but the fault is with your own people.\u201D"
+      - pageID: 72007
+        verses:
+        - verse: "Pharaoh said, \u201CLazy, that\u2019s what you are\u2014lazy! That
+            is why you keep saying, \u2018Let us go and sacrifice to the Lord.\u2019"
+        - verse: "Now get to work. You will not be given any straw, yet you must
+            produce your full quota of bricks.\u201D"
+      - pageID: 82007
+        verses:
+        - verse: "The Israelite overseers realized they were in trouble when they
+            were told, \u201CYou are not to reduce the number of bricks required
+            of you for each day.\u201D"
+        - verse: When they left Pharaoh, they found Moses and Aaron waiting to meet
+            them,
+        - verse: "and they said, \u201CMay the Lord look on you and judge you! You
+            have made us obnoxious to Pharaoh and his officials and have put a sword
+            in their hand to kill us.\u201D"
+    - passageID: 2008
+      title: God Promises Deliverence
+      pages:
+      - pageID: 12008
+        verses:
+        - verse: "Moses returned to the Lord and said, \u201CWhy, Lord, why have
+            you brought trouble on this people? Is this why you sent me?"
+        - verse: "Ever since I went to Pharaoh to speak in your name, he has brought
+            trouble on this people, and you have not rescued your people at all.\u201D"
+      - pageID: 22008
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CNow you will see what I will
+            do to Pharaoh: Because of my mighty hand he will let them go; because
+            of my mighty hand he will drive them out of his country.\u201D"
+        - verse: "God also said to Moses, \u201CI am the Lord."
+      - pageID: 32008
+        verses:
+        - verse: 'I appeared to Abraham, to Isaac and to Jacob as God Almighty, but
+            by my name the Lord I did not make myself fully known to them. '
+        - verse: 'I also established my covenant with them to give them the land
+            of Canaan, where they resided as foreigners. '
+        - verse: Moreover, I have heard the groaning of the Israelites, whom the
+            Egyptians are enslaving, and I have remembered my covenant.
+      - pageID: 42008
+        verses:
+        - verse: "\u201CTherefore, say to the Israelites: \u2018I am the Lord, and
+            I will bring you out from under the yoke of the Egyptians. I will free
+            you from being slaves to them, and I will redeem you with an outstretched
+            arm and with mighty acts of judgment."
+      - pageID: 52008
+        verses:
+        - verse: I will take you as my own people, and I will be your God. Then you
+            will know that I am the Lord your God, who brought you out from under
+            the yoke of the Egyptians.
+        - verse: "And I will bring you to the land I swore with uplifted hand to
+            give to Abraham, to Isaac and to Jacob. I will give it to you as a possession.
+            I am the Lord.\u2019\u201D"
+      - pageID: 62008
+        verses:
+        - verse: Moses reported this to the Israelites, but they did not listen to
+            him because of their discouragement and harsh labor.
+        - verse: Then the Lord said to Moses,
+        - verse: "\u201CGo, tell Pharaoh king of Egypt to let the Israelites go out
+            of his country.\u201D"
+      - pageID: 72008
+        verses:
+        - verse: "But Moses said to the Lord, \u201CIf the Israelites will not listen
+            to me, why would Pharaoh listen to me, since I speak with faltering lips?\u201D"
+    - passageID: 2009
+      title: Family Record of Moses and Aaron
+      pages:
+      - pageID: 12009
+        verses:
+        - verse: Now the Lord spoke to Moses and Aaron about the Israelites and Pharaoh
+            king of Egypt, and he commanded them to bring the Israelites out of Egypt.
+        - verse: 'These were the heads of their families:
+
+
+
+            The sons
+            of Reuben the firstborn son of Israel were Hanok and Pallu, Hezron and
+            Karmi. These were the clans of Reuben.'
+      - pageID: 22009
+        verses:
+        - verse: The sons of Simeon were Jemuel, Jamin, Ohad, Jakin, Zohar and Shaul
+            the son of a Canaanite woman. These were the clans of Simeon.
+        - verse: 'These were the names of the sons of Levi according to their records:
+            Gershon, Kohath and Merari. Levi lived 137 years.'
+      - pageID: 32009
+        verses:
+        - verse: The sons of Gershon, by clans, were Libni and Shimei.
+        - verse: The sons of Kohath were Amram, Izhar, Hebron and Uzziel. Kohath
+            lived 133 years.
+        - verse: 'The sons of Merari were Mahli and Mushi.
+
+
+
+            These were
+            the clans of Levi according to their records.'
+      - pageID: 42009
+        verses:
+        - verse: "Amram married his father\u2019s sister Jochebed, who bore him Aaron
+            and Moses. Amram lived 137 years."
+        - verse: The sons of Izhar were Korah, Nepheg and Zikri.
+        - verse: The sons of Uzziel were Mishael, Elzaphan and Sithri.
+      - pageID: 52009
+        verses:
+        - verse: Aaron married Elisheba, daughter of Amminadab and sister of Nahshon,
+            and she bore him Nadab and Abihu, Eleazar and Ithamar.
+        - verse: The sons of Korah were Assir, Elkanah and Abiasaph. These were the
+            Korahite clans.
+      - pageID: 62009
+        verses:
+        - verse: 'Eleazar son of Aaron married one of the daughters of Putiel, and
+            she bore him Phinehas.
+
+
+
+            These were the heads of the Levite
+            families, clan by clan.'
+        - verse: "It was this Aaron and Moses to whom the Lord said, \u201CBring
+            the Israelites out of Egypt by their divisions.\u201D"
+        - verse: "They were the ones who spoke to Pharaoh king of Egypt about bringing
+            the Israelites out of Egypt\u2014this same Moses and Aaron."
+    - passageID: 2010
+      title: Aaron to Speak for Moses
+      pages:
+      - pageID: 12010
+        verses:
+        - verse: Now when the Lord spoke to Moses in Egypt,
+        - verse: "he said to him, \u201CI am the Lord. Tell Pharaoh king of Egypt
+            everything I tell you.\u201D"
+        - verse: "But Moses said to the Lord, \u201CSince I speak with faltering
+            lips, why would Pharaoh listen to me?\u201D"
+      - pageID: 22010
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CSee, I have made you like God
+            to Pharaoh, and your brother Aaron will be your prophet."
+        - verse: You are to say everything I command you, and your brother Aaron
+            is to tell Pharaoh to let the Israelites go out of his country.
+      - pageID: 32010
+        verses:
+        - verse: "But I will harden Pharaoh\u2019s heart, and though I multiply my
+            signs and wonders in Egypt,"
+        - verse: he will not listen to you. Then I will lay my hand on Egypt and
+            with mighty acts of judgment I will bring out my divisions, my people
+            the Israelites.
+        - verse: "And the Egyptians will know that I am the Lord when I stretch out
+            my hand against Egypt and bring the Israelites out of it.\u201D"
+      - pageID: 42010
+        verses:
+        - verse: Moses and Aaron did just as the Lord commanded them.
+        - verse: Moses was eighty years old and Aaron eighty-three when they spoke
+            to Pharaoh.
+    - passageID: 2011
+      title: Aaron 's Staff Becomes a Snake
+      pages:
+      - pageID: 12011
+        verses:
+        - verse: 'The Lord said to Moses and Aaron, '
+        - verse: "\u201CWhen Pharaoh says to you, \u2018Perform a miracle,\u2019
+            then say to Aaron, \u2018Take your staff and throw it down before Pharaoh,\u2019
+            and it will become a snake.\u201D"
+        - verse: So Moses and Aaron went to Pharaoh and did just as the Lord commanded.
+            Aaron threw his staff down in front of Pharaoh and his officials, and
+            it became a snake.
+      - pageID: 22011
+        verses:
+        - verse: 'Pharaoh then summoned wise men and sorcerers, and the Egyptian
+            magicians also did the same things by their secret arts:'
+        - verse: "Each one threw down his staff and it became a snake. But Aaron\u2019s
+            staff swallowed up their staffs."
+        - verse: "Yet Pharaoh\u2019s heart became hard and he would not listen to
+            them, just as the Lord had said."
+    - passageID: 2012
+      title: The Plague of Blood
+      pages:
+      - pageID: 22012
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CPharaoh\u2019s heart is unyielding;
+            he refuses to let the people go."
+      - pageID: 32012
+        verses:
+        - verse: Go to Pharaoh in the morning as he goes out to the river. Confront
+            him on the bank of the Nile, and take in your hand the staff that was
+            changed into a snake.
+        - verse: "Then say to him, \u2018The Lord, the God of the Hebrews, has sent
+            me to say to you: Let my people go, so that they may worship me in the
+            wilderness. But until now you have not listened."
+        - verse: 'This is what the Lord says: By this you will know that I am the
+            Lord: With the staff that is in my hand I will strike the water of the
+            Nile, and it will be changed into blood.'
+      - pageID: 42012
+        verses:
+        - verse: "The fish in the Nile will die, and the river will stink; the Egyptians
+            will not be able to drink its water.\u2019\u201D"
+        - verse: "The Lord said to Moses, \u201CTell Aaron, \u2018Take your staff
+            and stretch out your hand over the waters of Egypt\u2014over the streams
+            and canals, over the ponds and all the reservoirs\u2014and they will
+            turn to blood.\u2019 Blood will be everywhere in Egypt, even in vessels
+            of wood and stone.\u201D"
+      - pageID: 52012
+        verses:
+        - verse: Moses and Aaron did just as the Lord had commanded. He raised his
+            staff in the presence of Pharaoh and his officials and struck the water
+            of the Nile, and all the water was changed into blood.
+        - verse: The fish in the Nile died, and the river smelled so bad that the
+            Egyptians could not drink its water. Blood was everywhere in Egypt.
+      - pageID: 62012
+        verses:
+        - verse: "But the Egyptian magicians did the same things by their secret
+            arts, and Pharaoh\u2019s heart became hard; he would not listen to Moses
+            and Aaron, just as the Lord had said."
+        - verse: Instead, he turned and went into his palace, and did not take even
+            this to heart.
+        - verse: And all the Egyptians dug along the Nile to get drinking water,
+            because they could not drink the water of the river.
+    - passageID: 2013
+      title: The Plague of Frogs
+      pages:
+      - pageID: 12013
+        verses:
+        - verse: Seven days passed after the Lord struck the Nile.
+        - verse: "Then the Lord said to Moses, \u201CGo to Pharaoh and say to him,
+            \u2018This is what the Lord says: Let my people go, so that they may
+            worship me."
+        - verse: If you refuse to let them go, I will send a plague of frogs on your
+            whole country.
+      - pageID: 22013
+        verses:
+        - verse: The Nile will teem with frogs. They will come up into your palace
+            and your bedroom and onto your bed, into the houses of your officials
+            and on your people, and into your ovens and kneading troughs.
+        - verse: "The frogs will come up on you and your people and all your officials.\u2019\u201D"
+      - pageID: 32013
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CTell Aaron, \u2018Stretch out
+            your hand with your staff over the streams and canals and ponds, and
+            make frogs come up on the land of Egypt.\u2019\u201D"
+        - verse: So Aaron stretched out his hand over the waters of Egypt, and the
+            frogs came up and covered the land.
+      - pageID: 42013
+        verses:
+        - verse: But the magicians did the same things by their secret arts; they
+            also made frogs come up on the land of Egypt.
+        - verse: "Pharaoh summoned Moses and Aaron and said, \u201CPray to the Lord
+            to take the frogs away from me and my people, and I will let your people
+            go to offer sacrifices to the Lord.\u201D"
+      - pageID: 52013
+        verses:
+        - verse: "Moses said to Pharaoh, \u201CI leave to you the honor of setting
+            the time for me to pray for you and your officials and your people that
+            you and your houses may be rid of the frogs, except for those that remain
+            in the Nile.\u201D"
+        - verse: "\u201CTomorrow,\u201D Pharaoh said.\r\n\r\nMoses replied, \u201CIt
+            will be as you say, so that you may know there is no one like the Lord
+            our God."
+        - verse: "The frogs will leave you and your houses, your officials and your
+            people; they will remain only in the Nile.\u201D"
+      - pageID: 62013
+        verses:
+        - verse: After Moses and Aaron left Pharaoh, Moses cried out to the Lord
+            about the frogs he had brought on Pharaoh.
+        - verse: And the Lord did what Moses asked. The frogs died in the houses,
+            in the courtyards and in the fields.
+        - verse: They were piled into heaps, and the land reeked of them.
+        - verse: But when Pharaoh saw that there was relief, he hardened his heart
+            and would not listen to Moses and Aaron, just as the Lord had said.
+    - passageID: 2014
+      title: The Plague of Gnats
+      pages:
+      - pageID: 12014
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CTell Aaron, \u2018Stretch out
+            your staff and strike the dust of the ground,\u2019 and throughout the
+            land of Egypt the dust will become gnats.\u201D"
+        - verse: They did this, and when Aaron stretched out his hand with the staff
+            and struck the dust of the ground, gnats came on people and animals.
+            All the dust throughout the land of Egypt became gnats.
+      - pageID: 22014
+        verses:
+        - verse: 'But when the magicians tried to produce gnats by their secret arts,
+            they could not.
+
+
+
+            Since the gnats were on people and animals
+            everywhere,'
+        - verse: "the magicians said to Pharaoh, \u201CThis is the finger of God.\u201D
+            But Pharaoh\u2019s heart was hard and he would not listen, just as the
+            Lord had said."
+    - passageID: 2015
+      title: The Plague of Flies
+      pages:
+      - pageID: 12015
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CGet up early in the morning
+            and confront Pharaoh as he goes to the river and say to him, \u2018This
+            is what the Lord says: Let my people go, so that they may worship me."
+        - verse: If you do not let my people go, I will send swarms of flies on you
+            and your officials, on your people and into your houses. The houses of
+            the Egyptians will be full of flies; even the ground will be covered
+            with them.
+      - pageID: 22015
+        verses:
+        - verse: "\u201C\u2018But on that day I will deal differently with the land
+            of Goshen, where my people live; no swarms of flies will be there, so
+            that you will know that I, the Lord, am in this land."
+        - verse: "I will make a distinction between my people and your people. This
+            sign will occur tomorrow.\u2019\u201D"
+      - pageID: 32015
+        verses:
+        - verse: "And the Lord did this. Dense swarms of flies poured into Pharaoh\u2019s
+            palace and into the houses of his officials; throughout Egypt the land
+            was ruined by the flies."
+        - verse: "Then Pharaoh summoned Moses and Aaron and said, \u201CGo, sacrifice
+            to your God here in the land.\u201D"
+      - pageID: 42015
+        verses:
+        - verse: "But Moses said, \u201CThat would not be right. The sacrifices we
+            offer the Lord our God would be detestable to the Egyptians. And if we
+            offer sacrifices that are detestable in their eyes, will they not stone
+            us?"
+        - verse: "We must take a three-day journey into the wilderness to offer sacrifices
+            to the Lord our God, as he commands us.\u201D"
+      - pageID: 52015
+        verses:
+        - verse: "Pharaoh said, \u201CI will let you go to offer sacrifices to the
+            Lord your God in the wilderness, but you must not go very far. Now pray
+            for me.\u201D"
+        - verse: "Moses answered, \u201CAs soon as I leave you, I will pray to the
+            Lord, and tomorrow the flies will leave Pharaoh and his officials and
+            his people. Only let Pharaoh be sure that he does not act deceitfully
+            again by not letting the people go to offer sacrifices to the Lord.\u201D"
+        - verse: Then Moses left Pharaoh and prayed to the Lord,
+      - pageID: 62015
+        verses:
+        - verse: and the Lord did what Moses asked. The flies left Pharaoh and his
+            officials and his people; not a fly remained.
+        - verse: But this time also Pharaoh hardened his heart and would not let
+            the people go.
+    - passageID: 2016
+      title: The Plague of Livestock
+      pages:
+      - pageID: 12016
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CGo to Pharaoh and say to him,
+            \u2018This is what the Lord, the God of the Hebrews, says: \u201CLet
+            my people go, so that they may worship me.\u201D"
+        - verse: If you refuse to let them go and continue to hold them back,
+        - verse: "the hand of the Lord will bring a terrible plague on your livestock
+            in the field\u2014on your horses, donkeys and camels and on your cattle,
+            sheep and goats."
+      - pageID: 22016
+        verses:
+        - verse: "But the Lord will make a distinction between the livestock of Israel
+            and that of Egypt, so that no animal belonging to the Israelites will
+            die.\u2019\u201D"
+        - verse: "The Lord set a time and said, \u201CTomorrow the Lord will do this
+            in the land.\u201D"
+      - pageID: 32016
+        verses:
+        - verse: 'And the next day the Lord did it: All the livestock of the Egyptians
+            died, but not one animal belonging to the Israelites died.'
+        - verse: Pharaoh investigated and found that not even one of the animals
+            of the Israelites had died. Yet his heart was unyielding and he would
+            not let the people go.
+    - passageID: 2017
+      title: The Plague of Boils
+      pages:
+      - pageID: 12017
+        verses:
+        - verse: "Then the Lord said to Moses and Aaron, \u201CTake handfuls of soot
+            from a furnace and have Moses toss it into the air in the presence of
+            Pharaoh."
+        - verse: "It will become fine dust over the whole land of Egypt, and festering
+            boils will break out on people and animals throughout the land.\u201D"
+      - pageID: 22017
+        verses:
+        - verse: So they took soot from a furnace and stood before Pharaoh. Moses
+            tossed it into the air, and festering boils broke out on people and animals.
+        - verse: The magicians could not stand before Moses because of the boils
+            that were on them and on all the Egyptians.
+        - verse: "But the Lord hardened Pharaoh\u2019s heart and he would not listen
+            to Moses and Aaron, just as the Lord had said to Moses."
+    - passageID: 2018
+      title: The Plague of Hail
+      pages:
+      - pageID: 12018
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CGet up early in the morning,
+            confront Pharaoh and say to him, \u2018This is what the Lord, the God
+            of the Hebrews, says: Let my people go, so that they may worship me,"
+        - verse: or this time I will send the full force of my plagues against you
+            and against your officials and your people, so you may know that there
+            is no one like me in all the earth.
+      - pageID: 22018
+        verses:
+        - verse: For by now I could have stretched out my hand and struck you and
+            your people with a plague that would have wiped you off the earth.
+        - verse: But I have raised you up for this very purpose, that I might show
+            you my power and that my name might be proclaimed in all the earth.
+        - verse: You still set yourself against my people and will not let them go.
+      - pageID: 32018
+        verses:
+        - verse: Therefore, at this time tomorrow I will send the worst hailstorm
+            that has ever fallen on Egypt, from the day it was founded till now.
+        - verse: "Give an order now to bring your livestock and everything you have
+            in the field to a place of shelter, because the hail will fall on every
+            person and animal that has not been brought in and is still out in the
+            field, and they will die.\u2019\u201D"
+      - pageID: 42018
+        verses:
+        - verse: Those officials of Pharaoh who feared the word of the Lord hurried
+            to bring their slaves and their livestock inside.
+        - verse: But those who ignored the word of the Lord left their slaves and
+            livestock in the field.
+      - pageID: 52018
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CStretch out your hand toward
+            the sky so that hail will fall all over Egypt\u2014on people and animals
+            and on everything growing in the fields of Egypt.\u201D"
+        - verse: When Moses stretched out his staff toward the sky, the Lord sent
+            thunder and hail, and lightning flashed down to the ground. So the Lord
+            rained hail on the land of Egypt;
+      - pageID: 62018
+        verses:
+        - verse: hail fell and lightning flashed back and forth. It was the worst
+            storm in all the land of Egypt since it had become a nation.
+        - verse: "Throughout Egypt hail struck everything in the fields\u2014both
+            people and animals; it beat down everything growing in the fields and
+            stripped every tree."
+        - verse: The only place it did not hail was the land of Goshen, where the
+            Israelites were.
+      - pageID: 72018
+        verses:
+        - verse: "Then Pharaoh summoned Moses and Aaron. \u201CThis time I have sinned,\u201D
+            he said to them. \u201CThe Lord is in the right, and I and my people
+            are in the wrong."
+        - verse: "Pray to the Lord, for we have had enough thunder and hail. I will
+            let you go; you don\u2019t have to stay any longer.\u201D"
+        - verse: "Moses replied, \u201CWhen I have gone out of the city, I will spread
+            out my hands in prayer to the Lord. The thunder will stop and there will
+            be no more hail, so you may know that the earth is the Lord\u2019s."
+        - verse: "But I know that you and your officials still do not fear the Lord
+            God.\u201D"
+      - pageID: 82018
+        verses:
+        - verse: (The flax and barley were destroyed, since the barley had headed
+            and the flax was in bloom.
+        - verse: The wheat and spelt, however, were not destroyed, because they ripen
+            later.)
+        - verse: Then Moses left Pharaoh and went out of the city. He spread out
+            his hands toward the Lord; the thunder and hail stopped, and the rain
+            no longer poured down on the land.
+      - pageID: 92018
+        verses:
+        - verse: 'When Pharaoh saw that the rain and hail and thunder had stopped,
+            he sinned again: He and his officials hardened their hearts.'
+        - verse: "So Pharaoh\u2019s heart was hard and he would not let the Israelites
+            go, just as the Lord had said through Moses."
+    - passageID: 2019
+      title: The Plague of Locusts
+      pages:
+      - pageID: 12019
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CGo to Pharaoh, for I have hardened
+            his heart and the hearts of his officials so that I may perform these
+            signs of mine among them"
+        - verse: "that you may tell your children and grandchildren how I dealt harshly
+            with the Egyptians and how I performed my signs among them, and that
+            you may know that I am the Lord.\u201D"
+      - pageID: 22019
+        verses:
+        - verse: "So Moses and Aaron went to Pharaoh and said to him, \u201CThis
+            is what the Lord, the God of the Hebrews, says: \u2018How long will you
+            refuse to humble yourself before me? Let my people go, so that they may
+            worship me."
+        - verse: If you refuse to let them go, I will bring locusts into your country
+            tomorrow.
+      - pageID: 32019
+        verses:
+        - verse: They will cover the face of the ground so that it cannot be seen.
+            They will devour what little you have left after the hail, including
+            every tree that is growing in your fields.
+        - verse: "They will fill your houses and those of all your officials and
+            all the Egyptians\u2014something neither your parents nor your ancestors
+            have ever seen from the day they settled in this land till now.\u2019\u201D
+            Then Moses turned and left Pharaoh."
+      - pageID: 42019
+        verses:
+        - verse: "Pharaoh\u2019s officials said to him, \u201CHow long will this
+            man be a snare to us? Let the people go, so that they may worship the
+            Lord their God. Do you not yet realize that Egypt is ruined?\u201D"
+        - verse: "Then Moses and Aaron were brought back to Pharaoh. \u201CGo, worship
+            the Lord your God,\u201D he said. \u201CBut tell me who will be going.\u201D"
+      - pageID: 52019
+        verses:
+        - verse: "Moses answered, \u201CWe will go with our young and our old, with
+            our sons and our daughters, and with our flocks and herds, because we
+            are to celebrate a festival to the Lord.\u201D"
+        - verse: "Pharaoh said, \u201CThe Lord be with you\u2014if I let you go,
+            along with your women and children! Clearly you are bent on evil."
+        - verse: "No! Have only the men go and worship the Lord, since that\u2019s
+            what you have been asking for.\u201D Then Moses and Aaron were driven
+            out of Pharaoh\u2019s presence."
+      - pageID: 62019
+        verses:
+        - verse: "And the Lord said to Moses, \u201CStretch out your hand over Egypt
+            so that locusts swarm over the land and devour everything growing in
+            the fields, everything left by the hail.\u201D"
+        - verse: So Moses stretched out his staff over Egypt, and the Lord made an
+            east wind blow across the land all that day and all that night. By morning
+            the wind had brought the locusts;
+      - pageID: 72019
+        verses:
+        - verse: they invaded all Egypt and settled down in every area of the country
+            in great numbers. Never before had there been such a plague of locusts,
+            nor will there ever be again.
+        - verse: "They covered all the ground until it was black. They devoured all
+            that was left after the hail\u2014everything growing in the fields and
+            the fruit on the trees. Nothing green remained on tree or plant in all
+            the land of Egypt."
+      - pageID: 82019
+        verses:
+        - verse: "Pharaoh quickly summoned Moses and Aaron and said, \u201CI have
+            sinned against the Lord your God and against you."
+        - verse: "Now forgive my sin once more and pray to the Lord your God to take
+            this deadly plague away from me.\u201D"
+        - verse: Moses then left Pharaoh and prayed to the Lord.
+      - pageID: 92019
+        verses:
+        - verse: And the Lord changed the wind to a very strong west wind, which
+            caught up the locusts and carried them into the Red Sea. Not a locust
+            was left anywhere in Egypt.
+        - verse: "But the Lord hardened Pharaoh\u2019s heart, and he would not let
+            the Israelites go."
+    - passageID: 2020
+      title: The Plague of Darkness
+      pages:
+      - pageID: 12020
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CStretch out your hand toward
+            the sky so that darkness spreads over Egypt\u2014darkness that can be
+            felt.\u201D"
+        - verse: So Moses stretched out his hand toward the sky, and total darkness
+            covered all Egypt for three days.
+        - verse: No one could see anyone else or move about for three days. Yet all
+            the Israelites had light in the places where they lived.
+      - pageID: 22020
+        verses:
+        - verse: "Then Pharaoh summoned Moses and said, \u201CGo, worship the Lord.
+            Even your women and children may go with you; only leave your flocks
+            and herds behind.\u201D"
+        - verse: "But Moses said, \u201CYou must allow us to have sacrifices and
+            burnt offerings to present to the Lord our God."
+      - pageID: 32020
+        verses:
+        - verse: "Our livestock too must go with us; not a hoof is to be left behind.
+            We have to use some of them in worshiping the Lord our God, and until
+            we get there we will not know what we are to use to worship the Lord.\u201D"
+        - verse: "But the Lord hardened Pharaoh\u2019s heart, and he was not willing
+            to let them go."
+      - pageID: 42020
+        verses:
+        - verse: "Pharaoh said to Moses, \u201CGet out of my sight! Make sure you
+            do not appear before me again! The day you see my face you will die.\u201D"
+        - verse: "\u201CJust as you say,\u201D Moses replied. \u201CI will never
+            appear before you again.\u201D"
+    - passageID: 2021
+      title: The Plague on the Firstborn
+      pages:
+      - pageID: 12021
+        verses:
+        - verse: "Now the Lord had said to Moses, \u201CI will bring one more plague
+            on Pharaoh and on Egypt. After that, he will let you go from here, and
+            when he does, he will drive you out completely."
+        - verse: "Tell the people that men and women alike are to ask their neighbors
+            for articles of silver and gold.\u201D"
+        - verse: "(The Lord made the Egyptians favorably disposed toward the people,
+            and Moses himself was highly regarded in Egypt by Pharaoh\u2019s officials
+            and by the people.)"
+      - pageID: 22021
+        verses:
+        - verse: "So Moses said, \u201CThis is what the Lord says: \u2018About midnight
+            I will go throughout Egypt."
+        - verse: Every firstborn son in Egypt will die, from the firstborn son of
+            Pharaoh, who sits on the throne, to the firstborn son of the female slave,
+            who is at her hand mill, and all the firstborn of the cattle as well.
+        - verse: "There will be loud wailing throughout Egypt\u2014worse than there
+            has ever been or ever will be again."
+      - pageID: 32021
+        verses:
+        - verse: "But among the Israelites not a dog will bark at any person or animal.\u2019
+            Then you will know that the Lord makes a distinction between Egypt and
+            Israel."
+        - verse: "All these officials of yours will come to me, bowing down before
+            me and saying, \u2018Go, you and all the people who follow you!\u2019
+            After that I will leave.\u201D Then Moses, hot with anger, left Pharaoh."
+      - pageID: 42021
+        verses:
+        - verse: "The Lord had said to Moses, \u201CPharaoh will refuse to listen
+            to you\u2014so that my wonders may be multiplied in Egypt.\u201D"
+        - verse: "Moses and Aaron performed all these wonders before Pharaoh, but
+            the Lord hardened Pharaoh\u2019s heart, and he would not let the Israelites
+            go out of his country."
+    - passageID: 2022
+      title: The Passover and the Festival of Uneleavened Bread
+      pages:
+      - pageID: 12022
+        verses:
+        - verse: The Lord said to Moses and Aaron in Egypt,
+        - verse: "\u201CThis month is to be for you the first month, the first month
+            of your year."
+        - verse: Tell the whole community of Israel that on the tenth day of this
+            month each man is to take a lamb for his family, one for each household.
+      - pageID: 22022
+        verses:
+        - verse: If any household is too small for a whole lamb, they must share
+            one with their nearest neighbor, having taken into account the number
+            of people there are. You are to determine the amount of lamb needed in
+            accordance with what each person will eat.
+        - verse: The animals you choose must be year-old males without defect, and
+            you may take them from the sheep or the goats.
+      - pageID: 32022
+        verses:
+        - verse: Take care of them until the fourteenth day of the month, when all
+            the members of the community of Israel must slaughter them at twilight.
+        - verse: Then they are to take some of the blood and put it on the sides
+            and tops of the doorframes of the houses where they eat the lambs.
+      - pageID: 42022
+        verses:
+        - verse: That same night they are to eat the meat roasted over the fire,
+            along with bitter herbs, and bread made without yeast.
+        - verse: "Do not eat the meat raw or boiled in water, but roast it over a
+            fire\u2014with the head, legs and internal organs."
+        - verse: Do not leave any of it till morning; if some is left till morning,
+            you must burn it.
+      - pageID: 52022
+        verses:
+        - verse: "This is how you are to eat it: with your cloak tucked into your
+            belt, your sandals on your feet and your staff in your hand. Eat it in
+            haste; it is the Lord\u2019s Passover."
+        - verse: "\u201COn that same night I will pass through Egypt and strike down
+            every firstborn of both people and animals, and I will bring judgment
+            on all the gods of Egypt. I am the Lord."
+      - pageID: 62022
+        verses:
+        - verse: The blood will be a sign for you on the houses where you are, and
+            when I see the blood, I will pass over you. No destructive plague will
+            touch you when I strike Egypt.
+        - verse: "\u201CThis is a day you are to commemorate; for the generations
+            to come you shall celebrate it as a festival to the Lord\u2014a lasting
+            ordinance."
+      - pageID: 72022
+        verses:
+        - verse: For seven days you are to eat bread made without yeast. On the first
+            day remove the yeast from your houses, for whoever eats anything with
+            yeast in it from the first day through the seventh must be cut off from
+            Israel.
+        - verse: On the first day hold a sacred assembly, and another one on the
+            seventh day. Do no work at all on these days, except to prepare food
+            for everyone to eat; that is all you may do.
+      - pageID: 82022
+        verses:
+        - verse: " \u201CCelebrate the Festival of Unleavened Bread, because it was
+            on this very day that I brought your divisions out of Egypt. Celebrate
+            this day as a lasting ordinance for the generations to come."
+      - pageID: 92022
+        verses:
+        - verse: In the first month you are to eat bread made without yeast, from
+            the evening of the fourteenth day until the evening of the twenty-first
+            day.
+        - verse: For seven days no yeast is to be found in your houses. And anyone,
+            whether foreigner or native-born, who eats anything with yeast in it
+            must be cut off from the community of Israel.
+        - verse: "Eat nothing made with yeast. Wherever you live, you must eat unleavened
+            bread.\u201D"
+      - pageID: 102022
+        verses:
+        - verse: "Then Moses summoned all the elders of Israel and said to them,
+            \u201CGo at once and select the animals for your families and slaughter
+            the Passover lamb."
+        - verse: Take a bunch of hyssop, dip it into the blood in the basin and put
+            some of the blood on the top and on both sides of the doorframe. None
+            of you shall go out of the door of your house until morning.
+      - pageID: 112022
+        verses:
+        - verse: When the Lord goes through the land to strike down the Egyptians,
+            he will see the blood on the top and sides of the doorframe and will
+            pass over that doorway, and he will not permit the destroyer to enter
+            your houses and strike you down.
+      - pageID: 122022
+        verses:
+        - verse: "\u201CObey these instructions as a lasting ordinance for you and
+            your descendants."
+        - verse: When you enter the land that the Lord will give you as he promised,
+            observe this ceremony.
+        - verse: "And when your children ask you, \u2018What does this ceremony mean
+            to you?\u2019"
+      - pageID: 132022
+        verses:
+        - verse: "then tell them, \u2018It is the Passover sacrifice to the Lord,
+            who passed over the houses of the Israelites in Egypt and spared our
+            homes when he struck down the Egyptians.\u2019\u201D Then the people
+            bowed down and worshiped."
+        - verse: The Israelites did just what the Lord commanded Moses and Aaron.
+      - pageID: 142022
+        verses:
+        - verse: At midnight the Lord struck down all the firstborn in Egypt, from
+            the firstborn of Pharaoh, who sat on the throne, to the firstborn of
+            the prisoner, who was in the dungeon, and the firstborn of all the livestock
+            as well.
+        - verse: Pharaoh and all his officials and all the Egyptians got up during
+            the night, and there was loud wailing in Egypt, for there was not a house
+            without someone dead.
+    - passageID: 2023
+      title: The Exodus
+      pages:
+      - pageID: 12023
+        verses:
+        - verse: "During the night Pharaoh summoned Moses and Aaron and said, \u201CUp!
+            Leave my people, you and the Israelites! Go, worship the Lord as you
+            have requested."
+        - verse: "Take your flocks and herds, as you have said, and go. And also
+            bless me.\u201D"
+        - verse: "The Egyptians urged the people to hurry and leave the country.
+            \u201CFor otherwise,\u201D they said, \u201Cwe will all die!\u201D"
+      - pageID: 22023
+        verses:
+        - verse: So the people took their dough before the yeast was added, and carried
+            it on their shoulders in kneading troughs wrapped in clothing.
+        - verse: The Israelites did as Moses instructed and asked the Egyptians for
+            articles of silver and gold and for clothing.
+      - pageID: 32023
+        verses:
+        - verse: The Lord had made the Egyptians favorably disposed toward the people,
+            and they gave them what they asked for; so they plundered the Egyptians.
+        - verse: The Israelites journeyed from Rameses to Sukkoth. There were about
+            six hundred thousand men on foot, besides women and children.
+        - verse: Many other people went up with them, and also large droves of livestock,
+            both flocks and herds.
+      - pageID: 42023
+        verses:
+        - verse: With the dough the Israelites had brought from Egypt, they baked
+            loaves of unleavened bread. The dough was without yeast because they
+            had been driven out of Egypt and did not have time to prepare food for
+            themselves.
+        - verse: Now the length of time the Israelite people lived in Egypt was 430
+            years.
+        - verse: "At the end of the 430 years, to the very day, all the Lord\u2019s
+            divisions left Egypt."
+      - pageID: 52023
+        verses:
+        - verse: Because the Lord kept vigil that night to bring them out of Egypt,
+            on this night all the Israelites are to keep vigil to honor the Lord
+            for the generations to come.
+    - passageID: 2024
+      title: Crossing the Sea
+      pages:
+      - pageID: 12024
+        verses:
+        - verse: "When Pharaoh let the people go, God did not lead them on the road
+            through the Philistine country, though that was shorter. For God said,
+            \u201CIf they face war, they might change their minds and return to Egypt.\u201D"
+        - verse: So God led the people around by the desert road toward the Red Sea.[a]
+            The Israelites went up out of Egypt ready for battle.
+      - pageID: 22024
+        verses:
+        - verse: "Moses took the bones of Joseph with him because Joseph had made
+            the Israelites swear an oath. He had said, \u201CGod will surely come
+            to your aid, and then you must carry my bones up with you from this place.\u201D"
+        - verse: After leaving Sukkoth they camped at Etham on the edge of the desert.
+      - pageID: 32024
+        verses:
+        - verse: By day the Lord went ahead of them in a pillar of cloud to guide
+            them on their way and by night in a pillar of fire to give them light,
+            so that they could travel by day or night.
+        - verse: Neither the pillar of cloud by day nor the pillar of fire by night
+            left its place in front of the people.
+        - verse: Then the Lord said to Moses,
+      - pageID: 42024
+        verses:
+        - verse: "\u201CTell the Israelites to turn back and encamp near Pi Hahiroth,
+            between Migdol and the sea. They are to encamp by the sea, directly opposite
+            Baal Zephon."
+        - verse: "Pharaoh will think, \u2018The Israelites are wandering around the
+            land in confusion, hemmed in by the desert.\u2019"
+        - verse: "And I will harden Pharaoh\u2019s heart, and he will pursue them.
+            But I will gain glory for myself through Pharaoh and all his army, and
+            the Egyptians will know that I am the Lord.\u201D So the Israelites did
+            this."
+      - pageID: 52024
+        verses:
+        - verse: "When the king of Egypt was told that the people had fled, Pharaoh
+            and his officials changed their minds about them and said, \u201CWhat
+            have we done? We have let the Israelites go and have lost their services!\u201D"
+        - verse: So he had his chariot made ready and took his army with him.
+      - pageID: 62024
+        verses:
+        - verse: He took six hundred of the best chariots, along with all the other
+            chariots of Egypt, with officers over all of them.
+        - verse: The Lord hardened the heart of Pharaoh king of Egypt, so that he
+            pursued the Israelites, who were marching out boldly.
+      - pageID: 72024
+        verses:
+        - verse: "The Egyptians\u2014all Pharaoh\u2019s horses and chariots, horsemen
+            and troops\u2014pursued the Israelites and overtook them as they camped
+            by the sea near Pi Hahiroth, opposite Baal Zephon."
+        - verse: As Pharaoh approached, the Israelites looked up, and there were
+            the Egyptians, marching after them. They were terrified and cried out
+            to the Lord.
+      - pageID: 82024
+        verses:
+        - verse: "They said to Moses, \u201CWas it because there were no graves in
+            Egypt that you brought us to the desert to die? What have you done to
+            us by bringing us out of Egypt?"
+        - verse: "Didn\u2019t we say to you in Egypt, \u2018Leave us alone; let us
+            serve the Egyptians\u2019? It would have been better for us to serve
+            the Egyptians than to die in the desert!\u201D"
+      - pageID: 92024
+        verses:
+        - verse: "Moses answered the people, \u201CDo not be afraid. Stand firm and
+            you will see the deliverance the Lord will bring you today. The Egyptians
+            you see today you will never see again."
+        - verse: "The Lord will fight for you; you need only to be still.\u201D"
+      - pageID: 102024
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CWhy are you crying out to me?
+            Tell the Israelites to move on."
+        - verse: Raise your staff and stretch out your hand over the sea to divide
+            the water so that the Israelites can go through the sea on dry ground.
+      - pageID: 112024
+        verses:
+        - verse: I will harden the hearts of the Egyptians so that they will go in
+            after them. And I will gain glory through Pharaoh and all his army, through
+            his chariots and his horsemen.
+        - verse: "The Egyptians will know that I am the Lord when I gain glory through
+            Pharaoh, his chariots and his horsemen.\u201D"
+      - pageID: 122024
+        verses:
+        - verse: "Then the angel of God, who had been traveling in front of Israel\u2019s
+            army, withdrew and went behind them. The pillar of cloud also moved from
+            in front and stood behind them,"
+        - verse: coming between the armies of Egypt and Israel. Throughout the night
+            the cloud brought darkness to the one side and light to the other side;
+            so neither went near the other all night long.
+      - pageID: 132024
+        verses:
+        - verse: Then Moses stretched out his hand over the sea, and all that night
+            the Lord drove the sea back with a strong east wind and turned it into
+            dry land. The waters were divided,
+        - verse: and the Israelites went through the sea on dry ground, with a wall
+            of water on their right and on their left.
+      - pageID: 142024
+        verses:
+        - verse: "The Egyptians pursued them, and all Pharaoh\u2019s horses and chariots
+            and horsemen followed them into the sea."
+        - verse: During the last watch of the night the Lord looked down from the
+            pillar of fire and cloud at the Egyptian army and threw it into confusion.
+      - pageID: 152024
+        verses:
+        - verse: "He jammed the wheels of their chariots so that they had difficulty
+            driving. And the Egyptians said, \u201CLet\u2019s get away from the Israelites!
+            The Lord is fighting for them against Egypt.\u201D"
+        - verse: "Then the Lord said to Moses, \u201CStretch out your hand over the
+            sea so that the waters may flow back over the Egyptians and their chariots
+            and horsemen.\u201D"
+      - pageID: 162024
+        verses:
+        - verse: Moses stretched out his hand over the sea, and at daybreak the sea
+            went back to its place. The Egyptians were fleeing toward it, and the
+            Lord swept them into the sea.
+        - verse: "The water flowed back and covered the chariots and horsemen\u2014the
+            entire army of Pharaoh that had followed the Israelites into the sea.
+            Not one of them survived."
+        - verse: But the Israelites went through the sea on dry ground, with a wall
+            of water on their right and on their left.
+      - pageID: 172024
+        verses:
+        - verse: That day the Lord saved Israel from the hands of the Egyptians,
+            and Israel saw the Egyptians lying dead on the shore.
+        - verse: And when the Israelites saw the mighty hand of the Lord displayed
+            against the Egyptians, the people feared the Lord and put their trust
+            in him and in Moses his servant.
+    - passageID: 2025
+      title: At Mount Sinai
+      pages:
+      - pageID: 12025
+        verses:
+        - verse: "On the first day of the third month after the Israelites left Egypt\u2014on
+            that very day\u2014they came to the Desert of Sinai."
+      - pageID: 22025
+        verses:
+        - verse: After they set out from Rephidim, they entered the Desert of Sinai,
+            and Israel camped there in the desert in front of the mountain.
+        - verse: "Then Moses went up to God, and the Lord called to him from the
+            mountain and said, \u201CThis is what you are to say to the descendants
+            of Jacob and what you are to tell the people of Israel:"
+      - pageID: 32025
+        verses:
+        - verse: "You yourselves have seen what I did to Egypt, and how I carried
+            you on eagles\u2019 wings and brought you to myself. "
+        - verse: Now if you obey me fully and keep my covenant, then out of all nations
+            you will be my treasured possession. Although the whole earth is mine,
+        - verse: "you will be for me a kingdom of priests and a holy nation.\u2019
+            These are the words you are to speak to the Israelites.\u201D"
+      - pageID: 42025
+        verses:
+        - verse: So Moses went back and summoned the elders of the people and set
+            before them all the words the Lord had commanded him to speak.
+        - verse: "The people all responded together, \u201CWe will do everything
+            the Lord has said.\u201D So Moses brought their answer back to the Lord."
+      - pageID: 52025
+        verses:
+        - verse: "The Lord said to Moses, \u201CI am going to come to you in a dense
+            cloud, so that the people will hear me speaking with you and will always
+            put their trust in you.\u201D Then Moses told the Lord what the people
+            had said."
+        - verse: "And the Lord said to Moses, \u201CGo to the people and consecrate
+            them today and tomorrow. Have them wash their clothes"
+        - verse: and be ready by the third day, because on that day the Lord will
+            come down on Mount Sinai in the sight of all the people.
+      - pageID: 62025
+        verses:
+        - verse: "Put limits for the people around the mountain and tell them, \u2018Be
+            careful that you do not approach the mountain or touch the foot of it.
+            Whoever touches the mountain is to be put to death."
+        - verse: "They are to be stoned or shot with arrows; not a hand is to be
+            laid on them. No person or animal shall be permitted to live.\u2019 Only
+            when the ram\u2019s horn sounds a long blast may they approach the mountain.\u201D"
+      - pageID: 72025
+        verses:
+        - verse: After Moses had gone down the mountain to the people, he consecrated
+            them, and they washed their clothes.
+        - verse: "Then he said to the people, \u201CPrepare yourselves for the third
+            day. Abstain from sexual relations.\u201D"
+      - pageID: 82025
+        verses:
+        - verse: On the morning of the third day there was thunder and lightning,
+            with a thick cloud over the mountain, and a very loud trumpet blast.
+            Everyone in the camp trembled.
+        - verse: Then Moses led the people out of the camp to meet with God, and
+            they stood at the foot of the mountain.
+      - pageID: 92025
+        verses:
+        - verse: Mount Sinai was covered with smoke, because the Lord descended on
+            it in fire. The smoke billowed up from it like smoke from a furnace,
+            and the whole mountain trembled violently.
+        - verse: As the sound of the trumpet grew louder and louder, Moses spoke
+            and the voice of God answered him.
+        - verse: The Lord descended to the top of Mount Sinai and called Moses to
+            the top of the mountain. So Moses went up
+      - pageID: 102025
+        verses:
+        - verse: "and the Lord said to him, \u201CGo down and warn the people so
+            they do not force their way through to see the Lord and many of them
+            perish."
+        - verse: "Even the priests, who approach the Lord, must consecrate themselves,
+            or the Lord will break out against them.\u201D"
+      - pageID: 112025
+        verses:
+        - verse: "Moses said to the Lord, \u201CThe people cannot come up Mount Sinai,
+            because you yourself warned us, \u2018Put limits around the mountain
+            and set it apart as holy.\u2019\u201D"
+        - verse: "The Lord replied, \u201CGo down and bring Aaron up with you. But
+            the priests and the people must not force their way through to come up
+            to the Lord, or he will break out against them.\u201D"
+        - verse: So Moses went down to the people and told them.
+    - passageID: 2026
+      title: The Ten Commandements
+      pages:
+      - pageID: 12026
+        verses:
+        - verse: 'And God spoke all these words:'
+        - verse: "\u201CI am the Lord your God, who brought you out of Egypt, out
+            of the land of slavery."
+        - verse: "\u201CYou shall have no other gods before me."
+      - pageID: 22026
+        verses:
+        - verse: "\u201CYou shall not make for yourself an image in the form of anything
+            in heaven above or on the earth beneath or in the waters below."
+        - verse: You shall not bow down to them or worship them; for I, the Lord
+            your God, am a jealous God, punishing the children for the sin of the
+            parents to the third and fourth generation of those who hate me,
+        - verse: but showing love to a thousand generations of those who love me
+            and keep my commandments.
+      - pageID: 32026
+        verses:
+        - verse: "\u201CYou shall not misuse the name of the Lord your God, for the
+            Lord will not hold anyone guiltless who misuses his name."
+        - verse: "\u201CRemember the Sabbath day by keeping it holy"
+        - verse: Six days you shall labor and do all your work,
+      - pageID: 42026
+        verses:
+        - verse: but the seventh day is a sabbath to the Lord your God. On it you
+            shall not do any work, neither you, nor your son or daughter, nor your
+            male or female servant, nor your animals, nor any foreigner residing
+            in your towns.
+        - verse: For in six days the Lord made the heavens and the earth, the sea,
+            and all that is in them, but he rested on the seventh day. Therefore
+            the Lord blessed the Sabbath day and made it holy.
+      - pageID: 52026
+        verses:
+        - verse: "\u201CHonor your father and your mother, so that you may live long
+            in the land the Lord your God is giving you."
+        - verse: "\u201CYou shall not murder."
+        - verse: "\u201CYou shall not commit adultery."
+        - verse: "\u201CYou shall not steal."
+        - verse: "\u201CYou shall not give false testimony against your neighbor."
+      - pageID: 62026
+        verses:
+        - verse: "\u201CYou shall not covet your neighbor\u2019s house. You shall
+            not covet your neighbor\u2019s wife, or his male or female servant, his
+            ox or donkey, or anything that belongs to your neighbor.\u201D"
+      - pageID: 72026
+        verses:
+        - verse: When the people saw the thunder and lightning and heard the trumpet
+            and saw the mountain in smoke, they trembled with fear. They stayed at
+            a distance
+        - verse: "and said to Moses, \u201CSpeak to us yourself and we will listen.
+            But do not have God speak to us or we will die.\u201D"
+      - pageID: 82026
+        verses:
+        - verse: "Moses said to the people, \u201CDo not be afraid. God has come
+            to test you, so that the fear of God will be with you to keep you from
+            sinning.\u201D"
+        - verse: The people remained at a distance, while Moses approached the thick
+            darkness where God was.
+    - passageID: 2027
+      title: Idols and Altars
+      pages:
+      - pageID: 12027
+        verses:
+        - verse: "Then the Lord said to Moses, \u201CTell the Israelites this: \u2018You
+            have seen for yourselves that I have spoken to you from heaven:"
+        - verse: Do not make any gods to be alongside me; do not make for yourselves
+            gods of silver or gods of gold.
+      - pageID: 22027
+        verses:
+        - verse: "\u201C\u2018Make an altar of earth for me and sacrifice on it your
+            burnt offerings and fellowship offerings, your sheep and goats and your
+            cattle. Wherever I cause my name to be honored, I will come to you and
+            bless you."
+        - verse: If you make an altar of stones for me, do not build it with dressed
+            stones, for you will defile it if you use a tool on it.
+        - verse: "And do not go up to my altar on steps, or your private parts may
+            be exposed.\u2019"
+  - bookID: 3
+    book: Leviticus
+    passages:
+    - passageID: 3001
+      title: Various Laws
+      pages:
+      - pageID: 13001
+        verses:
+        - verse: The Lord said to Moses,
+        - verse: "\u201CSpeak to the entire assembly of Israel and say to them: \u2018Be
+            holy because I, the Lord your God, am holy."
+      - pageID: 23001
+        verses:
+        - verse: "\u201C\u2018Each of you must respect your mother and father, and
+            you must observe my Sabbaths. I am the Lord your God."
+        - verse: "\u201C\u2018Do not turn to idols or make metal gods for yourselves.
+            I am the Lord your God."
+        - verse: "\u201C\u2018When you sacrifice a fellowship offering to the Lord,
+            sacrifice it in such a way that it will be accepted on your behalf."
+      - pageID: 33001
+        verses:
+        - verse: ' It shall be eaten on the day you sacrifice it or on the next day;
+            anything left over until the third day must be burned up.'
+        - verse: If any of it is eaten on the third day, it is impure and will not
+            be accepted.
+      - pageID: 43001
+        verses:
+        - verse: Whoever eats it will be held responsible because they have desecrated
+            what is holy to the Lord; they must be cut off from their people.
+      - pageID: 53001
+        verses:
+        - verse: "\u201C\u2018When you reap the harvest of your land, do not reap
+            to the very edges of your field or gather the gleanings of your harvest."
+      - pageID: 63001
+        verses:
+        - verse: Do not go over your vineyard a second time or pick up the grapes
+            that have fallen. Leave them for the poor and the foreigner. I am the
+            Lord your God.
+      - pageID: 73001
+        verses:
+        - verse: "\u201C\u2018Do not steal.\r\n\r\n\u201C\u2018Do not lie.\r\n\r\n\u201C\u2018Do
+            not deceive one another."
+        - verse: "\u201C\u2018Do not swear falsely by my name and so profane the
+            name of your God. I am the Lord."
+      - pageID: 83001
+        verses:
+        - verse: "\u201C\u2018Do not defraud or rob your neighbor.\r\n\r\n\u201C\u2018Do
+            not hold back the wages of a hired worker overnight."
+        - verse: "\u201C\u2018Do not curse the deaf or put a stumbling block in front
+            of the blind, but fear your God. I am the Lord."
+      - pageID: 93001
+        verses:
+        - verse: "\u201C\u2018Do not pervert justice; do not show partiality to the
+            poor or favoritism to the great, but judge your neighbor fairly."
+        - verse: "\u201C\u2018Do not go about spreading slander among your people.\n\n\u201C\u2018Do
+            not do anything that endangers your neighbor\u2019s life. I am the Lord."
+      - pageID: 103001
+        verses:
+        - verse: "\u201C\u2018Do not hate a fellow Israelite in your heart. Rebuke
+            your neighbor frankly so you will not share in their guilt."
+        - verse: "\u201C\u2018Do not seek revenge or bear a grudge against anyone
+            among your people, but love your neighbor as yourself. I am the Lord."
+      - pageID: 113001
+        verses:
+        - verse: "\u201C\u2018Keep my decrees.\r\n\r\n\u201C\u2018Do not mate different
+            kinds of animals.\r\n\r\n\u201C\u2018Do not plant your field with two
+            kinds of seed.\r\n\r\n\u201C\u2018Do not wear clothing woven of two kinds
+            of material."
+      - pageID: 123001
+        verses:
+        - verse: " \u201C\u2018If a man sleeps with a female slave who is promised
+            to another man but who has not been ransomed or given her freedom, there
+            must be due punishment.[a] Yet they are not to be put to death, because
+            she had not been freed."
+        - verse: The man, however, must bring a ram to the entrance to the tent of
+            meeting for a guilt offering to the Lord.
+      - pageID: 133001
+        verses:
+        - verse: With the ram of the guilt offering the priest is to make atonement
+            for him before the Lord for the sin he has committed, and his sin will
+            be forgiven.
+        - verse: "\u201C\u2018When you enter the land and plant any kind of fruit
+            tree, regard its fruit as forbidden.[b] For three years you are to consider
+            it forbidden; it must not be eaten."
+      - pageID: 143001
+        verses:
+        - verse: In the fourth year all its fruit will be holy, an offering of praise
+            to the Lord.
+        - verse: But in the fifth year you may eat its fruit. In this way your harvest
+            will be increased. I am the Lord your God.
+      - pageID: 153001
+        verses:
+        - verse: "\u201C\u2018Do not eat any meat with the blood still in it.\r\n\r\n\u201C\u2018Do
+            not practice divination or seek omens."
+        - verse: "\u201C\u2018Do not cut the hair at the sides of your head or clip
+            off the edges of your beard."
+        - verse: "\u201C\u2018Do not cut your bodies for the dead or put tattoo marks
+            on yourselves. I am the Lord."
+      - pageID: 163001
+        verses:
+        - verse: "\u201C\u2018Do not degrade your daughter by making her a prostitute,
+            or the land will turn to prostitution and be filled with wickedness."
+        - verse: "\u201C\u2018Observe my Sabbaths and have reverence for my sanctuary.
+            I am the Lord."
+        - verse: "\u201C\u2018Do not turn to mediums or seek out spiritists, for
+            you will be defiled by them. I am the Lord your God."
+      - pageID: 173001
+        verses:
+        - verse: "\u201C\u2018Stand up in the presence of the aged, show respect
+            for the elderly and revere your God. I am the Lord."
+        - verse: "\u201C\u2018When a foreigner resides among you in your land, do
+            not mistreat them."
+      - pageID: 183001
+        verses:
+        - verse: The foreigner residing among you must be treated as your native-born.
+            Love them as yourself, for you were foreigners in Egypt. I am the Lord
+            your God.
+        - verse: "\u201C\u2018Do not use dishonest standards when measuring length,
+            weight or quantity."
+      - pageID: 193001
+        verses:
+        - verse: Use honest scales and honest weights, an honest ephah and an honest
+            hin. I am the Lord your God, who brought you out of Egypt.
+        - verse: "\u201C\u2018Keep all my decrees and all my laws and follow them.
+            I am the Lord.\u2019\u201D"
+    - passageID: 3002
+      title: Punishment for Sin
+      pages:
+      - pageID: 13002
+        verses:
+        - verse: The Lord said to Moses,
+        - verse: "\u201CSay to the Israelites: \u2018Any Israelite or any foreigner
+            residing in Israel who sacrifices any of his children to Molek is to
+            be put to death. The members of the community are to stone him."
+      - pageID: 23002
+        verses:
+        - verse: I myself will set my face against him and will cut him off from
+            his people; for by sacrificing his children to Molek, he has defiled
+            my sanctuary and profaned my holy name.
+        - verse: If the members of the community close their eyes when that man sacrifices
+            one of his children to Molek and if they fail to put him to death,
+      - pageID: 33002
+        verses:
+        - verse: I myself will set my face against him and his family and will cut
+            them off from their people together with all who follow him in prostituting
+            themselves to Molek.
+        - verse: "\u201C\u2018I will set my face against anyone who turns to mediums
+            and spiritists to prostitute themselves by following them, and I will
+            cut them off from their people."
+      - pageID: 43002
+        verses:
+        - verse: "\u201C\u2018Consecrate yourselves and be holy, because I am the
+            Lord your God."
+        - verse: Keep my decrees and follow them. I am the Lord, who makes you holy.
+        - verse: "\u201C\u2018Anyone who curses their father or mother is to be put
+            to death. Because they have cursed their father or mother, their blood
+            will be on their own head."
+      - pageID: 53002
+        verses:
+        - verse: "\u201C\u2018If a man commits adultery with another man\u2019s wife\u2014with
+            the wife of his neighbor\u2014both the adulterer and the adulteress are
+            to be put to death."
+        - verse: "\u201C\u2018If a man has sexual relations with his father\u2019s
+            wife, he has dishonored his father. Both the man and the woman are to
+            be put to death; their blood will be on their own heads."
+      - pageID: 63002
+        verses:
+        - verse: " \u201C\u2018If a man has sexual relations with his daughter-in-law,
+            both of them are to be put to death. What they have done is a perversion;
+            their blood will be on their own heads."
+        - verse: "\u201C\u2018If a man has sexual relations with a man as one does
+            with a woman, both of them have done what is detestable. They are to
+            be put to death; their blood will be on their own heads."
+      - pageID: 73002
+        verses:
+        - verse: "\u201C\u2018If a man marries both a woman and her mother, it is
+            wicked. Both he and they must be burned in the fire, so that no wickedness
+            will be among you."
+        - verse: "\u201C\u2018If a man has sexual relations with an animal, he is
+            to be put to death, and you must kill the animal."
+      - pageID: 83002
+        verses:
+        - verse: "\u201C\u2018If a woman approaches an animal to have sexual relations
+            with it, kill both the woman and the animal. They are to be put to death;
+            their blood will be on their own heads."
+        - verse: "\u201C\u2018If a man marries his sister, the daughter of either
+            his father or his mother, and they have sexual relations, it is a disgrace.
+            They are to be publicly removed from their people. He has dishonored
+            his sister and will be held responsible."
+      - pageID: 93002
+        verses:
+        - verse: "\u201C\u2018If a man has sexual relations with a woman during her
+            monthly period, he has exposed the source of her flow, and she has also
+            uncovered it. Both of them are to be cut off from their people."
+        - verse: "\u201C\u2018Do not have sexual relations with the sister of either
+            your mother or your father, for that would dishonor a close relative;
+            both of you would be held responsible."
+      - pageID: 103002
+        verses:
+        - verse: "\u201C\u2018If a man has sexual relations with his aunt, he has
+            dishonored his uncle. They will be held responsible; they will die childless."
+        - verse: "\u201C\u2018If a man marries his brother\u2019s wife, it is an
+            act of impurity; he has dishonored his brother. They will be childless."
+      - pageID: 113002
+        verses:
+        - verse: "\u201C\u2018Keep all my decrees and laws and follow them, so that
+            the land where I am bringing you to live may not vomit you out."
+        - verse: You must not live according to the customs of the nations I am going
+            to drive out before you. Because they did all these things, I abhorred
+            them.
+      - pageID: 123002
+        verses:
+        - verse: "But I said to you, \u201CYou will possess their land; I will give
+            it to you as an inheritance, a land flowing with milk and honey.\u201D
+            I am the Lord your God, who has set you apart from the nations."
+        - verse: "\u201C\u2018You must therefore make a distinction between clean
+            and unclean animals and between unclean and clean birds. Do not defile
+            yourselves by any animal or bird or anything that moves along the ground\u2014those
+            that I have set apart as unclean for you."
+      - pageID: 133002
+        verses:
+        - verse: You are to be holy to me because I, the Lord, am holy, and I have
+            set you apart from the nations to be my own.
+        - verse: "\u201C\u2018A man or woman who is a medium or spiritist among you
+            must be put to death. You are to stone them; their blood will be on their
+            own heads.\u2019\u201D"

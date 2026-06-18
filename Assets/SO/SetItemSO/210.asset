@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c924ec77193d04c86e8d32dd8acf70, type: 3}
+  m_Name: 210
+  m_EditorClassIdentifier: Assembly-CSharp::setItemSO
+  setID: 210
+  setName: Royal Room
+  items:
+  - {fileID: 11400000, guid: b97eb687d25b810458cbdeb36cdcd3fa, type: 2}
+  - {fileID: 11400000, guid: 73cc04132c303d74189b37fe35d11c7d, type: 2}
+  - {fileID: 11400000, guid: ec916dbc9a056494e8d78a440d1736e2, type: 2}
+  - {fileID: 11400000, guid: 889c7b7a431efcf4cbaa45603ce94b39, type: 2}
+  - {fileID: 11400000, guid: a01ee17330f5c1549b9045ebed2e2c1e, type: 2}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c924ec77193d04c86e8d32dd8acf70, type: 3}
+  m_Name: 107
+  m_EditorClassIdentifier: Assembly-CSharp::setItemSO
+  setID: 107
+  setName: Musician
+  items:
+  - {fileID: 11400000, guid: a89fd000f66012a4986cfa2826a5f505, type: 2}
+  - {fileID: 11400000, guid: 933620e5b4ee84047934fd0e62a91937, type: 2}
+  - {fileID: 11400000, guid: 08275e735382dfa4f99428c7891ad6dd, type: 2}
+  - {fileID: 11400000, guid: a25d498094f96514889b710d5397f1b3, type: 2}
+  - {fileID: 11400000, guid: 3bc70aad04a114941b45480c2932f403, type: 2}

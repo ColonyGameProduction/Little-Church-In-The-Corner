@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c924ec77193d04c86e8d32dd8acf70, type: 3}
+  m_Name: 207
+  m_EditorClassIdentifier: Assembly-CSharp::setItemSO
+  setID: 207
+  setName: Temple Hall
+  items:
+  - {fileID: 11400000, guid: d8a8c63d0f7210247b7f06b581e87ce8, type: 2}
+  - {fileID: 11400000, guid: be3c6159a6458f2439416de984eab05d, type: 2}
+  - {fileID: 11400000, guid: 5cfc43952c7019d488d3dffa20e20add, type: 2}
+  - {fileID: 11400000, guid: 0f053cf3f9d944b4696d05f54448f1e9, type: 2}
+  - {fileID: 11400000, guid: 76543fcc715dc6841a076ffca3c17ef4, type: 2}

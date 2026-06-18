@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c924ec77193d04c86e8d32dd8acf70, type: 3}
+  m_Name: 102
+  m_EditorClassIdentifier: Assembly-CSharp::setItemSO
+  setID: 102
+  setName: Fisher
+  items:
+  - {fileID: 11400000, guid: 9958ba1e6ed50624db6425df1d98ebc8, type: 2}
+  - {fileID: 11400000, guid: 6f0b757aae4e86b4ba8d19dcc136710a, type: 2}
+  - {fileID: 11400000, guid: e1210b166196bd94f9e4126764b64a34, type: 2}

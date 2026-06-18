@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c924ec77193d04c86e8d32dd8acf70, type: 3}
+  m_Name: 108
+  m_EditorClassIdentifier: Assembly-CSharp::setItemSO
+  setID: 108
+  setName: Temple Helper
+  items:
+  - {fileID: 11400000, guid: 2f730950e791c6d4b9367f3bf7253704, type: 2}
+  - {fileID: 11400000, guid: 17b0e0a7fc1891242acc33ffd7c0023b, type: 2}
+  - {fileID: 11400000, guid: 6b7300f19a99cfb43849550999ea59e4, type: 2}
+  - {fileID: 11400000, guid: f2fd97e4e80a0e84ba296c701abdf368, type: 2}
+  - {fileID: 11400000, guid: 295dbd1e57ebd1d4882b740c8311359f, type: 2}

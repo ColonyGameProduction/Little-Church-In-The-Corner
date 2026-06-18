@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c924ec77193d04c86e8d32dd8acf70, type: 3}
+  m_Name: 209
+  m_EditorClassIdentifier: Assembly-CSharp::setItemSO
+  setID: 209
+  setName: Ark Exhibit
+  items:
+  - {fileID: 11400000, guid: 429ef39ca654287468da08cdfe7b1d32, type: 2}
+  - {fileID: 11400000, guid: b4f45c1c1bcbb654abe76c4adbc6f647, type: 2}
+  - {fileID: 11400000, guid: f502f540020b5404dbec7f9c4b250c4e, type: 2}
+  - {fileID: 11400000, guid: b58342a1081b5814ea5ad0dc05f00a81, type: 2}
+  - {fileID: 11400000, guid: 834218d93d75036409890935f959f1ba, type: 2}

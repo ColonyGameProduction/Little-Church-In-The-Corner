@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c924ec77193d04c86e8d32dd8acf70, type: 3}
+  m_Name: 100
+  m_EditorClassIdentifier: Assembly-CSharp::setItemSO
+  setID: 100
+  setName: Shepherd
+  items:
+  - {fileID: 11400000, guid: 633f1f78f32ec2249aa8055e7a8beedb, type: 2}
+  - {fileID: 11400000, guid: 79465238b382f6b499a100230ab3bfb6, type: 2}
+  - {fileID: 11400000, guid: d2447d960f0b49e47b42cca685cf7a1c, type: 2}

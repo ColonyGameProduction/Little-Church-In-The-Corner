@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c924ec77193d04c86e8d32dd8acf70, type: 3}
+  m_Name: 202
+  m_EditorClassIdentifier: Assembly-CSharp::setItemSO
+  setID: 202
+  setName: Desert Camp
+  items:
+  - {fileID: 11400000, guid: 7b2c29987a4bece4b9bc3e667e85cbd5, type: 2}
+  - {fileID: 11400000, guid: 95aa0909a7ab8474aa63b54802e56ccf, type: 2}
+  - {fileID: 11400000, guid: 10a95e21ba946a14788f3ed648f195c6, type: 2}
