@@ -33,6 +33,8 @@ public class TransitionManager : MonoBehaviour
 
     public bool B_enableSwipe;
 
+    public static event System.Action<ENM_Room> OnRoomChange;
+
     private void Awake()
     {
         Instance = this;
@@ -216,6 +218,8 @@ public class TransitionManager : MonoBehaviour
             .id;
 
         UIHUDManager.Instance.HighlightRoomButtonTransition(ENM_room);
+
+        OnRoomChange?.Invoke(ENM_room);
     }
 
     public void Transition(ENM_Room targetRoom)
