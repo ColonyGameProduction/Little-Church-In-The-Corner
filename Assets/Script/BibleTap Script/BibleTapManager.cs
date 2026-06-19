@@ -40,8 +40,8 @@ public class BibleTapManager : MonoBehaviour
     private Vector2 verseTextOriginalAnchorMax;
     private Vector2 verseTextOriginalPivot;
     private Vector2 verseTextOriginalAnchoredPosition;
-    private float verseTextOriginalHeight;
-    private float verseTextOriginalWidth;
+    private Vector2 verseTextOriginalRectSize;
+    private Vector2 verseTextOriginalSizeDelta;
 
     private Vector2 verseTextCenterAnchorMin = new Vector2(0.5f, 0.5f);
     private Vector2 verseTextCenterAnchorMax = new Vector2(0.5f, 0.5f);
@@ -69,7 +69,10 @@ public class BibleTapManager : MonoBehaviour
     void Start()
     {
         passageManager = PassageManager.instance;
+    }
 
+    public void UpdateVerseTextOriginalData()
+    {
         StartCoroutine(DelayedStart());
     }
 
@@ -80,8 +83,10 @@ public class BibleTapManager : MonoBehaviour
         verseTextOriginalAnchorMax = verseText.rectTransform.anchorMax;
         verseTextOriginalAnchoredPosition = verseText.rectTransform.anchoredPosition;
         verseTextOriginalPivot = verseText.rectTransform.pivot;
-        verseTextOriginalHeight = verseText.rectTransform.sizeDelta.y;
-        verseTextOriginalWidth = verseText.rectTransform.rect.width;
+        verseTextOriginalRectSize = verseText.rectTransform.rect.size;
+        verseTextOriginalSizeDelta = verseText.rectTransform.sizeDelta;
+        Debug.Log(verseTextOriginalRectSize);
+        Debug.Log(verseTextOriginalSizeDelta);
     }
 
 
@@ -141,6 +146,13 @@ public class BibleTapManager : MonoBehaviour
 
     public void SetupBibleTapGame(Passage passage)
     {
+        StartCoroutine(SetupBibleTapGameDelayed(passage));
+    }
+
+    private IEnumerator SetupBibleTapGameDelayed(Passage passage)
+    {
+        yield return StartCoroutine(DelayedStart());
+
         GameManager.instance.gameMode = E_GameMode.BibleTap;
 
 
@@ -159,10 +171,11 @@ public class BibleTapManager : MonoBehaviour
 
         introTutorial.SetActive(true);
         OnGameSetupDone?.Invoke(pageSets.Count);
-        
+
 
         SplitVerseIntoWords(allVerses[0]);
 
+        Debug.Log("Setup done");
     }
 
     public void SetupNextVerse()
@@ -251,27 +264,29 @@ public class BibleTapManager : MonoBehaviour
             LeanTween.value(gameObject, UpdateVerseTextAnchorMax, verseTextOriginalAnchorMax, verseTextCenterAnchorMax, DARKEN_DURATION);
             LeanTween.value(gameObject, UpdateVerseTextPivot, verseTextOriginalPivot, verseTextCenterPivot, DARKEN_DURATION);
             LeanTween.value(gameObject, UpdateVerseTextAnchoredPosition, verseTextOriginalAnchoredPosition, verseTextCenterAnchoredPosition, DARKEN_DURATION);
-            LeanTween.value(gameObject, UpdateVerseTextHeight, verseTextOriginalHeight, verseText.preferredHeight, DARKEN_DURATION);
+            Vector2 targetSize = new Vector2(verseTextOriginalRectSize.x, verseText.preferredHeight);
+            LeanTween.value(gameObject, UpdateVerseTextSize, verseTextOriginalSizeDelta, targetSize, DARKEN_DURATION);
             LeanTween.value(gameObject, UpdateVerseTextHighlightAnchorMin, verseTextOriginalAnchorMin, verseTextCenterAnchorMin, DARKEN_DURATION);
             LeanTween.value(gameObject, UpdateVerseTextHighlightAnchorMax, verseTextOriginalAnchorMax, verseTextCenterAnchorMax, DARKEN_DURATION);
             LeanTween.value(gameObject, UpdateVerseTextHighlightPivot, verseTextOriginalPivot, verseTextCenterPivot, DARKEN_DURATION);
             LeanTween.value(gameObject, UpdateVerseTextHighlightAnchoredPosition, verseTextOriginalAnchoredPosition, verseTextCenterAnchoredPosition, DARKEN_DURATION);
-            LeanTween.value(gameObject, UpdateVerseTextHighlightHeight, verseTextOriginalHeight, verseText.preferredHeight, DARKEN_DURATION);
+            LeanTween.value(gameObject, UpdateVerseTextHighlightSize, verseTextOriginalSizeDelta, targetSize, DARKEN_DURATION);
         }
         else
         {
             LeanTween.cancel(gameObject);
             // Balikin ke normalnya instant aja, soalnya ga keliatan juga teksnya pas mau balikin
-            LeanTween.value(gameObject, UpdateVerseTextAnchorMin, verseTextCenterAnchorMin, verseTextOriginalAnchorMin, 0f);
-            LeanTween.value(gameObject, UpdateVerseTextAnchorMax, verseTextCenterAnchorMax, verseTextOriginalAnchorMax, 0f);
-            LeanTween.value(gameObject, UpdateVerseTextPivot, verseTextCenterPivot, verseTextOriginalPivot, 0f);
-            LeanTween.value(gameObject, UpdateVerseTextAnchoredPosition, verseTextCenterAnchoredPosition, verseTextOriginalAnchoredPosition, 0f);
-            LeanTween.value(gameObject, UpdateVerseTextHeight, verseText.preferredHeight, verseTextOriginalHeight, 0f);
-            LeanTween.value(gameObject, UpdateVerseTextHighlightAnchorMin, verseTextCenterAnchorMin, verseTextOriginalAnchorMin, 0f);
-            LeanTween.value(gameObject, UpdateVerseTextHighlightAnchorMax, verseTextCenterAnchorMax, verseTextOriginalAnchorMax, 0f);
-            LeanTween.value(gameObject, UpdateVerseTextHighlightPivot, verseTextCenterPivot, verseTextOriginalPivot, 0f);
-            LeanTween.value(gameObject, UpdateVerseTextHighlightAnchoredPosition, verseTextCenterAnchoredPosition, verseTextOriginalAnchoredPosition, 0f);
-            LeanTween.value(gameObject, UpdateVerseTextHighlightHeight, verseText.preferredHeight, verseTextOriginalHeight, 0f);
+            LeanTween.value(gameObject, UpdateVerseTextAnchorMin, verseTextCenterAnchorMin, verseTextOriginalAnchorMin, 0.01f);
+            LeanTween.value(gameObject, UpdateVerseTextAnchorMax, verseTextCenterAnchorMax, verseTextOriginalAnchorMax, 0.01f);
+            LeanTween.value(gameObject, UpdateVerseTextPivot, verseTextCenterPivot, verseTextOriginalPivot, 0.01f);
+            LeanTween.value(gameObject, UpdateVerseTextAnchoredPosition, verseTextCenterAnchoredPosition, verseTextOriginalAnchoredPosition, 0.01f);
+            Vector2 previousSize = new Vector2(verseTextOriginalRectSize.x, verseText.preferredHeight);
+            LeanTween.value(gameObject, UpdateVerseTextSize, previousSize, verseTextOriginalSizeDelta, 0.01f);
+            LeanTween.value(gameObject, UpdateVerseTextHighlightAnchorMin, verseTextCenterAnchorMin, verseTextOriginalAnchorMin, 0.01f);
+            LeanTween.value(gameObject, UpdateVerseTextHighlightAnchorMax, verseTextCenterAnchorMax, verseTextOriginalAnchorMax, 0.01f);
+            LeanTween.value(gameObject, UpdateVerseTextHighlightPivot, verseTextCenterPivot, verseTextOriginalPivot, 0.01f);
+            LeanTween.value(gameObject, UpdateVerseTextHighlightAnchoredPosition, verseTextCenterAnchoredPosition, verseTextOriginalAnchoredPosition, 0.01f);
+            LeanTween.value(gameObject, UpdateVerseTextHighlightSize, previousSize, verseTextOriginalSizeDelta, 0.01f);
         }
     }
 
@@ -295,10 +310,26 @@ public class BibleTapManager : MonoBehaviour
         verseText.rectTransform.anchoredPosition = newAnchoredPosition;
     }
 
-    private void UpdateVerseTextHeight(float newHeight)
+    private void UpdateVerseTextSize(Vector2 size)
     {
-        verseText.rectTransform.sizeDelta = new Vector2(verseTextOriginalWidth, newHeight);
+        verseText.rectTransform.sizeDelta = new Vector2(size.x, size.y);
     }
+
+    //private void UpdateVerseTextHeight(float newHeight)
+    //{
+    //    Debug.Log($"Before = {verseText.rectTransform.sizeDelta}");
+    //    verseText.rectTransform.sizeDelta = new Vector2(verseTextOriginalWidth, newHeight);
+    //    Debug.Log($"After = {verseText.rectTransform.sizeDelta}");
+    //}
+
+    //private void UpdateVerseTextHeightSizeDelta(float newHeight)
+    //{
+    //    Debug.Log($"Before = {verseText.rectTransform.sizeDelta}");
+    //    verseText.rectTransform.sizeDelta = new Vector2(verseTextOriginalSizeDeltaX, newHeight);
+    //    Debug.Log($"After = {verseText.rectTransform.sizeDelta}");
+    //}
+
+    //TODO: update verse text width as well, from size delta to rect width (on move to center) or vice versa on move to original
 
     private void UpdateVerseTextHighlightAnchorMin(Vector2 newAnchorMin)
     {
@@ -320,9 +351,19 @@ public class BibleTapManager : MonoBehaviour
         verseTextHighlight.rectTransform.anchoredPosition = newAnchoredPosition;
     }
 
-    private void UpdateVerseTextHighlightHeight(float newHeight)
+    //private void UpdateVerseTextHighlightHeight(float newHeight)
+    //{
+    //    verseTextHighlight.rectTransform.sizeDelta = new Vector2(verseTextOriginalWidth, newHeight);
+    //}
+
+    //private void UpdateVerseTextHighlightHeightSizeDelta(float newHeight)
+    //{
+    //    verseTextHighlight.rectTransform.sizeDelta = new Vector2(verseTextOriginalSizeDeltaX, newHeight);
+    //}
+
+    private void UpdateVerseTextHighlightSize(Vector2 size)
     {
-        verseTextHighlight.rectTransform.sizeDelta = new Vector2(verseTextOriginalWidth, newHeight);
+        verseTextHighlight.rectTransform.sizeDelta = new Vector2(size.x, size.y);
     }
 
     public void ContinuePassage()
